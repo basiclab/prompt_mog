@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROMPT_ROOT_DIR="data/lpbench"
+PROMPT_ROOT_DIR="data/lpbench/filtered"
 OUTPUT_ROOT_DIR="outputs/origin"
 NUM_PROCESSES=1
 MODE="single"
@@ -60,7 +60,6 @@ else
 fi
 
 MODEL_NAME=(
-    "sdxl"
     "flux"
     "sd3"
     "qwen"

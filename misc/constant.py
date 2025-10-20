@@ -58,15 +58,12 @@ For each of the three aspects — **semantic**, **spatial**, and **stylistic**:
 1. Provide **3-6 short description chunks** (10-25 words each) that summarize the key visual facts.  
    These chunks should be standalone statements describing observable parts of the image.
 
-2. Provide **2-4 QA pairs** with **diverse question types**, such as:
-   - **Boolean (yes/no)** → "Is there a person holding an umbrella?" → "Yes"
-   - **Counting** → "How many towers rise from the platform?" → "Three"
-   - **Color/Material** → "What color is the sky?" → "Amber"
-   - **Relation/Position** → "Where is the ship relative to the cliffs?" → "Below the cliffs"
-   - **Lighting/Time** → "What time of day is depicted?" → "Dawn"
-   - **Style/Mood** → "What artistic style defines the scene?" → "Cinematic realism"
-
-Answers must be short and factual (1-3 words or a number).
+2. Provide **2-4 Yes or No questions** whose correct answer is always **"Yes."**  
+   The questions must:
+   - Be unambiguous and directly check facts stated or implied by the descriptions or the long prompt.  
+   - Avoid negation and double negatives.  
+   - Avoid ambiguous quantities. If a quantity is involved, phrase the question so that "Yes" is correct.  
+   - Stay aspect aligned: semantic questions focus on objects and actions, spatial questions focus on positions and relations, stylistic questions focus on style, lighting, mood, or palette.
 
 ---
 
@@ -83,9 +80,9 @@ Return valid JSON in this structure:
             "[short declarative chunk 2]",
             "[short declarative chunk 3]"
         ],
-        "qa_pairs": [
-            {"question": "[Question 1]", "answer": "[Answer 1]"},
-            {"question": "[Question 2]", "answer": "[Answer 2]"}
+        "questions": [
+            "[Yes-No question 1 with correct answer Yes]",
+            "[Yes-No question 2 with correct answer Yes]"
         ]
     },
     "spatial": {
@@ -94,9 +91,9 @@ Return valid JSON in this structure:
             "[short declarative chunk 2]",
             "[short declarative chunk 3]"
         ],
-        "qa_pairs": [
-            {"question": "[Question 1]", "answer": "[Answer 1]"},
-            {"question": "[Question 2]", "answer": "[Answer 2]"}
+        "questions": [
+            "[Yes-No question 1 with correct answer Yes]",
+            "[Yes-No question 2 with correct answer Yes]"
         ]
     },
     "stylistic": {
@@ -105,9 +102,9 @@ Return valid JSON in this structure:
             "[short declarative chunk 2]",
             "[short declarative chunk 3]"
         ],
-        "qa_pairs": [
-            {"question": "[Question 1]", "answer": "[Answer 1]"},
-            {"question": "[Question 2]", "answer": "[Answer 2]"}
+        "questions": [
+            "[Yes-No question 1 with correct answer Yes]",
+            "[Yes-No question 2 with correct answer Yes]"
         ]
     }
 }
@@ -118,41 +115,41 @@ Return valid JSON in this structure:
 
 {
     "theme": "Floating Market at Dawn",
-    "prompt": "Wooden boats drift lazily across a river tinted gold by the first light of morning. Vendors in straw hats sell fruits, lanterns, and steaming bowls of soup as mist curls above the calm water. The air hums softly with conversation and the distant sound of bells from the riverbank temple. Reflections shimmer across the surface, broken by gentle ripples from paddles. A camera hovers close to the water, catching both the boats in the foreground and the glowing sky beyond the bridges. The atmosphere is tranquil, nostalgic, and cinematic—filled with the warmth of sunrise and quiet life. The palette glows with soft oranges, pale blues, and fading violets. The style blends painterly realism with subtle photographic focus, evoking the serenity of early morning in a world untouched by haste.",
+    "prompt": "Wooden boats drift across a river tinted gold by first light. Vendors in straw hats sell fruits and steaming soup while mist curls above the calm water. The air carries quiet conversation and distant bells from a riverbank temple. Reflections tremble across the surface, broken by paddles. A camera hovers close to the water, framing boats in the foreground and a glowing sky beyond the bridges. The atmosphere is tranquil, nostalgic, and cinematic, filled with the warmth of sunrise. The palette glows with soft oranges, pale blues, and fading violets. The style blends painterly realism with subtle photographic focus, evoking serene early morning.",
     "semantic": {
         "description": [
-            "Wooden boats float across a misty river.",
-            "Vendors wear straw hats and sell colorful fruits.",
-            "Steam rises from bowls of soup held by customers."
+            "Wooden boats carry vendors selling fresh fruits and hot soup.",
+            "Straw hats are worn by several vendors on the river.",
+            "Soft conversation and temple bells create a calm scene."
         ],
-        "qa_pairs": [
-            {"question": "What are the vendors wearing?", "answer": "Straw hats"},
-            {"question": "What are the boats carrying?", "answer": "Fruits and soup"},
-            {"question": "Are the boats floating on a river?", "answer": "Yes"}
+        "questions": [
+            "Are wooden boats present on the river?",
+            "Are vendors wearing straw hats?",
+            "Are foods or goods being sold from the boats?"
         ]
     },
     "spatial": {
         "description": [
-            "Camera positioned near water level showing boats in foreground.",
-            "Temple stands on the riverbank in the background.",
-            "Soft mist rises between foreground and background elements."
+            "The camera sits near water level with boats in the foreground.",
+            "A temple stands on the riverbank in the distant background.",
+            "Gentle mist separates foreground boats from background structures."
         ],
-        "qa_pairs": [
-            {"question": "Where is the temple located?", "answer": "On the riverbank"},
-            {"question": "From what level is the camera positioned?", "answer": "Near water level"},
-            {"question": "How is the mist distributed?", "answer": "Between foreground and background"}
+        "questions": [
+            "Is the camera positioned close to the water surface?",
+            "Is the temple located on the riverbank in the background?",
+            "Is there visible mist between the foreground and background?"
         ]
     },
     "stylistic": {
         "description": [
-            "Warm golden lighting from dawn sunlight.",
-            "Soft orange and pale blue color palette.",
-            "Painterly realism with cinematic tone and gentle atmosphere."
+            "Warm golden lighting indicates early morning sunlight.",
+            "A palette of orange, pale blue, and violet dominates the scene.",
+            "The overall tone follows painterly realism with a cinematic mood."
         ],
-        "qa_pairs": [
-            {"question": "What is the primary lighting condition?", "answer": "Dawn sunlight"},
-            {"question": "What are the dominant colors?", "answer": "Orange and blue"},
-            {"question": "What artistic style defines the scene?", "answer": "Painterly realism"}
+        "questions": [
+            "Is the lighting consistent with dawn sunlight?",
+            "Is a warm color palette present in the scene?",
+            "Does the image convey a cinematic and tranquil mood?"
         ]
     }
 }

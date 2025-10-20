@@ -6,10 +6,11 @@ from collections import Counter
 
 import matplotlib.pyplot as plt
 import numpy as np
-import scienceplots  # noqa
+import scienceplots  # noqa: F401
 import spacy
 import tyro
 from constant import SPATIAL_PHRASES, SPATIAL_SINGLE, STYLISTIC_PHRASES, STYLISTIC_SINGLE
+from datasets import load_dataset
 from matplotlib.gridspec import GridSpec
 from matplotlib.patches import Rectangle
 from spacy.matcher import PhraseMatcher
@@ -142,7 +143,7 @@ def get_statistics_from_prompts(prompts: list[str]):
     }
 
 
-def count_t2i_compbench(data_root_dir: str):
+def count_t2i_compbench(data_root_dir: str) -> list[str]:
     data_files = glob.glob(os.path.join(data_root_dir, "*.txt"))
     prompts = []
     for data_file in data_files:
@@ -155,7 +156,7 @@ def count_t2i_compbench(data_root_dir: str):
     return prompts
 
 
-def count_geneval(data_root_dir: str):
+def count_geneval(data_root_dir: str) -> list[str]:
     prompts = []
     with open(os.path.join(data_root_dir, "prompts.txt"), "r") as f:
         data = f.readlines()
@@ -166,7 +167,7 @@ def count_geneval(data_root_dir: str):
     return prompts
 
 
-def count_dpg_bench(data_root_dir: str):
+def count_dpg_bench(data_root_dir: str) -> list[str]:
     data_files = glob.glob(os.path.join(data_root_dir, "*.txt"))
     prompts = []
     for data_file in data_files:
@@ -179,7 +180,7 @@ def count_dpg_bench(data_root_dir: str):
     return prompts
 
 
-def count_rarebench(data_root_dir: str):
+def count_rarebench(data_root_dir: str) -> list[str]:
     data_files = glob.glob(os.path.join(data_root_dir, "*.txt"))  # although .txt, it is a .json file
     prompts = []
     for data_file in data_files:
@@ -190,8 +191,15 @@ def count_rarebench(data_root_dir: str):
     return prompts
 
 
-def count_lpbench(data_root_dir: str):
-    data_files = glob.glob(os.path.join(data_root_dir, "*.json"))
+def count_genai_bench(*_, **__) -> list[str]:
+    dataset = load_dataset("BaiqiL/GenAI-Bench")
+    prompts = [example["Prompt"] for example in dataset["train"]]
+    del dataset
+    return prompts
+
+
+def count_lpbench(data_root_dir: str) -> list[str]:
+    data_files = glob.glob(os.path.join(data_root_dir, "filtered/*.json"))
     prompts = []
     for data_file in data_files:
         with open(data_file, "r") as f:
@@ -215,7 +223,7 @@ target_dataset = {
     "t2i_compbench": (count_t2i_compbench, "T2I-CompBench"),
     "geneval": (count_geneval, "GenEval"),
     "dpg_bench": (count_dpg_bench, "DPG-Bench"),
-    "rarebench": (count_rarebench, "RareBench"),
+    "genai_bench": (count_genai_bench, "GenAI-Bench"),
     "lpbench": (count_lpbench, r"\textbf{LPBench}"),
 }
 

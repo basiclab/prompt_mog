@@ -78,7 +78,7 @@ def _worker_task(
 
 def main(
     save_folder: str = "data/lpbench",
-    num_prompts: int = 20,
+    num_prompts: int = 200,
     max_length: int = 512,
     model: str = "gpt-4o",
     max_workers: int = 8,

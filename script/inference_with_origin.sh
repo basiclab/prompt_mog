@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROMPT_ROOT_DIR="data/lpbench"
+PROMPT_ROOT_DIR="data/lpbench/filtered"
 OUTPUT_ROOT_DIR="outputs/origin"
 NUM_PROCESSES=4
 MODE="multi"
@@ -47,7 +47,6 @@ else
 fi
 
 MODEL_NAME_PAIR=(
-    "stabilityai/stable-diffusion-xl-base-1.0,sdxl"
     "black-forest-labs/FLUX.1-Krea-dev,flux"
     "stabilityai/stable-diffusion-3.5-large,sd3"
     "Qwen/Qwen-Image,qwen"

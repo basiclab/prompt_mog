@@ -29,11 +29,13 @@ import tqdm
 import transformers
 import tyro
 from accelerate import Accelerator
-from sentence_transformers import SentenceTransformer
 from torch.utils.data import DataLoader
 from transformers import Qwen3VLMoeForConditionalGeneration, Qwen3VLProcessor, SiglipModel, SiglipProcessor
 
 from eval_utils.dataset import LongPromptGenDataset, collate_fn
+
+# avoid the warning of tokenizers parallelism
+os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 
 def base64_encode_image(img: PIL.Image.Image, format: str = "PNG"):
@@ -85,38 +87,24 @@ def build_siglip_model(
     return model, processor
 
 
-def build_sentence_transformer_model(
-    device: torch.device,
-    dtype: torch.dtype = torch.bfloat16,
-    pretrained_name: str = "Qwen/Qwen3-Embedding-0.6B",
-) -> SentenceTransformer:
-    model = SentenceTransformer(
-        pretrained_name,
-        device=device,
-        model_kwargs={"torch_dtype": dtype},
-    )
-    return model
-
-
 def submit_to_vqa_model(
     model: Qwen3VLMoeForConditionalGeneration,
     processor: Qwen3VLProcessor,
     base_image: str,
     question: str,
+    answer_token_idx: int,
 ) -> str:
     messages = [
         {
             "role": "user",
             "content": [
                 {
-                    "type": "image_url",
-                    "image_url": {"url": f"data:image/png;base64,{base_image}"},
+                    "type": "image",
+                    "image": f"data:image/png;base64,{base_image}",
                 },
                 {
                     "type": "text",
-                    "text": question
-                    + " "
-                    + "Answer should be short and concise. Do not repeat any part of the question in the answer.",
+                    "text": question + " Please answer in Yes/No.",
                 },
             ],
         }
@@ -129,24 +117,16 @@ def submit_to_vqa_model(
         return_tensors="pt",
     )
     inputs = inputs.to(model.device)
-    generated_ids = model.generate(**inputs, max_new_tokens=50)
-    generated_ids_trimmed = [
-        out_ids[len(in_ids) :] for in_ids, out_ids in zip(inputs.input_ids, generated_ids, strict=True)
-    ]
-    output_text = processor.batch_decode(
-        generated_ids_trimmed, skip_special_tokens=True, clean_up_tokenization_spaces=False
+    outputs = model.generate(
+        **inputs,
+        max_new_tokens=1,
+        do_sample=False,
+        output_scores=True,
+        return_dict_in_generate=True,
     )
-    return output_text[0].strip().replace(".", "")
-
-
-def compute_vqa_score(
-    sentence_transformer_model: SentenceTransformer, predicted_answer: str, answer: str
-) -> float:
-    encode_embeddings = sentence_transformer_model.encode(
-        [predicted_answer.lower(), answer.lower()],
-        convert_to_numpy=False,
-    )
-    return torch.nn.functional.cosine_similarity(encode_embeddings[0], encode_embeddings[1], dim=-1).item()
+    probs = torch.nn.functional.softmax(outputs.scores[0], dim=-1)
+    lm_prob = probs[0, answer_token_idx].item()
+    return lm_prob
 
 
 @torch.inference_mode()
@@ -165,7 +145,7 @@ def main(
     with accelerator.main_process_first():
         vqa_model, vqa_processor = build_vqa_model(device, dtype)
         clip_model, clip_processor = build_siglip_model(device, dtype)
-        sentence_transformer_model = build_sentence_transformer_model(device, dtype)
+    answer_token_idx = vqa_processor.tokenizer.encode("Yes")[0]
 
     dataset = LongPromptGenDataset(root_dir=prompt_root_dir, gen_image_dir=gen_root_dir)
     dataloader = DataLoader(
@@ -229,14 +209,17 @@ def main(
 
                 # vqa score
                 single_score = 0
-                qa_pairs = image_text_pair["prompt"][eval_type]["qa_pairs"]
-                for qa_pair in qa_pairs:
-                    question = qa_pair["question"]
-                    answer = qa_pair["answer"]
-                    predicted_answer = submit_to_vqa_model(vqa_model, vqa_processor, base_image, question)
-                    vqa_score = compute_vqa_score(sentence_transformer_model, predicted_answer, answer)
+                questions = image_text_pair["prompt"][eval_type]["questions"]
+                for question in questions:
+                    vqa_score = submit_to_vqa_model(
+                        model=vqa_model,
+                        processor=vqa_processor,
+                        base_image=base_image,
+                        question=question,
+                        answer_token_idx=answer_token_idx,
+                    )
                     single_score += vqa_score
-                recorded_score[eval_type]["vqa_score"] = single_score / len(qa_pairs)
+                recorded_score[eval_type]["vqa_score"] = single_score / len(questions)
 
             # save the score
             with open(os.path.join(gen_root_dir, f"score_{base_starting_idx:03d}.json"), "w") as f:

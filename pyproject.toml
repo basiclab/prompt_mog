@@ -22,6 +22,7 @@ dependencies = [
     "sentence-transformers==5.1.1",
     "spacy==3.8.7",
     "pip==25.2",
+    "datasets==4.2.0",
 ]
 
 [tool.uv]
