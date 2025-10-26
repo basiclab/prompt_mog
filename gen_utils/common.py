@@ -1,24 +1,25 @@
+from typing import Literal
+
 import diffusers
 import torch
 import transformers
-from transformers import LlamaForCausalLM, PreTrainedTokenizerFast
 
 from pipeline import (
     CogView4Pipeline,
+    FluxLPRPipeline,
     FluxPipeline,
-    HiDreamImagePipeline,
     QwenImagePipeline,
     StableDiffusion3Pipeline,
-    StableDiffusionXLPipeline,
 )
 
-pipeline_mapping = {
-    "sdxl": StableDiffusionXLPipeline,
+ORIGINAL_PIPELINE_MAPPING = {
     "flux": FluxPipeline,
     "sd3": StableDiffusion3Pipeline,
     "qwen": QwenImagePipeline,
-    "hidream": HiDreamImagePipeline,
     "cogview4": CogView4Pipeline,
+}
+LONG_PROMPT_PIPELINE_MAPPING = {
+    "flux": FluxLPRPipeline,
 }
 
 DETYPE_MAPPING = {
@@ -46,13 +47,12 @@ def create_pipeline(
     dtype: torch.dtype,
     use_balance: bool,
     device: torch.device,
-) -> StableDiffusionXLPipeline | FluxPipeline | StableDiffusion3Pipeline | QwenImagePipeline:
-    pipe_kwargs = {
-        "torch_dtype": dtype,
-    }
-    if "stable-diffusion-xl" in pretrained_name.lower():
-        pipeline_class = pipeline_mapping["sdxl"]
-    elif "flux" in pretrained_name.lower():
+    model_type: Literal["long", "short"] = "short",
+) -> FluxPipeline | StableDiffusion3Pipeline | CogView4Pipeline | QwenImagePipeline:
+    pipe_kwargs = {"torch_dtype": dtype}
+    pipeline_mapping = ORIGINAL_PIPELINE_MAPPING if model_type == "short" else LONG_PROMPT_PIPELINE_MAPPING
+
+    if "flux" in pretrained_name.lower():
         pipeline_class = pipeline_mapping["flux"]
     elif "stable-diffusion-3" in pretrained_name.lower():
         pipeline_class = pipeline_mapping["sd3"]
@@ -60,20 +60,6 @@ def create_pipeline(
         pipeline_class = pipeline_mapping["qwen"]
     elif "cogview4" in pretrained_name.lower():
         pipeline_class = pipeline_mapping["cogview4"]
-    elif "hidream" in pretrained_name.lower():
-        tokenizer_4 = PreTrainedTokenizerFast.from_pretrained("meta-llama/Meta-Llama-3.1-8B-Instruct")
-        text_encoder_4 = LlamaForCausalLM.from_pretrained(
-            "meta-llama/Meta-Llama-3.1-8B-Instruct",
-            output_hidden_states=True,
-            output_attentions=True,
-            torch_dtype=dtype,
-        )
-        pipe_kwargs = {
-            **pipe_kwargs,
-            "tokenizer_4": tokenizer_4,
-            "text_encoder_4": text_encoder_4,
-        }
-        pipeline_class = pipeline_mapping["hidream"]
     else:
         raise ValueError(f"Unknown pipeline {pretrained_name}")
 
@@ -82,8 +68,5 @@ def create_pipeline(
     else:
         pipeline = pipeline_class.from_pretrained(pretrained_name, **pipe_kwargs)
         pipeline.to(device)
-
-    if "hunyuan" in pretrained_name.lower():
-        pipeline.load_tokenizer(pretrained_name)
 
     return pipeline

@@ -11,14 +11,14 @@ def collate_fn(batch: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return batch
 
 
-class LongPromptGenDataset(Dataset):
-    def __init__(self, root_dir: str, gen_image_dir: str):
-        self.root_dir = root_dir
+class GeneratedImageDataset(Dataset):
+    def __init__(self, prompt_root_dir: str, gen_root_dir: str):
+        self.prompt_root_dir = prompt_root_dir
         self.prompt_files = sorted(
-            list(glob.glob(os.path.join(self.root_dir, "*.json"))),
+            list(glob.glob(os.path.join(self.prompt_root_dir, "*.json"))),
             key=lambda x: int(os.path.basename(x).split("_")[-1].split(".")[0]),
         )
-        self.gen_image_dir = gen_image_dir
+        self.gen_root_dir = gen_root_dir
 
     def __len__(self):
         return len(self.prompt_files)
@@ -28,6 +28,6 @@ class LongPromptGenDataset(Dataset):
             prompt = json.load(f)
 
         prompt["prompt"] = prompt["prompt"].strip().lower()
-        image_path = os.path.join(self.gen_image_dir, f"gen_{idx:03d}.png")
+        image_path = os.path.join(self.gen_root_dir, f"gen_{idx:03d}.png")
         image = Image.open(image_path)
         return {"prompt": prompt, "image": image}

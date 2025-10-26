@@ -1,0 +1,97 @@
+#!/bin/bash
+
+PROMPT_ROOT_DIR="data/lpbench/filtered"
+OUTPUT_ROOT_DIR="outputs/long_prompt"
+DATASET_TYPE="long"
+MODEL_TYPE="short"
+NUM_PROCESSES=4
+MODE="multi"
+SEED=(42 1234 21344 304516
+      405671 693042 820319
+      972534 987241 1182039)
+PORT=29500
+P_DROP=0.1
+SIGMA_TEXT=0.05
+WINDOW_SIZE=0.75
+
+print_help() {
+    echo "Usage: bash gen_image.sh [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
+    echo "  --output_root_dir PATH    Output directory (default: outputs/origin)"
+    echo "  --dataset_type TYPE       Dataset type: 'long' or 'short' or 'rewritten' (default: long)"
+    echo "  --model_type TYPE         Model type: 'long' or 'short' (default: short)"
+    echo "  --num_processes INT       Number of processes (default: 4)"
+    echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
+    echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
+    echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
+    echo "  --p_drop FLOAT            Per-token dropout probability (default: 0.1)"
+    echo "  --sigma_text FLOAT        Gaussian noise std in embedding space (default: 0.05)"
+    echo "  --window_size INT         Window size for chunking prompts (default: 4)"
+    echo "  -h, --help                Show this help message and exit"
+}
+
+OLDIFS=$IFS
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --prompt_root_dir) PROMPT_ROOT_DIR="$2"; shift ;;
+        --output_root_dir) OUTPUT_ROOT_DIR="$2"; shift ;;
+        --dataset_type) DATASET_TYPE="$2"; shift ;;
+        --model_type) MODEL_TYPE="$2"; shift ;;
+        --num_processes) NUM_PROCESSES="$2"; shift ;;
+        --mode) MODE="$2"; shift ;; 
+        --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
+        --port) PORT="$2"; shift ;;
+        --p_drop) P_DROP="$2"; shift ;;
+        --sigma_text) SIGMA_TEXT="$2"; shift ;;
+        --window_size) WINDOW_SIZE="$2"; shift ;;
+        -h|--help) print_help; exit 0 ;;
+        *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
+    esac
+    shift
+done
+IFS=$OLDIFS
+
+if [ "$MODE" = "multi" ]; then
+    CMD="accelerate launch --multi_gpu --main_process_port ${PORT} --num_processes ${NUM_PROCESSES}"
+elif [ "$MODE" = "single" ]; then
+    CMD="python"
+else
+    echo "Invalid mode: $MODE"
+    print_help
+    exit 1
+fi
+
+MODEL_NAME_PAIR=(
+    "black-forest-labs/FLUX.1-Krea-dev,flux"
+    "stabilityai/stable-diffusion-3.5-large,sd3"
+    "THUDM/CogView4-6B,cogview4"
+    "Qwen/Qwen-Image,qwen"
+)
+
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+for model_name_type in ${MODEL_NAME_PAIR[@]}; do
+    IFS=","
+    set -- $model_name_type
+    model_name=$1
+    model_type=$2
+    echo "Generating images with model: ${model_type}"
+    IFS=$OLDIFS  # restore the original IFS
+    SEED_INDEX=0
+    for seed in ${SEED[@]}; do
+        $CMD gen_utils/generate.py \
+            --pretrained_name ${model_name} \
+            --prompt_root_dir ${PROMPT_ROOT_DIR} \
+            --output_root_dir ${OUTPUT_ROOT_DIR}/${model_type}/${seed} \
+            --mixed_precision bf16 \
+            --seed ${seed} \
+            --dataset_type ${DATASET_TYPE} \
+            --model_type ${MODEL_TYPE} \
+            --p_drop ${P_DROP} \
+            --sigma_text ${SIGMA_TEXT} \
+            --window_size ${WINDOW_SIZE} \
+            --prompt_index ${SEED_INDEX}
+        SEED_INDEX=$((SEED_INDEX + 1))
+    done
+done

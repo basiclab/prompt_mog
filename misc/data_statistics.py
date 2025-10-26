@@ -79,8 +79,7 @@ def entropy_norm(p: list[float]) -> float:
         return 0.0
     q = [x / s for x in p if x > 0]
     H = -sum(x * math.log(x + 1e-12) for x in q)
-    Hmax = math.log(2)  # two categories
-    return float(H / Hmax)
+    return float(H)
 
 
 def prep_stats(text: str) -> tuple[int, int, float]:

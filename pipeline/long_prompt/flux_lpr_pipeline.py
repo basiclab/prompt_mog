@@ -1,230 +1,111 @@
-from typing import Any, Callable
-
-import numpy as np
-import PIL.Image
 import torch
-from diffusers import FluxPipeline
-from diffusers.pipelines.flux.pipeline_flux import FluxPipelineOutput, calculate_shift, retrieve_timesteps
+from transformers import AutoTokenizer
 
-from pipeline.common import accumulative_concat
+from pipeline.vanilla import FluxPipeline
+
+
+def _special_mask_from_ids(token_ids: torch.Tensor | None, tokenizer: AutoTokenizer) -> torch.Tensor | None:
+    if token_ids is None:
+        return None
+    special = torch.zeros_like(token_ids, dtype=torch.bool)
+    special_ids = set(tokenizer.all_special_ids) if hasattr(tokenizer, "all_special_ids") else set()
+    for sid in special_ids:
+        special |= token_ids == sid
+    return special
+
+
+def apply_text_dropout(
+    prompt_embeds: torch.Tensor,
+    token_ids: torch.Tensor | None = None,
+    tokenizer: AutoTokenizer | None = None,
+    p_drop: float = 0.0,  # per-token dropout prob
+    preserve_special: bool = True,
+) -> torch.Tensor:
+    B, L, _ = prompt_embeds.shape
+    device = prompt_embeds.device
+    out = prompt_embeds.clone()
+
+    special_mask = (
+        _special_mask_from_ids(token_ids=token_ids, tokenizer=tokenizer) if preserve_special else None
+    )
+    # Build dropout mask
+    if p_drop > 0.0:
+        drop_mask = torch.rand(B, L, device=device) < p_drop
+        if special_mask is not None:
+            drop_mask &= ~special_mask.to(device)
+        out = out * (~drop_mask).unsqueeze(-1)
+
+    return out
+
+
+def apply_text_noise(
+    prompt_embeds: torch.Tensor,
+    sigma_text: float = 0.0,  # Gaussian noise std in embedding space
+) -> torch.Tensor:
+    out = prompt_embeds.clone()
+    if sigma_text > 0.0:
+        noise = torch.randn_like(out) * sigma_text
+        out = out + noise
+    return out
+
+
+def chuck_prompt(
+    prompt: str,
+    window_size: int | float = 0.75,
+) -> list[str]:
+    prompts = [prompt.strip() for prompt in prompt.split(".")]
+    if isinstance(window_size, float):
+        window_size = int(len(prompts) * window_size)
+    if len(prompts) < window_size:
+        return [". ".join(prompts)]
+    overlap_prompts = [". ".join(prompts[i : i + window_size]) for i in range(len(prompts) - window_size + 1)]
+    return overlap_prompts
 
 
 class FluxLPRPipeline(FluxPipeline):
-    def denoise(
+    def encode_prompt(
         self,
-        latents: torch.Tensor,
-        pooled_prompt_embeds: torch.Tensor,
-        prompt_embeds: torch.Tensor,
-        text_ids: torch.Tensor,
-        latent_image_ids: torch.Tensor,
-        guidance_scale: float,
-        start_refinement_step: int,
-        end_refinement_step: int,
-        num_inference_steps: int,
-        device: torch.device,
-        sigmas: list[float] | None = None,
-        joint_attention_kwargs: dict[str, Any] | None = None,
-        callback_on_step_end: Callable[[int, int, dict], None] | None = None,
-        callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
-    ) -> torch.Tensor:
-        sigmas = np.linspace(1.0, 1 / num_inference_steps, num_inference_steps) if sigmas is None else sigmas
-        if hasattr(self.scheduler.config, "use_flow_sigmas") and self.scheduler.config.use_flow_sigmas:
-            sigmas = None
-        image_seq_len = latents.shape[1]
-        mu = calculate_shift(
-            image_seq_len,
-            self.scheduler.config.get("base_image_seq_len", 256),
-            self.scheduler.config.get("max_image_seq_len", 4096),
-            self.scheduler.config.get("base_shift", 0.5),
-            self.scheduler.config.get("max_shift", 1.15),
-        )
-        timesteps, num_inference_steps = retrieve_timesteps(
-            self.scheduler,
-            num_inference_steps,
-            device,
-            sigmas=sigmas,
-            mu=mu,
-        )
-        num_warmup_steps = max(len(timesteps) - num_inference_steps * self.scheduler.order, 0)
-        self._num_timesteps = len(timesteps)
-
-        if self.transformer.config.guidance_embeds:
-            inverse_guidance = torch.full([1], 1.0, device=device, dtype=torch.float32)
-            inverse_guidance = inverse_guidance.expand(latents.shape[0])
-            guidance = torch.full([1], guidance_scale, device=device, dtype=torch.float32)
-            guidance = guidance.expand(latents.shape[0])
-        else:
-            guidance = None
-
-        if joint_attention_kwargs is None:
-            joint_attention_kwargs = {}
-
-        step_idx = 0
-        dtype = latents.dtype
-        cur_prompt_idx = 0
-        self.scheduler.set_begin_index(0)
-        with self.progress_bar(total=num_inference_steps) as progress_bar:
-            while step_idx < num_inference_steps:
-                # Inner inversion to handle the text prompt refinement
-                if cur_prompt_idx < len(prompt_embeds) - 1 and step_idx == end_refinement_step:
-                    for inverse_step_idx in range(step_idx, start_refinement_step, -1):
-                        t_curr = timesteps[inverse_step_idx]
-                        t_prev = timesteps[inverse_step_idx - 1]
-                        sigma_curr = t_curr / self.scheduler.config.num_train_timesteps
-                        sigma_prev = t_prev / self.scheduler.config.num_train_timesteps
-                        noise_pred = self.transformer(
-                            hidden_states=latents,
-                            timestep=sigma_curr.expand(latents.shape[0]).to(dtype),
-                            guidance=inverse_guidance,
-                            pooled_projections=pooled_prompt_embeds[cur_prompt_idx].unsqueeze(0),
-                            encoder_hidden_states=prompt_embeds[cur_prompt_idx].unsqueeze(0),
-                            txt_ids=text_ids,
-                            img_ids=latent_image_ids,
-                            joint_attention_kwargs=joint_attention_kwargs,
-                            return_dict=False,
-                        )[0].float()
-                        latents = latents + (sigma_prev - sigma_curr) * noise_pred
-                        latents = latents.to(dtype)
-                        step_idx -= 1
-                    cur_prompt_idx += 1
-
-                t_curr = timesteps[step_idx]
-                t_prev = timesteps[step_idx + 1] if step_idx + 1 < num_inference_steps else 0
-                self._current_timestep = t_curr
-                if self.interrupt:
-                    continue
-                sigma_curr = t_curr / self.scheduler.config.num_train_timesteps
-                sigma_prev = t_prev / self.scheduler.config.num_train_timesteps
-                noise_pred = self.transformer(
-                    hidden_states=latents,
-                    timestep=sigma_curr.expand(latents.shape[0]).to(dtype),
-                    guidance=guidance,
-                    pooled_projections=pooled_prompt_embeds[cur_prompt_idx].unsqueeze(0),
-                    encoder_hidden_states=prompt_embeds[cur_prompt_idx].unsqueeze(0),
-                    txt_ids=text_ids,
-                    img_ids=latent_image_ids,
-                    joint_attention_kwargs=joint_attention_kwargs,
-                    return_dict=False,
-                )[0].float()
-
-                latents = latents + (sigma_prev - sigma_curr) * noise_pred
-                latents = latents.to(dtype)
-
-                if callback_on_step_end is not None:
-                    callback_kwargs = {}
-                    for k in callback_on_step_end_tensor_inputs:
-                        callback_kwargs[k] = locals()[k]
-                    callback_outputs = callback_on_step_end(self, step_idx, t_curr, callback_kwargs)
-
-                    latents = callback_outputs.pop("latents", latents)
-                    prompt_embeds = callback_outputs.pop("prompt_embeds", prompt_embeds)
-
-                if (
-                    step_idx == len(timesteps) - 2
-                    or (
-                        cur_prompt_idx == len(prompt_embeds) - 1
-                        and (step_idx + 1) > num_warmup_steps
-                        and (step_idx + 1) % self.scheduler.order == 0
-                    )
-                    or step_idx < start_refinement_step
-                ):
-                    progress_bar.update()
-
-                step_idx += 1
-
-        self._current_timestep = None
-        return latents
-
-    @torch.inference_mode()
-    def __call__(
-        self,
-        prompt: str,
-        prompt_2: str | list[str] = None,
-        height: int | None = None,
-        width: int | None = None,
-        num_inference_steps: int = 28,
-        start_refinement_step: int = 3,
-        end_refinement_step: int = 6,
-        sigmas: list[float] | None = None,
-        guidance_scale: float = 3.5,
-        num_images_per_prompt: int | None = 1,
-        generator: torch.Generator | list[torch.Generator] | None = None,
-        latents: torch.FloatTensor | None = None,
+        prompt: str | list[str],
+        prompt_2: str | list[str] | None = None,
+        device: torch.device | None = None,
+        num_images_per_prompt: int = 1,
         prompt_embeds: torch.FloatTensor | None = None,
         pooled_prompt_embeds: torch.FloatTensor | None = None,
-        output_type: str | None = "pil",
-        return_dict: bool = True,
-        joint_attention_kwargs: dict[str, Any] | None = None,
-        callback_on_step_end: Callable[[int, int, dict], None] | None = None,
-        callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
         max_sequence_length: int = 512,
-    ) -> FluxPipelineOutput | tuple[PIL.Image.Image]:
-        height = height or self.default_sample_size * self.vae_scale_factor
-        width = width or self.default_sample_size * self.vae_scale_factor
+        lora_scale: float | None = None,
+        window_size: int = 4,
+        p_drop: float = 0.1,
+        sigma_text: float = 0.05,
+        preserve_special: bool = False,
+    ):
+        device = device or self._execution_device
 
-        self._guidance_scale = guidance_scale
-        self._current_timestep = None
-        self._interrupt = False
+        prompt = [prompt] if isinstance(prompt, str) else prompt
 
-        # [TODO] Add support for batching
-        batch_size = 1
-        prompt = accumulative_concat(prompt)
+        assert len(prompt) == 1, "Only one prompt is supported for now"
 
-        device = self._execution_device
+        if prompt_embeds is None:
+            prompt_2 = prompt_2 or prompt
+            prompt_2 = [prompt_2] if isinstance(prompt_2, str) else prompt_2
+            assert len(prompt_2) == 1, "Only one prompt_2 is supported for now"
+            chunked_prompt_2 = chuck_prompt(prompt_2[0], window_size=window_size)
 
-        (
-            prompt_embeds,
-            pooled_prompt_embeds,
-            text_ids,
-        ) = self.encode_prompt(
-            prompt=prompt,
-            prompt_2=prompt_2,
-            prompt_embeds=prompt_embeds,
-            pooled_prompt_embeds=pooled_prompt_embeds,
-            device=device,
-            num_images_per_prompt=num_images_per_prompt,
-            max_sequence_length=max_sequence_length,
-        )
+            # We only use the pooled prompt output from the CLIPTextModel
+            pooled_prompt_embeds = self._get_clip_prompt_embeds(
+                prompt=prompt,
+                device=device,
+                num_images_per_prompt=num_images_per_prompt,
+            )
 
-        num_channels_latents = self.transformer.config.in_channels // 4
-        latents, latent_image_ids = self.prepare_latents(
-            batch_size * num_images_per_prompt,
-            num_channels_latents,
-            height,
-            width,
-            prompt_embeds.dtype,
-            device,
-            generator,
-            latents,
-        )
-        latents = self.denoise(
-            latents=latents,
-            pooled_prompt_embeds=pooled_prompt_embeds,
-            prompt_embeds=prompt_embeds,
-            text_ids=text_ids,
-            latent_image_ids=latent_image_ids,
-            guidance_scale=guidance_scale,
-            start_refinement_step=start_refinement_step,
-            end_refinement_step=end_refinement_step,
-            num_inference_steps=num_inference_steps,
-            device=device,
-            sigmas=sigmas,
-            joint_attention_kwargs=joint_attention_kwargs,
-            callback_on_step_end=callback_on_step_end,
-            callback_on_step_end_tensor_inputs=callback_on_step_end_tensor_inputs,
-        )
+            prompt_embeds = self._get_t5_prompt_embeds(
+                prompt=prompt_2 + chunked_prompt_2,
+                num_images_per_prompt=num_images_per_prompt,
+                max_sequence_length=max_sequence_length,
+                device=device,
+            )
+            prompt_embeds = prompt_embeds.mean(dim=0).unsqueeze(0)
 
-        if output_type == "latent":
-            image = latents
-        else:
-            latents = self._unpack_latents(latents, height, width, self.vae_scale_factor)
-            latents = (latents / self.vae.config.scaling_factor) + self.vae.config.shift_factor
-            image = self.vae.decode(latents, return_dict=False)[0]
-            image = self.image_processor.postprocess(image, output_type=output_type)
+        dtype = self.text_encoder.dtype if self.text_encoder is not None else self.transformer.dtype
+        text_ids = torch.zeros(prompt_embeds.shape[1], 3).to(device=device, dtype=dtype)
 
-        self.maybe_free_model_hooks()
-
-        if not return_dict:
-            return (image,)
-
-        return FluxPipelineOutput(images=image)
+        return prompt_embeds, pooled_prompt_embeds, text_ids

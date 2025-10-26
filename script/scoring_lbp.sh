@@ -1,23 +1,27 @@
 #!/bin/bash
 
 PROMPT_ROOT_DIR="data/lpbench/filtered"
-OUTPUT_ROOT_DIR="outputs/origin"
+OUTPUT_ROOT_DIR="outputs/long_prompt"
 NUM_PROCESSES=1
 MODE="single"
 PORT=29500
-SEED=(42 1234 21344)
+SEED=(42 1234 21344 304516
+      405671 693042 820319
+      972534 987241 1182039)
 OVERWRITE=false
+MODEL_NAME=(sd3 flux cogview4 qwen)
 
 print_help() {
-    echo "Usage: bash evaluate_lbp.sh [OPTIONS]"
+    echo "Usage: bash scoring_lbp.sh [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  --prompt_root_dir PATH        Path to prompts (default: data/long_prompt)"
-    echo "  --output_root_dir PATH        Output directory (default: outputs/origin)"
+    echo "  --prompt_root_dir PATH    Path to prompts (default: data/lpbench/filtered)"
+    echo "  --output_root_dir PATH    Output root directory (default: outputs/long_prompt)"
     echo "  --num_processes INT       Number of processes (default: 1)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: single)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
-    echo "  --overwrite                Overwrite existing scores (default: false)"
+    echo "  --overwrite               Overwrite existing scores (default: false)"
+    echo "  --model_name MODE         Model name: 'flux' or 'sd3' or 'cogview4' or 'qwen' (default: all)"
     echo "  -h, --help                Show this help message and exit"
 }
 
@@ -30,6 +34,7 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;;
         --port) PORT="$2"; shift ;;
         --overwrite) OVERWRITE="$2"; shift ;;
+        --model_name) IFS=',' read -ra MODEL_NAME <<< "$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
     esac
@@ -58,14 +63,6 @@ else
     print_help
     exit 1
 fi
-
-MODEL_NAME=(
-    "flux"
-    "sd3"
-    "qwen"
-    "cogview4"
-    "hidream"
-)
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 

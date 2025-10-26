@@ -1,11 +1,5 @@
-SYSTEM_PROMPT = """
-You are an expert visual prompt engineer and researcher specializing in long, compositionally rich prompts for text-to-image generation.
-"""
-
-INSTRUCTION_PROMPT = """
-You are an expert visual prompt engineer and researcher specializing in long, compositionally rich prompts for text-to-image generation.
-
-Your task is to:
+DATA_GEN_SYSTEM_PROMPT = """You are an expert visual prompt engineer and researcher specializing in long, compositionally rich prompts for text-to-image generation."""
+DATA_GEN_INSTRUCTION_PROMPT = """Your task is to:
 1. Invent a creative theme yourself.  
 2. Write a long, detailed, and coherent text-to-image prompt based on that theme.  
 3. Decompose the scene into **semantic**, **spatial**, and **stylistic** aspects.  
@@ -152,8 +146,12 @@ Return valid JSON in this structure:
             "Does the image convey a cinematic and tranquil mood?"
         ]
     }
-}
-"""
+}"""
+
+REWRITER_SYSTEM_RPOMPT = """You are an expert prompt rephraser for text-to-image generation models."""
+REWRITER_INSTRUCTION_PROMPT = """Your task is to rephrase the given prompt while keeping the same subject and intent. You should keep the length of the rephrased prompt as close to the original as possible. Please provide {num_variants} variants.
+Original prompt: {original_prompt}
+Output Format (Python list of strings): [prompt1, prompt2, ...]"""
 
 
 # =============================== These are LLM-generated phrases ===============================

@@ -3,7 +3,6 @@ from typing import Any, Callable
 import numpy as np
 import PIL.Image
 import torch
-from diffusers import QwenImagePipeline
 from diffusers.pipelines.qwenimage.pipeline_qwenimage import (
     QwenImagePipelineOutput,
     calculate_shift,
@@ -11,6 +10,7 @@ from diffusers.pipelines.qwenimage.pipeline_qwenimage import (
 )
 
 from pipeline.common import accumulative_concat
+from pipeline.vanilla import QwenImagePipeline
 
 
 class QwenImageLPRPipeline(QwenImagePipeline):
@@ -179,7 +179,7 @@ class QwenImageLPRPipeline(QwenImagePipeline):
         true_cfg_scale: float = 4.0,
         height: int | None = None,
         width: int | None = None,
-        num_inference_steps: int = 50,
+        num_inference_steps: int = 28,
         start_refinement_step: int = 6,
         end_refinement_step: int = 15,
         sigmas: list[float] | None = None,

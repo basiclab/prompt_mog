@@ -144,7 +144,10 @@ def format_latex(rows, col_means, col_stds, show_labels=True):
     def fmt_mean_std(m, s):
         return f"{m:.2f} {{\\scriptsize $\\pm$ {s:.2f}}}"
 
-    summary_cells = [fmt_mean_std(m, s) for m, s in zip(col_means, col_stds, strict=True)]
+    summary_cells = [
+        fmt_mean_std(m, s) if col_idx > len(col_means) - 5 else fmt_num(m)
+        for col_idx, (m, s) in enumerate(zip(col_means, col_stds, strict=True))
+    ]
     if show_labels:
         summary_cells = ["mean"] + summary_cells
     lines.append(join_cells(summary_cells))
@@ -182,6 +185,27 @@ def main(
         col_stds = [stdev(col) for col in cols_transposed]
     else:
         col_stds = [0.0 for _ in cols_transposed]
+
+    # add diversity scores
+    count = 0
+    diversity_scores = {"inception-embeddings-vendi": [], "dino-embeddings-vendi": []}
+    for json_file in (root / "diversity").glob("diversity_*.json"):
+        with open(json_file, "r") as f:
+            data = json.load(f)
+        diversity_scores["inception-embeddings-vendi"].append(data["inception_embeddings_vendi"])
+        diversity_scores["dino-embeddings-vendi"].append(data["dino_embeddings_vendi"])
+    col_means.extend(
+        [
+            mean(diversity_scores["inception-embeddings-vendi"]),
+            mean(diversity_scores["dino-embeddings-vendi"]),
+        ]
+    )
+    col_stds.extend(
+        [
+            stdev(diversity_scores["inception-embeddings-vendi"]),
+            stdev(diversity_scores["dino-embeddings-vendi"]),
+        ]
+    )
 
     # Output
     if latex:

@@ -1,7 +1,6 @@
 from typing import Any, Callable
 
 import torch
-from diffusers import StableDiffusion3Pipeline
 from diffusers.pipelines.stable_diffusion_3.pipeline_stable_diffusion_3 import (
     StableDiffusion3PipelineOutput,
     calculate_shift,
@@ -9,9 +8,10 @@ from diffusers.pipelines.stable_diffusion_3.pipeline_stable_diffusion_3 import (
 )
 
 from pipeline.common import accumulative_concat
+from pipeline.vanilla import StableDiffusion3Pipeline
 
 
-class SD35LPRPipeline(StableDiffusion3Pipeline):
+class SD3LPRPipeline(StableDiffusion3Pipeline):
     def denoise(
         self,
         latents: torch.Tensor,
@@ -202,7 +202,7 @@ class SD35LPRPipeline(StableDiffusion3Pipeline):
         clip_skip: int | None = None,
         callback_on_step_end: Callable[[int, int, dict], None] | None = None,
         callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
-        max_sequence_length: int = 256,
+        max_sequence_length: int = 512,
         skip_guidance_layers: list[int] | None = None,
         skip_layer_guidance_scale: float = 2.8,
         skip_layer_guidance_stop: float = 0.2,

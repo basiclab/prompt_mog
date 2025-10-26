@@ -32,7 +32,7 @@ from accelerate import Accelerator
 from torch.utils.data import DataLoader
 from transformers import Qwen3VLMoeForConditionalGeneration, Qwen3VLProcessor, SiglipModel, SiglipProcessor
 
-from eval_utils.dataset import LongPromptGenDataset, collate_fn
+from eval_utils.dataset import GeneratedImageDataset, collate_fn
 
 # avoid the warning of tokenizers parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -147,7 +147,7 @@ def main(
         clip_model, clip_processor = build_siglip_model(device, dtype)
     answer_token_idx = vqa_processor.tokenizer.encode("Yes")[0]
 
-    dataset = LongPromptGenDataset(root_dir=prompt_root_dir, gen_image_dir=gen_root_dir)
+    dataset = GeneratedImageDataset(prompt_root_dir=prompt_root_dir, gen_root_dir=gen_root_dir)
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,
@@ -228,6 +228,7 @@ def main(
 
         starting_idx += batch_size * accelerator.num_processes
 
+    accelerator.wait_for_everyone()  # since we need to compute the average score on the main process
     # compute the average score (only on the main process)
     if accelerator.is_main_process:
         average_score = {}

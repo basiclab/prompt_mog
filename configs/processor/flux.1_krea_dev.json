@@ -1,0 +1,11 @@
+{
+    "start_normal_token_idx": 1,
+    "end_normal_token_idx": -1,
+    "alignment_modules": [
+        "transformer_blocks.8.attn",
+        "single_transformer_blocks.34.attn",
+        "single_transformer_blocks.35.attn"
+    ],
+    "has_cfg": false,
+    "batch_idx": 0
+}
