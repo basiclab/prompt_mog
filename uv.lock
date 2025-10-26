@@ -1168,12 +1168,10 @@ dependencies = [
     { name = "diffusers" },
     { name = "einops" },
     { name = "flash-attn" },
-    { name = "lpips" },
     { name = "openai" },
     { name = "pip" },
     { name = "protobuf" },
     { name = "python-dotenv" },
-    { name = "pytorch-msssim" },
     { name = "sentence-transformers" },
     { name = "sentencepiece" },
     { name = "spacy" },
@@ -1183,7 +1181,6 @@ dependencies = [
     { name = "torchvision" },
     { name = "transformers" },
     { name = "tyro" },
-    { name = "vendi-score", extra = ["images"] },
 ]
 
 [package.dev-dependencies]
@@ -1203,12 +1200,10 @@ requires-dist = [
     { name = "diffusers", specifier = "==0.35.1" },
     { name = "einops", specifier = "==0.8.1" },
     { name = "flash-attn", specifier = "==2.8.3" },
-    { name = "lpips", specifier = "==0.1.4" },
     { name = "openai", specifier = "==2.4.0" },
     { name = "pip", specifier = "==25.2" },
     { name = "protobuf", specifier = "==6.31.1" },
     { name = "python-dotenv", specifier = "==1.1.1" },
-    { name = "pytorch-msssim", specifier = "==1.0.0" },
     { name = "sentence-transformers", specifier = "==5.1.1" },
     { name = "sentencepiece", specifier = "==0.2.0" },
     { name = "spacy", specifier = "==3.8.7" },
@@ -1218,7 +1213,6 @@ requires-dist = [
     { name = "torchvision", specifier = "==0.23.0", index = "https://download.pytorch.org/whl/cu126" },
     { name = "transformers", specifier = "==4.57.1" },
     { name = "tyro", specifier = "==0.9.35" },
-    { name = "vendi-score", extras = ["images"], specifier = ">=0.0.3" },
 ]
 
 [package.metadata.requires-dev]
@@ -1229,22 +1223,6 @@ dev = [
     { name = "ruff", specifier = ">=0.11.11" },
     { name = "scienceplots", specifier = ">=2.1.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
-]
-
-[[package]]
-name = "lpips"
-version = "0.1.4"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "numpy" },
-    { name = "scipy" },
-    { name = "torch" },
-    { name = "torchvision" },
-    { name = "tqdm" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e8/2d/4b8148d32f5bd461eb7d5daa54fcc998f86eaa709a57f4ef6aa4c62f024f/lpips-0.1.4.tar.gz", hash = "sha256:3846331df6c69688aec3d300a5eeef6c529435bc8460bd58201c3d62e56188fa", size = 18029, upload-time = "2021-08-25T22:10:32.803Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/9b/13/1df50c7925d9d2746702719f40e864f51ed66f307b20ad32392f1ad2bb87/lpips-0.1.4-py3-none-any.whl", hash = "sha256:fd537af5828b69d2e6ffc0a397bd506dbc28ca183543617690844c08e102ec5e", size = 53763, upload-time = "2021-08-25T22:10:31.257Z" },
 ]
 
 [[package]]
@@ -2273,18 +2251,6 @@ wheels = [
 ]
 
 [[package]]
-name = "pytorch-msssim"
-version = "1.0.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "torch" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/69/43/fd181aef46e96ed025f5056efa1c45e63c93d377fbe7ea784a21ce058d03/pytorch_msssim-1.0.0.tar.gz", hash = "sha256:53273f03ce5c435f706f49feb5110a8afe90b2519484b0fe0df9639670106d0b", size = 10113, upload-time = "2023-05-25T17:15:57.146Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/e2/8c/856047f955acc30179e9255fdc488059ca22f0938519523d53494f7cfee8/pytorch_msssim-1.0.0-py3-none-any.whl", hash = "sha256:0b4b7bbf7035fe9dc8084244237aac13b1f104852c45b63a7e9fab4363bede54", size = 7744, upload-time = "2023-05-25T17:15:55.809Z" },
-]
-
-[[package]]
 name = "pytz"
 version = "2025.2"
 source = { registry = "https://pypi.org/simple" }
@@ -3119,24 +3085,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
-]
-
-[[package]]
-name = "vendi-score"
-version = "0.0.3"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "numpy" },
-    { name = "scikit-learn" },
-    { name = "scipy" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/7f/4c/ffff6368e4f13a17b8b65df59c868f6a2c8c9feadaaa203e7b6ac5e5f659/vendi-score-0.0.3.tar.gz", hash = "sha256:7b133fd293d63038aea032b2933c68a7040991ee91d9b953fb6b1ede43526c53", size = 13158, upload-time = "2022-08-30T15:58:35.418Z" }
-
-[package.optional-dependencies]
-images = [
-    { name = "matplotlib" },
-    { name = "torch" },
-    { name = "torchvision" },
 ]
 
 [[package]]
