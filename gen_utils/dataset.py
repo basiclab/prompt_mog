@@ -41,7 +41,13 @@ class ShortPromptDataset(Dataset):
         for prompt_file in prompt_files:
             with open(prompt_file, "r") as f:
                 prompt = json.load(f)
-            self.prompts.append(". ".join(prompt["prompt"].split(".")[:first_top]).strip().lower())
+            split_prompt = prompt["prompt"].split(".")
+            if len(split_prompt) < first_top:
+                self.prompts.append(prompt["prompt"].strip().lower())
+                continue
+            else:
+                # using the same seperator
+                self.prompts.append(".".join(split_prompt[:first_top]).strip().lower())
 
     def __len__(self):
         return len(self.prompts)

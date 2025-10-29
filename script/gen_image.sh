@@ -27,10 +27,10 @@ print_help() {
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
+    echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 3.0)"
     echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
     echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
-    echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  -h, --help                Show this help message and exit"
 }
 
@@ -45,6 +45,7 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;; 
         --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
         --port) PORT="$2"; shift ;;
+        --first_top) FIRST_TOP="$2"; shift ;;
         --gamma) GAMMA="$2"; shift ;;
         --num_mode) NUM_MODE="$2"; shift ;;
         --sigma) SIGMA="$2"; shift ;;
