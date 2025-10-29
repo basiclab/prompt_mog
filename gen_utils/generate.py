@@ -11,7 +11,7 @@ from accelerate import Accelerator
 from torch.utils.data import DataLoader
 
 from gen_utils.common import DETYPE_MAPPING, check_used_balance, create_pipeline, setup_logging
-from gen_utils.dataset import LongPromptDataset, RewrittenPromptDataset, ShortPromptDataset
+from gen_utils.dataset import GenEvalDataset, LongPromptDataset, RewrittenPromptDataset, ShortPromptDataset
 
 # avoid the warning of tokenizers parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
@@ -19,6 +19,7 @@ DATASET_MAPPING = {
     "rewritten": RewrittenPromptDataset,
     "long": LongPromptDataset,
     "short": ShortPromptDataset,
+    "geneval": GenEvalDataset,
 }
 
 
@@ -26,19 +27,20 @@ def main(
     prompt_root_dir: str,
     output_root_dir: str,
     pretrained_name: str,
-    dataset_type: Literal["long", "short", "rewritten"] = "long",
-    model_type: Literal["long", "short"] = "short",
+    dataset_type: Literal["long", "short", "rewritten", "geneval"] = "long",
+    model_type: Literal["pmog", "chunk", "short"] = "short",
     config_root: str = "configs",
     mixed_precision: Literal["none", "fp16", "bf16"] = "bf16",
     seed: int = 42,
-    prompt_index: int = 0,  # for rewritten prompts only
     required_memory: int = 1,
     batch_size: int = 1,
     num_workers: int = 4,
-    # long prompt generation parameters
-    p_drop: float = 0.1,
-    sigma_text: float = 0.05,
-    window_size: int | float = 0.75,
+    prompt_index: int = 0,  # for rewritten prompts only
+    first_top: int = 1,  # for short prompts only
+    # p-mog generation parameters
+    gamma: float = 3.0,
+    num_mode: int = 10,
+    sigma: float = 0.05,
 ):
     accelerator = Accelerator()
     device = accelerator.device
@@ -55,10 +57,8 @@ def main(
             device=device,
             model_type=model_type,
         )
-    if model_type == "long":
-        pipe.encode_prompt = partial(
-            pipe.encode_prompt, window_size=window_size, p_drop=p_drop, sigma_text=sigma_text
-        )
+    if model_type == "pmog":
+        pipe.encode_prompt = partial(pipe.encode_prompt, gamma=gamma, num_mode=num_mode, sigma=sigma)
 
     pipe.set_progress_bar_config(disable=True)
     if hasattr(pipe, "set_logger_level"):
@@ -73,7 +73,7 @@ def main(
     with open(config_path, "r") as f:
         gen_params = json.load(f)
 
-    dataset = DATASET_MAPPING[dataset_type](root_dir=prompt_root_dir, index=prompt_index)
+    dataset = DATASET_MAPPING[dataset_type](root_dir=prompt_root_dir, index=prompt_index, first_top=first_top)
     dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=num_workers, shuffle=False)
 
     dataloader = accelerator.prepare(dataloader)

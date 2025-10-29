@@ -1,6 +1,11 @@
-from .long_prompt.flux_lpr_pipeline import FluxLPRPipeline
-from .long_prompt.qwen_image_lpr_pipeline import QwenImageLPRPipeline
-from .long_prompt.sd35_lpr_pipeline import SD3LPRPipeline
+from .chuck_prompt.cogview4_chunk_pipeline import CogView4PromptChunkPipeline
+from .chuck_prompt.flux_chunk_pipeline import FluxPromptChunkPipeline
+from .chuck_prompt.qwen_image_chunk_pipeline import QwenImagePromptChunkPipeline
+from .chuck_prompt.sd3_chunk_pipeline import SD3PromptChunkPipeline
+from .prompt_mog.cogview_pmog_pipeline import CogView4PMOGPipeline
+from .prompt_mog.flux_pmog_pipeline import FluxPMOGPipeline
+from .prompt_mog.qwen_pmog_pipeline import QwenPMOGPipeline
+from .prompt_mog.sd3_pmog_pipeline import SD3PMOGPipeline
 from .vanilla import (
     CogView4Pipeline,
     FluxPipeline,
@@ -9,9 +14,14 @@ from .vanilla import (
 )
 
 __all__ = [
-    "FluxLPRPipeline",
-    "QwenImageLPRPipeline",
-    "SD3LPRPipeline",
+    "FluxPMOGPipeline",
+    "CogView4PromptChunkPipeline",
+    "FluxPromptChunkPipeline",
+    "QwenImagePromptChunkPipeline",
+    "SD3PromptChunkPipeline",
+    "CogView4PMOGPipeline",
+    "SD3PMOGPipeline",
+    "QwenPMOGPipeline",
     "FluxPipeline",
     "QwenImagePipeline",
     "StableDiffusion3Pipeline",

@@ -32,6 +32,7 @@ if [ "$OVERWRITE" = true ]; then
     ARGS="--overwrite"
 fi
 
+export PYTHONPATH=$PYTHONPATH:$(pwd)
 for model in "${MODEL_LIST[@]}"; do
     for mode in "${OUTPUT_ROOT_DIR}"/*; do
         if [ ! -d "${mode}/${model}" ]; then  # Specific prompt type

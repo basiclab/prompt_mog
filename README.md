@@ -65,14 +65,45 @@ The outputs will be saved to `data/lpbench/rewritten`.
 ./script/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/short_prompt
+    --output_root_dir outputs/short_prompt_1 \
+    --first_num 1
+./script/gen_image.sh \
+    --dataset_type short \
+    --prompt_root_dir data/lpbench/filtered \
+    --output_root_dir outputs/short_prompt_3 \
+    --first_num 3
+./script/gen_image.sh \
+    --dataset_type short \
+    --prompt_root_dir data/lpbench/filtered \
+    --output_root_dir outputs/short_prompt_3 \
+    --first_num 5
 
 # Score the diversity
 ./script/scoring_diversity.sh --output_root_dir outputs/long_prompt
 ./script/scoring_diversity.sh --output_root_dir outputs/short_prompt
 ```
 
-### Prompt Rewriting Test
+### Prompt-MoG
+
+```bash
+./script/gen_image.sh \
+    --dataset_type long \
+    --model_type pmog \
+    --prompt_root_dir data/lpbench/filtered \
+    --output_root_dir outputs/pmog_prompt
+```
+
+### Chunking
+
+```bash
+./script/gen_image.sh \
+    --dataset_type long \
+    --model_type chunk \
+    --prompt_root_dir data/lpbench/filtered \
+    --output_root_dir outputs/chunk_prompt
+```
+
+### Prompt Rewriting
 
 ```bash
 ./script/gen_image.sh \
@@ -86,4 +117,13 @@ The outputs will be saved to `data/lpbench/rewritten`.
 
 # Score the CLIP and VQA score
 ./script/scoring_lbp.sh --output_root_dir outputs/rewritten_prompt
+```
+
+### GenEval
+
+```bash
+./script/gen_image.sh \
+    --dataset_type gen_eval \
+    --prompt_root_dir data/geneval \
+    --output_root_dir outputs/gen_eval_prompt
 ```

@@ -64,12 +64,12 @@ else
     exit 1
 fi
 
-export PYTHONPATH=$PYTHONPATH:$(pwd)
-
 ARGS="--dtype bf16"
 if [ "$OVERWRITE" = true ]; then
     ARGS="$ARGS --overwrite"
 fi
+
+export PYTHONPATH=$PYTHONPATH:$(pwd)
 for model_name in ${MODEL_NAME[@]}; do
     for seed in ${SEED[@]}; do
         echo "Scoring ${model_name} for seed ${seed}"

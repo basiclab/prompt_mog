@@ -6,9 +6,16 @@ import transformers
 
 from pipeline import (
     CogView4Pipeline,
-    FluxLPRPipeline,
+    CogView4PMOGPipeline,
+    CogView4PromptChunkPipeline,
     FluxPipeline,
+    FluxPMOGPipeline,
+    FluxPromptChunkPipeline,
     QwenImagePipeline,
+    QwenImagePromptChunkPipeline,
+    QwenPMOGPipeline,
+    SD3PMOGPipeline,
+    SD3PromptChunkPipeline,
     StableDiffusion3Pipeline,
 )
 
@@ -18,8 +25,22 @@ ORIGINAL_PIPELINE_MAPPING = {
     "qwen": QwenImagePipeline,
     "cogview4": CogView4Pipeline,
 }
-LONG_PROMPT_PIPELINE_MAPPING = {
-    "flux": FluxLPRPipeline,
+CHUNK_PIPELINE_MAPPING = {
+    "flux": FluxPromptChunkPipeline,
+    "sd3": SD3PromptChunkPipeline,
+    "qwen": QwenImagePromptChunkPipeline,
+    "cogview4": CogView4PromptChunkPipeline,
+}
+PMOG_PIPELINE_MAPPING = {
+    "flux": FluxPMOGPipeline,
+    "sd3": SD3PMOGPipeline,
+    "qwen": QwenPMOGPipeline,
+    "cogview4": CogView4PMOGPipeline,
+}
+NAME_TO_PIPELINE_MAPPING = {
+    "pmog": PMOG_PIPELINE_MAPPING,
+    "chunk": CHUNK_PIPELINE_MAPPING,
+    "short": ORIGINAL_PIPELINE_MAPPING,
 }
 
 DETYPE_MAPPING = {
@@ -47,10 +68,11 @@ def create_pipeline(
     dtype: torch.dtype,
     use_balance: bool,
     device: torch.device,
-    model_type: Literal["long", "short"] = "short",
+    model_type: Literal["pmog", "chunk", "short"] = "short",
 ) -> FluxPipeline | StableDiffusion3Pipeline | CogView4Pipeline | QwenImagePipeline:
     pipe_kwargs = {"torch_dtype": dtype}
-    pipeline_mapping = ORIGINAL_PIPELINE_MAPPING if model_type == "short" else LONG_PROMPT_PIPELINE_MAPPING
+    assert model_type in NAME_TO_PIPELINE_MAPPING, f"Unknown model type: {model_type}"
+    pipeline_mapping = NAME_TO_PIPELINE_MAPPING[model_type]
 
     if "flux" in pretrained_name.lower():
         pipeline_class = pipeline_mapping["flux"]
