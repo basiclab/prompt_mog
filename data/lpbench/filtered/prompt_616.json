@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of a grand, historic cathedral, a wedding ceremony unfolds with timeless elegance beneath the soaring arches and intricate stained glass windows that bathe the space in a kaleidoscope of colors. The bride, adorned in a gown of delicate lace and flowing satin, stands at the altar beside her groom, whose tailored tuxedo exudes sophistication. Guests, elegantly dressed, fill the pews, their faces lit with anticipation and joy. The scene is captured from the aisle, offering a central perspective that draws focus to the couple. The foreground features a path of rose petals leading to the altar, while the midground highlights the attentive congregation. In the background, the cathedral's majestic organ and towering columns stand in silent grandeur. Soft, natural light filters through the stained glass, casting vibrant hues onto the polished marble floor. The atmosphere is serene, yet charged with the emotion of the occasion. The color palette harmonizes rich reds, deep blues, and warm golds from the stained glass, creating an air of opulence and reverence. The cathedral's intricate details are rendered with the clarity and precision of fine art photography, capturing both the intimate and grandiose elements of the celebration. This professional composition, with its crisp focus and exquisite detail, invites viewers to experience the profound beauty and significance of this matrimonial milestone, making the scene an unforgettable visual narrative.",
+  "semantic": {
+    "description": [
+      "The scene takes place in a historic cathedral during a wedding ceremony.",
+      "A bride and groom stand at the altar, surrounded by elegantly dressed guests.",
+      "Stained glass windows illuminate the space with vibrant colors."
+    ],
+    "questions": [
+      "Is the setting a historic cathedral?",
+      "Are there stained glass windows in the scene?",
+      "Are the bride and groom at the altar?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a central aisle perspective, focusing on the couple.",
+      "A path of rose petals is visible in the foreground leading to the altar.",
+      "In the background, the cathedral's organ and columns provide a grand backdrop."
+    ],
+    "questions": [
+      "Is the perspective from the aisle central to the couple?",
+      "Are rose petals arranged on the floor leading to the altar?",
+      "Is there a grand organ visible in the cathedral's background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and natural, filtered through stained glass.",
+      "The mood is serene yet emotionally charged with a sense of opulence.",
+      "The color palette includes rich reds, deep blues, and warm golds."
+    ],
+    "questions": [
+      "Is the lighting soft and natural in quality?",
+      "Does the color palette feature rich reds and deep blues?",
+      "Is the mood both serene and reverent?"
+    ]
+  }
+}

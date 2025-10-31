@@ -1,0 +1,37 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "In a secluded coastal alcove where the land meets the sea, an impeccably restored 1960s Jaguar E-Type gleams under the soft light of dawn. Its opalescent green paint shimmers in the early morning light, contrasting against the rugged rocks and the shimmering azure waters of the Atlantic. The vehicle is positioned at an angle with the front facing the inviting horizon, capturing the elegance of its elongated hood and the classic curvature of its sleek frame. From a slightly elevated position, the photograph captures the vehicle's allure, with the waves of the ocean gently lapping at the rocky shore in the background. The Jaguar stands prominently in the foreground, its polished chrome accents reflecting the golden hues of the breaking day. The atmosphere is serene, the gently shifting sea breeze creating a rhythmic play of shadows across the car's surface. The color palette is a harmonious blend of the car's vintage green with the ocean's deep blue and the sky's pastel hues, setting an evocative mood of nostalgia and wanderlust. Fine art photography elements are embraced in style, utilizing a wide-angle lens to frame both the vintage car and the expansive seascape. The composition exudes professionalism and attention to detail, with sharp focus and meticulous clarity, ensuring every reflection and curvature is captured with precision. This breathtaking moment is rendered in high-definition, poised to be celebrated as an award-winning automotive photograph.",
+  "semantic": {
+    "description": [
+      "The scene features a 1960s Jaguar E-Type with an opalescent green paint.",
+      "The Jaguar is restored to an impeccable condition, showcasing its classic design.",
+      "Waves of the ocean can be seen lapping at the rocky shore in the background."
+    ],
+    "questions": [
+      "Is there a restored Jaguar E-Type in the scene?",
+      "Is the Jaguar positioned near the ocean?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The Jaguar E-Type is positioned at an angle facing the horizon.",
+      "The photograph is taken from a slightly elevated vantage point.",
+      "The car is prominently placed in the foreground with the ocean in the background."
+    ],
+    "questions": [
+      "Is the photograph taken from an elevated position?",
+      "Is the car in the foreground of the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The photograph captures soft light of dawn, creating a serene atmosphere.",
+      "The color palette includes the car's vintage green, ocean blue, and pastel sky hues.",
+      "The style embraces fine art photography with a focus on detail and clarity."
+    ],
+    "questions": [
+      "Is the photograph taken in the soft light of dawn?",
+      "Does the color palette feature vintage green and ocean blue tones?"
+    ]
+  }
+}

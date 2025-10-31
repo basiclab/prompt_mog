@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the heart of an expansive and verdant football pitch, a crucial match unfolds between two rival teams, each vying for victory under the bright afternoon sun. The air is charged with tension and energy as players, clad in distinctive jerseys, race across the lush green grass, their movements a blur of agility and determination. Positioned within the frame, the camera captures a dynamic mid-action shot from a side angle, focusing on a star striker as he deftly maneuvers past the opposing defenders. His muscles ripple under the exertion, sweat glistening on his brow, his eyes intensely fixated on the goal. The goalkeeper is poised, anticipating the shot with arms wide and eyes sharp. In the background, a roaring crowd fills the stadium, their vibrant attire and animated gestures painting a tapestry of anticipation and excitement. Towering floodlights stand sentinel over the scene, casting soft, elongated shadows across the field. A gentle breeze rustles the flags atop the stadium, their colors popping vividly against the clear sky. The lighting adds a dramatic aura, with the sun casting a golden hue that highlights the contrast between the bright jerseys and the verdant grass. The image resonates with the gritty realism of high-stakes sports photography, capturing the raw emotion and intense focus of the players. The scene, rich in detail and clarity, boasts impeccable sharpness and depth, reflecting the precision and skill of a seasoned sports photographer.",
+  "semantic": {
+    "description": [
+      "Two rival football teams are engaged in a match on a verdant pitch.",
+      "A star striker is captured mid-action as he maneuvers past defenders.",
+      "The goalkeeper is poised with arms wide, anticipating the coming shot."
+    ],
+    "questions": [
+      "Are there two teams playing football?",
+      "Is the striker maneuvering past defenders?",
+      "Is the goalkeeper positioned to block a shot?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is from the side, focusing on the striker mid-action.",
+      "Players are positioned across the lush green field with a dynamic layout.",
+      "Floodlights stand tall in the background, casting shadows on the field."
+    ],
+    "questions": [
+      "Is the camera angle side-focused on the striker?",
+      "Are the players positioned dynamically across the field?",
+      "Do the floodlights cast shadows on the pitch?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in golden sunlight, enhancing contrast and clarity.",
+      "The sun casts a warm, golden hue across players and grass.",
+      "The image embodies the gritty realism typical of sports photography."
+    ],
+    "questions": [
+      "Is the scene illuminated by golden sunlight?",
+      "Does the sun cast a warm hue over the scene?",
+      "Is the image in the style of sports photography?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "As dusk gently descends upon an idyllic seaside village, its vibrant wedding celebration comes alive against the backdrop of a serene, star-studded ocean vista. The scene thrives with harmonious contrasts, where a majestic pavilion draped in silken pastel fabrics stands elegantly in the sand, its form mirrored by the shimmering azure waves. Within the pavilion, the joyous bride and groom, resplendent in their attire, share tender vows, surrounded by a gathering of close family and friends whose laughter mingles with the soft symphony of cascading waves. Viewed from a slightly elevated perspective, the camera captures the ceremonial arch framed by delicate floral arrangements that sway gently in the ocean breeze, adding layers of color and depth. A meticulously arranged aisle of polished, conch shell-lined sand leads viewers' eyes toward the couple, enhancing the sense of intimacy and focus. The golden glow of lanterns hung on strings overhead casts a warm, enchanting halo upon the assembly, interspersed with the flickering light of candles adorning each table, creating a magical atmosphere that breathes life into the celebration. As the evening progresses, the sky is painted with hues of deep indigo and soft coral, mirrored on the tranquil sea, while gentle shadows play upon the soft sand, heightening the romantic allure. The color palette of the event is a splendid mix of serene blues, tender pastels, and ethereal golds, evoking a sense of timeless love and belonging. The image, reminiscent of fine art event photography, is captured with exceptional clarity and rich texture, emphasizing the fine details, from the intricate beading on the bride's dress to the thoughtful arrangement of tropical flowers. The overall composition is both visually striking and emotionally evocative, a testament to professional craftsmanship that renders the special day unforgettable.",
+  "semantic": {
+    "description": [
+      "A majestic pavilion, draped in silken pastel fabrics, stands elegantly in the sand.",
+      "The bride and groom, in resplendent attire, exchange vows inside the pavilion.",
+      "Family and friends gather around, enhancing the atmosphere with their presence."
+    ],
+    "questions": [
+      "Is the pavilion draped in pastel fabrics?",
+      "Are the bride and groom exchanging vows in the scene?",
+      "Are family and friends present at the wedding celebration?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated perspective, enhancing depth.",
+      "An aisle of conch shell-lined sand leads towards the central ceremony.",
+      "Delicate floral arrangements sway around the ceremonial arch, adding layers of color."
+    ],
+    "questions": [
+      "Is the camera perspective slightly elevated?",
+      "Does the aisle of sand lead towards the ceremony?",
+      "Are there floral arrangements around the ceremonial arch?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The warm glow of lanterns casts an enchanting halo over the scene.",
+      "The sky is painted in hues of deep indigo and soft coral, mirrored on the sea.",
+      "The image captures rich textures, from the dress beading to tropical flowers."
+    ],
+    "questions": [
+      "Is there a warm glow from the lanterns?",
+      "Are the sky's colors mirrored on the sea?",
+      "Is the image rich in texture and detail?"
+    ]
+  }
+}

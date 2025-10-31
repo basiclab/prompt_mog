@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Set within an affluent urban landscape, a newly designed, luxury penthouse apartment crowns the top of a sleek and stylish skyscraper. The architecture is a masterful blend of glass and steel, reflecting both innovation and modern elegance. Inside, the apartment unfolds in a spacious open floor plan, emphasizing clean lines and a minimalist aesthetic. From a high vantage point, the camera captures the panoramic view, with floor-to-ceiling windows revealing the bustling cityscape below. This allows natural light to flood the interior, creating an airy and expansive atmosphere. The interior design showcases a harmonious blend of contemporary furniture — elegant yet functional pieces in muted tones of gray and beige, complemented by polished hardwood floors that exude warmth and sophistication. The living room serves as the focal point, centered around a stylish, low-profile sofa with a glass coffee table and abstract art adorning the walls. The kitchen, seamlessly integrated into the space, features high-end stainless steel appliances and a sleek marble island, perfect for entertaining guests. In the background, the city skyline rises against the horizon, glowing softly as the sun sets, casting a golden hue across the scene. This beautiful blend of natural light and ambient indoor lighting creates a serene and inviting atmosphere, enhancing the luxurious feel of the space. In the style of high-end architectural photography, the image captures every detail with impeccable clarity and sharpness, showcasing the opulent design and the refined taste of the setting. The final composition is a testament to professional photography, where every element is perfectly framed and balanced, making it a compelling representation of sophisticated urban living.",
+  "semantic": {
+    "description": [
+      "The penthouse apartment is located at the top of a modern skyscraper.",
+      "The interior features an open floor plan with contemporary furniture.",
+      "A panoramic view is visible through floor-to-ceiling windows."
+    ],
+    "questions": [
+      "Is there a penthouse apartment in the scene?",
+      "Does the interior have an open floor plan?",
+      "Are there floor-to-ceiling windows visible?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a high vantage point above the city.",
+      "The living room is centered around a low-profile sofa and a glass coffee table.",
+      "The cityscape is visible in the background through large windows."
+    ],
+    "questions": [
+      "Is the camera positioned at a high vantage point?",
+      "Is the living room centered around a specific arrangement?",
+      "Is the cityscape visible through the windows?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene uses a blend of natural and ambient indoor lighting.",
+      "The color palette includes muted tones of gray and beige.",
+      "The style is high-end architectural photography with sharp clarity."
+    ],
+    "questions": [
+      "Is there a mix of natural and ambient lighting in the scene?",
+      "Are the colors in muted tones of gray and beige?",
+      "Is the style reflective of high-end architectural photography?"
+    ]
+  }
+}

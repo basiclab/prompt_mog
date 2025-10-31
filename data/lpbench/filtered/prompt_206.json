@@ -1,0 +1,37 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "As the tempest unfolds, an ancient stone bridge arches gracefully over a roaring river, its weathered stones glistening under the relentless assault of driving rain. The scene is captured from a slightly elevated vantage point, positioned to the left of the bridge, allowing for an expansive view of the landscape beyond. The foreground is dominated by the swirling waters of the river, tumultuous and alive, reflecting the stormy sky overhead. In the midground, the bridge stands as a testament to human endurance against nature's fury, while the background reveals a dense forest shrouded in a veil of mist, as if trying to conceal itself from the storm's wrath. The sky is a dramatic tableau of dark, swirling clouds, punctuated intermittently by brilliant flashes of lightning that illuminate the scene with ephemeral bursts of light. The interplay of light and shadow created by the lightning adds depth and intensity, enhancing the already electric atmosphere. The color palette is dominated by deep grays and silvery blues, with occasional streaks of vivid white from the lightning, conveying a sense of raw and unrestrained power. The rain cascades down in sheets, blurring the boundaries between earth and sky and blending the scene into a cohesive, dynamic whole. The style captures the raw beauty and violence of the storm, a homage to nature's untamed spirit. With each detail rendered in sharp focus, the image exudes a professional quality, akin to an award-winning landscape photograph. Each element, from the bridge to the forest, is meticulously composed, inviting the viewer to lose themselves in the storm's embrace.",
+  "semantic": {
+    "description": [
+      "An ancient stone bridge arches over a roaring river.",
+      "The river reflects the stormy sky overhead.",
+      "A dense forest is visible in the background, shrouded in mist."
+    ],
+    "questions": [
+      "Is there an ancient stone bridge in the scene?",
+      "Does the river reflect the stormy sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated vantage point to the left of the bridge.",
+      "The bridge occupies the midground, with the river in the foreground.",
+      "The forest in the background creates a sense of depth."
+    ],
+    "questions": [
+      "Is the bridge positioned in the midground?",
+      "Does the scene provide an expansive view of the landscape?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The sky is filled with dark, swirling clouds and intermittent lightning.",
+      "The color palette features deep grays and silvery blues.",
+      "Sheeting rain blurs the boundaries between earth and sky."
+    ],
+    "questions": [
+      "Does the scene include flashes of lightning?",
+      "Is the color palette dominated by deep grays and silvery blues?"
+    ]
+  }
+}

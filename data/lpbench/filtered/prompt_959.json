@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a mystical, dreamlike realm, there stands an otherworldly library engulfed by the expanse of a floating island in a surreal sky. The library, a towering structure seemingly crafted from translucent glass and shimmering opal, is the central figure on this ethereal canvas, projecting an aura of ancient wisdom and arcane mystery. Spiraling upwards like a towering spiral shell, its structure defies both gravity and logic, suggesting that laws of physics bend to imagination here. Hovering above the island, a collection of enormous books drifts gently through the air, their covers animated with shifting scenes from forgotten worlds. Abstract patterns of golden script adorn their surfaces, gleaming with an internal glow that dances with the rhythm of a silent, celestial melody. From a vantage point above and slightly to the side, the library is framed by a drifting sea of clouds—soft and textured like rippling silk—enhancing the vivid impression of flight and weightlessness. In the background, a sky navigates between twilight hues, where strands of the aurora borealis weave through a spectrum of soft purples, blues, and luminous greens. The primary light source is a radiant crescent moon, floating impossibly close, illuminating the scene with an ethereal, silver-blue luminescence. Shadows cast by the moon create deep, intricate patterns across the scene, suggesting untold stories hidden in their depths. The color palette shifts seamlessly from the warm opalescent tones of the library to the cool, spectral colors of the sky, evoking a sense of wonder and tranquility. The image captures the essence of a fantastical library scene that might emerge from a dream, with technical finesse that merges the sharpness of high-resolution photography with the atmospheric qualities of a classic impressionist painting. The result is an award-winning composition, where every detail is meticulously captured to inspire awe and contemplation.",
+  "semantic": {
+    "description": [
+      "An otherworldly library stands on a floating island in a surreal sky.",
+      "Enormous books drift through the air, adorned with golden script.",
+      "A crescent moon illuminates the scene with a silver-blue glow."
+    ],
+    "questions": [
+      "Is there a library present in the scene?",
+      "Are there floating books depicted?",
+      "Is the scene illuminated by a crescent moon?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The library is central and spirals upwards like a shell.",
+      "The vantage point is from above, slightly to the side.",
+      "Clouds surround the island, enhancing the scene's weightlessness."
+    ],
+    "questions": [
+      "Is the library positioned centrally in the scene?",
+      "Does the vantage point show the scene from above?",
+      "Are clouds visibly surrounding the floating island?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene shifts between twilight hues of purples and blues.",
+      "The image has the sharpness of high-resolution photography.",
+      "The light creates deep, intricate shadows across the scene."
+    ],
+    "questions": [
+      "Does the scene feature a twilight color palette?",
+      "Is the image sharp, with high-resolution quality?",
+      "Are there intricate shadows created by the light?"
+    ]
+  }
+}

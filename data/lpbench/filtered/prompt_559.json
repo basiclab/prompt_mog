@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the heart of a grand Olympic-sized velodrome, a high-stakes track cycling championship unfolds under the glaring floodlights. The immense circular track, a marvel of engineering, encircles the field like a massive ring of polished wood, providing the perfect surface for speed and precision. Cyclists clad in vibrant aerodynamic suits blaze around the track, their bodies low to their carbon-fiber frames, capturing the essence of athletic excellence and competition. Positioned high above the arena, the camera angle offers a sweeping view of the entire track, accentuating the meticulous lines and the packed audience whose cheers echo through the air. The framing centers on a lead cyclist pushing the limits, head down, muscles taut, as rivals surge closely behind, creating a scenario bursting with tension and drama. The background is a blur of motion, colors, and lights, amplifying the sense of incredible speed. The dazzling artificial lights cast sharp shadows on the track, highlighting the cyclists' features and the gleaming surfaces of their helmets and bikes. Amidst this electric atmosphere, the bright, vivid jerseys of the athletes contrast with the sleek, neutral tones of the velodrome, emphasizing the determined spirits of those who compete on this global stage. The mood is electric, with a frenetic energy that mirrors the cycling pace, every pedal stroke a mix of power and grace. Captured with a photojournalistic approach, the scene is filled with razor-sharp detail and dynamic composition, emphasizing the technical prowess and human endurance of international sports.",
+  "semantic": {
+    "description": [
+      "Cyclists in aerodynamic suits are racing on a wooden track.",
+      "The scene is set in an Olympic-sized velodrome filled with spectators.",
+      "Bright floodlights illuminate the cyclists and the track."
+    ],
+    "questions": [
+      "Are the cyclists wearing aerodynamic suits?",
+      "Is the event taking place in a velodrome?",
+      "Are the floodlights illuminating the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned high, offering a sweeping view of the track.",
+      "Cyclists are centered in the frame with a lead cyclist in focus.",
+      "The audience is situated around the track in the background."
+    ],
+    "questions": [
+      "Is the camera positioned to give a high view of the velodrome?",
+      "Are the cyclists centered in the image?",
+      "Is there an audience visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is sharp and dramatic, casting clear shadows.",
+      "The color palette includes bright jerseys against a neutral track.",
+      "The scene has a photojournalistic style with sharp detail."
+    ],
+    "questions": [
+      "Are the cyclists' features highlighted by the lighting?",
+      "Does the scene use a photojournalistic style?",
+      "Is there a contrast between the colorful jerseys and the track?"
+    ]
+  }
+}

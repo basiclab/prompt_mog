@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "In the heart of a sprawling coastal marshland, an imposing bank of thunderheads looms ominously on the horizon. These colossal clouds, dark and dense, are brimming with the promise of a tempest about to be unleashed. Veins of lightning intermittently fracture the sky, their jagged brilliance illuminating the tumultuous cloudscape in fleeting, electric flashes. Below, the marshland stretches out, a tapestry of emerald grasses and sinuous waterways that weave a serene contrast to the chaos above. The perspective is set from a low angle, accentuating the dominance of the sky and intensifying the approaching storm's sense of scale and power. The foreground is filled with wind-blown reeds, swaying wildly as the first gusts of the storm make landfall, their motion a prelude to the impending deluge. The marsh sits nestled against a distant backdrop of rolling dunes, barely visible beneath a veil of heavy mist that hangs low over the landscape. As the storm approaches, the atmosphere thickens with humidity, and the air takes on a tangible weight, charged with static. Catching the last rays of a sun all but obscured, the water surfaces mirror the brooding sky, creating a hauntingly beautiful chiaroscuro effect. The overall color palette shifts dramatically; deep charcoal grays of the clouds are punctuated by the brief, stark whites of lightning and softened by the muted greens and browns of the marshland. This dramatic interplay of light and shadow casts a somber mood over the scene, a testament to nature's raw and unpredictable power. The scene is captured with the precision of fine-art landscape photography, emphasizing detail and texture, from the intricate patterns of the water's surface to the wisps of clouds curling into the storm. Every element is meticulously framed in a wide, cinematic composition that draws viewers into the unfolding meteorological drama.",
+  "semantic": {
+    "description": [
+      "An imposing bank of dark thunderheads looms on the horizon.",
+      "Veins of lightning illuminate the tumultuous cloudscape above.",
+      "Wind-blown reeds sway in the marshland's foreground."
+    ],
+    "questions": [
+      "Is there a bank of thunderheads in the sky?",
+      "Are lightning veins present in the scene?",
+      "Do the reeds appear to be swaying in the foreground?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a low angle, enhancing the sky's dominance.",
+      "Foreground reeds are positioned against the midground marshland.",
+      "Distant dunes are visible beneath a misty veil in the background."
+    ],
+    "questions": [
+      "Is the scene captured from a low angle viewpoint?",
+      "Are the reeds positioned in the foreground?",
+      "Can the dunes be seen in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting creates a chiaroscuro effect across the scene.",
+      "The color palette includes deep grays, stark whites, and muted greens.",
+      "A cinematic composition emphasizes detail and texture."
+    ],
+    "questions": [
+      "Does the lighting create a chiaroscuro effect?",
+      "Is the color palette characterized by deep grays and stark whites?",
+      "Is the composition cinematic with detailed emphasis?"
+    ]
+  }
+}

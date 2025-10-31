@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "A vast expanse of turbulent ocean stretches beneath a sky thick with menacing storm clouds, the churning sea reflecting the darkened hues of the heavens above. At the heart of this tempestuous scene, a small fishing vessel struggles against the roaring winds and crashing waves, its hull barely visible amid the towering crests of water. This view is captured from a high vantage point, allowing a sweeping panorama of the chaotic interplay between sea and sky. The boat, positioned at the lower third of the composition, serves as a stark contrast to the tumultuous backdrop, highlighting the fragile resilience of human endeavor against nature's fury. Above, the clouds coil and twist, a swirling mass of gray and black, periodically illuminated by flashes of lightning that split the sky with blinding intensity. The early evening light casts a pallid glow over the scene, muted by the thickness of the storm, yet casting enough illumination to reveal the intricate textures of the seascape. As the lightning dances within the clouds, it accentuates the ominous atmosphere, imbuing the scene with a sense of impending doom. The color palette is dominated by deep blues and grays, punctuated by the stark white of sea foam and the occasional electric glow of lightning. This composition embodies a dramatic and dynamic narrative, conveyed with the precision and clarity of documentary photography. The image is captured in high resolution, with attention to detail that ensures every droplet of water and every flicker of light is rendered with stunning sharpness, offering a masterfully composed portrayal of elemental chaos.",
+  "semantic": {
+    "description": [
+      "A small fishing vessel struggles against tumultuous waves in the ocean.",
+      "A dramatic storm with swirling clouds dominates the sky above the sea.",
+      "Lightning flashes periodically, illuminating the storm clouds and sea."
+    ],
+    "questions": [
+      "Is there a small fishing vessel in the scene?",
+      "Does the scene include storm clouds?",
+      "Is lightning visible in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The fishing vessel is positioned at the lower third of the composition.",
+      "The scene is viewed from a high vantage point, offering a sweeping panorama.",
+      "The clouds swirl dynamically above, interacting with the ocean below."
+    ],
+    "questions": [
+      "Is the boat positioned in the lower part of the frame?",
+      "Is the scene captured from a high vantage point?",
+      "Do the clouds appear to interact with the sea?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The color palette features deep blues, grays, and stark whites.",
+      "The scene is captured in a documentary photography style.",
+      "The image is highly detailed, with sharp focus on all elements."
+    ],
+    "questions": [
+      "Is the color palette dominated by deep blues and grays?",
+      "Is the scene captured in a documentary photography style?",
+      "Is the image highly detailed and sharp?"
+    ]
+  }
+}

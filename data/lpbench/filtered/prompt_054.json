@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the crisp morning air entwines with the salty aroma of the ocean, a sprawling seascape reveals itself to the discerning eye. Center stage is a celebrated weathered lighthouse, its paint peeling in testament to countless years braving the elements, perched defiantly atop rugged cliffs. Surrounding this stoic guardian, seagulls wheel and dive, their playful cries harmonizing with the ceaseless roar of waves crashing against the rocky shore. The scene is observed from a high vantage point, offering a panoramic view that stretches from the craggy foreground to where the sea kisses the sky on the far horizon. In the foreground, the jagged rocks stand as silent witnesses to the ocean’s eternal dance, their surfaces slick with sea spray glistening in the gentle dawn light. This light filters through a thin veil of morning mist, softening the distant outlines of a small cluster of fishing boats dotting the midground, their homespun nets hung out to dry like spectral relics. The horizon itself is a blurred line of ever-changing hues where the cool indigo of the night slowly gives way to the warming azure of day. The scene is bathed in the diffused, golden glow of sunrise, casting long, gentle shadows that play upon the water's surface, illuminating it with shimmering flecks. This color palette, a harmonious blend of cool blues and warm golds, imbues the scene with an atmosphere of serene isolation and timeless resilience. Each detail is captured with precision, from the texture of the weather-beaten stone to the frothy lacework of waves breaking upon the shore, creating a tableau that beckons viewers into a vivid and immersive depiction of coastal splendor. The entire composition is rendered with a cinematic flair, echoing the classic aesthetics of romantic landscape photography, where technical excellence meets artistic vision, ensuring every nuance is portrayed with stunning clarity and emotional depth.",
+  "semantic": {
+    "description": [
+      "A weathered lighthouse stands atop rugged cliffs overlooking the ocean.",
+      "Seagulls circle and dive around the lighthouse.",
+      "Fishing boats with nets are visible in the midground of the scene."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are there seagulls flying around the lighthouse?",
+      "Are fishing boats present in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned at the top of a cliff in the foreground.",
+      "Fishing boats are scattered in the midground area of the scene.",
+      "The horizon is where the sea meets the sky in the background."
+    ],
+    "questions": [
+      "Is the lighthouse located at the top of a cliff?",
+      "Are the fishing boats situated in the midground?",
+      "Does the horizon form a boundary in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in a soft, golden light indicative of sunrise.",
+      "The color palette consists of cool blues and warm golds.",
+      "The composition has a cinematic and romantic feel."
+    ],
+    "questions": [
+      "Is the scene illuminated by sunrise light?",
+      "Are the colors predominantly cool blues and warm golds?",
+      "Does the scene have a cinematic style?"
+    ]
+  }
+}

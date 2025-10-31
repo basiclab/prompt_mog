@@ -1,3 +1,5 @@
+import math
+
 import torch
 
 
@@ -9,7 +11,7 @@ def _random_orthogonal(
 ) -> torch.Tensor:
     """Return a proper orthogonal matrix Q in R^{d x d} with det(Q)=+1."""
     A = torch.randn((dim, dim), device=device, dtype=dtype, generator=generator)
-    Q, _ = torch.linalg.qr(A, mode="reduced")  # Q: (d,d)
+    Q, _ = torch.linalg.qr(A, mode="reduced")  # Q: (d, d)
     if torch.linalg.det(Q) < 0:
         Q[:, 0] = -Q[:, 0]
     return Q
@@ -39,40 +41,23 @@ def _regular_simplex_vertices(
 def _pack_on_sphere(
     num_mode: int,
     dim: int,
-    steps: int = 200,
-    lr: float = 0.05,
     device: torch.device | None = None,
     dtype: torch.dtype | None = None,
     generator: torch.Generator | None = None,
 ) -> torch.Tensor:
     """
     Return n unit vectors in R^d, well-separated on S^{d-1}.
-    If n <= d+1, use regular simplex embedded in R^d (optimal).
-    Otherwise, use a simple Thomson-like repulsion heuristic.
+    Use regular simplex embedded in R^d (optimal).
     Shape: (n, d)
     """
-    if num_mode <= dim + 1:
-        Uv = _regular_simplex_vertices(num_mode, device=device, dtype=dtype)  # (n, n-1)
-        V = torch.zeros((num_mode, dim), device=device, dtype=dtype)
-        V[:, : num_mode - 1] = Uv
-        R = _random_orthogonal(dim, device=device, dtype=dtype, generator=generator)
-        P = (R @ V.T).T  # (n, d)
-        P = P / (torch.linalg.norm(P, dim=1, keepdim=True) + 1e-12)
-        return P
+    assert num_mode <= dim + 1, "num_mode must be less than or equal to dim + 1"
 
-    # Repulsion fallback for n > d+1
-    P = torch.randn((num_mode, dim), device=device, dtype=dtype, generator=generator)
+    Uv = _regular_simplex_vertices(num_mode, device=device, dtype=dtype)  # (n, n-1)
+    V = torch.zeros((num_mode, dim), device=device, dtype=dtype)
+    V[:, : num_mode - 1] = Uv
+    R = _random_orthogonal(dim, device=device, dtype=dtype, generator=generator)
+    P = (R @ V.T).T  # (n, d)
     P = P / (torch.linalg.norm(P, dim=1, keepdim=True) + 1e-12)
-
-    for _ in range(steps):
-        # Pairwise differences: (n, n, d)
-        diff = P[:, None, :] - P[None, :, :]
-        dist2 = (diff * diff).sum(dim=-1, keepdim=True) + 1e-6  # (n, n, 1)
-        # Inverse-square repulsion; ignore self by zeroing diagonal
-        force = (diff / dist2.pow(1.5)).sum(dim=1)  # (n, d)
-        force = force - torch.diag_embed(torch.diag(force @ P.T)) @ P  # (optional stabilize)
-        P = P + lr * force
-        P = P / (torch.linalg.norm(P, dim=1, keepdim=True) + 1e-12)
     return P
 
 
@@ -80,9 +65,6 @@ def centers_on_sphere(
     Ec: torch.Tensor,
     gamma: float,
     num_mode: int,
-    steps: int = 200,
-    lr: float = 0.05,
-    rotate_per_batch: bool = True,
     generator: torch.Generator | None = None,
 ) -> torch.Tensor:
     """
@@ -103,24 +85,10 @@ def centers_on_sphere(
     B, d = Ec.shape
 
     device, dtype = Ec.device, Ec.dtype
-    U = _pack_on_sphere(
-        num_mode, d, steps=steps, lr=lr, device=device, dtype=dtype, generator=generator
-    )  # (n, d)
-
-    if rotate_per_batch:
-        # Apply an independent random rotation per batch item
-        centers = []
-        for b in range(B):
-            Rb = _random_orthogonal(d, device=device, dtype=dtype, generator=generator)
-            Ub = (Rb @ U.T).T  # (n, d)
-            Cb = Ec[b].unsqueeze(0) + gamma * Ub  # (n, d)
-            centers.append(Cb)
-        C = torch.stack(centers, dim=0)  # (B, n, d)
-    else:
-        # One rotation shared across the batch
-        R = _random_orthogonal(d, device=device, dtype=dtype, generator=generator)
-        Urot = (R @ U.T).T  # (n, d)
-        C = Ec[:, None, :] + gamma * Urot.unsqueeze(0)  # (B, n, d)
+    U = _pack_on_sphere(num_mode, d, device=device, dtype=dtype, generator=generator)  # (n, d)
+    R = _random_orthogonal(d, device=device, dtype=dtype, generator=generator)
+    Urot = (R @ U.T).T  # (n, d)
+    C = Ec[:, None, :] + gamma[:, None, None] * Urot.unsqueeze(0)  # (B, n, d)
 
     return C
 
@@ -150,15 +118,17 @@ def sample_from_mog(
 
 def perform_pmog(
     prompt_embeds: torch.Tensor,
-    gamma: float,
+    gamma: float,  # this is defined in cosine similarity
     num_mode: int,
     sigma: float,
     batch_size: int,
 ) -> torch.Tensor:
-    """
-    Perform PMoG to the prompt embeddings.
-    """
     prompt_embeds = prompt_embeds.reshape(-1, prompt_embeds.shape[-1])
+
+    # convert the cosine similarity to the euclidean distance. This process suppose that the prompt embeddings have the same norm.
+    norm_of_prompt_embeds = torch.linalg.norm(prompt_embeds, dim=1)
+    gamma = norm_of_prompt_embeds * math.sqrt(2 * (1 - gamma))
+
     reformulated_prompt_centers = centers_on_sphere(prompt_embeds.float(), gamma=gamma, num_mode=num_mode)
     sampled_prompt_embeds = sample_from_mog(reformulated_prompt_centers, sigma=sigma)
     sampled_prompt_embeds = sampled_prompt_embeds.reshape(batch_size, -1, prompt_embeds.shape[-1])

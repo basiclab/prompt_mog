@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of a rustic, lovingly restored barn, an intimate wedding unfolds, enveloped by the warm embrace of candlelight and the soft glow of vintage string lights. The main focus of the scene is the newlywed couple, who stand hand in hand in the center of the open-plan space, beneath intricately intertwined garlands of wildflowers and lush greenery that hang from the high rafters. Surrounding them, an assembly of delighted guests, dressed in elegantly understated attire, watch on with expressions of joy and warmth. The camera captures this moment from a slightly elevated angle, allowing the expansive hardwood floor and the rich wooden textures of the barn’s structure to frame the festivities in the foreground, while long banquet tables, adorned with rustic floral arrangements and handcrafted place settings, form the midground. In the background, the barn’s wide-open doors reveal a glimpse of the twilight landscape beyond, where rolling fields stretch out under the stillness of the early evening sky. The lighting is soft and romantic, with the candle flames flickering gently, casting a dance of shadows that ripple across the guests and the space, creating an atmosphere that is both rustic and enchanting. The color palette embraces warm earth tones, with subdued hues of ochre, soft blush, and deep forest green that harmonize with the natural setting, evoking a mood of timeless elegance and heartfelt celebration. The texture of weathered wood and the delicate lace of the bridal gown offer tactile richness, enhancing the visual and emotional depth of the scene. This image is envisioned in a photojournalistic style, capturing candid expressions and authentic moments with high resolution and clarity, reflecting the intimacy and sincerity of this cherished occasion in a way that is both timeless and genuine.",
+  "semantic": {
+    "description": [
+      "The scene takes place in a rustic barn adorned with vintage string lights.",
+      "A newlywed couple stands at the center, hand in hand under garlands of wildflowers.",
+      "Guests, dressed elegantly, watch on with expressions of joy and warmth."
+    ],
+    "questions": [
+      "Is the location a barn decorated with vintage string lights?",
+      "Are the newlyweds holding hands under the garlands of wildflowers?",
+      "Are the guests visibly joyous as they watch the couple?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is at a slightly elevated angle capturing the expansive hardwood floor.",
+      "Banquet tables form the midground, extending towards the open barn doors.",
+      "The open barn doors in the background reveal the twilight landscape."
+    ],
+    "questions": [
+      "Is the main couple positioned in the center of the frame?",
+      "Do banquet tables extend into the midground?",
+      "Is there a view of the outside landscape through the barn doors?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft candlelight and string lights create a warm, romantic atmosphere.",
+      "The color palette includes warm earth tones with hues of ochre and blush.",
+      "The photojournalistic style captures candid expressions with high resolution."
+    ],
+    "questions": [
+      "Is the atmosphere created with soft candlelight and string lights?",
+      "Does the color scheme include warm, earthy tones?",
+      "Is the image captured in a photojournalistic style?"
+    ]
+  }
+}

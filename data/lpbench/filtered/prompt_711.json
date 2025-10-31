@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a meticulously arranged studio setup, a collection of high-end kitchen appliances is elegantly displayed, exuding both modern functionality and aesthetic grace. The primary focus is on a premium, stainless steel espresso machine, its sleek lines and metallic finish glistening under the soft, diffused light. Surrounding this centerpiece are an array of complementary items: a set of brushed chrome coffee grinders, an assortment of fine china cups in delicate pastel tones, and a series of artisanal coffee beans contained within clear, hermetically sealed glass jars. The scene is viewed from a slightly elevated angle, allowing the viewer to appreciate the harmony of the arrangement, where each element is strategically placed to create a balanced and inviting visual composition. The espresso machine is positioned in the foreground, prominently capturing the viewer's attention, while the grinders and cups form a semi-circle around it, adding depth and scale. The lighting is carefully controlled to create an atmosphere of serene sophistication, with a warm, ambient glow that highlights the reflective surfaces and produces soft shadows. This lighting choice enhances the tactile qualities of the materials, from the glossy finish of the metals to the smooth, matte surface of the ceramics. The color palette is dominated by the cool silvers and grays of the appliances, contrasted by the warm cream and pastel hues of the china, establishing a modern yet inviting mood. The overall style is reminiscent of fine art photography, where technical precision meets creative expression, with every detail captured in razor-sharp focus to emphasize the luxurious quality of the products. The composition is executed with professional finesse, showcasing the products as both functional kitchen essentials and objects of beauty, designed for those who appreciate the finer things in life.",
+  "semantic": {
+    "description": [
+      "A premium stainless steel espresso machine is the centerpiece of the arrangement.",
+      "Assorted fine china cups in pastel tones surround the primary espresso machine.",
+      "Artisanal coffee beans are housed in clear glass jars."
+    ],
+    "questions": [
+      "Is there a stainless steel espresso machine in the setup?",
+      "Are there fine china cups displayed in the scene?",
+      "Do the glass jars contain coffee beans?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The espresso machine is positioned prominently in the foreground.",
+      "The coffee grinders and cups form a semi-circle around the main machine.",
+      "The scene is viewed from a slightly elevated angle."
+    ],
+    "questions": [
+      "Is the espresso machine placed in the foreground of the scene?",
+      "Do the cups and grinders form a semi-circle around the espresso machine?",
+      "Is the camera perspective slightly elevated?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting creates a warm, ambient glow over the entire setup.",
+      "The scene uses a color palette of cool silvers and warm pastels.",
+      "The photographic style is reminiscent of fine art photography with sharp details."
+    ],
+    "questions": [
+      "Does the lighting create a warm glow in the scene?",
+      "Is the color palette a mix of cool silvers and warm pastels?",
+      "Is the photographic style similar to fine art photography?"
+    ]
+  }
+}

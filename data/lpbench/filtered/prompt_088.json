@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the untouched expanse of the Alaskan wilderness, a majestic bald eagle soars gracefully, its powerful wings cutting through the crisp morning air as it searches for prey below. The scene is set against the backdrop of a sprawling, icy river that snakes through a dense forest of towering evergreens, their needles dusted with a light layer of frost. The eagle's keen eyes scan the glistening surface of the river, where a family of salmon is visible beneath the clear, icy water, gently moving upstream to spawn. Captured from a slightly elevated viewpoint, the eagle is framed against the vast landscape, with the river weaving through the scene from the lower left to the upper right, leading the viewer's eye through its serpentine path. The early morning sunlight filters through the canopy, casting a soft, diffused light that bathes the scene in a serene glow. Sunlight dances on the water, creating shimmering highlights that contrast with the cool shadows of the forest. The color palette is a harmonious blend of cool blues and greens, with the occasional warm glint of sunlight adding depth and warmth. This serene tableau captures the essence of the natural world in all its raw beauty, drawing attention to the interconnectedness of its inhabitants. Rendered with the precision of a high-definition photograph, the scene is a testament to the delicate balance of nature, showcasing the sharp detail of the eagle's plumage and the delicate ripples in the water as if frozen in time, inviting viewers to pause and appreciate the intricate dance of life in the wild.",
+  "semantic": {
+    "description": [
+      "A bald eagle soars above a sprawling, icy river in the Alaskan wilderness.",
+      "A family of salmon is visible beneath the clear, icy water of the river.",
+      "The scene takes place in a dense forest of tall evergreens with frosty needles."
+    ],
+    "questions": [
+      "Is there a bald eagle in the scene?",
+      "Are the salmon visible underneath the river's surface?",
+      "Is the setting in a forest with evergreen trees?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The bald eagle is captured from a slightly elevated viewpoint.",
+      "The eagle is framed against a backdrop of the vast Alaskan landscape.",
+      "The icy river weaves through the scene from the lower left to the upper right."
+    ],
+    "questions": [
+      "Is the bald eagle captured from an elevated viewpoint?",
+      "Does the river weave through the scene from one side to the other?",
+      "Is the eagle framed against the landscape?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit with soft, diffused morning sunlight.",
+      "Shimmering highlights on the water contrast with the forest's cool shadows.",
+      "The color palette features cool blues and greens with warm sunlight glints."
+    ],
+    "questions": [
+      "Is the scene lit with soft, diffused sunlight?",
+      "Do highlights on the water contrast with shadows in the forest?",
+      "Does the color palette include cool blues and greens?"
+    ]
+  }
+}

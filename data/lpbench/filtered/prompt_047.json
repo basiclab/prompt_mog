@@ -1,0 +1,37 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the gentle rays of the setting sun bathe the scene in a warm glow, a serene coastal tableau unfolds before the viewer's eyes. The main subject is a rugged cliff face, its dark silhouette stark against the vivid oranges and pinks of the evening sky. Perched atop this natural fortress is an ancient lighthouse, its weathered stone exterior standing as a testament to centuries of service against the relentless energy of the sea. Waves crash rhythmically at the base of the cliff, sending forth a fine mist that captures the sun's final rays, creating an ethereal halo around the scene. The camera captures this moment from a mid-altitude perspective, slightly angled downwards to encompass both the expansive sky and the frothy white waves below. The lighthouse, slightly off-center, draws the eye, while the dramatic horizon line stretches across the top third of the frame, offering a sense of space and grandeur. The foreground features scattered rocks and tidal pools shimmering with reflections, adding textural richness. The light is soft and diffused, with long shadows stretching towards the viewer, enhancing the depth and drama of the scene. The color palette is a harmonious blend of warm sunset hues against the cool blues of the ocean, fostering a mood of tranquil reverence and timeless beauty. In the style of fine art photography, the interplay of light and shadow is meticulously captured, emphasizing the rugged texture of the cliffs and the shimmering surface of the water. The composition is expertly crafted, resulting in a high-resolution image that presents an intricate balance of natural elements and historical significance. Every detail is sharp and clear, from the distinct layers of ocean waves to the intricate patterns of erosion on the cliff face, culminating in a visually captivating seascape that feels both alive and timeless.",
+  "semantic": {
+    "description": [
+      "A rugged cliff face is the main subject of the scene.",
+      "An ancient lighthouse perches atop the cliff.",
+      "Waves crash at the base of the cliff, creating a mist."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are there waves crashing against the cliff?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera perspective is mid-altitude, angled slightly downward.",
+      "The lighthouse is slightly off-center in the composition.",
+      "The horizon line stretches across the top third of the frame."
+    ],
+    "questions": [
+      "Is the lighthouse positioned off-center?",
+      "Does the composition include a visible horizon line?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, with long shadows.",
+      "The color palette blends warm sunset hues with cool ocean blues.",
+      "The scene is captured in the style of fine art photography."
+    ],
+    "questions": [
+      "Is the lighting in the scene diffused and soft?",
+      "Does the scene feature warm and cool color contrasts?"
+    ]
+  }
+}

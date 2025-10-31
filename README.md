@@ -21,10 +21,10 @@ To generate the long prompts similar to `LPBench`, run the following command:
 
 ```bash
 # Step 1: Generate a pool of long prompts
-python misc/generate_long_prompt.py --num-prompts 200
+ python misc/dataset_gen/generate_long_prompt.py --num-prompts-for-topic 60
 
 # Step 2: Filter the prompts
-python misc/post_process_data.py --data-root data/lpbench --num-remain 100  
+python misc/dataset_gen/post_process_data.py --data-root data/lpbench --num_prompts_per_topic 60 --num_remain_per_topic 40
 ```
 
 The outputs will be saved to `data/lpbench/filtered`.
@@ -32,7 +32,7 @@ The outputs will be saved to `data/lpbench/filtered`.
 Users can also run the statistics of the dataset by running the following command:
 
 ```bash
-python misc/data_statistics.py --data-root-dir data --plot 
+python misc/dataset_gen/data_statistics.py --data-root-dir data --plot 
 ```
 
 The results will be saved to `assets/dataset_statistics.pdf`.

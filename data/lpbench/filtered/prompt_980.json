@@ -1,0 +1,37 @@
+{
+  "theme": "Long Exposure Photography",
+  "prompt": "In the depth of a starlit night, a secluded coastal pier stretches gracefully into the vast ocean, its wooden planks capturing the ethereal dance of moonlit reflections on the water's surface. This scene is framed from a medium distance, where the viewer's gaze is drawn along the length of the pier, leading to the open sea. The pier itself, illuminated by soft, ambient light, becomes a pathway through the scene, guiding the eye from the foreground to the horizon where the sky and sea converge. The long exposure captures the gentle motion of the waves, transforming them into a silky mist that hugs the pier's structure, while the stars above trace delicate arcs across the sky, forming a celestial tapestry that conveys the passage of time. The atmosphere is serene, with the quietude of the night augmented by the rhythmic lapping of the waves against the wooden beams. The color palette is dominated by deep blues and soft silvers, interspersed with the occasional glint of starlight, creating a cool, tranquil mood that permeates the scene. In the distance, a lone lighthouse stands as a sentinel, its beam cutting through the night, adding a touch of mystery and hope to the composition. The image is rendered with meticulous detail, capturing the texture of weathered wood and the subtle gradations of light and shadow, embodying the technical precision of professional long exposure photography. The composition, with its blend of natural and artificial light, speaks to the enduring romance and mystery of the sea under the spell of the night sky, providing a timeless snapshot of tranquility and beauty.",
+  "semantic": {
+    "description": [
+      "A coastal pier extends into the ocean, surrounded by moonlit reflections.",
+      "The long exposure captures the waves as a silky mist around the pier.",
+      "Stars form arcs in the night sky, showing the passage of time."
+    ],
+    "questions": [
+      "Is there a pier extending into the ocean?",
+      "Are the stars forming arcs in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a medium distance, centered on the pier.",
+      "The pier leads the eye towards the horizon where sky meets sea.",
+      "The lighthouse is positioned in the distance, adding depth to the scene."
+    ],
+    "questions": [
+      "Is the pier leading towards the horizon?",
+      "Is there a lighthouse visible in the distance?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image uses a cool palette of deep blues and silvers.",
+      "Long exposure technique captures movement of waves as mist.",
+      "The scene is illuminated by ambient moonlight."
+    ],
+    "questions": [
+      "Is the color palette primarily deep blues and silvers?",
+      "Does the image use long exposure to capture wave movement?"
+    ]
+  }
+}

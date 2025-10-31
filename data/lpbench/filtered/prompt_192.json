@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "Beneath an indigo blanket of night, a meticulous astrophotographer positions herself on a weathered, rocky outcrop overlooking a vast, tranquil desert plain. The expansive sky above is studded with innumerable stars, forming intricate constellations that seem to dance in the crisp, clear air devoid of urban light pollution. Her state-of-the-art telescope stands sturdy beside her, precisely aligned to capture the luminous beauty of distant galaxies and star clusters. The camera is poised to record the celestial display, capturing the soft, ethereal light of a distant nebula that glows with a faint, otherworldly silver and blue. From this vantage point, the desert seems to extend infinitely, a silent witness to the cosmic wonders above. The composition is framed from a slightly elevated angle, allowing the viewer to immerse into the vastness of space while also feeling grounded by the earthy textures of the desert landscape. In the foreground, the rocky surface is illuminated by the diffuse light of the stars, casting gentle shadows that stretch towards the horizon. The atmospheric clarity allows for an unparalleled view of the Milky Way, arcing gracefully across the sky in a brilliant cascade of light and shadow. The overall lighting is soft and diffused, creating an intimate and contemplative mood. The color palette is dominated by cool blues and soft silvers, with occasional pops of warmer tones from the occasional red dwarf star. This is an image that evokes wonder and the infinite complexities of the universe, captured with the finesse and precision of professional astrophotography. The whole scene conveys a sense of serenity and awe, inviting the viewer to pause and appreciate the magnificence of the cosmos captured in high-resolution detail.",
+  "semantic": {
+    "description": [
+      "A meticulous astrophotographer stands on a rocky outcrop with a state-of-the-art telescope.",
+      "The night sky is filled with innumerable stars forming intricate constellations.",
+      "The camera captures the silvery-blue glow of a distant nebula."
+    ],
+    "questions": [
+      "Is there an astrophotographer present in the scene?",
+      "Are there numerous stars visible in the sky?",
+      "Is a nebula visible in the photograph?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The astrophotographer stands on a rocky outcrop overlooking a vast desert plain.",
+      "The composition is framed from a slightly elevated angle.",
+      "The rocky surface in the foreground is illuminated by starlight."
+    ],
+    "questions": [
+      "Is the astrophotographer positioned on an elevated outcrop?",
+      "Is the scene viewed from an elevated perspective?",
+      "Is the rocky surface visible in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The overall lighting is soft and diffused, creating an intimate mood.",
+      "The color palette features cool blues and soft silvers.",
+      "The image conveys a sense of serenity and wonder."
+    ],
+    "questions": [
+      "Is the lighting in the scene soft and diffused?",
+      "Does the color palette include cool blues and silvers?",
+      "Is the mood of the scene serene and contemplative?"
+    ]
+  }
+}

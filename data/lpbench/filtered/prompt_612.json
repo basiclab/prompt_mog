@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "Amidst the verdant expanse of a sprawling hillside vineyard, a joyous wedding celebration takes center stage beneath the vibrant glow of the setting sun. The scene captures a jubilant mix of guests elegantly attired, gathered around festively adorned tables draped with crisp white linen and dotted with arrangements of fresh wildflowers. The bride, a vision of classic beauty in an ivory lace gown, stands beside the groom, who is dressed in a tailored navy blue suit, their hands entwined as they share a heartfelt laugh with guests. This picturesque tableau is viewed from a mid-level perspective, capturing the couple as the focal point, framed by the gentle curves of the surrounding vineyards that stretch out into the distance. To the left, a rustic wooden arbor, entwined with climbing roses and fairy lights, stands as a testament to the couple's vows, while the right side of the frame is animated by the joyful dance of children chasing each other through the grass. The warm, golden light of the late afternoon bathes the entire scene, casting long shadows across the vineyard rows and creating pockets of dappled light on the bridal party. This ethereal glow enhances the rich palette of earthy greens from the vines, complemented by the pops of color from the guests' attire and floral décor. Soft jazz wafts through the air, blending effortlessly with the murmur of laughter and clinking glasses, creating an atmosphere of timeless celebration. The scene captures the essence of the celebration with a fine-art approach, its colors and composition reminiscent of an impressionist painting, ensuring that each detail is captured in exquisite clarity and vibrant resolution.",
+  "semantic": {
+    "description": [
+      "A bride in an ivory lace gown stands beside the groom in a navy blue suit.",
+      "Guests are elegantly attired, gathered around tables with crisp white linen.",
+      "A rustic wooden arbor entwined with climbing roses stands to the left."
+    ],
+    "questions": [
+      "Is the bride wearing an ivory lace gown?",
+      "Are the guests gathered around tables?",
+      "Is there a rustic wooden arbor to the left?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The couple is centered in the frame, surrounded by the gently curving vineyards.",
+      "The scene is captured from a mid-level perspective.",
+      "Children play to the right, while adults gather around tables in the foreground."
+    ],
+    "questions": [
+      "Is the couple centered in the frame?",
+      "Is the scene captured from a mid-level perspective?",
+      "Are there children playing to the right of the couple?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the golden light of late afternoon.",
+      "The warm glow casts long shadows across the vineyard.",
+      "The colors and composition are reminiscent of an impressionist painting."
+    ],
+    "questions": [
+      "Is the scene bathed in golden light?",
+      "Are there long shadows across the vineyard?",
+      "Is the style reminiscent of an impressionist painting?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "Amidst the roaring ambiance of a grand stadium, the football field is a canvas for a fierce showdown between two rival teams. The players, clad in vibrant jerseys of contrasting colors—one team in striking royal blue and the other in vivid crimson—are a whirl of athleticism and strategy. At the center of the action, a forward in red, with determination etched across his face, is captured mid-sprint, eyes locked on the ball as he maneuvers deftly past defenders. The audience, a sea of enthusiasm, is a colorful tapestry of team colors, flags, and banners, their collective energy palpable as it surges through the stands. A sense of tension hangs thick in the air as an expert photographer, positioned low and slightly off-center in the frame, immortalizes the electrifying moment from a slight upward angle, emphasizing the player’s dynamic movement against the backdrop of the sprawling stadium. The floodlights blaze intensely, casting dramatic, elongated shadows on the meticulously maintained pitch, highlighting the contours of the players’ muscular forms in high contrast. Straddling the boundary between day and night, the scene is bathed in the last golden rays of the setting sun, merging with the artificial lights to create a warm, immersive glow. This nuanced interplay of lighting conditions evokes a sense of urgency and anticipation. The color palette, dominated by deep blues and bright reds, punctuated by the warm amber of the floodlights, orchestrates a symphony of contrasts that heighten the drama of the competition. The blending of documentary photography with a fine art approach encapsulates the tension, movement, and raw emotion in an 8K resolution capture that speaks volumes of professional mastery.",
+  "semantic": {
+    "description": [
+      "The scene captures a football game between two rival teams.",
+      "One team wears vibrant royal blue jerseys, the other vivid crimson.",
+      "A forward in red sprints with determination, eyes fixed on the ball."
+    ],
+    "questions": [
+      "Are there two opposing football teams in the scene?",
+      "Is one team wearing blue jerseys?",
+      "Is the forward player focused on the ball?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The photographer captures the scene from a low, slightly off-center position.",
+      "The forward is centered in the field, with defenders around him.",
+      "The audience forms a backdrop, filling the stadium stands."
+    ],
+    "questions": [
+      "Is the scene captured from a low angle?",
+      "Is the forward player in the center of the action?",
+      "Are the stadium stands filled with an audience?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Floodlights cast dramatic shadows on the players.",
+      "The interplay of sunset and artificial lighting creates a warm glow.",
+      "The color palette features deep blues and bright reds."
+    ],
+    "questions": [
+      "Do the floodlights create dramatic shadows on the field?",
+      "Is there a warm glow from the lighting in the scene?",
+      "Does the color palette include deep blues and bright reds?"
+    ]
+  }
+}

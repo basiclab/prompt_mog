@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "Under the vast, inky expanse of a moonless night sky, an isolated wooden pier stretches out over a serene alpine lake nestled within an undisturbed valley. The pier, weathered by time and elements, acts as a contemplative vantage point from which a lone observer can embrace the celestial splendor above. This landscape is viewed from a slightly elevated angle, where the camera captures the fullness of the scene, starting from the foreground where the pier extends out towards the lake, leading the eye deeper into the composition. In the midground, the still water of the lake mirrors the starry sky, creating an illusion of continuity between earth and cosmos. Beyond the lake, silhouettes of distant mountains form a jagged horizon that blends into the sky, offering a subtle contrast against the sea of stars. The absence of artificial light sources emphasizes the clarity of the star field, where clusters of stars form the Milky Way, a river of light across the heavens. Silver starlight casts a gentle glow on the scene, creating soft reflections on the lake's surface and muted shadows along the pier. The color palette is dominated by deep blues interspersed with shimmering whites and occasional hints of faint greens from distant nebulae, evoking a mood of tranquility and introspection. The scene's artistic style is reminiscent of classic landscape photography, capturing the essence of untouched natural beauty under the night sky. The image is rendered with high resolution, ensuring every star and reflection is depicted in sharp detail, conveying the majesty of the cosmos with professional precision and finesse.",
+  "semantic": {
+    "description": [
+      "An isolated wooden pier extends over a serene alpine lake.",
+      "A lone observer contemplates the starry night sky.",
+      "The Milky Way is visible as a bright band in the sky."
+    ],
+    "questions": [
+      "Is there a wooden pier in the scene?",
+      "Does the scene include an observer looking at the sky?",
+      "Is the Milky Way visible in the night sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The pier is positioned in the foreground, leading towards the lake.",
+      "The lake is situated in the midground, reflecting the starry sky.",
+      "Distant mountains form the background, blending into the night sky."
+    ],
+    "questions": [
+      "Is the pier in the foreground of the scene?",
+      "Is the lake located in the midground of the scene?",
+      "Are there mountains in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by natural starlight, creating gentle reflections.",
+      "The color palette consists of deep blues and shimmering whites.",
+      "The image is rendered with high resolution and sharp detail."
+    ],
+    "questions": [
+      "Is the scene lit by natural starlight?",
+      "Does the color palette include deep blues and whites?",
+      "Is the image rendered with sharp detail?"
+    ]
+  }
+}

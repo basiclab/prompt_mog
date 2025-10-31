@@ -38,7 +38,7 @@ def main(
     prompt_index: int = 0,  # for rewritten prompts only
     first_top: int = 1,  # for short prompts only
     # p-mog generation parameters
-    gamma: float = 3.0,
+    gamma: float = 0.8,  # define in cosine similarity
     num_mode: int = 10,
     sigma: float = 0.05,
 ):

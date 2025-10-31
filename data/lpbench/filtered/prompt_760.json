@@ -1,0 +1,40 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "Amidst the bustling streets of a historic European city, a meticulously restored classic motorcycle stands prominently in front of a charming vintage café. Its gleaming chrome finish and deep midnight blue bodywork vividly contrast with the cobblestone streets and weathered brick buildings that form its backdrop. Elegantly poised beneath a canopy of string lights crisscrossing the narrow alley, this motorcycle is captured from a three-quarter front angle, providing a detailed view of its intricately designed features like the polished fuel tank and vintage leather seat. Nearby, a group of café-goers casually converses at an outdoor table, their animated gestures frozen in time, accentuating the motorcycle's stationary elegance. The scene is enveloped in the soft, ambient glow of the early evening, as the golden hour light spills across the setting, casting intricate shadow patterns from the café's ironwork onto the smooth cobblestones. The warm hues of twilight merge seamlessly with the cool metallic sheen of the motorcycle, creating a harmonious balance of color that suggests nostalgia and timelessness. The mood is further accentuated by the subtle reflections captured in the motorcycle's mirrors, offering glimpses of the vibrant urban life unfolding beyond the frame. Its overall aesthetic embodies the essence of classic film photography, with a focus on high-resolution detail and a finely tuned depth of field that ensures every element, from the pavement's texture to the café's rustic signage, is crisply defined, making this scene a testament to the artistry of automotive photography.",
+  "semantic": {
+    "description": [
+      "A restored classic motorcycle is parked in front of a vintage café.",
+      "The motorcycle features a gleaming chrome finish and deep midnight blue bodywork.",
+      "Café-goers are seated at an outdoor table, engaging in conversation."
+    ],
+    "questions": [
+      "Is there a classic motorcycle depicted in the scene?",
+      "Does the scene include a vintage café background?",
+      "Are there people sitting at an outdoor café table?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The motorcycle is positioned prominently in the foreground from a three-quarter front angle.",
+      "Ambient string lights are overhead, creating a canopy effect over the narrow alley.",
+      "Café-goers are situated to the left side of the frame, near the café entrance."
+    ],
+    "questions": [
+      "Is the motorcycle captured from a front angle perspective?",
+      "Are there string lights visible overhead in the scene?",
+      "Is there an outdoor café table positioned near the left side of the frame?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit with the soft glow of golden hour sunlight in the early evening.",
+      "Warm twilight hues blend with the cool metallic sheen of the motorcycle.",
+      "The image is reminiscent of classic film photography, with high-resolution detail."
+    ],
+    "questions": [
+      "Is the scene illuminated by golden hour lighting?",
+      "Does the color palette include warm twilight hues?",
+      "Is the photographic style reminiscent of classic film techniques?"
+    ]
+  }
+}

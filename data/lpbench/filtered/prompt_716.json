@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In an exquisitely-lit studio environment designed to mimic a contemporary architectural setting, a collection of bespoke leather handbags is artfully arranged. Each bag, crafted from luxurious full-grain leather, displays its unique texture and rich color variations, ranging from deep mahogany to olive green and classic black. The bags sit on a polished granite table, its surface subtly reflecting their shapes and imbuing the scene with sophisticated elegance. The camera is positioned at eye level, slightly tilted to emphasize the varying heights and depths of the bags, creating a dynamic yet harmonious arrangement that draws the viewer's gaze across the scene. In the background, a soft-focus wall made of reclaimed wood adds a touch of rustic warmth, providing a refined contrast to the contemporary presentation. Streamlined spotlights create focused beams of light, casting soft shadows that highlight the intricate stitching and hardware details of each piece. The lighting is warm, suggesting the ambiance of a late afternoon, which complements the earthy tones of the handbags and augments the richness of their colors. The overall color palette is balanced and sophisticated with complementary earth tones, evoking a sense of timeless elegance and understated luxury. The image is shot with a high-resolution camera, ensuring that every detail is captured with remarkable clarity and precision, akin to fine art photography. The crisp focus highlights the craftsmanship of each piece, making the image both a visual and tactile experience, as if inviting the viewer to reach out and feel the plush leather.",
+  "semantic": {
+    "description": [
+      "The scene showcases a collection of bespoke leather handbags.",
+      "Each handbag is crafted from full-grain leather with rich color variations.",
+      "The handbags are arranged on a polished granite table."
+    ],
+    "questions": [
+      "Are there bespoke leather handbags in the scene?",
+      "Is each handbag made from full-grain leather?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at eye level, slightly tilted.",
+      "Handbags are arranged dynamically on the table.",
+      "A soft-focus wooden wall acts as the backdrop."
+    ],
+    "questions": [
+      "Is the camera positioned at eye level?",
+      "Are the handbags arranged on a table?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft spotlights create a focused beam of light.",
+      "The lighting suggests the ambiance of a late afternoon.",
+      "The color palette includes complementary earthy tones."
+    ],
+    "questions": [
+      "Does the lighting resemble a late afternoon ambiance?",
+      "Is there a soft-focus background in the scene?"
+    ]
+  }
+}

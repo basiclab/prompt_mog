@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Situated in a bustling metropolitan district, a striking modern skyscraper stands as a testament to contemporary architectural innovation and urban sophistication. The building's graceful facade is adorned with a latticework of stainless steel and glass, creating a reflective mosaic of the vibrant cityscape surrounding it. In front of the building, a landscaped plaza features meticulously arranged flowerbeds and fountains, adding a touch of nature to the concrete jungle. As the camera captures the structure from an eye-level viewpoint, the architectural lines guide the viewer's gaze upward, following the sleek contours to the pinnacle of the structure that pierces the sky. The image frames the skyscraper as the central subject, with adjacent high-rises and bustling streets providing context and scale. Seen in the early evening, the building is bathed in the warm, ambient glow of sunset, which casts long shadows and highlights the reflective surfaces, giving the structure an ethereal quality. The sky transitions from vibrant oranges and pinks to the deep blues of impending night, further enhancing the mood of urban elegance and anticipation. Inside the building, through vast glass windows, the interiors reveal a blend of luxury and modernity, featuring open-plan office spaces with state-of-the-art technology and sleek minimalist design. The scene exudes a sense of ambition and progress, perfectly capturing the spirit of modern city living. The photograph is taken in the style of high-end commercial photography, ensuring sharp focus and immaculate detail, capturing the intricate patterns and textures of the building’s surface with a clarity that invites viewers to explore every facet of the composition.",
+  "semantic": {
+    "description": [
+      "A modern skyscraper with a stainless steel and glass facade dominates the scene.",
+      "Landscaped flowerbeds and fountains enhance the plaza in front of the building.",
+      "The building's interiors feature open-plan office spaces with modern technology."
+    ],
+    "questions": [
+      "Is there a modern skyscraper in the scene?",
+      "Are there landscaped flowerbeds visible?",
+      "Can the building's interiors be seen through the windows?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The skyscraper is centrally framed with adjacent high-rises providing scale and context.",
+      "The camera captures the building from an eye-level viewpoint, guiding the gaze upward.",
+      "The plaza and surrounding streets are visible, adding depth to the composition."
+    ],
+    "questions": [
+      "Is the skyscraper centrally framed in the image?",
+      "Does the camera view the building from eye-level?",
+      "Are surrounding streets visible in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The building is bathed in the warm glow of early evening sunlight.",
+      "The scene transitions from vibrant sunset colors to deep blues of night.",
+      "The photograph exhibits sharp focus and immaculate detail, typical of high-end commercial photography."
+    ],
+    "questions": [
+      "Is the building illuminated by early evening sunlight?",
+      "Does the sky transition from sunset colors to night blues?",
+      "Is the photograph characterized by sharp focus and detail?"
+    ]
+  }
+}

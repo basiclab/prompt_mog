@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the heart of an illuminated basketball arena, an intense championship game reaches its climax, as two rival teams battle for supremacy. Positioned center court, the star players dribble and pivot with lightning-fast agility, each motion captured in a vivid display of athletic prowess. Cheerleaders on the sidelines animate the crowd with synchronized waves of enthusiasm, their pompoms glittering under the bright overhead lights. The crowd, a pulsating sea of team colors, roars in deafening support, their collective energy palpable. Captured from a slightly elevated midcourt vantage point, the scene showcases the vibrant court with its polished wooden floor gleaming under the arena's powerful lights. The camera captures players mid-leap, their muscular forms suspended in the air, showcasing the explosive power and grace inherent in the sport. Shadows and highlights play across the scene, accentuating the dynamic contrast created by the directional lighting, and intensifying the drama of the unfolding action. The game occurs under an artificial, crisp white light that casts sharp, defined shadows on the hardwood. A plethora of bold colors dominate the scene, with the striking reds, blues, and whites of the team uniforms juxtaposed against the neutral tones of the court. The emotional tone is charged with urgency and excitement, a testament to the heightened stakes of the championship finale. Executed in a photojournalistic style, the image captures the raw and authentic energy of live sports, with a pin-sharp focus and impeccable clarity, highlighting every bead of sweat and expression of determination. The technical excellence is evident in its detail and depth, offering a captivating glimpse into the high-octane world of professional sports photography.",
+  "semantic": {
+    "description": [
+      "Two rival basketball teams are competing in a championship game.",
+      "Cheerleaders on the sidelines energize the crowd with coordinated movements.",
+      "A pulsating crowd supports their teams with visible excitement and team colors."
+    ],
+    "questions": [
+      "Are there two teams playing in the basketball game?",
+      "Do the cheerleaders add to the atmosphere with their movements?",
+      "Is the crowd visibly supporting their teams?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a slightly elevated midcourt viewpoint.",
+      "Players are arranged dynamically on the court, with some mid-leap.",
+      "The court features prominently, showcasing its polished wooden surface."
+    ],
+    "questions": [
+      "Is the scene captured from a midcourt perspective?",
+      "Are players visible in mid-air on the basketball court?",
+      "Is the polished wooden floor of the court noticeable?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit by bright, crisp, artificial lights from above.",
+      "Bold colors dominate, with uniform contrasts against the neutral court.",
+      "The atmosphere conveys urgency and excitement, typical of high-stakes sports."
+    ],
+    "questions": [
+      "Is the scene lit by artificial lighting?",
+      "Do bold team colors stand out against the court?",
+      "Does the atmosphere reflect high-stakes excitement?"
+    ]
+  }
+}

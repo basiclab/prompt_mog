@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In an impeccably designed minimalistic photography studio, a collection of sleek, modern kitchen utensils takes center stage. The utensils, made of polished stainless steel, are arranged meticulously on a smooth, matte black countertop. This striking contrast accentuates their lustrous surfaces and clean, ergonomic lines. Each piece is positioned with precision, ensuring perfect alignment and symmetry, intensifying the overall aesthetic appeal for a sophisticated audience. The camera angle, set at a slight elevation, captures the subtle curvature and texture of each utensil, drawing attention to their craftsmanship while maintaining a uniform backdrop. The composition includes a trio of utensils prominently featured in the foreground—a pair of tongs, a spatula, and a ladle—flanked by a set of measuring spoons slightly receding into the midground. Beyond them, a minimalistic wall clock adds an element of modernity to the scene, complementing the utensils' contemporary design. The lighting is carefully orchestrated to mimic the soft, ambient glow of an overcast sky, flooding the studio with diffused light that eliminates harsh shadows and highlights the reflective surfaces of the utensils without overwhelming glare. This setting fosters an atmosphere of serene elegance, resonating with an understated luxury that is both inviting and aspirational. The color palette is dominated by silver and charcoal hues, enhanced by the subtle warmth of the ambient lighting, which imbues the room with a tranquil yet dynamic energy. The stylistic choice favors a minimalist inspired approach, using clean lines and negative space to emphasize the quality and functionality of each item on display. Captured with a high-resolution camera, the image boasts sharp detail and texture, demonstrating professional-grade photography that is both technically proficient and artistically compelling, perfect for a high-end kitchenware catalog.",
+  "semantic": {
+    "description": [
+      "The scene features polished stainless steel kitchen utensils.",
+      "A matte black countertop serves as the display surface for the utensils.",
+      "A minimalistic wall clock is positioned in the background, adding modernity."
+    ],
+    "questions": [
+      "Are the kitchen utensils made of polished stainless steel?",
+      "Is there a wall clock visible in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The utensils are arranged on a smooth, matte black countertop.",
+      "The camera captures the utensils from a slight elevation.",
+      "The trio of featured utensils is placed prominently in the foreground."
+    ],
+    "questions": [
+      "Are the utensils placed on a countertop?",
+      "Is the camera positioned at an elevated angle?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is diffused, mimicking an overcast sky.",
+      "Silver and charcoal hues dominate the color palette.",
+      "The stylistic approach favors minimalistic design with clean lines."
+    ],
+    "questions": [
+      "Is the lighting in the studio designed to be soft and diffused?",
+      "Does the color palette feature predominantly silver and charcoal hues?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the grandeur of a lavish ballroom, a golden wedding celebration is in full swing. The opulent space is adorned with elegantly draped fabric and ornate floral arrangements, cascading from the ceiling like ethereal waterfalls. Crystal chandeliers hang resplendently above, their multifaceted surfaces reflecting a kaleidoscope of warm, golden light that bathes the room in enchantment. Couples twirl gracefully across the polished marble floor, their movements synchronized with the lilting melody of a live string quartet. Friends and family encircle the central dance area, their expressions of joy and laughter captured in perfect candor. Tables laden with sumptuous delicacies border the scene, each one a testament to the meticulous attention to detail that defines this exquisite celebration. Photographed from a subtle vantage point, the scene captures a sense of intimacy and splendor, with the camera positioned to encompass both the grandeur of the setting and the warmth of the personal interactions. Warm hues of gold and ivory dominate the color palette, complemented by delicate accents of rose and sage in the floral decor, creating a harmonious atmosphere of romance and celebration. The lighting is soft and radiant, emphasizing the natural beauty of the attendees and the intricate details of their elegant attire. The photograph, executed with the finesse of fine art portraiture, captures every nuance in stunning clarity, testament to the professional skill behind the lens and the high-quality equipment used. The image's cinematic quality evokes the timeless elegance of classic wedding photography, ensuring the memory of this special occasion endures with unmatched vibrancy and detail.",
+  "semantic": {
+    "description": [
+      "The ballroom is adorned with elegantly draped fabric and ornate floral arrangements.",
+      "Couples twirl across the polished marble floor to the music of a live string quartet.",
+      "Tables laden with sumptuous delicacies are arranged around the dance area."
+    ],
+    "questions": [
+      "Are there ornate floral arrangements in the ballroom?",
+      "Is there a live string quartet playing music?",
+      "Are the tables prepared with sumptuous delicacies?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "Crystal chandeliers hang above, reflecting a kaleidoscope of warm, golden light.",
+      "The camera is positioned to capture both the grandeur of the setting and personal interactions.",
+      "The tables are arranged around the central dance area."
+    ],
+    "questions": [
+      "Are the chandeliers reflecting warm, golden light?",
+      "Is the camera positioned to show both grandeur and intimacy?",
+      "Are the tables arranged around the dance area?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm hues of gold and ivory dominate the color palette.",
+      "The lighting is soft and radiant, emphasizing the beauty of the attendees.",
+      "The photograph captures the scene with the finesse of fine art portraiture."
+    ],
+    "questions": [
+      "Do warm hues of gold and ivory dominate the scene?",
+      "Is the lighting soft and radiant in the image?",
+      "Does the photograph embody the style of fine art portraiture?"
+    ]
+  }
+}

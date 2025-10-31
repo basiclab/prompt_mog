@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a bizarre and enchanting dreamscape, a giant, transparent bubble hovers in the sky, encapsulating an entire, thriving miniature city within its delicate, iridescent walls. This bubble city floats over an expanse of surreal, undulating hills covered in a plush layer of soft green moss, which gleams under the whimsical hues of a twilight sky. The scene is viewed from a slightly elevated perspective, allowing the viewer to see the intricate details of the city—its tiny spires and domed towers glistening like jewels under the radiant, swirling luminescence of the bubble. The foreground features a single, ancient tree with twisted, gnarled branches that reach out like curious fingers towards the floating bubble, hinting at an age-old quest for dreams. A gentle, ethereal light emanates from within the bubble, casting soft, playful shadows over the hills and creating an aura of mystery and wonder. The color palette is dominated by cool, dreamy pastel shades of blues, purples, and pinks, with subtle hints of gold reflecting off the bubble's surface, setting an otherworldly, tranquil mood. This scene is styled in a manner reminiscent of surrealist paintings, blending masterful photographic detail with a touch of fantasy—a testament to high-resolution digital artistry, capturing each element in stunning clarity and vividness. Such is the serene and fantastical nature of this surreal composition, where reality and imagination dance seamlessly together in an endless loop of wonder.",
+  "semantic": {
+    "description": [
+      "A giant transparent bubble hovers over the hills, containing a miniature city.",
+      "The city inside the bubble has tiny spires and domed towers.",
+      "An ancient tree with twisted branches stands in the foreground."
+    ],
+    "questions": [
+      "Is there a transparent bubble in the scene?",
+      "Does the bubble contain a miniature city?",
+      "Is there an ancient tree in the foreground?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The bubble is centrally positioned and viewed from an elevated perspective.",
+      "The ancient tree's branches extend towards the floating bubble.",
+      "The hills are covered in soft green moss, creating a plush terrain."
+    ],
+    "questions": [
+      "Is the bubble centrally positioned in the scene?",
+      "Do the tree branches extend towards the bubble?",
+      "Are the hills covered in soft green moss?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit with an ethereal light emanating from the bubble.",
+      "The color palette includes pastels of blues, purples, and pinks.",
+      "The style blends surrealism with photographic detail, creating a fantastical atmosphere."
+    ],
+    "questions": [
+      "Is the scene lit with an ethereal light from the bubble?",
+      "Does the color palette include pastels and dreamy hues?",
+      "Is the style reminiscent of surrealist paintings?"
+    ]
+  }
+}

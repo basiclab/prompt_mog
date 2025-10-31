@@ -1,0 +1,40 @@
+{
+  "theme": "Still Life Photography",
+  "prompt": "In a quiet, sunlit nook of a vintage farmhouse kitchen, an intricately arranged still life unfolds across a timeworn wooden tabletop. The scene is populated by a collection of carefully selected objects, each evoking a sense of rustic elegance and nostalgia. Dominating the composition is a woven wicker basket brimming with freshly picked apples, their vibrant red and green skins gleaming softly in the gentle morning light that spills through a nearby window. Next to the basket, a copper kettle with a well-polished spout catches the light with a warm glow, adding a touch of metallic contrast to the organic elements. Scattered around these central pieces are hand-crafted ceramic bowls filled with assorted nuts, their textured surfaces adding depth and variety to the tableau. The composition is captured from a slightly elevated perspective, allowing a clear view of the arrangement and emphasizing the harmonious interplay of shapes and textures. In the background, partially obscured by the soft focus, stands an antique mantle clock, its elegant hands frozen in an eternal moment. The natural light filters through sheer curtains, creating delicate patterns of shadow that dance across the scene, enhancing the warm, inviting atmosphere. A muted palette of earthy tones and soft pastels dominates the image, creating a serene mood that invites reflection and appreciation of life's simple pleasures. The entire scene is rendered in the style of fine art photography, with an emphasis on high resolution and sharp detail, ensuring each element is captured with exceptional clarity and finesse, reminiscent of a masterfully composed painting.",
+  "semantic": {
+    "description": [
+      "A woven wicker basket filled with fresh apples is the central focus.",
+      "A well-polished copper kettle is placed next to the wicker basket.",
+      "Hand-crafted ceramic bowls contain a variety of assorted nuts."
+    ],
+    "questions": [
+      "Is there a woven wicker basket present in the scene?",
+      "Do the apples have vibrant red and green skins?",
+      "Is there a copper kettle included in the composition?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a slightly elevated perspective.",
+      "The apples are arranged prominently inside the wicker basket.",
+      "Ceramic bowls are scattered around the central objects on the table."
+    ],
+    "questions": [
+      "Is the composition captured from a slightly elevated viewpoint?",
+      "Are the apples centrally arranged in the wicker basket?",
+      "Are there multiple ceramic bowls around the main objects?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image features a warm, inviting atmosphere with soft morning light.",
+      "Delicate shadow patterns are created by sheer curtains filtering natural light.",
+      "The scene is rendered in the style of fine art photography."
+    ],
+    "questions": [
+      "Is the atmosphere enhanced by soft, natural morning light?",
+      "Do sheer curtains create delicate shadow patterns across the scene?",
+      "Is the still life rendered in a fine art photography style?"
+    ]
+  }
+}

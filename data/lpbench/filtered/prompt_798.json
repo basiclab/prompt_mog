@@ -1,0 +1,40 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "A luxurious, high-performance sports car sits majestically at the boundary between ocean and land, poised on a jagged cliff that overlooks a sweeping expanse of azure sea. The car's sleek, aerodynamic body is finished in a deep, metallic midnight blue, which mirrors the ocean's hues, creating a seamless transition between the machine and its natural backdrop. In the foreground, the rugged, rocky cliff edge is dotted with hardy coastal wildflowers, their vivid yellows and purples providing a striking contrast against the car's polished exterior. The composition is framed from a slightly elevated perspective, allowing the viewer to take in both the intricate design details of the car and the vast seascape beyond. This vantage point emphasizes the car's aggressive stance and the stark drop of the cliff behind, enhancing the sense of adventure and freedom. Illuminated by the warm, golden light of the setting sun, the scene is bathed in a rich tapestry of hues, where the metallic sheen of the car is accentuated by the sun's rays, casting dramatic shadows that dance across the cliff face. The evening sky is a symphony of oranges, pinks, and soft purples that simultaneously reflect off the car's bodywork and the tranquil ocean below, creating an atmosphere of serene elegance and exhilarating potential. The photograph is captured in the style of high-end automotive advertising, where every detail from the glossy finish of the car to the subtle textures of the rocky ground is rendered in sharp, high-resolution detail. The composition exudes a professional caliber, with every element meticulously balanced to convey a sense of luxury, power, and timeless beauty—hallmarks of award-winning automotive photography.",
+  "semantic": {
+    "description": [
+      "A high-performance sports car is positioned on a cliff by the ocean.",
+      "The car is painted in a metallic midnight blue color.",
+      "Coastal wildflowers in yellow and purple are present near the car."
+    ],
+    "questions": [
+      "Is there a sports car featured in the image?",
+      "Is the car's color a metallic midnight blue?",
+      "Are there coastal wildflowers visible near the car?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The sports car is located at the edge of a cliff overlooking the ocean.",
+      "The scene is viewed from a slightly elevated perspective.",
+      "The composition includes a vast seascape in the background."
+    ],
+    "questions": [
+      "Is the car positioned at the edge of a cliff?",
+      "Does the scene include an ocean in the background?",
+      "Is the vantage point slightly elevated?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by the warm light of the setting sun.",
+      "The color palette includes oranges, pinks, and purples in the sky.",
+      "The photo exhibits high-resolution details typical of automotive advertising."
+    ],
+    "questions": [
+      "Is the scene lit by the setting sun?",
+      "Are warm colors like oranges and pinks present in the sky?",
+      "Does the image have high-resolution details?"
+    ]
+  }
+}

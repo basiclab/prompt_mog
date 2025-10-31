@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "On a remote cliffside overlooking an expansive ocean, an ancient observatory, weathered by centuries of sea spray, stands as a silent sentinel under the vast, star-laden night sky. The observatory, crafted from stones encrusted with lichen, cradles a vintage telescope whose brass fittings gleam faintly in the moon's gentle light. As the tide whispers below, the observatory's circular platform provides an unobstructed, panoramic view of the heavens. From this vantage point, the observer, clad in a woolen cloak against the cool ocean breeze, peers intently through the eyepiece, tracing the arc of a shooting star that blazes momentarily before fading into the deep night. Overhead, the Milky Way stretches like a celestial river, its intricate tapestry of stars shimmering with a light both ancient and serene. The scene is framed from a slightly elevated perspective, capturing the observatory as a central focal point, with the vast ocean receding into the darkness below and the sky arching infinitely above. Starlight gently illuminates the ocean, creating a delicate interplay of light and shadow across the swelling waves. A palette of deep indigos, midnight blues, and shimmering silvers infuses the scene with a calm, contemplative mood, reflecting the quiet majesty of the cosmos. A subtle haze from the sea air softens the distant horizon, enhancing the dreamlike quality of the scene. Captured in a fine art, long-exposure photography style, the image blends serene stillness with the dynamism of the galaxy, achieving an award-winning level of detail and clarity. The observatory’s dome, the vibrant texture of the stones, and the ethereal dance of the stars are all rendered in crisp, high-resolution detail, inviting the viewer into a world of wonder and discovery.",
+  "semantic": {
+    "description": [
+      "The scene includes an ancient stone observatory overlooking the ocean.",
+      "A vintage telescope within the observatory is pointed at the night sky.",
+      "An observer clad in a woolen cloak is gazing through the telescope."
+    ],
+    "questions": [
+      "Is there an observatory featured in the scene?",
+      "Does the observer use a telescope to view the sky?",
+      "Is an observer present in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The observatory is centrally located on a cliffside overlooking the ocean.",
+      "The viewer's perspective is slightly elevated, offering a panoramic view.",
+      "The ocean extends into the distance under the vast night sky."
+    ],
+    "questions": [
+      "Is the observatory centrally positioned in the scene?",
+      "Does the perspective include both the ocean and the sky?",
+      "Is the ocean visible beneath the observatory?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is infused with deep indigos and midnight blues.",
+      "Starlight interacts with ocean waves creating light and shadow play.",
+      "Captured in fine art, long-exposure photography, enhancing detail."
+    ],
+    "questions": [
+      "Is the color palette dominated by indigos and blues?",
+      "Does starlight create a play of light and shadow in the scene?",
+      "Is the image captured in a fine art style with long exposure?"
+    ]
+  }
+}

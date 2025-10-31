@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Amidst a dramatic atmospheric ballet, a solitary, timeworn barn stands resiliently in a field of golden wheat, its weathered wood and sagging roof testament to years of enduring the elements. Above, a whirlwind of meteorological phenomena unfolds, as a colossal supercell storm churns the sky, its immense, swirling form dominating the heavens with a formidable presence. The scene is viewed from a slightly elevated, wide-angle perspective, capturing the expansive breadth of the landscape with an eye that pans from the rustling wheat in the foreground to the barn at mid-focus, and finally up to the tempestuous sky that envelops the horizon in shadow and light. As the late afternoon sun struggles to pierce through the thick veil of rolling clouds, a stark interplay of light and shadow ensues, casting the barn in alternating washes of warm sunlight and cold shadows. This dynamic lighting paints the scene with a palette of deep indigos and stark whites, contrasted by the earthy ochres of the field beneath, generating a mood both dramatic and foreboding with the promise of an impending storm. The swirling vortex of clouds is textured with ripples and folds, its edges tinged with a ghostly luminescence as flashes of distant lightning briefly illuminate their depths. In the distance, a solitary tree stands in defiance against the storm, its silhouette stark and gnarled, adding another layer of texture and depth to the scene. The image, rendered with a hyper-realistic style, captures every minute detail with masterful clarity, from the individual blades of wheat to the subtly gradating hues of the storm clouds, ensuring a breathtakingly vivid portrayal of nature's volatile beauty.",
+  "semantic": {
+    "description": [
+      "A solitary, timeworn barn stands in a field of golden wheat.",
+      "A colossal supercell storm dominates the sky above the landscape.",
+      "A gnarled tree silhouette adds depth to the distant scene."
+    ],
+    "questions": [
+      "Is there a barn in the field?",
+      "Does the sky feature a supercell storm?",
+      "Is there a tree visible in the distance?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated, wide-angle perspective.",
+      "The barn is at mid-focus while the wheat field is in the foreground.",
+      "The storm clouds envelop the horizon with a dramatic presence."
+    ],
+    "questions": [
+      "Is the barn captured in the mid-focus area of the scene?",
+      "Does the perspective show a wide-angle view of the landscape?",
+      "Are the storm clouds positioned in the horizon?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The late afternoon sun casts warm sunlight and cold shadows over the scene.",
+      "The color palette consists of deep indigos, stark whites, and earthy ochres.",
+      "Distant lightning occasionally illuminates the storm clouds with ghostly luminescence."
+    ],
+    "questions": [
+      "Is the lighting dynamic with both warm and cold tones?",
+      "Does the color palette include deep indigos and earthy ochres?",
+      "Is there a ghostly luminescence in the storm clouds from lightning?"
+    ]
+  }
+}

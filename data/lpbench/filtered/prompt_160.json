@@ -1,0 +1,38 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "In an expansive and serene desert landscape, an ancient stone arch carved by millennia of wind and sand stands silently under the vast expanse of the night sky. This monumental arch is the central feature, appearing weathered and robust, its silhouette stark against the twinkling stars. The viewpoint is from a low angle, framing the arch in the lower third of the composition, while the heavens stretch infinitely above. The scene is captured from a distance that emphasizes both the isolation of the arch and the grandeur of the celestial vault, scattered with countless stars and the ethereal glow of the Milky Way crossing the canvas of the sky. As moonlight bathes the desert, it casts a soft, silvery glow over the landscape, accentuating the textures of the rocky terrain and creating gentle shadows that pool in the arch's crevices. This serene lighting is complemented by the crisp clarity of the atmosphere, allowing the stars to shine with a piercing brightness. The dominant color palette consists of deep midnight blues interspersed with white starbursts and the faint, mystical shades of the Milky Way, creating a tranquil yet awe-inspiring mood. Various celestial phenomena are subtly visible, such as a faint aurora at the horizon and sporadic meteor trails that momentarily blaze across the sky. Rendered in a hyper-realistic and highly detailed photographic style, this image captures the awe of the cosmos in an intimate, personal moment, inviting the viewer to ponder the vastness beyond. Every star is sharp, each detail meticulously captured, achieving an award-winning level of professional quality and clarity, immortalizing this celestial panorama in breathtaking fidelity.",
+  "semantic": {
+    "description": [
+      "An ancient stone arch is centrally positioned in the desert landscape.",
+      "Countless stars fill the sky, with the Milky Way running across it.",
+      "A faint aurora appears at the horizon, adding subtle colors."
+    ],
+    "questions": [
+      "Is there an ancient stone arch in the scene?",
+      "Are there countless stars visible in the sky?",
+      "Is the Milky Way visible in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The stone arch is framed in the lower third of the composition.",
+      "The celestial phenomena are located mainly above the arch."
+    ],
+    "questions": [
+      "Is the stone arch positioned in the lower part of the image?",
+      "Is the sky full of celestial phenomena above the arch?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured in a hyper-realistic photographic style.",
+      "The light creates a silvery glow over the desert landscape.",
+      "The color palette features midnight blues and silvery whites."
+    ],
+    "questions": [
+      "Is the style of the image hyper-realistic?",
+      "Does the lighting create a silvery glow on the landscape?",
+      "Are midnight blues a dominant color in the sky?"
+    ]
+  }
+}

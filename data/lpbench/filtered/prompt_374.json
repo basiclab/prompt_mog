@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Nestled within the rolling hills of a prestigious countryside, an exquisite stone manor stands as a paragon of refined elegance and timeless design. This majestic residence, surrounded by lush gardens, is captured under the clear, blue afternoon sky, where its grand turret and gabled rooflines draw the viewer's gaze upward towards the heavens. The photograph is taken from a slightly elevated angle, allowing the sweeping driveway that leads from the wrought iron entrance gates to fill the lower third of the image, enhancing the sense of approach and anticipation. The manor's robust, stone facade, with its intricate masonry and arched windows, is bathed in the soft glow of the afternoon sun, casting gentle shadows that accentuate every architectural detail. Sunlight filters delicately through the mature oak trees that border the property, creating a dappled light pattern on the immaculately kept lawn and emphasizing the tranquil ambiance of this idyllic setting. The color palette of the scene is a sophisticated blend of earthy tones and muted greens, evoking feelings of warmth and tranquility. Hints of blooming lavender and rose bushes add subtle splashes of color, further enhancing the elegance of this distinguished estate. Captured in the style of traditional architectural photography, the image showcases an impeccable attention to detail and composition, demonstrating a mastery of light and shadow play that elevates the visual narrative. Such high-definition photography ensures every stone, every leaf, and every petal is rendered with stunning clarity, offering viewers a glimpse into the serene luxury and timeless beauty of country estate living.",
+  "semantic": {
+    "description": [
+      "An exquisite stone manor stands amid lush gardens, demonstrating refined elegance.",
+      "The photograph features a grand turret and gabled rooflines of the manor.",
+      "Mature oak trees border the property, providing a tranquil ambiance."
+    ],
+    "questions": [
+      "Is there a stone manor featured in the scene?",
+      "Does the scene include mature oak trees?",
+      "Are there lush gardens around the manor?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a slightly elevated angle.",
+      "The driveway occupies the lower third of the composition.",
+      "Sunlight filters through trees, creating dappled light patterns."
+    ],
+    "questions": [
+      "Is the image taken from an elevated angle?",
+      "Does the driveway fill the lower third of the image?",
+      "Are there sunlight patterns created by trees?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The facade is bathed in the soft glow of the afternoon sun.",
+      "The color palette includes earthy tones and muted greens.",
+      "The scene is captured in traditional architectural photography style."
+    ],
+    "questions": [
+      "Is the manor's facade illuminated by the afternoon sun?",
+      "Does the color palette feature earthy tones?",
+      "Is the photography style traditional architectural?"
+    ]
+  }
+}

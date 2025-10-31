@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Underneath an expansive sky, a solitary beach stretches out, flanked by tall, weathered cliffs that stand as ancient sentinels against the relentless ocean. A ferocious storm rages, unleashing its full might upon the landscape, as thunderous waves crash against the rocky coastline with unyielding force. The air crackles with the energy of the tempest, alive with the brilliant forks of lightning that dance across the tumultuous clouds. The beach, eerily deserted, is littered with driftwood and seaweed, remnants of past tempests. A lone seabird braves the fierce winds, its silhouette just visible against the chaotic sky, embodying resilience in the face of nature's ferocity. From a perspective near the ground, the scene captures the raw power of the approaching storm, with the cliff walls rising dominantly to each side, creating a natural frame for the turbulent ocean and sky beyond. The foreground features the textured sands of the beach, dotted with debris, leading the eye to the roiling waters that unfurl in dramatic fashion at the horizon. As the storm clouds churn and boil, the scene is bathed in a surreal light, where the faintest hint of sunlight struggles through the dense cloud cover to cast a cold, silver sheen across the water's surface, enhancing the atmosphere of impending chaos. Deep, brooding grays and blues dominate the sky, contrasting with the muted tan of the sandy beach, creating an emotionally charged palette that evokes tension and awe. The image evokes a sense of cinematic grandeur, influenced by fine art landscape photography with an emphasis on capturing the sublime beauty and terror of nature's unrestrained fury. The photograph is executed with high-resolution precision, showcasing intricate details in both the crashing waves and the intricate patterns of the stormy sky, earning the image acclaim for its technical mastery and emotive expression.",
+  "semantic": {
+    "description": [
+      "The scene depicts a solitary beach with tall, weathered cliffs on either side.",
+      "A fierce storm is raging, with waves crashing against the rocky coastline.",
+      "A lone seabird is visible, silhouetted against the stormy sky."
+    ],
+    "questions": [
+      "Is the beach depicted as solitary and deserted?",
+      "Are there cliffs shown flanking the beach?",
+      "Is there a seabird visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The perspective is set near the ground, emphasizing the height of the cliffs.",
+      "Cliff walls create a natural frame for the ocean and sky.",
+      "The foreground shows textured sand leading to the midground's roiling waters."
+    ],
+    "questions": [
+      "Is the camera perspective set near the ground?",
+      "Do the cliffs create a natural frame for other elements?",
+      "Does the composition include textured sand in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting casts a cold, silver sheen across the water's surface.",
+      "Deep grays and blues dominate the color palette, conveying tension.",
+      "The style is influenced by fine art landscape photography."
+    ],
+    "questions": [
+      "Is the lighting described as casting a silver sheen?",
+      "Are deep grays and blues dominant in the color scheme?",
+      "Is the style based on fine art landscape photography?"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a sleek and meticulously organized photography studio, a refined assortment of artisanal chocolate bars lies elegantly arranged on a polished mahogany table, capturing the eye with their luxurious packaging and intricate designs. The studio's minimalist design, centered around clean lines and high-end materials, underscores the artisanal quality of the chocolates, placing them in an environment that speaks to sophisticated indulgence. The camera captures the scene from a slightly elevated viewpoint, positioned to offer a comprehensive view that includes the foreground detail of each bar and the linear arrangement stretching towards the back edge of the table. Placed at varying angles, the bars create a dynamic yet harmonious composition, inviting the viewer's gaze to explore each piece's unique artistry. The studio's lighting is carefully curated, with soft, diffused light illuminating the scene, creating gentle reflections on the glossy table surface and highlighting the textural richness of the chocolate wrappers. The warm, subtle lighting enhances the rich, earthy tones of the chocolate bars, complemented by a background hue that shifts from warm beige to a deep, soothing chestnut. This palette infuses the scene with a sense of warmth and opulence, setting a mood of comfort and luxury. The packaging of each chocolate bar features intricate patterns and gold foil accents, their crisp designs standing out against the smooth, rich surfaces. The overall aesthetic is one of polished elegance, a style reminiscent of high-end culinary photography, where every detail is captured with exquisite precision and clarity. The photograph exhibits a high level of technical finesse, characterized by sharp focus and an exceptional depth of field, showcasing the chocolate bars in stunning 8K resolution that emphasizes every nuance of texture and color contrast, resulting in a masterful composition worthy of a luxury brand advertisement.",
+  "semantic": {
+    "description": [
+      "An assortment of artisanal chocolate bars is arranged on a polished mahogany table.",
+      "Each chocolate bar has intricate designs and luxurious packaging with gold foil accents.",
+      "The studio environment is minimalist with clean lines and high-end materials."
+    ],
+    "questions": [
+      "Is the main subject a collection of chocolate bars?",
+      "Does each chocolate bar have unique packaging designs?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is slightly elevated, capturing the chocolate bars in a comprehensive view.",
+      "Chocolate bars are placed at varying angles across the polished table surface.",
+      "The arrangement of bars stretches towards the back edge of the table, adding depth."
+    ],
+    "questions": [
+      "Is the scene viewed from a slightly elevated angle?",
+      "Are the chocolate bars arranged in a linear composition on the table?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, creating gentle reflections on the table surface.",
+      "Warm tones dominate the color palette, with hues shifting from beige to chestnut.",
+      "The photographic style emphasizes precision, with sharp focus and exceptional detail."
+    ],
+    "questions": [
+      "Is the lighting in the scene soft and diffused?",
+      "Does the scene use a warm color palette with earthy tones?"
+    ]
+  }
+}

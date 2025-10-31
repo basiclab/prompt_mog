@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "In the stillness of a secluded mountain range, an amateur astronomer stands by her high-tech telescope, situated at the edge of a sheer cliff. She is captivated by the profound infinity of the cosmos, her gaze steadfastly focused on a vivid procession of celestial wonders. Above, the star-filled sky stretches out like a velvety black tapestry, adorned with the twinkling brilliance of innumerable stars and distant galaxies. The scene is captured from a low-angle perspective, emphasizing the sublime vastness of the heavens and the small yet determined figure of the astronomer silhouetted against the astral panorama. In the foreground, the rocky terrain is visible, rugged and raw, leading the viewer's eye toward the edge of the cliff, where the universe unfurls in all its glory. A gentle breeze moves through, rustling the pages of a stargazing manual resting beside her, a testament to her meticulous study of the night. The Milky Way arcs majestically overhead, its luminescent trail of stars clearly defined against the hard, cold backdrop of space. Luminous nebulae add splashes of color, their gaseous forms swirling in ethereal pinks and purples amidst the deeper indigos and blues. The quality of the night is pristine, the air crisp and clear, diminishing the distant city lights to mere pinpricks on the horizon. Stars glimmer with a sharp, unwavering clarity under the influence of the new moon, casting soft, diffuse shadows across the landscape. The entire scene is imbued with quiet grandeur, inviting a profound sense of reflection and wonder. Captured with the precision of a masterful astrophotographer, the image reveals an unparalleled level of detail and sharpness, presenting an awe-inspiring portrait of the night sky that speaks to the boundless beauty and mystery of the universe.",
+  "semantic": {
+    "description": [
+      "An amateur astronomer stands beside a high-tech telescope on a cliff.",
+      "The Milky Way is clearly visible, arching overhead in the night sky.",
+      "A stargazing manual is open beside the astronomer, pages rustling gently."
+    ],
+    "questions": [
+      "Is there an astronomer present in the scene?",
+      "Is the Milky Way visible in the sky?",
+      "Is there a stargazing manual near the astronomer?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera perspective is low-angle, emphasizing the vastness of the sky.",
+      "The foreground features a rugged, rocky terrain leading to the cliff's edge.",
+      "The astronomer is silhouetted against the backdrop of the celestial panorama."
+    ],
+    "questions": [
+      "Is the scene captured from a low-angle perspective?",
+      "Is there a rugged terrain visible in the foreground?",
+      "Is the astronomer silhouetted in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by starlight with sharp clarity under a new moon.",
+      "The color palette features indigos, blues, pinks, and purples of nebulae.",
+      "The atmosphere is crisp, with diffuse shadows created by the starlight."
+    ],
+    "questions": [
+      "Is the night scene illuminated by starlight?",
+      "Does the color palette include indigos and blues?",
+      "Are there diffuse shadows in the scene?"
+    ]
+  }
+}

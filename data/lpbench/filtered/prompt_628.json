@@ -1,0 +1,39 @@
+{
+  "theme": "Event Photography",
+  "prompt": "Under the clear blue sky of a serene Mediterranean coastal town, an intimate seaside wedding ceremony unfolds on an expansive wooden deck that stretches out over the turquoise water. The deck is adorned with delicate white and pastel blue drapes that flutter gently in the light sea breeze, creating an ethereal atmosphere. A small group of close family and friends gather around, dressed in elegant summer attire, their faces alight with joy as they witness the union. The bride, in an exquisite lace gown with a flowing train, stands hand in hand with the groom, who is dressed in a tailored beige suit, both centered beneath a gracefully arched pergola adorned with climbing white roses. The photographer captures the scene from an elevated angle, allowing the endless horizon to form a stunning backdrop. In the foreground, a table elegantly set with fine china and crystal glasses awaits the celebratory dinner, positioned next to a path of rose petals leading to the ceremonial arch. The mid-afternoon sun casts a soft, golden glow over the scene, highlighting the gentle waves that lap against the sides of the deck and creating a shimmering effect on the water. The light dances across the scene, creating shadows that add depth and contrast to the elegant setup. A palette of soft blues, whites, and sandy beiges permeates the setting, enhancing the tranquil and joyful mood of the occasion. The photograph exhibits a fine art portraiture style, with a sharp focus and a well-balanced composition, capturing the grandeur and intimacy of this special moment with professional precision.",
+  "semantic": {
+    "description": [
+      "An intimate wedding ceremony takes place on a wooden deck over turquoise water.",
+      "The bride wears an exquisite lace gown, while the groom is in a tailored beige suit.",
+      "Family and friends are gathered around, dressed in elegant summer attire."
+    ],
+    "questions": [
+      "Is the wedding ceremony happening on a deck?",
+      "Is the bride wearing a lace gown?",
+      "Are there family and friends present at the ceremony?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The ceremony is centered beneath an arched pergola with climbing white roses.",
+      "The photograph is taken from an elevated angle, showing the horizon as a backdrop.",
+      "A table is set in the foreground, next to a path of rose petals leading to the arch."
+    ],
+    "questions": [
+      "Is there a pergola in the center of the scene?",
+      "Is the photograph taken from an elevated perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by a soft, golden mid-afternoon sunlight.",
+      "The color palette includes soft blues, whites, and sandy beiges.",
+      "The photograph is in a fine art portraiture style with sharp focus."
+    ],
+    "questions": [
+      "Is the scene lit by mid-afternoon sunlight?",
+      "Does the image use a fine art portraiture style?",
+      "Are soft blues, whites, and sandy beiges dominant in the color palette?"
+    ]
+  }
+}

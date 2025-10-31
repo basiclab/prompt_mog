@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In an ultra-modern and meticulously designed photography studio, a premium collection of bespoke luxury eyewear takes center stage. Each pair of sunglasses, distinguished by its unique craftsmanship and contemporary design, is strategically positioned on a sleek, reflective pedestal that amplifies their elegance. The camera captures the scene from a slightly raised angle and medium distance, ensuring that the intricate details of the eyewear frames are clearly visible, while the background fades into a soft blur, focusing the viewer's attention firmly on the products. The studio is illuminated with soft, diffused lighting, subtly layered from above and the sides, creating gentle highlights along the sleek lines of the glasses and casting minimal shadows, thus emphasizing the precision of their construction. The atmosphere is imbued with a sense of minimalist sophistication, enhanced by the monochromatic color scheme dominated by shades of charcoal gray and silver, which exudes an upscale, contemporary feel. The eyeglasses themselves showcase a palette of brushed metal hues and deep, rich acetates, suggesting durability and elegance combined. The entire composition embodies the aesthetic of minimalistic high fashion editorial photography, with a focus on clean lines and an uncluttered presentation, ensuring that the product’s luxurious essence is captured with high-resolution clarity and professional finesse.",
+  "semantic": {
+    "description": [
+      "The scene showcases a collection of bespoke luxury eyewear.",
+      "Each pair of sunglasses is positioned on a reflective pedestal.",
+      "The eyewear is made of brushed metal and rich acetate materials."
+    ],
+    "questions": [
+      "Is the main subject of the scene a collection of eyewear?",
+      "Are the sunglasses positioned on pedestals?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the eyewear from a slightly raised angle.",
+      "The background is softly blurred to focus on the eyewear.",
+      "The eyewear is centrally positioned in the studio setup."
+    ],
+    "questions": [
+      "Is the camera angle slightly raised?",
+      "Is the background blurred to enhance focus on the eyewear?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, with highlights on the eyewear.",
+      "The color scheme is monochromatic, using charcoal gray and silver tones.",
+      "The image style embodies minimalistic high fashion editorial photography."
+    ],
+    "questions": [
+      "Is the lighting in the studio soft and diffused?",
+      "Does the scene feature a monochromatic color scheme?"
+    ]
+  }
+}

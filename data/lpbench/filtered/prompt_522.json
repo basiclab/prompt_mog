@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "On the rugged cliffs of an Atlantic coastal track, an exhilarating road cycling race unfolds as racers clad in aerodynamic gear slice through the crisp ocean breeze. Each cyclist embodies pure grit and determination, muscles taut and focused expressions fixed ahead, vying for supremacy in this ultimate test of endurance and speed. The scene is captured from a dynamic, overhead angle, offering a sweeping view of the winding coastal road that curves dramatically around sheer cliffs, with the turbulent ocean crashing onto rocks far below. In the foreground, the leading cyclist, an intense figure of concentration, leans into a sharp bend, tires gripping the asphalt, while a colorful peloton trails closely behind, a vivid streak against the deep blue of the sea. High above, the early morning sun casts a golden glow across the landscape, accentuating the cyclists' colorful jerseys and casting long, racing shadows that stretch across the road. The salty sea air mingles with the fresh scent of pine from the adjacent forests, creating an invigorating atmosphere that captures the thrill of this high-stakes competition. The color palette is a vibrant mix of oceanic blues, sunlit golds, and the vivid hues of the cyclists' jerseys, reflecting both the natural beauty of the coastal setting and the intense energy of the race. The scene is depicted in the polished style of professional sports photography, with a focus on capturing the action in stunningly sharp detail. Each element, from the rocky cliffs to the spray of ocean waves, is vividly rendered, ensuring a visual experience that is as breathtaking as the race itself.",
+  "semantic": {
+    "description": [
+      "The scene features cyclists in aerodynamic gear racing along a coastal track.",
+      "The cyclists demonstrate intense concentration as they navigate sharp bends.",
+      "A colorful peloton trails the leading cyclist on a winding road."
+    ],
+    "questions": [
+      "Are the cyclists dressed in aerodynamic gear?",
+      "Is there a peloton visible in the race scene?",
+      "Are the cyclists navigating sharp road bends?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from an overhead angle for a sweeping view.",
+      "The road curves dramatically around cliffs with ocean waves below.",
+      "The leading cyclist is positioned at a sharp bend in the foreground."
+    ],
+    "questions": [
+      "Is the road curving around sheer cliffs?",
+      "Is the scene captured from an overhead angle?",
+      "Is the leading cyclist positioned prominently in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in golden morning sunlight.",
+      "The color palette includes oceanic blues, sunlit golds, and vibrant jersey hues.",
+      "The atmosphere combines the fresh scent of pine with the salty sea air."
+    ],
+    "questions": [
+      "Is the scene illuminated by morning sunlight?",
+      "Are oceanic blues included in the color palette?",
+      "Is the atmosphere invigorating with a mix of pine and sea air?"
+    ]
+  }
+}

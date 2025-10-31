@@ -1,0 +1,37 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "A meticulously restored 1958 Chevrolet Corvette sits proudly in front of a vintage American diner under the soft glow of neon lights. The scene is set on a quiet evening in a small town, where the classic retro design of the Corvette with its gleaming chrome accents and vibrant red paint evokes the spirit of mid-20th century Americana. The car’s distinctively smooth curves and dual headlight arrangement reflect the subtle hues of the surrounding neon signs, casting colorful reflections on its polished exterior. Positioned in the center of the frame, the Corvette is captured from a low-angle perspective, emphasizing its sleek profile and giving it a sense of dynamic presence. In the background, the diner, with its stainless steel facade and fluorescent glow, adds a nostalgic backdrop that complements the car's timeless design. Warm pools of diffused light spill onto the asphalt, creating a contrast with the cool night sky dotted with stars. The ambient light accentuates the Corvette's contours, highlighting its intricate details and craftsmanship. The atmosphere is calm and reflective, with a color palette dominated by cool blues and warm reds, instilling a sense of nostalgia and romance. The composition makes use of professional automotive photography techniques, showcasing both the vehicle and its setting with impeccable clarity and depth. Each element is in sharp focus, revealing textures and details that invite the viewer to linger and explore the scene further. The overall quality reflects a high level of technical skill, capturing the essence of a bygone era with cinematic flair.",
+  "semantic": {
+    "description": [
+      "A 1958 Chevrolet Corvette is the main subject of the scene.",
+      "The car is parked in front of a vintage American diner.",
+      "The Corvette has a vibrant red paint and chrome accents."
+    ],
+    "questions": [
+      "Is a 1958 Chevrolet Corvette featured in the image?",
+      "Does the car have chrome accents?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The Corvette is positioned centrally in the frame.",
+      "It is viewed from a low-angle perspective.",
+      "The diner serves as a nostalgic backdrop in the background."
+    ],
+    "questions": [
+      "Is the car positioned in the center of the frame?",
+      "Is the background occupied by a diner?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by soft neon lights.",
+      "The color palette features cool blues and warm reds.",
+      "There's a cinematic quality to the composition."
+    ],
+    "questions": [
+      "Is the scene lit by neon lights?",
+      "Does the color palette include cool blues and warm reds?"
+    ]
+  }
+}

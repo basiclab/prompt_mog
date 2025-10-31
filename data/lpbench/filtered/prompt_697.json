@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a sophisticated and meticulously arranged photography studio, a chic collection of contemporary kitchenware is elegantly displayed, capturing the viewer's attention with its exquisite design and high-end finish. The main subjects, a set of sleek, matte stainless steel cookware, including pots and skillets, are arranged in an aesthetically pleasing configuration that showcases their modern contours and polished surfaces. Accompanying them are complimentary accessories such as artisan wooden spoons and cutting boards, each crafted with precision to enhance the overall presentation. The studio space exudes an air of minimalist luxury, accentuated by the presence of a polished quartz countertop where the cookware rests. Viewed from a slightly high angle, the scene is centered in the frame, allowing the viewer to appreciate the fine craftsmanship of each item. The arrangement is thoughtfully structured with the larger pots at the back and smaller skillets at the front, creating a sense of layered depth and inviting the observer's eye to explore each element of the display. Bathed in soft, diffused lighting, the studio is illuminated by a large overhead light fixture, which casts gentle, even illumination across the scene, highlighting the subtle textures and sleek finish of the products. The atmosphere is serene and inviting, with a warm and neutral color palette dominated by soft grays, earth tones, and hints of deep blue, which lend an understated elegance to the setting. The overall mood is one of modern sophistication combined with a sense of practical functionality, appealing to discerning customers seeking both style and durability in their kitchenware. The style of photography adopts a contemporary commercial aesthetic, characterized by clean lines and simplicity, reminiscent of high-end magazine editorials. Captured in 8K resolution, the image boasts unparalleled sharpness and clarity, showcasing the fine details and textures of the cookware and accessories, while maintaining a professional quality that aligns with industry standards for high-end product photography.",
+  "semantic": {
+    "description": [
+      "The scene showcases contemporary kitchenware including pots and skillets.",
+      "Accompanying the cookware are artisan wooden spoons and cutting boards.",
+      "The studio features a polished quartz countertop where the items are displayed."
+    ],
+    "questions": [
+      "Is there a collection of kitchenware in the scene?",
+      "Are there wooden spoons included in the display?",
+      "Does the scene include a quartz countertop?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at a slightly high angle for better product visibility.",
+      "Larger pots are placed at the back, with smaller skillets in the front.",
+      "The cookware is centered on the polished quartz countertop."
+    ],
+    "questions": [
+      "Is the camera angle slightly elevated?",
+      "Are the larger pots placed behind the smaller skillets?",
+      "Is the cookware centered on a surface?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, enhancing the products' sleek finishes.",
+      "The color palette includes soft grays, earth tones, and deep blue hints.",
+      "The style is a contemporary commercial aesthetic with clean lines."
+    ],
+    "questions": [
+      "Is the lighting soft and diffused?",
+      "Does the color palette feature soft grays and earth tones?",
+      "Is the photographic style contemporary and commercial?"
+    ]
+  }
+}

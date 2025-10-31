@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "In a picturesque rural setting, a charming victorian-style farmhouse stands proudly, a beacon of timeless design juxtaposed against the vast open fields that stretch to the horizon. The house features a classic gable roof and ornate wooden trim, instantly evoking a sense of nostalgic elegance. Nestled within a lush garden filled with blooming roses and towering sunflowers, the farmhouse is a testament to meticulous landscaping and harmonious integration with nature. This scene is captured from a slight elevation, providing a three-quarter view that reveals the intricate patterns of the wrap-around porch and the pristine white clapboard exterior. In the foreground, a cobblestone path winds through the vibrant garden, inviting the viewer to explore further. Light diffuses gently through the early morning mist, casting a soft, ethereal glow over the scene. The golden rays of the rising sun illuminate the façade, creating a striking contrast between light and shadow that accentuates the architectural details. A palette of warm earth tones and cool greens dominates, establishing a serene and inviting mood. The photograph embodies a classic fine art style, blending a documentary approach with artistic composition to capture the essence of rural beauty. Captured with high resolution and professional equipment, the image bursts with sharp detail and dynamic range, offering a masterful portrayal of this idyllic countryside abode.",
+  "semantic": {
+    "description": [
+      "The farmhouse is victorian-style with a gable roof and ornate wooden trim.",
+      "A wrap-around porch enhances the visual appeal of the house.",
+      "The garden is filled with blooming roses and towering sunflowers."
+    ],
+    "questions": [
+      "Is the farmhouse victorian-style?",
+      "Does the garden contain sunflowers?",
+      "Is there a wrap-around porch on the house?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The farmhouse is positioned centrally in the landscape, dominating the midground.",
+      "A cobblestone path winds through the garden in the foreground.",
+      "Open fields stretch into the background, providing depth to the scene."
+    ],
+    "questions": [
+      "Is the farmhouse centrally positioned in the scene?",
+      "Does a cobblestone path run through the garden?",
+      "Are there open fields visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by the golden rays of the rising sun.",
+      "Warm earth tones and cool greens create a serene mood.",
+      "The image is captured with a high-resolution, fine art style."
+    ],
+    "questions": [
+      "Is the image captured in a fine art style?",
+      "Does golden sunlight illuminate the scene?",
+      "Are warm earth tones and cool greens present in the color palette?"
+    ]
+  }
+}

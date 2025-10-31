@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under a foreboding sky, a dramatic scene unfolds as a turbulent storm approaches an isolated coastal village. The air is laden with moisture, and the scent of rain hangs heavily, as towering cumulonimbus clouds gather ominously overhead, their dark, swirling forms occasionally illuminated by the electric dance of lightning. The village, nestled on a rugged cliffside, is a collection of quaint stone cottages with thatched roofs, their windows reflecting the flash of impending tempest. A solitary lighthouse stands vigilant at the edge of the rocky outcrop, its weathered beacon casting a steady, comforting glow through the increasing gloom. From a high vantage point, the scene is captured in wide-angle perspective, emphasizing the vastness of the stormy sky that occupies two-thirds of the frame, dwarfing the man-made structures below. In the foreground, a solitary figure clad in a slick yellow raincoat ventures bravely towards the lighthouse, caught in a moment of still determination amidst chaos. The encroaching storm casts the landscape in dramatic chiaroscuro, the interplay of shadows and light creating stark contrasts on the wet cobblestones and weather-beaten walls. The color palette is dominated by deep grays and blues, the cool tones conveying a somber and anticipatory mood, punctuated by the occasional warm flash of lightning that momentarily turns the scene into a study of contrasts. The photographic style captures the scene in high resolution, with a documentary approach that emphasizes the raw power and beauty of nature, while the precise detailing in the composition highlights the professionalism and skill of an experienced weather photographer.",
+  "semantic": {
+    "description": [
+      "A solitary lighthouse stands on a rocky cliff's edge.",
+      "The scene features a collection of quaint stone cottages.",
+      "A figure in a yellow raincoat walks towards the lighthouse."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are there stone cottages present in the village?",
+      "Is someone wearing a yellow raincoat visible?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The sky occupies about two-thirds of the frame, creating a sense of vastness.",
+      "The village is situated on a rugged cliffside with a high vantage point.",
+      "The lighthouse is positioned at the edge of a rocky outcrop."
+    ],
+    "questions": [
+      "Does the sky take up most of the frame?",
+      "Is the village located on a cliffside?",
+      "Is the lighthouse at the rock's edge?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured in high resolution, showcasing detailed textures.",
+      "A documentary approach emphasizes the raw power of the storm.",
+      "Shadows and highlights create dramatic contrasts throughout."
+    ],
+    "questions": [
+      "Is the image captured in high resolution?",
+      "Does the scene emphasize the storm's power?",
+      "Are there dramatic contrasts in shadows and highlights?"
+    ]
+  }
+}

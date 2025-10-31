@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "Amidst the serene isolation of a vast North American prairie, a stunning scene unfolds as a herd of wild mustangs gallops across the sweeping grasslands. These majestic horses, strong and robust, exhibit coats of varied earthy tones, from deep chestnut to dappled gray, their manes flowing like silken banners in the wind. The scene is captured from a low-angle perspective, providing an intimate view of the horses' powerful limbs as they stir the tall grasses, creating a sense of motion and dynamic energy. Positioned slightly off-center, the lead stallion commands attention, its muscular frame and resolute gaze directing the movement of the herd. In the distant background, a line of ancient cottonwoods stands silhouetted against a horizon that stretches indefinitely beneath a boundless sky. Early morning sunlight bathes the prairie in a soft, golden light, casting elongated shadows that emphasize the horses' forms and highlight droplets of dew on the grass, which glisten like tiny jewels. A gentle breeze carries the fresh scent of earth and wildflowers, adding to the tranquil yet vibrant atmosphere of the scene. The color palette is dominated by golden yellows and soft greens, complemented by the subtle grays and browns of the mustangs, evoking a sense of natural harmony and freedom. The artistic style captures the essence of fine art wildlife photography, rendering every detail with sharp clarity and a focus on the raw beauty and untamed spirit of the scene. With high resolution and a keen eye for composition, this image is masterfully crafted, offering a breathtaking glimpse into the untamed wilderness that defines this corner of the world.",
+  "semantic": {
+    "description": [
+      "A herd of wild mustangs gallops across the prairie.",
+      "The mustangs display coats of chestnut and dappled gray.",
+      "A lead stallion is prominently featured, directing the herd."
+    ],
+    "questions": [
+      "Does the scene feature a herd of wild mustangs?",
+      "Are the horses shown in motion across the landscape?",
+      "Is the lead stallion positioned prominently in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a low-angle perspective.",
+      "The lead stallion is slightly off-center in the composition.",
+      "The prairie horizon stretches far into the distance."
+    ],
+    "questions": [
+      "Is the scene captured from a low-angle perspective?",
+      "Does the lead stallion appear slightly off-center?",
+      "Is the horizon visible in the distance of the composition?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft, with golden hues of early morning sunlight.",
+      "Shadows are elongated, highlighting the horses' forms.",
+      "The color palette includes golden yellows and soft greens."
+    ],
+    "questions": [
+      "Is the scene illuminated by early morning sunlight?",
+      "Are elongated shadows present, enhancing the horses' forms?",
+      "Does the color palette include golden yellows and greens?"
+    ]
+  }
+}

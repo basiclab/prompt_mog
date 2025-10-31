@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In an opulent ballroom adorned with elegant crystal chandeliers and elaborate floral arrangements, an enchanting wedding celebration unfolds with a touch of timeless sophistication. The scene is set in the historic grandeur of a centuries-old castle, where mahogany and marble create a rich, majestic backdrop. Guests elegantly dressed in formal attire mingle gracefully, their laughter and conversations blending with the soft strains of a live string quartet. The bride, resplendent in a lace-covered gown, and the groom, dashing in a classic black tuxedo, share a tender moment on the dance floor. Viewed from a slightly elevated vantage point, the scene captures the couple centered in a delicate spotlight that highlights their affectionate glances amid the gentle symmetry of the room. Surrounding them are beautifully arranged tables draped in silk linens, each graced with glittering candelabras and lush flower arrangements. A grand staircase descends along one side, providing a layered depth to the setting, while floor-to-ceiling windows allow the soft hues of twilight to filter through, casting a magical glow across the room. The atmosphere is one of warmth and enchantment, enhanced by the golden candlelight that reflects off the polished surfaces, creating an intimate yet spectacular ambiance. The color palette is a harmonious blend of ivory, gold, and soft blush tones, evoking a feeling of romance and luxury. Every detail, from the intricate floral centerpieces to the delicate lace on the bride’s veil, is captured with exquisite clarity and precision, resulting in a stunning visual narrative that speaks to the beauty and joy of the occasion. The style is reminiscent of classic fine art portraiture, combining the elegance of traditional wedding photography with the intimacy of a painting. High-resolution detail ensures every facet of the composition is sharp and vivid, offering a masterful glimpse into this celebrated moment.",
+  "semantic": {
+    "description": [
+      "The ballroom is adorned with crystal chandeliers and floral arrangements.",
+      "The bride wears a lace-covered gown, and the groom is in a classic tuxedo.",
+      "Guests are dressed in formal attire, mingling gracefully."
+    ],
+    "questions": [
+      "Is the ballroom decorated with chandeliers?",
+      "Is the bride wearing a lace-covered gown?",
+      "Are the guests in formal attire?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The bride and groom are centered on the dance floor, highlighted by a spotlight.",
+      "A grand staircase descends along one side of the room.",
+      "Tables with silk linens and floral arrangements surround the dance floor."
+    ],
+    "questions": [
+      "Is the couple centered on the dance floor?",
+      "Is there a grand staircase visible?",
+      "Are there tables surrounding the dance floor?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is cast in the warm glow of twilight and candlelight.",
+      "The color palette includes ivory, gold, and blush tones.",
+      "The photographic style resembles classic fine art portraiture."
+    ],
+    "questions": [
+      "Is the atmosphere warm and enchanting?",
+      "Does the color palette include ivory tones?",
+      "Is the style similar to fine art portraiture?"
+    ]
+  }
+}

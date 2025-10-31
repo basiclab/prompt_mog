@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "In the heart of a serene suburban enclave, a stately Georgian-style townhome emerges as a masterclass in architectural refinement, exuding timeless elegance through its symmetric brick façade and tall, white windows that gleam under the clear afternoon sky. This high-end residence is positioned prominently at the end of a cul-de-sac, offering a tranquil vista over the manicured neighborhood. Captured from a moderately elevated angle, the photograph highlights the home's grand entrance, adorned with classical columns and a polished mahogany door that serves as the focal point of the composition. In the foreground, a neatly trimmed hedge-lined pathway leads the viewer toward the entrance, flanked by vibrant rose bushes that add a splash of color to the composition. Sunlight pours over the property, casting soft shadows across the lawn and illuminating the intricate brickwork, while a gentle breeze sways the foliage, adding a dynamic element to the otherwise still scene. The color palette is a harmonious blend of soft earth tones from the bricks and lush greens from the surrounding landscape, establishing a warm and welcoming ambiance. The style of the image leans towards fine art photography, with an emphasis on crisp detail and a balanced composition that elevates the home's prestigious demeanor. With professional-grade clarity and sharpness, the photograph serves not just as documentation, but as an invitation to step into a space where classic design meets modern luxury.",
+  "semantic": {
+    "description": [
+      "A stately Georgian-style townhome stands prominently at the end of a cul-de-sac.",
+      "The home's symmetrical facade features classical columns and polished mahogany doors.",
+      "Vibrant rose bushes line the neatly trimmed pathway leading to the entrance."
+    ],
+    "questions": [
+      "Is there a Georgian-style townhome in the scene?",
+      "Does the photograph include rose bushes?",
+      "Are there classical columns at the entrance of the home?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The photograph is taken from a moderately elevated angle, showcasing the home's facade.",
+      "A neatly trimmed hedge-lined pathway is in the foreground, leading toward the entrance.",
+      "The home is positioned prominently at the end of a cul-de-sac."
+    ],
+    "questions": [
+      "Is the photograph taken from an elevated angle?",
+      "Is there a pathway leading to the entrance?",
+      "Is the home positioned at the end of a cul-de-sac?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image uses a fine art photography style with an emphasis on detail and composition.",
+      "Sunlight casts soft shadows and illuminates the intricate brickwork of the home.",
+      "The color palette is a harmonious blend of soft earth tones and lush greens."
+    ],
+    "questions": [
+      "Is the style of the image fine art photography?",
+      "Does the sunlight illuminate the brickwork of the home?",
+      "Is the color palette a blend of earth tones and greens?"
+    ]
+  }
+}

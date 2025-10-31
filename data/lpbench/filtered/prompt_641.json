@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In the heart of a chic urban kitchen, a lavish brunch tableau is carefully arranged on a pristine, expansive marble island. The focal point of this culinary masterpiece is a sumptuous array of freshly baked pastries, each delicately dusted with powdered sugar and artfully drizzled with vibrant fruit coulis. These golden-brown croissants and Danish pastries are nestled among elegant porcelain ramekins filled with homemade jams and clotted cream, enhancing the overall presentation with splashes of rich color. To the side, there is a graceful pitcher of freshly squeezed orange juice, its translucent amber hue catching the light streaming in from the large, west-facing windows. This natural illumination bathes the scene in a soft, warm glow, giving the impression of a serene late morning. The camera is positioned at eye level, capturing the scene from a slight angle to emphasize the generous spread and inviting textures, allowing the viewer to imagine reaching out to sample the treats. In the foreground, a sprig of fresh mint adds a pop of green, perfectly contrasting with the golden hues of the pastries. The harmonious combination of warm earth tones and lively citrus colors creates a welcoming and uplifting mood, ideal for a leisurely brunch setting. The overall style is reminiscent of lifestyle photography, with a focus on simplicity and elegance, inviting viewers to savor the moment. The high-resolution image captures every detail with crisp clarity, from the flaky layers of the pastries to the delicate gloss of the fruit coulis, ensuring the scene feels both inviting and professionally executed.",
+  "semantic": {
+    "description": [
+      "The scene centers on a collection of freshly baked pastries.",
+      "Porcelain ramekins hold a variety of homemade jams and clotted cream.",
+      "A pitcher of fresh orange juice is positioned to the side."
+    ],
+    "questions": [
+      "Are there freshly baked pastries featured prominently?",
+      "Is there a pitcher of orange juice included in the scene?",
+      "Do the ramekins contain jams?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is arranged on a large marble kitchen island.",
+      "The camera captures the scene from a slight angle at eye level.",
+      "Fresh mint is prominently placed in the foreground."
+    ],
+    "questions": [
+      "Is the scene arranged on a marble surface?",
+      "Does the camera angle emphasize the spread of food?",
+      "Is there a garnish of mint visible in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Natural light filters through west-facing kitchen windows.",
+      "The color palette includes warm earth tones and lively citrus hues.",
+      "The image has a lifestyle photography aesthetic."
+    ],
+    "questions": [
+      "Is the scene illuminated by natural light?",
+      "Does the color palette feature warm and citrus tones?",
+      "Is the style reminiscent of lifestyle photography?"
+    ]
+  }
+}

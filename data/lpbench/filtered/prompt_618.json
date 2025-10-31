@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In an elegantly decorated banquet hall, a grand wedding reception unfolds, showcasing an array of exquisitely arranged tables adorned with silk white linens and lush floral centerpieces. The room exudes timeless sophistication, with intricately carved wooden paneling lining the walls and a richly patterned carpet underfoot. The bride and groom, central to the celebration, engage in a lively dance, their expressions filled with sheer joy as they glide across the polished marble floor. Guests, dressed in an array of colorful, formal attire, encircle the dance floor, applauding and capturing the moment with their phones. The camera captures the scene from a slightly elevated angle, highlighting the expansive space and the dynamic interaction between guests and the newlyweds. A grand crystal chandelier hangs centrally, casting a soft, diffused light that creates an intimate atmosphere while beautifully illuminating the bride’s shimmering gown. The warm glow of candlelight on each table enhances the luxurious ambiance, creating a harmonious interplay of light and shadow across the room. The color palette is dominated by soft pastels and warm golds, creating an inviting and romantic mood. The delicate floral arrangements add hints of pink and lavender, providing a gentle contrast to the white and gold theme. Each table is meticulously arranged, with gold-rimmed dinnerware and elegantly folded napkins, showcasing the attention to detail and the art of celebration. The overall style reflects a blend of classical elegance and modern flair, captured with professional clarity and sharpness in high-definition, ensuring that every detail of this momentous occasion is vividly preserved, from the intricate lace on the bride’s gown to the subtle smiles exchanged among guests.",
+  "semantic": {
+    "description": [
+      "The bride and groom are dancing joyfully in the center of the room.",
+      "Guests are encircling the dance floor, applauding and taking photos with phones.",
+      "Tables are adorned with silk white linens and lush floral centerpieces."
+    ],
+    "questions": [
+      "Are the bride and groom dancing?",
+      "Are there guests capturing the event with their phones?",
+      "Are the tables decorated with floral centerpieces?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the event from a slightly elevated angle.",
+      "A grand crystal chandelier is centrally placed in the room.",
+      "The bride and groom are positioned centrally on the dance floor."
+    ],
+    "questions": [
+      "Is the camera angle slightly elevated?",
+      "Is there a centrally placed chandelier in the room?",
+      "Are the bride and groom in the center of the dance floor?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "A soft, diffused light from the chandelier illuminates the room.",
+      "The color palette includes soft pastels and warm golds.",
+      "Each detail is captured with professional clarity and sharpness."
+    ],
+    "questions": [
+      "Is the room illuminated by diffused chandelier light?",
+      "Does the color palette feature soft pastels and warm golds?",
+      "Is the image captured with professional clarity and sharpness?"
+    ]
+  }
+}

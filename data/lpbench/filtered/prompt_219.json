@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under a vast and volatile sky, a dramatic weather scenario unfolds over a sprawling desert landscape. In the distance, a massive supercell cloud formation looms, its swirling mass creating a spectacle of nature's raw power. The scene captures a solitary desert highway stretching into the horizon, bisected by lightning that illuminates the skies with electric fervor. A lone, battered pickup truck, weathered by time and the elements, sits on the verge of the road, creating a poignant juxtaposition of human presence against the immense forces of nature. Captured from a low vantage point close to the ground, the highway's linearity guides the viewer's gaze into the heart of the impending storm, while the expanse of the desert plain and the towering clouds envelop the scene in a sense of awe and foreboding. The lighting is stark and dramatic, with the dark, brooding clouds casting deep shadows across the landscape while sporadic flashes of lightning create stark highlights. The atmosphere is electric and tense, with gusts of wind raising dust that swirls across the ground, adding dynamic movement to the scene. The color palette is dominated by dark, stormy grays interspersed with flashes of brilliant white from the lightning, evoking a mood of anticipation and urgency. The scene is rendered in a style reminiscent of high-definition landscape photography, capturing minute details of the desert terrain and the turbulent sky above. The image possesses a sharpness and clarity that highlight the intricacies of the cloud formations and the textures of the desert floor, emphasizing the professional quality of this striking weather photograph.",
+  "semantic": {
+    "description": [
+      "A massive supercell cloud formation dominates the sky, swirling with ominous energy.",
+      "A solitary desert highway stretches into the distance, creating a central focal point.",
+      "A lone, battered pickup truck is positioned near the highway, adding a human element."
+    ],
+    "questions": [
+      "Is there a supercell cloud formation in the scene?",
+      "Is a pickup truck present near the highway?",
+      "Does the highway extend into the distance?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The highway forms a linear path that leads the viewer's gaze into the storm.",
+      "The scene is captured from a low vantage point near the ground, emphasizing the horizon.",
+      "The expanse of the desert and the towering clouds create a sense of depth and scale."
+    ],
+    "questions": [
+      "Is the scene captured from a low vantage point?",
+      "Does the highway guide the gaze towards the storm?",
+      "Are the clouds creating a sense of depth and scale?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is stark and dramatic, with shadows and highlights from the storm.",
+      "The color palette features dark grays with bright lightning contrasts, creating tension.",
+      "The image has a high-definition, landscape photography style, capturing fine details."
+    ],
+    "questions": [
+      "Is the lighting dramatic with shadows and highlights?",
+      "Does the color palette include dark grays and bright lightning?",
+      "Is the image rendered in a high-definition photography style?"
+    ]
+  }
+}

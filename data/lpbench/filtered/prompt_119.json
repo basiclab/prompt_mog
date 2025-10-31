@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the verdant heart of the expansive African wetlands, a mesmerizing scene unfolds as a group of graceful flamingos wades through the shimmering, sunlit waters. The birds, with their slender necks and long legs, exhibit a palette of vibrant pinks and soft whites, creating a striking visual harmony against the lush backdrop of tall, swaying reeds. The camera captures the scene from a slightly elevated perspective, positioning the flock in the center of the frame, with lush greenery framing the edges, creating a natural vignette that directs the viewer’s gaze toward the radiant display of the birds. In the foreground, delicate ripples form around their feet as they move gently through the water, echoing the serene atmosphere that envelops the landscape. The afternoon sun bathes the scene in warm, golden light, casting delicate reflections of the flamingos upon the water’s surface and accentuating the gentle textures of their plumage. The tranquil ambiance is further enhanced by the subtle play of shadows across the wetlands, where the dense greenery absorbs the light to create a soft, inviting contrast. The color palette predominantly features warm pinks and golden hues, interspersed with the rich green of the surrounding reeds, evoking a sense of peaceful isolation and natural elegance. The photographic style is reminiscent of fine art nature photography, emphasizing the exquisite detail of each feather and the fluid grace of the flamingos’ movements. The image is captured with high-resolution clarity, ensuring that every nuance and subtle detail is vividly rendered, creating a visual narrative that celebrates the beauty and tranquility of the natural world.",
+  "semantic": {
+    "description": [
+      "The scene depicts a flock of flamingos in an African wetland.",
+      "The flamingos feature vibrant pink and soft white plumage.",
+      "Tall reeds surround the wetlands, creating a lush backdrop."
+    ],
+    "questions": [
+      "Are there flamingos in the scene?",
+      "Do the flamingos have pink and white feathers?",
+      "Is the setting in a wetland environment?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is slightly elevated, framing the flock centrally.",
+      "Lush greenery creates a natural vignette around the scene.",
+      "Flamingos wade in the center, surrounded by shimmering water."
+    ],
+    "questions": [
+      "Is the flock of flamingos centered in the frame?",
+      "Does the scene include lush greenery on the edges?",
+      "Are the flamingos wading in water at the center?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by warm, golden afternoon sunlight.",
+      "Reflections of flamingos are visible on the water's surface.",
+      "The color palette includes warm pinks, golden hues, and rich greens."
+    ],
+    "questions": [
+      "Is the scene lit by golden light from the afternoon sun?",
+      "Are there reflections of the flamingos on the water?",
+      "Does the color palette include warm pinks and golden hues?"
+    ]
+  }
+}

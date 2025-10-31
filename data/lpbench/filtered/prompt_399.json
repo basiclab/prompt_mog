@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Nestled at the edge of a glistening lake, a contemporary luxury villa stands as a beacon of modern architectural innovation, its sweeping glass facades reflecting the tranquil waters and the lush greenery that surrounds it. The villa, with its expansive open-plan design, is situated on a meticulously landscaped property that blends seamlessly with the natural environment, creating an oasis of serenity. Large floor-to-ceiling windows offer an uninterrupted view of the lake, allowing natural light to flood the interiors, illuminating the carefully curated decor that combines elements of elegance and comfort. From an elevated camera perspective, the villa is captured in its entirety, revealing the intricate details of its facade, with a focus on the geometric patterns and the juxtaposition of natural stone and sleek metal elements. In the foreground, a sun-drenched patio extends towards the lake, furnished with plush outdoor seating that invites relaxation and enjoyment of the serene views. As the late afternoon sun begins to set, the villa is bathed in the warm, golden hues of the golden hour, casting long shadows that accentuate the building's dynamic lines and the soft ripples on the lake's surface. The color palette is dominated by the natural tones of the surrounding landscape, enhanced by the rich, earthy browns and greens of the foliage, creating a harmonious blend between structure and nature. The overall style captures the essence of high-end real estate photography, with a focus on highlighting the luxurious features of the property and its idyllic setting, achieved through a high-resolution lens that ensures every detail is crisp and vivid. This scene, crafted with professional precision, offers a glimpse into an elite lifestyle, where luxury meets tranquility in perfect harmony.",
+  "semantic": {
+    "description": [
+      "A contemporary luxury villa stands at the lake's edge.",
+      "The villa features expansive open-plan design with floor-to-ceiling windows.",
+      "The outdoor patio is furnished with plush seating."
+    ],
+    "questions": [
+      "Is there a luxury villa in the scene?",
+      "Does the villa have large windows for lake views?",
+      "Is there outdoor seating on the patio?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is captured from an elevated perspective.",
+      "In the foreground, the patio extends towards the lake.",
+      "Floor-to-ceiling windows offer an uninterrupted view of the lake."
+    ],
+    "questions": [
+      "Is the villa captured from an elevated viewpoint?",
+      "Does the patio extend towards the lake?",
+      "Are the windows positioned to offer lake views?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The villa is bathed in warm, golden hour sunlight.",
+      "Long shadows accentuate the building's dynamic lines.",
+      "The color palette is dominated by natural tones and earthy shades."
+    ],
+    "questions": [
+      "Is the villa illuminated by golden hour light?",
+      "Do long shadows highlight the building's lines?",
+      "Are natural tones prominent in the color palette?"
+    ]
+  }
+}

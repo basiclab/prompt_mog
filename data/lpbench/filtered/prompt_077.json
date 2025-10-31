@@ -1,0 +1,37 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the first rays of dawn begin to pierce the horizon, an expansive coastal scene unfurls, revealing a dramatic interplay between land and ocean. This breathtaking vista captures an unspoiled stretch of rocky shoreline where the unruly sea continually reshapes the land. The main subject of the scene is a solitary lighthouse, perched precariously atop a jagged cliff, its weathered stone exterior standing as a testament to the relentless forces of nature it has withstood over the years. Below, the waves crash against the rocks with rhythmic precision, casting a fine mist into the air that glistens in the early morning light. The vantage point is from a low angle at the cliff's edge, providing a sweeping view that captures the lighthouse's imposing height against the backdrop of the vast ocean. In the foreground, rugged boulders lead the eye toward the lighthouse, giving way to the midground where the restless sea reflects the pastel hues of dawn—pink, lavender, and subtle gold. The sky above is a tapestry of soft purples and pinks, a prelude to the sun's ascent, while wisps of clouds float gently, infused with the serene atmosphere. The overall mood is one of solitude and resilience, underscored by the contrast between the robust lighthouse and the transient beauty of the dawn sky. This scene, captured in the style of fine art seascape photography, emphasizes meticulous detail and a dynamic range of lighting. It is rendered with exceptional clarity, the textures of the cliff and the subtle gradients of the sky captured in ultra-high resolution quality, making the seascape come alive with both visual and emotional depth.",
+  "semantic": {
+    "description": [
+      "A solitary lighthouse stands atop a jagged cliff overlooking the ocean.",
+      "Waves crash rhythmically against the rocky shoreline, creating a fine mist.",
+      "The lighthouse is weathered, suggesting it has withstood the forces of nature."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are the waves crashing against the rocks?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a low angle at the cliff's edge.",
+      "Rugged boulders in the foreground lead toward the lighthouse.",
+      "The lighthouse is positioned prominently in the background."
+    ],
+    "questions": [
+      "Is the lighthouse positioned prominently in the scene?",
+      "Are the boulders in the foreground leading towards the lighthouse?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by the soft hues of dawn.",
+      "The sky features pastel colors of pink, lavender, and gold.",
+      "The photograph is styled in fine art seascape photography with dynamic lighting."
+    ],
+    "questions": [
+      "Is the scene illuminated by dawn light?",
+      "Does the sky display pastel hues of pink and lavender?"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "In the tranquil embrace of a remote coastal cliff, an ancient stone lighthouse stands proud, its weathered façade silently observing the night sky ablaze with astral wonders. The scene is set at the edge of a craggy shoreline where the rhythmic murmur of waves kissing the rocks adds a serene dimension to the night. Overhead, the cosmos unfurls in a breathtaking display; myriad stars glint like diamonds scattered across the velvet of infinity. The Milky Way, a river of light, arches majestically across the sky, its dense clusters of stars and nebulae suffusing the darkness with ethereal luminescence. Captured from a low vantage point, the composition draws the eye up from the lighthouse in the foreground, past the jagged rocks awash in moonlight, and into the celestial spectacle above. The lighthouse, a sentinel against the backdrop of infinity, serves as a point of contrast against the seemingly boundless universe. Moonlight bathes the scene in a cool, silvery glow, softening the ruggedness of the rocks and lending the landscape a dreamlike quality. A gentle breeze stirs, carrying the salty tang of the ocean, and causes the lighthouse's distant light to flicker intermittently, adding a touch of life to the stillness. The color palette is dominated by deep blues and inky blacks of the night sky interspersed with the shimmering white and golden hues of starlight, evoking a mood of quiet wonder and infinite possibility. The photograph captures the essence of astrophotography, blending the stark beauty of Earth and the vast mystery of the cosmos. The image is rendered with stunning clarity, every star and geological detail sharp against the serene void, showcasing the technical prowess behind the lens.",
+  "semantic": {
+    "description": [
+      "An ancient stone lighthouse stands on a remote coastal cliff.",
+      "The Milky Way is visible arched across the night sky.",
+      "Waves gently lap against the rocky shoreline below the lighthouse.",
+      "Stars densely populate the sky, creating a celestial spectacle."
+    ],
+    "questions": [
+      "Is there a lighthouse depicted in the scene?",
+      "Does the Milky Way feature prominently in the sky?",
+      "Are stars visible in the night sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned in the foreground of the image.",
+      "The Milky Way arches across the upper half of the frame.",
+      "The rocky shoreline extends into the middle distance, below the lighthouse.",
+      "The viewpoint is from a low angle, emphasizing the height of the lighthouse."
+    ],
+    "questions": [
+      "Is the lighthouse in the foreground of the scene?",
+      "Does the composition include a low-angle perspective?",
+      "Is the Milky Way depicted in the upper portion of the image?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Moonlight casts a silvery glow over the scene.",
+      "The color palette consists of deep blues, blacks, and shimmering whites.",
+      "The image has a serene and dreamlike atmospheric quality.",
+      "Stars and geological details are captured with sharp clarity."
+    ],
+    "questions": [
+      "Is the scene illuminated by moonlight?",
+      "Are cool colors like blues and blacks dominant in the palette?",
+      "Does the image have a serene and dreamlike atmosphere?"
+    ]
+  }
+}

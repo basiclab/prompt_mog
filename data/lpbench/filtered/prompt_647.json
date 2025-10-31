@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "On a sunlit coastal veranda, a sumptuous culinary scene unfolds, where an assortment of expertly crafted seafood dishes takes center stage. Freshly caught lobsters, their shells a vibrant scarlet, are arranged on an ice-laden platter, glistening under the natural light. Surrounding this central display are smaller dishes featuring golden-brown crab cakes, delicately garnished with microgreens, and an array of oysters, arranged in a circular pattern with wedges of lemon strategically placed to accentuate their pearly silhouettes. The scene is captured from an eye-level perspective, allowing the viewer to appreciate the intricate textures and colors of each dish. In the background, the gentle sway of palm trees adds a serene coastal ambiance, while the distant shimmer of the ocean provides a tranquil backdrop. Sunlight filters through, casting soft, dappled shadows across the table, enhancing the vivid hues of the seafood. The color palette is a harmonious mix of ocean blues, sandy whites, and the rich reds and yellows of the dishes, reflecting the fresh and inviting essence of coastal cuisine. The entire composition is a testament to the art of fine dining, embodying the luxurious and indulgent spirit of a sea-side feast. The image captures every detail in high resolution, showcasing the skillful presentation of the dishes and the lush atmosphere of the setting, inviting the viewer to savor the scene with both eyes and imagination.",
+  "semantic": {
+    "description": [
+      "A platter of freshly caught lobsters is central to the scene.",
+      "Golden-brown crab cakes are garnished with microgreens.",
+      "An array of oysters is arranged with lemon wedges."
+    ],
+    "questions": [
+      "Is there a central platter of lobsters?",
+      "Are the crab cakes garnished with microgreens?",
+      "Are there lemon wedges arranged with the oysters?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from an eye-level perspective.",
+      "Palm trees and the ocean form the distant background.",
+      "Dappled shadows are cast across the table by sunlight."
+    ],
+    "questions": [
+      "Is the scene captured from eye-level?",
+      "Are palm trees visible in the background?",
+      "Do shadows fall across the table?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The color palette includes ocean blues, sandy whites, and rich reds.",
+      "The lighting is natural, casting a warm and inviting glow.",
+      "The composition captures the scene in high resolution."
+    ],
+    "questions": [
+      "Is the color palette dominated by ocean blues and sandy whites?",
+      "Does the lighting create a warm and inviting atmosphere?",
+      "Is the image captured in high resolution?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "An elegant colonial-style mansion stands prominently in an affluent neighborhood, showcasing its historical charm and modern luxury. The mansion, with its classic symmetrical facade, features pristine white columns supporting a broad portico that invites visitors into its grandiose entrance. A manicured garden stretches across the front lawn, offering a colorful contrast to the mansion's traditional brick architecture, with vibrant azaleas and neatly trimmed hedges adding a burst of life to the scene. A cobblestone pathway weaves through the garden, leading to a formidable wrought iron gate that adds an air of exclusivity. Captured from a slightly elevated angle, the scene provides a comprehensive view of the mansion's exquisite front elevation, with the camera positioned to highlight the depth of the entrance and the grandeur of the columns. The mansion occupies the center of the frame, drawing the viewer's eye toward the intricately designed front doors. The composition emphasizes the mansion's scale, with the garden and pathway leading the viewer's eye deeper into the property. Bathed in the golden hues of late afternoon sunlight, the mansion and surrounding landscape bask in a warm, inviting glow. The sunlight casts soft shadows behind the columns and beneath the hedges, enhancing the intricate details of the architecture and foliage. The atmosphere is serene, with a gentle breeze rustling the leaves and a few clouds scattered across the blue sky. The color palette blends the rich reds of the brickwork with the soft greens of the garden and the creamy whites of the columns, creating an atmosphere of understated luxury and timeless elegance. The photograph is styled in the tradition of high-end real estate photography, with a focus on clarity and depth, ensuring the scene is captured with sharp detail and vibrant colors. The overall quality is professional-grade, showcasing the property as a coveted piece of real estate through precise composition and meticulous attention to detail.",
+  "semantic": {
+    "description": [
+      "The mansion features a symmetrical facade with white columns and a brick exterior.",
+      "Vibrant azaleas and neatly trimmed hedges adorn the garden in front of the mansion.",
+      "A broad portico supported by columns marks the entrance of the mansion."
+    ],
+    "questions": [
+      "Does the mansion have a brick exterior?",
+      "Are there white columns supporting the portico?",
+      "Is the garden in front of the mansion vibrant with flowers?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The mansion occupies the center of the frame, emphasizing its grandeur.",
+      "A cobblestone pathway leads through the garden to the mansion's entrance.",
+      "The camera is positioned at a slightly elevated angle for a comprehensive view."
+    ],
+    "questions": [
+      "Is the mansion centered in the frame?",
+      "Does a cobblestone pathway lead to the entrance?",
+      "Is the viewpoint slightly elevated?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the warm glow of late afternoon sunlight.",
+      "The color palette includes rich reds, soft greens, and creamy whites.",
+      "The photograph prioritizes clarity, vibrant colors, and sharp detail."
+    ],
+    "questions": [
+      "Is the sunlight casting a warm, golden glow over the scene?",
+      "Are the colors in the photograph vibrant and vivid?",
+      "Is the photograph styled with sharp detail and professional clarity?"
+    ]
+  }
+}

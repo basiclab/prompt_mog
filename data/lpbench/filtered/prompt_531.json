@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "Amidst the electrifying buzz of an urban skate park, a skilled skateboarder catches air above a halfpipe, their silhouette momentarily framed against the vibrant graffiti that covers the concrete walls. The scene is captured from a dynamic low-angle perspective, emphasizing the height of the leap and the skateboarder's mastery over gravity. The skateboarder, dressed in a mix of urban streetwear and safety gear, exudes confidence and concentration as they spin the board beneath their feet. The halfpipe, positioned centrally in the frame, draws the eye upwards, highlighting the skateboarder's flight and the rich details of the painted background. The late afternoon sun casts a warm golden light across the park, accentuating the skateboarder's figure and casting dramatic shadows that dance across the ground. The colorful graffiti varies from bold reds and blues to softer pastels, creating a lively, youthful atmosphere that complements the energy of the subject. The mood is a blend of intense focus and playful daring, capturing a moment suspended between effort and exhilaration. With precise clarity and sharp focus, the image is executed in the style of action sports photography, emphasizing movement and adrenaline. The composition embodies technical excellence, with crisp detail in both the skateboarder's form and the textured backdrop, resulting in a visually arresting and award-worthy snapshot of urban athleticism.",
+  "semantic": {
+    "description": [
+      "A skateboarder performs a trick in the air above a halfpipe.",
+      "The skateboarder is wearing urban streetwear and safety gear.",
+      "Vibrant graffiti covers the concrete walls of the skate park."
+    ],
+    "questions": [
+      "Is the skateboarder performing a trick in mid-air?",
+      "Is the skateboarder wearing safety gear?",
+      "Is there graffiti on the walls in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a low angle, emphasizing height and action.",
+      "The halfpipe is centrally placed, directing focus to the skateboarder.",
+      "The skateboarder is silhouetted against the vibrant graffiti."
+    ],
+    "questions": [
+      "Is the scene captured from a low-angle perspective?",
+      "Is the halfpipe centrally positioned in the image?",
+      "Is the skateboarder silhouetted against the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The late afternoon sun casts warm golden light across the scene.",
+      "The color palette includes bold reds, blues, and soft pastels.",
+      "The image has a sharp focus and high detail, typical of action sports photography."
+    ],
+    "questions": [
+      "Is the scene illuminated by warm late afternoon sunlight?",
+      "Are bold colors like reds and blues part of the color palette?",
+      "Is the image executed in the style of action sports photography?"
+    ]
+  }
+}

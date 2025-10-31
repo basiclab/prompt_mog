@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "In an idyllic coastal town, an exquisitely designed beachfront villa stands majestically, its architecture a seamless blend of modern luxury and classic elegance. The villa, adorned with expansive glass windows, offers panoramic views of the azure ocean that stretches endlessly beyond the horizon. Positioned at the foreground of the property are manicured tropical gardens, featuring lush palm trees and vibrant hibiscus flowers, which provide a vibrant contrast to the villa's sleek, white façade. A spacious wooden deck extends from the rear of the property, leading to an infinity pool that seems to merge with the sea at the edge of vision. The camera captures this scene from a slight upward angle, offering a full view of the villa's grand entrance and its elegantly curved rooflines. In the background, the ocean glistens under the afternoon sun, its shimmering surface reflecting the soft hues of the setting sun. The light here is warm and golden, casting long, gentle shadows that enhance the villa's architectural contours, creating a serene and inviting atmosphere. The color palette is a harmonious blend of creamy whites, ocean blues, and lush greens, encapsulating a sense of tranquility and expansive luxury. The scene is rendered in the style of high-end architectural photography, with impeccable attention to detail and clarity. Each element, from the texture of the wooden deck to the reflection of the skies in the villa's windows, is captured in ultra-high definition, ensuring that the image conveys the exquisite craftsmanship and breathtaking beauty of this coastal paradise.",
+  "semantic": {
+    "description": [
+      "A beachfront villa combines modern luxury with classic elegance in its design.",
+      "Expansive glass windows of the villa offer panoramic ocean views.",
+      "Tropical gardens with palm trees and hibiscus flowers surround the villa."
+    ],
+    "questions": [
+      "Is the main subject a beachfront villa?",
+      "Are there tropical gardens in front of the villa?",
+      "Do the villa's windows offer views of the ocean?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is positioned centrally with tropical gardens in the foreground.",
+      "A wooden deck extends from the rear of the property toward an infinity pool.",
+      "The ocean acts as a backdrop, merging with the pool at the horizon."
+    ],
+    "questions": [
+      "Is the villa centrally located in the composition?",
+      "Is there an infinity pool connected to the property?",
+      "Does the ocean serve as the background element in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured in the style of high-end architectural photography.",
+      "Warm, golden light casts gentle shadows enhancing architectural details.",
+      "The color palette blends creamy whites, blues, and greens."
+    ],
+    "questions": [
+      "Is the style of the image high-end architectural photography?",
+      "Does the lighting create a warm and inviting atmosphere?",
+      "Are creamy whites and ocean blues part of the color palette?"
+    ]
+  }
+}

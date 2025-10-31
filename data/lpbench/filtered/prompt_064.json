@@ -1,0 +1,44 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "An untamed seascape stretches beneath a sprawling sky, where towering waves crash with unrelenting power against a jagged rocky shore. Captured from a precarious cliffside vantage point, the scene immerses the viewer into the chaos of nature's raw energy. In the foreground, the foam of the ocean churns into intricate patterns, its whites and blues forming a vivid texture against the dark rock outcrops. Midground reveals the unyielding might of the waves as they rise and break, sending sprays of saltwater high into the air, while the background fades into a misty horizon where the ocean meets the sky. The lighting is a dramatic interplay of contrasts, with pockets of sunlight cutting through dark, brooding clouds that hang low and heavy, casting dapples of light across the turbulent waters. The overall palette is dominated by deep sea blues, slate grays, and the occasional flash of golden sunlight, creating a mood of awe and respect for the untamed forces of nature. The scene is brought to life with expert composition, where the detailed textures of water and rock are captured in high definition, allowing every ripple and crevice to be meticulously observed. This is a piece of seascape photography that embodies a sense of grandeur and captures a moment of both beauty and chaos as the relentless ocean continues its timeless dance with the earth.",
+  "semantic": {
+    "description": [
+      "Towering waves crash against a jagged rocky shore in the foreground.",
+      "The ocean's foam churns into intricate patterns against dark rock outcrops.",
+      "Sunlight occasionally breaks through clouds, casting highlights on the water."
+    ],
+    "questions": [
+      "Are there towering waves in the scene?",
+      "Does the ocean's foam form intricate patterns?",
+      "Is sunlight visible breaking through the clouds?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a cliffside viewpoint, providing a wide perspective.",
+      "The foreground features dark rock outcrops amidst churning ocean foam.",
+      "Midground waves dominate the composition as they rise and break.",
+      "The background fades into a misty horizon where the ocean meets the sky."
+    ],
+    "questions": [
+      "Is the scene viewed from a cliffside?",
+      "Are there dark rock outcrops in the foreground?",
+      "Do midground waves dominate the composition?",
+      "Does the background feature a misty horizon?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting exhibits a dramatic interplay of sunlight and clouds.",
+      "The color palette includes deep sea blues, slate grays, and golden sunlight.",
+      "The photograph captures detailed textures in high definition.",
+      "The mood conveys awe and respect for nature's untamed forces."
+    ],
+    "questions": [
+      "Is there a dramatic interplay of sunlight and clouds?",
+      "Does the color palette feature deep sea blues and slate grays?",
+      "Is the photograph's texture captured in high definition?",
+      "Does the mood convey awe of nature's forces?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Landscape Photography",
+  "prompt": "In the serene embrace of an untouched alpine wilderness, a vast panorama reveals its breathtaking beauty. Towering evergreen forests cascade down towards a tranquil sapphire lake that mirrors the cloud-speckled sky above, bordered by majestic cliffs that rise sharply from the water's edge. This scene is viewed from a high vantage point, capturing a sweeping view where the rocky cliffs frame the expanse of the lake, leading the viewer's eye from the foreground of verdant meadows, across the glistening water, and towards the jagged summits shrouded in delicate tendrils of mist. Golden sunlight breaks through the scattered clouds, painting the landscape in warm hues, while gentle breezes create ripples across the lake's surface, adding a dynamic texture to the scene. The color palette melds the deep greens of the forests with the shimmering blues of the lake and sky, while the cliffs reflect a rich, earthy tone that grounds the scene in natural splendor. Small flocks of birds glide gracefully across the horizon, their silhouettes graceful and fleeting against the backdrop of the expansive sky. The entire composition is encapsulated in a style reminiscent of large-format landscape photography, where meticulous attention to panoramic detail captures the grandeur and tranquility of nature in stunning clarity and resolution.",
+  "semantic": {
+    "description": [
+      "Towering evergreen forests surround a tranquil sapphire lake.",
+      "Majestic cliffs rise sharply from the water's edge.",
+      "Small flocks of birds glide across the horizon."
+    ],
+    "questions": [
+      "Are there evergreen forests in the scene?",
+      "Is a lake featured prominently in the composition?",
+      "Do birds appear in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a high vantage point, overlooking the landscape.",
+      "Cliffs frame the lake, creating a natural border around it.",
+      "The viewer's eye is led from the meadows to the lake and then to the summits."
+    ],
+    "questions": [
+      "Is the viewpoint elevated?",
+      "Are the cliffs positioned around the lake?",
+      "Does the composition direct the viewer's eye through multiple layers?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Golden sunlight illuminates the landscape, creating warm hues.",
+      "The color palette blends deep greens, shimmering blues, and earthy tones.",
+      "The style resembles large-format landscape photography with panoramic detail."
+    ],
+    "questions": [
+      "Does the sunlight create warm hues?",
+      "Is there a mix of greens, blues, and earthy tones?",
+      "Is the style akin to large-format landscape photography?"
+    ]
+  }
+}

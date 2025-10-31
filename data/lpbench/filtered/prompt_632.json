@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "As the late afternoon sun begins its descent towards the horizon, a grand wedding celebration unfolds in a lush, meticulously manicured garden that borders an elegant, centuries-old manor. Central to this picturesque scene is a beautifully adorned gazebo, draped with delicate ivory tulle and festoons of lavender and white roses, serving as the focal point for the couple exchanging vows. The bride, in a flowing, intricate lace gown with a trailing veil, stands beside the groom clad in a classic tailored suit, both encompassed by an aura of serene happiness. Around them, an audience of family and friends sits upon chic white chairs arranged in orderly rows, their faces illuminated by the soft, warm glow of the sun filtering through the garden's verdant canopy. Viewed from a low angle perspective, the scene captures not only the intimate exchange at the heart of the ceremony, but also the grandeur of the garden surroundings and the imposing elegance of the manor silhouetted against the sky in the background. Golden sunlight bathes the scene, casting long, gentle shadows and creating a richly textured interplay of highlights upon the meticulously arranged floral decorations. This soft lighting, combined with the garden's vibrant greenery and the subdued pastels of the wedding attire, sets a warmly romantic atmosphere. The color palette is a harmonious blend of vivid greens, soft whites, and touches of lavender, evoking an enchanting and tender mood. The entire composition is captured through the lens of fine art photography, emphasizing both the emotional depth of the moment and the exquisite details of the setting. The image is beautifully crisp, showcasing high-resolution sharpness that highlights every detail, from the bride's delicate lace to the individual petals of the flowers, embodying a level of professional excellence that offers a timeless snapshot of love and union.",
+  "semantic": {
+    "description": [
+      "The bride wears a flowing lace gown and a trailing veil.",
+      "The groom is dressed in a classic tailored suit.",
+      "A gazebo decorated with tulle and roses is central to the scene."
+    ],
+    "questions": [
+      "Is the bride wearing a lace gown?",
+      "Is the gazebo adorned with flowers?",
+      "Are the guests arranged in rows of chairs?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a low angle perspective.",
+      "The manor is positioned in the background, silhouetted against the sky.",
+      "Guests are seated in orderly rows within the garden."
+    ],
+    "questions": [
+      "Is the manor visible in the background?",
+      "Is the garden setting visible in the scene?",
+      "Are there rows of chairs for the guests?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Golden sunlight creates a rich play of highlights and shadows.",
+      "The color palette includes vivid greens, soft whites, and lavender.",
+      "The scene captures a fine art photography style."
+    ],
+    "questions": [
+      "Is the scene illuminated by golden sunlight?",
+      "Does the image feature a romantic and warm atmosphere?",
+      "Is the style consistent with fine art photography?"
+    ]
+  }
+}

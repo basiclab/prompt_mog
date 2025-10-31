@@ -1,0 +1,46 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "In a bustling urban setting, a contemporary high-rise apartment building stands as an epitome of modern architectural elegance. The sleek glass façade gleams in the midday sun, reflecting the vivid blue sky and the dynamic cityscape surrounding it. Perched atop a bustling street corner, this residential tower features a series of cascading balconies that appear almost like stepping stones reaching towards the sky, each offering panoramic views of the city below. The entrance, marked by a grand glass atrium, invites residents and visitors into a sanctuary of style and sophistication. As one peers through the crystal-clear windows, the interiors reveal themselves; a blend of minimalist design and luxurious comfort. In the spacious living room, modern furniture pieces are arranged with precision, exuding both function and artistic flair. Lush indoor plants bring a touch of nature indoors, contrasting with the sleek finishes and high-tech amenities. A gourmet kitchen with state-of-the-art appliances and a polished marble island opens up into the living area, creating a harmonious flow perfect for entertaining. Light pours in from the expansive windows, bathing the space in warmth and creating an inviting atmosphere. In the evening, the building is strikingly transformed as exterior lights imbue the structure with a gentle glow, accentuating its architectural lines and making it a beacon of luxury within the vibrant city. The color palette throughout the property is neutral, with subtle tones of gray and cream, complemented by warm wood accents and the occasional pop of color from curated artwork. Photographed with a wide-angle lens, the image captures the grandeur of both the exterior and interior seamlessly, offering a comprehensive vision of modern urban luxury living. The photograph, marked by its clarity and detail, stands as a testament to professional real estate photography, expertly balancing technical precision with artistic composition.",
+  "semantic": {
+    "description": [
+      "A contemporary high-rise apartment building with a sleek glass façade is prominently featured.",
+      "The building includes a series of cascading balconies providing panoramic city views.",
+      "Interiors showcase minimalist design with luxurious comforts and modern furniture arrangements.",
+      "The grand glass atrium marks the entrance, adding a touch of sophistication."
+    ],
+    "questions": [
+      "Is a high-rise apartment building visible in the scene?",
+      "Does the building have cascading balconies?",
+      "Is the interior design minimalist and luxurious?",
+      "Is there a grand glass atrium at the entrance?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a street corner, showing the building's towering presence.",
+      "Wide-angle lens captures both the exterior grandeur and interior spaces seamlessly.",
+      "Expansive windows dominate the façade, allowing light to flood into the interiors.",
+      "The building sits prominently in the urban cityscape, commanding attention."
+    ],
+    "questions": [
+      "Is the building photographed from a street corner?",
+      "Does the image capture both the exterior and interior with a wide-angle lens?",
+      "Are expansive windows visible on the building facade?",
+      "Is the building prominently positioned in the urban setting?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The photograph uses natural midday sunlight, making the glass façade gleam.",
+      "Neutral tones with gray and cream dominate the color palette, enhanced by warm wood accents.",
+      "Exterior lighting creates a gentle glow at night, highlighting architectural lines.",
+      "The photograph is noted for its clarity and professional composition."
+    ],
+    "questions": [
+      "Does the photograph use natural midday sunlight?",
+      "Are neutral tones predominant in the color scheme?",
+      "Is the building illuminated by exterior lighting at night?",
+      "Is the photograph professionally composed with clarity?"
+    ]
+  }
+}

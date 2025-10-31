@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a sophisticated and ultramodern photography studio, a luxurious arrangement of high-end leather travel bags takes center stage. Each bag, crafted from the finest grain leather, is positioned with meticulous precision on a sleek white pedestal. The studio is designed with a minimalist aesthetic, allowing the richness and texture of the leather to be highlighted. The bags vary in size, from a compact weekend duffle to an expansive, sturdy travel trunk, each exuding an air of elegance and sophistication. Their polished metallic accents catch the light, adding a subtle glint that complements the overall composition. The viewpoint is an eye-level perspective that captures the ensemble in full view, ensuring each bag’s unique design and craftsmanship is prominently displayed. In the background, soft, diffused lighting is achieved through strategically placed light panels, creating a gentle, ambient glow that envelops the scene. This lighting condition highlights the natural hues of mahogany and tan leather, enhancing the warmth and elegance of the setup. A sense of quiet luxury pervades the atmosphere, with the smooth, immaculate surfaces of the studio reflecting the bags’ silhouette subtly. The color palette favors warm earthy tones, consisting of rich browns and soft creams interspersed with occasional cool metallic tints, producing a harmonious visual rhythm that underscores exclusivity and premium quality. The scene is captured with the finesse of high-resolution, professional-grade photography, ensuring every stitch, texture, and nuance of the leather is rendered in exquisite detail. This meticulous presentation is reminiscent of a high-fashion editorial shoot, bringing out the luxurious character and premium craftsmanship of the bags with unmistakable clarity and elegance.",
+  "semantic": {
+    "description": [
+      "The scene features a collection of high-end leather travel bags as the primary subject.",
+      "Each bag is crafted from the finest grain leather with polished metallic accents.",
+      "The bags include a variety of sizes, from a weekend duffle to a travel trunk."
+    ],
+    "questions": [
+      "Are there high-end leather travel bags in the scene?",
+      "Do the bags feature polished metallic accents?",
+      "Is there a variety of bag sizes present?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The bags are positioned on a sleek white pedestal in the center of the scene.",
+      "The camera captures the ensemble from an eye-level perspective.",
+      "Strategically placed light panels create a diffused, ambient glow in the background."
+    ],
+    "questions": [
+      "Are the bags positioned on a white pedestal?",
+      "Is the ensemble captured from an eye-level perspective?",
+      "Do the light panels create a diffused lighting effect?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, highlighting the bags' details.",
+      "The color palette includes warm earthy tones and cool metallic tints.",
+      "The scene mimics the style of a high-fashion editorial photoshoot."
+    ],
+    "questions": [
+      "Is the lighting soft and diffused?",
+      "Does the color palette include warm earthy tones?",
+      "Is the style reminiscent of high-fashion photography?"
+    ]
+  }
+}

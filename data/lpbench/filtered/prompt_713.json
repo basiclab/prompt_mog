@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a sleek, contemporary photography studio dedicated to high-end audio equipment, an exquisite collection of premium headphones is elegantly showcased. The headphones, with their luxurious leather and brushed metal finishes, are creatively arranged on a circular, polished glass table that reflects their craftsmanship. The studio's minimalistic design, with its soft gray walls and carefully curated ambient lighting, creates an atmosphere of sophistication and modernity. The composition is captured from a moderately high angle, revealing the intricate details of the headphones' design, while ensuring each set is distinctly visible. In the foreground, a pair of rose-gold headphones stands prominently, drawing the viewer's attention, with their glossy finish catching the spotlight. The midground features a set of headphones in classic black, with subtle gold accents, positioned slightly to the right, enhancing the scene's balance and depth. The far end of the table displays a pair of headphones in a matte silver finish, their understated elegance complementing the surrounding aesthetics. The room is softly illuminated by strategically positioned LED lights that cast gentle, diffused lighting, eliminating harsh shadows and highlighting the rich textures of the materials. The color scheme predominantly features shades of black, silver, and rose gold, which harmonize to evoke a sense of luxury and exclusivity. The overall mood of the image is calm and composed, with a focus on the elegance and precision of high-end audio craftsmanship. Styled in the vein of fine art product photography, the image demonstrates technical exceptionalism, with high-resolution clarity and meticulous attention to detail, ensuring that each element is captured in sharp focus, revealing the nuances of design and material quality.",
+  "semantic": {
+    "description": [
+      "The scene features a collection of premium headphones with leather and metal finishes.",
+      "A pair of rose-gold headphones is prominently displayed in the foreground.",
+      "The headphones are arranged on a circular, polished glass table."
+    ],
+    "questions": [
+      "Are there premium headphones featured in the scene?",
+      "Is there a set of rose-gold headphones in the picture?",
+      "Does the table have a polished glass surface?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The composition is captured from a moderately high angle.",
+      "Headphones in classic black are positioned slightly to the right in the midground.",
+      "The table arrangement creates a sense of balance and depth."
+    ],
+    "questions": [
+      "Is the composition viewed from a high angle?",
+      "Are the black headphones positioned in the midground?",
+      "Does the arrangement of headphones demonstrate depth?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The studio features soft gray walls and curated ambient lighting.",
+      "LED lights provide gentle, diffused illumination throughout the scene.",
+      "The color scheme includes shades of black, silver, and rose gold."
+    ],
+    "questions": [
+      "Are soft gray walls part of the studio setting?",
+      "Is the lighting diffused and gentle?",
+      "Does the color scheme include rose gold tones?"
+    ]
+  }
+}

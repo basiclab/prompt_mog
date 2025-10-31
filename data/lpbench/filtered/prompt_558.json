@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the vibrant energy of a bustling urban sports arena, a thrilling handball game is underway, capturing the essence of contemporary competitive sports. The scene is set in an expansive gymnasium illuminated by overhead lights, creating a bright and intense atmosphere as two rival teams compete ferociously on the polished wooden court. Players, clad in colorful jerseys emblazoned with team logos, sprint across the floor with sheer determination, their athletic prowess evident in their fluid movements and coordinated team strategies. Viewed from a mid-level vantage point, slightly to the right of the center court, the camera captures the fast-paced action with a slightly elevated perspective, allowing the viewer to fully appreciate the dynamic interplay between the athletes. In the foreground, a player launches an impressive jump shot, muscles taut and focused, framed perfectly against a background of cheering spectators whose enthusiasm adds to the electrifying mood. The arena's architecture, with its high vaulted ceilings and rows of seats packed with energized fans, creates a sense of immense scale and drama. The day is bright, with artificial lights casting a crisp clarity across the court, while the vibrant colors of the players' uniforms - reds, blues, and yellows - pop against the shiny wooden floor, enhancing the visual excitement of the match. The captured moment exudes a vivid, documentary-style realism, emphasizing the athletic feats and the emotional highs of the competition. The scene is rendered with high-resolution detail, showcasing the players' expressions, the texture of the ball in motion, and the intensity etched on the faces of the spectators, contributing to a masterful portrayal of the game's dynamic energy and passion.",
+  "semantic": {
+    "description": [
+      "The scene captures a handball game with two rival teams competing on a wooden court.",
+      "Players wear jerseys with team logos, indicating their competitive intent and team spirit.",
+      "A player is captured mid-jump shot in the foreground, demonstrating athletic prowess."
+    ],
+    "questions": [
+      "Is there a handball game occurring in the scene?",
+      "Are the players wearing jerseys with team logos?",
+      "Is there a player performing a jump shot in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned mid-level, slightly right of the center court with an elevated view.",
+      "Spectators fill the background, creating an energetic atmosphere with their presence.",
+      "The scene features a large gymnasium with high vaulted ceilings, amplifying the space."
+    ],
+    "questions": [
+      "Is the camera positioned at a mid-level vantage point?",
+      "Are spectators visible in the background?",
+      "Is the scene set in a gymnasium with vaulted ceilings?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Artificial lighting provides crisp clarity and enhances the vivid colors on the court.",
+      "The color palette of the scene is dominated by reds, blues, and yellows on the players' uniforms.",
+      "The image captures a documentary-style realism, focusing on the dynamic energy of the game."
+    ],
+    "questions": [
+      "Is the lighting artificial, providing crisp clarity in the scene?",
+      "Are vibrant colors like reds and blues present in the players' uniforms?",
+      "Is there a focus on documentary-style realism in the scene?"
+    ]
+  }
+}

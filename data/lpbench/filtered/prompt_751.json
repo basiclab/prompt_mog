@@ -1,0 +1,40 @@
+{
+  "theme": "Still Life Photography",
+  "prompt": "In a serene sunlit breakfast nook, an elaborate still life arrangement captures the viewer's attention atop a smooth, polished cherry wood table. The scene is a meticulous composition of seasonal fruits, antique crockery, and a handwoven cloth, all bathed in the soft morning light filtering through an adjacent window. A hand-painted porcelain teapot with a delicate floral pattern sits at the center, surrounded by vibrant red and green apples, a vase of fresh lavender, and a small crystal bowl of golden honey. The setting creates a harmonious interplay of colors and textures, with the varied tones of the ceramic glaze and the rich hues of the fruits providing a visual feast. Viewed from a slightly elevated angle, the composition allows the eye to travel across the tableau, from the inviting warmth of freshly cut lemons to the intricate detailing of an ornate silver spoon resting beside a vintage ceramic bowl. In the background, a sheer lace curtain adds a layer of elegance to the scene, subtly diffusing the sunlight and casting gentle, intricate shadows. The overall atmosphere is one of rustic charm and quiet luxury, with a color palette that balances warm yellows and greens against cool blue accents, creating a sense of both vibrancy and tranquility. The artwork is styled in the vein of classical realist painting, capturing photographic detail with a painter's sensibility. The scene is rendered with a high level of sharpness and clarity, highlighting the textures and bringing out the finest details of every element in the composition, from the shimmering honey to the delicate lavender blooms.",
+  "semantic": {
+    "description": [
+      "The still life features a porcelain teapot with a floral pattern.",
+      "A small crystal bowl holds golden honey.",
+      "Fresh lavender is arranged in a vase beside the fruits."
+    ],
+    "questions": [
+      "Does the still life include a porcelain teapot?",
+      "Is there a bowl of honey in the composition?",
+      "Are there lavender flowers visible in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The teapot is placed at the center of the arrangement.",
+      "The scene is viewed from a slightly elevated angle.",
+      "A vintage ceramic bowl is accompanied by an ornate silver spoon."
+    ],
+    "questions": [
+      "Is the teapot centrally placed in the arrangement?",
+      "Is the perspective slightly elevated?",
+      "Is there a silver spoon next to the ceramic bowl?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene uses soft morning light from an adjacent window.",
+      "A lace curtain diffuses sunlight and casts delicate shadows.",
+      "The color palette combines warm yellows and greens with cool blue accents."
+    ],
+    "questions": [
+      "Is soft morning light used in the scene?",
+      "Does the lace curtain create delicate shadows?",
+      "Are there cool blue accents in the color palette?"
+    ]
+  }
+}

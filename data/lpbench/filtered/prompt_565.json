@@ -1,0 +1,39 @@
+{
+  "theme": "Candid Photography",
+  "prompt": "In a bustling urban coffee shop, the morning sun streams through tall glass windows, casting long shadows across textured wooden floors. The central figure, a young woman dressed in casual attire, is deeply engrossed in writing on a laptop, surrounded by the comforting chaos of her surroundings. Her face, framed by loose curls, is softly lit by the screen's glow, contrasting with the vibrant movements around her. To her right, a barista with a focused expression skilfully crafts a latte, steam swirling above the espresso machine. Nearby, a group of friends animatedly share stories, their laughter punctuating the ambient hum of the café. The scene captures an intricate tapestry of urban life, where individual moments unfold within a larger, interconnected narrative. The camera adopts a slightly elevated angle, offering a panoramic view of the space, with the woman writer subtly off-center to highlight her quiet concentration amidst the dynamic backdrop. In the background, the open kitchen reveals brief glimpses of bustling activity, chefs in motion as they prepare fresh pastries. The atmosphere is lively yet intimate, suffused with the rich aroma of coffee and freshly baked bread. Natural light interacts with warm interior lighting, creating a cozy and inviting mood. A palette of muted browns, soft greens, and subtle terracotta hues envelops the scene, evoking a sense of warmth and camaraderie. This candid moment, captured with the precision of a seasoned photojournalist, exudes a documentary-style realism, rich in detail and texture, with a crisp 8K resolution enhancing the clarity and vibrancy of each element within the frame.",
+  "semantic": {
+    "description": [
+      "A young woman is typing on a laptop amid a busy café scene.",
+      "The barista is making a latte with steam rising above the espresso machine.",
+      "A group of friends is engaged in lively conversation nearby."
+    ],
+    "questions": [
+      "Is the young woman focused on her laptop?",
+      "Does the café scene include a barista making coffee?",
+      "Are multiple people engaged in conversation in the café?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is slightly elevated for a panoramic view of the café.",
+      "The young woman is positioned slightly off-center to emphasize her presence.",
+      "The open kitchen in the background shows chefs preparing pastries."
+    ],
+    "questions": [
+      "Is the perspective slightly elevated to provide a broad view?",
+      "Does the woman's positioning highlight her amidst the café's activity?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm natural and interior lighting create a cozy atmosphere.",
+      "Muted browns, greens, and terracotta colors dominate the scene.",
+      "The image is captured in documentary style with rich detail and texture."
+    ],
+    "questions": [
+      "Does the lighting create an inviting, warm ambiance?",
+      "Are the colors primarily muted browns, greens, and terracotta?",
+      "Is the image style reminiscent of documentary photography?"
+    ]
+  }
+}

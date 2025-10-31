@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the tranquil embrace of a lush alpine meadow, a pair of elegant alpine ibexes gracefully navigate the steep, rocky terrain. Their magnificent horns curve majestically, reflecting a silhouette against the cerulean sky. Set within a vibrant ecosystem, the ibexes are perched with poised agility on narrow ledges, surrounded by clusters of wildflowers and moss-covered stones. The camera captures this striking scene from a mid-distance, positioned slightly below the subjects, emphasizing their impressive stature and the ruggedness of their mountainous home. The background features distant, mist-shrouded peaks, while the foreground is rich with diverse flora, creating a layered tableau that highlights the scale and majesty of the setting. The sunlight, filtered through thin clouds, casts a soft, diffused glow over the landscape, lending a serene and ethereal atmosphere. Shadows play gently across the rocky surfaces, enhancing the textural contrasts, while subtle highlights dance atop the ibexes' coats, accentuating their natural grace. The color palette is a harmonious blend of cool blues and deep greens, with occasional bursts of floral yellows and whites, evoking a sense of peaceful vibrance. The scene is captured in a style reminiscent of fine art nature photography, with a focus on sharp clarity and exquisite detail, showcasing the rugged beauty of the alpine environment and the majesty of its wildlife in breathtaking resolution.",
+  "semantic": {
+    "description": [
+      "A pair of alpine ibexes stand on steep, rocky terrain.",
+      "The ibexes have large, curved horns and appear poised and agile.",
+      "Wildflowers and moss-covered stones surround the ibexes."
+    ],
+    "questions": [
+      "Are there two ibexes in the scene?",
+      "Do the ibexes have large, curved horns?",
+      "Is the setting a rocky, mountainous terrain?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The ibexes are captured from a mid-distance, slightly below them.",
+      "The scene is layered with a rugged foreground and mist-shrouded peaks in the background.",
+      "The ibexes are positioned on narrow ledges among flora."
+    ],
+    "questions": [
+      "Is the camera positioned slightly below the ibexes?",
+      "Are the ibexes on narrow ledges?",
+      "Is there a misty background with distant peaks?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The sunlight is soft and diffused, creating a serene atmosphere.",
+      "Shadows enhance the textural contrasts of the rocky terrain.",
+      "The color palette includes blues, greens, yellows, and whites."
+    ],
+    "questions": [
+      "Is the lighting soft and diffused?",
+      "Are there shadows enhancing the texture of the rocks?",
+      "Is the color palette harmonious with blues and greens?"
+    ]
+  }
+}

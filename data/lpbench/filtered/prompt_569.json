@@ -1,0 +1,40 @@
+{
+  "theme": "Candid Photography",
+  "prompt": "As the late afternoon sun starts to dip behind a row of historic brownstone buildings, a lively scene unfolds on one of the narrow cobblestone streets of an old European city. The main subject, a street vendor in her mid-forties, with a warm smile and eyes that spark with enthusiasm, stands behind a wooden stall laden with colorful blooms. She is fully engaged in conversation with a young couple who are laughing at something she has said, their eyes twinkling with shared amusement. A gentle breeze plays with the vendor's auburn hair and carries the sweet scent of flowers through the air. In the background, a bicyclist weaves effortlessly through a group of pedestrians, while a street performer strums a slow tune on his guitar. The camera captures this moment from an eye-level perspective, framing the vendor and her stall in the foreground, the couple slightly off-center, and the vibrant hustle of the street scene in the background, adding depth and life to the composition. The scene is bathed in the soft, diffused glow of the golden hour, casting warm highlights on the vendor's face and enhancing the colors of her floral display. Shadows stretch gently across the cobblestones, creating a dance of light and shade that evokes a sense of timelessness and charm. The color palette is dominated by warm, earthy tones contrasted with the vivid hues of the flowers, creating a lively and inviting atmosphere. The photograph is captured in a documentary style, focusing on the spontaneity and authenticity of the moment, with a crisp resolution that highlights even the smallest textures and expressions. This image offers a slice of everyday life, celebrating the beauty of unposed human interactions in a bustling urban setting.",
+  "semantic": {
+    "description": [
+      "A street vendor, mid-forties, stands behind her stall full of colorful flowers.",
+      "The vendor is talking to a laughing young couple in front of her stall.",
+      "A cyclist rides through pedestrians in the background, adding movement to the scene."
+    ],
+    "questions": [
+      "Is there a street vendor present in the scene?",
+      "Are the flowers on display at the vendor's stall colorful?",
+      "Are people interacting in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The vendor and her stall are positioned prominently in the foreground.",
+      "The young couple is slightly off-center, engaging with the vendor.",
+      "Background elements include pedestrians and a cyclist weaving through them."
+    ],
+    "questions": [
+      "Is the vendor's stall in the foreground of the image?",
+      "Is the young couple positioned slightly off-center?",
+      "Is there movement visible in the background of the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit by soft, diffused golden hour light.",
+      "Warm highlights accentuate the vendor's face and the flowers.",
+      "The photograph uses a documentary style, capturing spontaneity and authenticity."
+    ],
+    "questions": [
+      "Is the scene illuminated by golden hour light?",
+      "Are warm highlights present on the vendor's face and flowers?",
+      "Is the photographic style documentary in nature?"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In the heart of an opulent, sun-drenched conservatory, a lavish brunch setting spreads across an expansive, polished oak dining table. The main attraction is an intricately styled charcuterie board, brimming with an array of gourmet cheeses, cured meats, and fresh fruits. The scene is captured from a slightly elevated angle, framing the table as the central focal point while allowing the intricate details of each element to be fully appreciated. Plates of delicately arranged croissants and pastries flank the board, their golden crusts glistening under the natural light, while vibrant bowls of seasonal berries and a crystal decanter filled with freshly squeezed orange juice complete the ensemble. Morning sunlight streams through the large, arching windows, casting an ethereal glow over the room and creating soft shadows that dance across the table setting. This warm, inviting light enhances the rich hues of the dark wood and the vivid colors of the food, imbuing the scene with a sense of tranquility and indulgence. The color palette celebrates warm, earthy tones with the deep reds and oranges of ripe fruits, contrasted against the creamy whites of the cheeses and buttery yellows of the pastries. This harmonious color arrangement conveys a mood of comfort and luxury, inviting viewers to linger and partake in the feast. The overall style embodies the essence of fine dining food photography, with an emphasis on texture and depth, captured in stunning detail with the clarity and precision of high-resolution imagery. Every element is thoughtfully positioned to create an exquisite composition that captures the art of culinary presentation in a sophisticated and inviting manner.",
+  "semantic": {
+    "description": [
+      "An opulent brunch setting is showcased on a polished oak dining table.",
+      "A charcuterie board is adorned with cheeses, cured meats, and fresh fruits.",
+      "Golden croissants and pastries are arranged around the charcuterie board."
+    ],
+    "questions": [
+      "Is there a charcuterie board present in the scene?",
+      "Are the croissants and pastries visible on the table?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The table is the central focal point of the composition.",
+      "The scene is photographed from a slightly elevated angle.",
+      "Large windows allow sunlight to illuminate the table from one side."
+    ],
+    "questions": [
+      "Is the table the central element in the composition?",
+      "Is the scene captured from an elevated perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is warm and inviting, streaming through large windows.",
+      "The color palette uses earthy tones like deep reds and creamy whites.",
+      "The scene embodies fine dining food photography with precise detail."
+    ],
+    "questions": [
+      "Is the lighting described as warm and inviting?",
+      "Are earthy tones part of the color palette?"
+    ]
+  }
+}

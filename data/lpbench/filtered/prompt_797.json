@@ -1,0 +1,40 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "In a secluded mountain retreat, a classic 1960s muscle car rests gracefully amidst a dense blanket of freshly fallen snow. The vehicle shines with a deep metallic blue, its polished chrome accents gleaming under the diffused light of a winter morning. This powerful machine, with its bold, aggressive lines and wide stance, commands attention as it sits parked on a narrow driveway leading to a charming log cabin that stands in the background, half-veiled by the fog that hugs the ground. The camera captures this scene from a slightly elevated angle, providing a sweeping view of the surroundings, with the car centered prominently in the frame. Behind the car, tall, snow-laden pine trees create a natural canopy, while delicate snowflakes continue to fall silently, adding a touch of serenity to this otherwise imposing presence. The soft, ambient lighting creates subtle highlights and gentle shadows on the car's sleek surface, enhancing its contours and emphasizing the craftsmanship of its design. The atmosphere is one of calm and isolation, with the muted colors of winter contrasting the vibrant blue of the car, setting a mood of introspection and nostalgia. The overall image exudes a sense of quiet power, captured with the precision and artistry of professional automotive photography, where every detail is crisp and finely rendered, ensuring that the viewer is drawn into this tranquil yet majestic winter tableau.",
+  "semantic": {
+    "description": [
+      "A 1960s muscle car with a deep metallic blue color is the primary subject.",
+      "The car has polished chrome accents that gleam under winter morning light.",
+      "A charming log cabin is visible in the background, partially veiled by fog."
+    ],
+    "questions": [
+      "Is the primary subject a 1960s muscle car?",
+      "Does the car have polished chrome accents?",
+      "Is there a log cabin visible in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The car is centered prominently in the frame of the photograph.",
+      "Tall pine trees create a natural canopy in the background.",
+      "The camera captures the scene from a slightly elevated angle."
+    ],
+    "questions": [
+      "Is the car centered in the frame?",
+      "Do tall pine trees appear in the background?",
+      "Is the scene captured from an elevated angle?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and ambient, with diffused winter morning light.",
+      "The scene has muted colors of winter contrasting with the vibrant blue car.",
+      "The image is rendered with precision, showcasing professional automotive photography quality."
+    ],
+    "questions": [
+      "Is the lighting soft and ambient in the scene?",
+      "Do muted winter colors contrast with the blue of the car?",
+      "Is the image rendered with professional quality?"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under the brooding expanse of the sky, a quaint coastal village braces for an impending storm. The air is thick with anticipation as enormous, swirling nimbus clouds begin to gather, casting deep, shifting shadows over the landscape. A weathered lighthouse stands proudly at the edge of a jagged cliff, its stark silhouette a beacon against the tumultuous backdrop. The scene is observed from a slightly elevated angle, capturing the layered composition of the village nestled against rugged cliffs to the right, a roiling sea stretching out beyond, and the foreboding sky above. In the foreground, tattered flags on fishing boats flap wildly in the strengthening winds, hinting at the chaotic energy soon to descend. The midground centers on the lighthouse, its structure highlighted by intermittent flashes of distant lightning, which illuminate the scene in a stark, ethereal light. The deepening storm clouds create a palette dominated by ominous grays and deep blues, contrasted by brief, luminous flares of lightning and the warm glow of the lighthouse's rotating beam. Shadows stretch and contort as the inconsistent lighting flickers across the terrain, adding to the scene's ominous yet captivating mood. The atmosphere is thick with the scent of rain and sea salt, creating a tangible tension that grips the viewer. This dramatic coastal tableau is presented in a classic, high-contrast black-and-white style reminiscent of fine art photography. The image is sharp and meticulously detailed, with each element rendered in crisp focus to underline the gravity and beauty of nature's theatrical display. An 8K resolution ensures that every nuance of texture and light is brought to life, marking the piece as a masterful example of professional weather photography.",
+  "semantic": {
+    "description": [
+      "A quaint coastal village is depicted under an ominous sky.",
+      "A weathered lighthouse stands prominently at the edge of a cliff.",
+      "Flags on fishing boats flap in the strengthening winds."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are there flags visible on fishing boats?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The village is nestled against the cliffs on the right side of the frame.",
+      "The lighthouse is centered in the midground of the composition.",
+      "Clouds form a dense, swirling layer across the upper part of the image."
+    ],
+    "questions": [
+      "Is the lighthouse centered in the midground?",
+      "Are the clouds dense and swirling?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is rendered in high-contrast black-and-white photography.",
+      "Lightning flashes intermittently illuminate the scene.",
+      "The image features sharp detail and crisp focus throughout."
+    ],
+    "questions": [
+      "Is the image in black-and-white?",
+      "Are lightning flashes depicted in the scene?"
+    ]
+  }
+}

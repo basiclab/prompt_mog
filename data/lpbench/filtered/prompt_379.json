@@ -1,0 +1,37 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Nestled amidst a lush urban landscape, a newly constructed modern villa captures the attention with its striking design and positioning. This architectural masterpiece is thoughtfully situated on a generous corner plot, surrounded by meticulously manicured gardens and towering palm trees that sway gently in the breeze. The villa's façade showcases an elegant blend of glass, steel, and natural stone, exuding a sense of contemporary sophistication while harmoniously integrating with the verdant surroundings. From a slightly elevated angle, one can appreciate the villa's expansive layout, featuring a spacious outdoor terrace that seamlessly connects to an infinity pool, offering breathtaking views of the skyline beyond. The foreground is framed by a cobblestone driveway leading to a sleek, double-height entrance, where floor-to-ceiling windows allow sunlight to flood the interior spaces. As the sun begins to set, the villa is bathed in warm, golden hues that accentuate the textures of the stone and provide a dramatic contrast against the deepening blues of the dusk sky. This cinematic lighting creates a cozy yet luxurious atmosphere, enhanced by the soft glow of strategically placed outdoor lighting along the pathways and garden beds. The color palette embraces earthy tones and muted greens, complementing the villa's natural stone elements and lush garden backdrop. Inside, the villa features an open-plan design characterized by minimalist elegance and a seamless flow between indoor and outdoor living spaces. Innovative lighting design highlights architectural features and artwork, while large glass doors slide away to incorporate the terrace and garden into the living area. Captured in high-resolution, with a keen eye for detail and composition, this real estate photograph conveys both the luxury and liveability of the property, inviting potential buyers to envision their future in this exquisite home.",
+  "semantic": {
+    "description": [
+      "The villa's design uses glass, steel, and natural stone materials.",
+      "Lush gardens and palm trees surround the modern villa.",
+      "Floor-to-ceiling windows allow sunlight into the villa's interior."
+    ],
+    "questions": [
+      "Does the villa have floor-to-ceiling windows?",
+      "Is the villa surrounded by gardens?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is situated on a corner plot with a generous size.",
+      "A cobblestone driveway leads to the villa's entrance.",
+      "The outdoor terrace connects seamlessly to an infinity pool."
+    ],
+    "questions": [
+      "Is there a cobblestone driveway leading to the entrance?",
+      "Does the terrace connect to an infinity pool?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The villa is bathed in warm, golden hues at sunset.",
+      "Cinematic lighting creates a luxurious atmosphere.",
+      "The scene captures earthy tones and muted greens."
+    ],
+    "questions": [
+      "Is the villa enveloped in warm lighting during sunset?",
+      "Does the scene emphasize earthy tones?"
+    ]
+  }
+}

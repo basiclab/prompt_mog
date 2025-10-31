@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In the sunlit warmth of a contemporary kitchen, a vibrant culinary masterpiece takes shape on a wide, rustic wooden table. The focal point of this delicious scene is a beautifully plated dish of fresh seafood, crowned with succulent, glistening lobster tail, surrounded by a medley of colorful, neatly diced vegetables like bell peppers, carrots, and snow peas. This culinary creation is flanked by a pair of elegantly arranged side dishes, each featuring heirloom tomatoes in a rainbow of hues and delicate sprigs of basil that add aromatic allure. The setting is completed with sleek utensils that catch the light and crystal-clear glasses of sparkling water, their surfaces glistening with condensation. Captured from a slightly elevated angle, the camera looks down upon the table, allowing the viewer to take in the entire spread in one glance. The composition is carefully balanced with the main dish prominently positioned in the middle, while the side dishes and utensils subtly frame it, creating a harmonious visual rhythm. The soft natural light from an overhead window bathes the table in a warm, inviting glow, casting gentle shadows that add depth and dimension to the scene. The color palette is a feast for the eyes with vibrant reds, greens, and oranges set against the earthy tones of the wooden table, evoking a sense of freshness and abundance. The mood is one of refined elegance yet approachable warmth, inviting the viewer to savor the artistry and flavor of this culinary presentation. This image embodies the crisp precision of professional culinary photography, highlighting the textures and intricate details with remarkable clarity and focus, ensuring that every element on the table looks as if it could almost be touched.",
+  "semantic": {
+    "description": [
+      "A vibrant seafood dish with glistening lobster tail is the focal point.",
+      "The dish is surrounded by colorful, diced vegetables like bell peppers and snow peas.",
+      "Elegantly arranged side dishes feature heirloom tomatoes and basil sprigs."
+    ],
+    "questions": [
+      "Is the main dish a seafood plate with lobster tail?",
+      "Are there colorful vegetables surrounding the main dish?",
+      "Do the side dishes include heirloom tomatoes?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is slightly elevated, looking down onto the table.",
+      "The main seafood dish is positioned prominently in the center of the table.",
+      "Side dishes and utensils are arranged to frame the main dish harmoniously."
+    ],
+    "questions": [
+      "Is the scene captured from a slightly elevated angle?",
+      "Is the main dish positioned in the center of the table?",
+      "Are the side dishes arranged around the main dish?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft natural light from an overhead window illuminates the scene.",
+      "The color palette consists of vibrant reds, greens, and oranges.",
+      "The mood is elegant yet approachable, with a warm and inviting glow."
+    ],
+    "questions": [
+      "Is there soft natural light illuminating the scene?",
+      "Does the scene feature a vibrant color palette with reds and greens?",
+      "Is the mood of the scene warm and inviting?"
+    ]
+  }
+}

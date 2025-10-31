@@ -1,0 +1,40 @@
+{
+  "theme": "Fine Art Photography",
+  "prompt": "In a secluded and timeless stretch of rugged coastline, a solitary figure stands atop a weathered cliff, their silhouette sharply outlined against a tumultuous sky. The viewer observes from a low vantage point, allowing the expanse of the stormy seascape to dominate the composition. Jagged rocks descend steeply into the frothy surf below, creating a sense of dramatic tension as dark waves crash relentlessly against the shore. The person, clad in a flowing, vibrant red shawl, contrasts vividly with the muted earth tones of the rocky landscape, offering a singular splash of color amidst the otherwise monochrome setting. As the day gives way to dusk, the scene is illuminated by fleeting shafts of dramatic light piercing through breaks in the overcast sky, casting ephemeral golden highlights across the water and enhancing the deep shadows that envelop the cliffs. The atmosphere is charged with the anticipation of an approaching storm, the air thick with moisture and the scent of salt. Subtle gradients of slate gray and navy blue dominate the scene, punctuated by the starkly white crests of the waves and the brilliant red of the shawl, creating a charged and emotionally resonant mood. The artful interplay of light and shadow lends an impressionistic quality to the scene, suggestive of the transient beauty and raw power of nature. The photograph captures this moment with exceptional clarity and detail, showcasing the tumultuous elegance of the sea and the resilience of solitude. In its composition and technical execution, the image embodies the masterful qualities associated with award-winning fine art photography.",
+  "semantic": {
+    "description": [
+      "A solitary figure stands atop a weathered cliff by the coast.",
+      "The person is wearing a vibrant red shawl that contrasts with the landscape.",
+      "Dark waves crash against the rocky shore below the cliff."
+    ],
+    "questions": [
+      "Is there a solitary figure in the scene?",
+      "Does the person wear a red shawl?",
+      "Are dark waves visible crashing against the shore?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a low vantage point emphasizing the expansive seascape.",
+      "Rugged cliffs descend steeply into the frothy surf below.",
+      "The person is sharply outlined against the tumultuous sky."
+    ],
+    "questions": [
+      "Is the viewpoint from a low angle?",
+      "Do the cliffs descend steeply into the surf?",
+      "Is the figure outlined against the sky?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by dramatic light shafts through the overcast sky.",
+      "Subtle gradients of slate gray and navy dominate the palette.",
+      "The photograph embodies an impressionistic quality with its interplay of light and shadow."
+    ],
+    "questions": [
+      "Are there dramatic light shafts in the scene?",
+      "Does the color palette include slate gray and navy?",
+      "Is there an impressionistic quality to the lighting?"
+    ]
+  }
+}

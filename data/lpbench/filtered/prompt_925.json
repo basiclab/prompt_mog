@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a dreamlike seaside world, a gigantic, intricately detailed seashell stands precariously on the edge of an expansive, sandy beach, its spiral structure twisting elegantly into the sky. The beach stretches endlessly, bordered by a tranquil azure ocean that gently laps against the shore, where clusters of glossy, oversized pearls glisten under the ethereal glow of a dual sunset. Viewed from a low angle, this surreal landscape is framed symmetrically by towering, sculpted sand dunes that rise like ancient guardians on either side, their smooth curves casting elongated shadows across the sunlit sand. In the foreground, vibrant coral reefs peek above the water's surface, adding a splash of vivid colors against the muted tones of the beach. Above, the sky is a kaleidoscope of lavender, rose, and gold hues, where two suns orbit each other in a cosmic dance, casting twin streams of soft, golden light that illuminate the scene with an otherworldly radiance. The atmosphere is filled with a gentle haze, softening the distant horizon where the ocean meets the sky, evoking a sense of serenity and timelessness. The color palette is a harmonious blend of warm and cool tones, with the iridescent sheen of the pearls reflecting the dual sunlight, creating a mood that is both mesmerizing and calming. The image captures the essence of a fantastical world, where reality bends, and imagination soars, rendered with exquisite detail and a high level of technical precision, capturing every nuance of this surreal seaside spectacle in stunning clarity.",
+  "semantic": {
+    "description": [
+      "A gigantic seashell stands on a sandy beach, spiraling into the sky.",
+      "Clusters of oversized pearls glisten on the beach under a dual sunset.",
+      "Vibrant coral reefs peek above the water's surface in the foreground."
+    ],
+    "questions": [
+      "Is there a gigantic seashell present in the scene?",
+      "Are there oversized pearls visible on the beach?",
+      "Can vibrant coral reefs be seen in the foreground?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The seashell is positioned at the edge of the sandy beach.",
+      "Sand dunes rise symmetrically on either side of the scene.",
+      "The ocean gently laps against the shore in the background."
+    ],
+    "questions": [
+      "Is the seashell positioned at the edge of the beach?",
+      "Do sand dunes rise symmetrically in the scene?",
+      "Is the ocean visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the soft, golden light of a dual sunset.",
+      "A kaleidoscope of lavender, rose, and gold hues fills the sky.",
+      "The color palette blends warm and cool tones harmoniously."
+    ],
+    "questions": [
+      "Is the scene illuminated by a dual sunset?",
+      "Are lavender, rose, and gold hues present in the sky?",
+      "Does the color palette blend warm and cool tones?"
+    ]
+  }
+}

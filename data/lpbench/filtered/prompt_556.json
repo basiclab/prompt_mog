@@ -1,0 +1,39 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the heart of a bustling stadium, a fierce soccer match unfolds, capturing the raw intensity and passion of competitive sports. The central figure, a determined striker in a vibrant red and white uniform, charges forward with unwavering focus, the ball at his feet. Around him, teammates and opponents alike move with synchronized urgency, their movements a choreographed dance of strategy and speed. The crowd roars with anticipation, a sea of faces painted with team colors, their collective energy almost tangible. This dynamic moment is framed from a low, sideline perspective, providing a visceral sense of being right on the field amidst the action. The composition centers the striker, his form highlighted against a blurred backdrop of players in motion, creating a sense of depth that draws the viewer's eye across the field. Harsh stadium lights cast dramatic shadows across the players, enhancing the high-stakes atmosphere of the game. The evening sky, a mix of deep blues and purples, contrasts with the bright white lines and vibrant uniforms, setting a dramatic, competitive mood. The crispness of the scene is accentuated by the high-definition capture, revealing every drop of sweat and blade of grass, ensuring that the thrill and intensity of the match are vividly felt. This image embodies the spirit of photojournalism, freezing a fleeting moment of human determination and athleticism, and presenting it with stunning clarity and detail.",
+  "semantic": {
+    "description": [
+      "A determined soccer striker is captured charging forward with the ball.",
+      "The scene unfolds in a bustling stadium during a competitive soccer match.",
+      "Players are dressed in vibrant red and white uniforms, indicative of team colors."
+    ],
+    "questions": [
+      "Is the central figure a soccer player?",
+      "Are there teammates and opponents visible in the scene?",
+      "Does the scene take place in a stadium?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The composition centers the striker with players blurred in the background.",
+      "The scene is viewed from a low, sideline perspective on the field.",
+      "The players and the field create a sense of depth in the image."
+    ],
+    "questions": [
+      "Is the composition centered around the striker?",
+      "Is the perspective taken from the sideline of the field?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Harsh stadium lights cast dramatic shadows across the players.",
+      "The evening sky features deep blues and purples, contrasting with field colors.",
+      "The image captures the scene with high-definition clarity and sharpness."
+    ],
+    "questions": [
+      "Does the lighting create dramatic shadows in the scene?",
+      "Is the evening sky rendered in deep blues and purples?",
+      "Is the image captured in high definition?"
+    ]
+  }
+}

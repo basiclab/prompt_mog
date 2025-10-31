@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "As dawn reluctantly breaks over a storm-lashed coastal landscape, a rugged stretch of beach comes into focus, framed by the towering cliffs that rise abruptly from the sea. Here, a solitary photographer stands, capturing the tumultuous grandeur of nature's wrath with a formidable DSLR camera and a sturdy tripod. In the sky above, a swirling mass of cumulonimbus clouds gathers ominously, their quilted depths illuminated intermittently by the electric flash of lightning. Each bolt heralds its presence with a crackling energy that reverberates through the air, casting fleeting shadows across the roiling sea below. The composition captures this scene from the edge of the cliffs, allowing the viewer to glimpse the vastness of the ocean as it churns with relentless power. In the foreground, weather-beaten rocks bear the brunt of the waves, while a vibrant rainbow arches across the horizon, juxtaposing the storm's fury with its serene beauty. The light is ethereal, filtered through the cloud cover, highlighting the cascading sheets of rain that sweep across the vista. The color palette is striking, with inky blues and grays dominating, punctuated by the vivid reds and oranges of the sunrise attempting to breach the horizon. There is a chiaroscuro quality to the scene, where light and shadow play across the landscape, creating a dynamic tension. The photographic style is both documentary and fine art, capturing the ephemeral nature of the weather with both precision and emotional depth. The image is rendered with breathtaking clarity, every raindrop and lightning bolt captured in high definition, promising an award-winning composition that communicates the raw, untamed power of the elements.",
+  "semantic": {
+    "description": [
+      "A solitary photographer stands on a storm-lashed coastal beach.",
+      "A rainbow arches across the horizon amidst the storm.",
+      "Lightning bolts illuminate the cumulonimbus clouds."
+    ],
+    "questions": [
+      "Is there a photographer visible in the scene?",
+      "Does the image include a rainbow?",
+      "Are lightning bolts present in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from the edge of the cliffs overlooking the ocean.",
+      "Weather-beaten rocks are visible in the foreground, near the shoreline.",
+      "The photographer is positioned on the beach below the towering cliffs."
+    ],
+    "questions": [
+      "Is the scene captured from the edge of the cliffs?",
+      "Are there rocks visible in the foreground?",
+      "Is the photographer on the beach below the cliffs?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The light is filtered through cloud cover, creating an ethereal effect.",
+      "The color palette includes inky blues and grays, with hints of reds and oranges.",
+      "The photographic style combines documentary and fine art elements."
+    ],
+    "questions": [
+      "Is the light filtered through clouds creating an ethereal atmosphere?",
+      "Does the color palette feature blues, grays, and some reds and oranges?",
+      "Is the photographic style a blend of documentary and fine art?"
+    ]
+  }
+}

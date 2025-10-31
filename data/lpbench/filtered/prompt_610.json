@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of an enchanting coastal garden, a magnificent wedding celebration unfolds under the soft glow of a crescent moon. The ceremony takes place beside a tranquil fountain, where ornate stone sculptures sprinkle shimmering water droplets that catch the delicate light. A path paved with rose petals leads to a decorated archway entwined with an abundance of fragrant, blooming flowers, their colors vibrant in the moonlight. The air is filled with the gentle hum of a string quartet, their melodies weaving a musical tapestry that complements the whispers of the ocean. Guests, elegantly attired in evening wear, mingle joyously across the garden, their laughter melding with the music to create a symphony of celebration. The couple, radiant and resplendent, exchange vows beneath the flower-laden archway, surrounded by an intimate circle of family and friends. Captured from an elevated, slightly angled perspective, the garden scene is framed with an eye for depth, showcasing the layered beauty from the foreground's petal-strewn path to the softly lit expanse of the ocean beyond. The lighting is a harmonious blend of natural lunar radiance and strategically placed votive candles, casting a gentle, warm glow that dances across the guests' faces and creates a play of light and shadow on the garden's foliage. The color palette is a mix of deep emerald greens and creamy whites, contrasted by the warm amber of the candles and the soft blues of the night sky, evoking a serene yet celebratory mood. In the style of fine art event photography, the scene is masterfully composed, capturing both the grand scale of the celebration and the intimate moments of affection and joy, rendered in high detail with impeccable clarity and rich textures that elevate the image to an award-winning standard of photographic excellence.",
+  "semantic": {
+    "description": [
+      "A wedding celebration takes place in a coastal garden under a crescent moon.",
+      "A string quartet plays gentle music, complementing the ocean's whispers.",
+      "The couple exchanges vows beneath a flower-laden archway."
+    ],
+    "questions": [
+      "Is the wedding celebration happening under a crescent moon?",
+      "Does a string quartet play music at the event?",
+      "Are the vows exchanged beneath a flower-laden archway?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from an elevated, slightly angled perspective.",
+      "A path of rose petals leads to a decorated archway in the garden.",
+      "Guests are seen mingling joyously across the garden space."
+    ],
+    "questions": [
+      "Is the scene captured from an elevated perspective?",
+      "Does a path of rose petals lead to an archway?",
+      "Are guests mingling across the garden?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is a blend of moonlight and votive candles.",
+      "The color palette features emerald greens and creamy whites.",
+      "The style resembles fine art event photography with high detail and clarity."
+    ],
+    "questions": [
+      "Is the lighting a mix of moonlight and candlelight?",
+      "Does the color palette include emerald greens and creamy whites?",
+      "Is the style similar to fine art event photography?"
+    ]
+  }
+}

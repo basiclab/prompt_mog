@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Amidst an unsettling yet awe-inspiring spectacle, a colossal supercell thunderstorm dwarfs the expansive landscape below, swirling with ominous energy. The scene is framed from the vantage point of a solitary grove of ancient oak trees, their sturdy branches twisting skyward as if challenging the heavens. This dense thicket occupies the foreground, adding a contrasting element of stability against the churning chaos above. In the midground, an expansive field of tall, golden-tan grasses shudders in the gusty winds, swaying rhythmically as if acknowledging the storm's approaching wrath. The background is dominated by a horizon-spanning bank of tumultuous, layered cumulonimbus clouds, their dark, billowy masses appearing as an impenetrable wall of nature's fury. The storm is lit dramatically by errant streaks of lightning, which illuminate the clouds in fleeting bursts of stark, electric whites and purples. These vivid flashes cast sharp, ever-shifting shadows against the landscape, creating a dynamic interplay of light and dark. The color palette of the scene is a haunting blend of deep grays and blacks from the storm clouds, juxtaposed with the warm, muted tones of the field, creating a mood of tense anticipation. The overall mood of the image is one of powerful, almost primal energy, as if capturing a moment on the brink of unleashing nature's full force. Captured in stunning detail, the image is reminiscent of fine art landscape photography, characterized by its high-resolution quality, where each blade of grass and every ripple in the cloud formation is depicted with striking clarity and precision.",
+  "semantic": {
+    "description": [
+      "A colossal supercell thunderstorm dominates the scene, swirling ominously.",
+      "A solitary grove of ancient oak trees stands in the foreground.",
+      "Tall, golden-tan grasses cover the expansive field in the midground."
+    ],
+    "questions": [
+      "Is there a supercell thunderstorm in the scene?",
+      "Are there ancient oak trees present in the image?",
+      "Does the scene feature an expansive field of grasses?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The oak grove is positioned in the foreground, offering stability against the storm.",
+      "The expansive field of grasses sways rhythmically in the midground.",
+      "A horizon-spanning bank of cumulonimbus clouds dominates the background."
+    ],
+    "questions": [
+      "Are the oak trees located in the foreground?",
+      "Is the field of grasses positioned in the midground?",
+      "Do the cumulonimbus clouds occupy the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Errant streaks of lightning illuminate the clouds with electric whites and purples.",
+      "The color palette blends deep grays and blacks with warm, muted field tones.",
+      "The scene is reminiscent of fine art landscape photography with high-resolution quality."
+    ],
+    "questions": [
+      "Is the scene lit by streaks of lightning?",
+      "Does the color palette include deep grays and blacks?",
+      "Is the image captured in a high-resolution, fine art style?"
+    ]
+  }
+}

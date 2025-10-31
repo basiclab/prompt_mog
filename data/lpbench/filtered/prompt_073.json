@@ -1,0 +1,45 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the vibrant hues of the setting sun paint the sky in shades of orange and pink, a dramatic seascape unfolds along a rugged coastline. Jagged cliffs rise precipitously from the ocean, casting long shadows that stretch across the waves. A solitary lighthouse stands sentinel atop one of the cliffs, its whitewashed walls bathed in the golden light, providing a stark contrast against the deep azure of the sea. The camera captures the scene from a low vantage point near the shoreline, framing the lighthouse in the upper third of the image, with the expansive ocean filling the rest of the composition. Waves crash relentlessly against the base of the cliffs, creating a dynamic interplay between land and sea. The powerful surf sends plumes of white spray into the air, glistening in the fading light. In the foreground, a narrow strip of sandy beach is strewn with smooth, time-worn pebbles that reflect the twilight glow, adding texture and detail to the scene. The warm, golden hour light enhances the natural colors, saturating the orange and pink hues in the sky while deepening the blues of the ocean. Beneath the surface, the water takes on a greenish tinge where the sun's rays penetrate, revealing the undulating patterns of the seabed. A gentle breeze stirs the coastal grass atop the cliffs, adding a sense of motion and life to the tranquil yet powerful atmosphere. Captured in high-resolution with precise detail, the composition evokes a sense of awe and contemplation, echoing the timeless connection between the forceful sea and the steadfast land, rendered in the style of fine art seascape photography.",
+  "semantic": {
+    "description": [
+      "Jagged cliffs rise steeply from the ocean along the coastline.",
+      "A solitary lighthouse stands atop one of the cliffs in the scene.",
+      "Waves crash against the base of the cliffs, sending plumes of spray into the air.",
+      "A narrow strip of sandy beach is covered with smooth pebbles."
+    ],
+    "questions": [
+      "Is there a lighthouse visible in the scene?",
+      "Are there cliffs rising from the ocean?",
+      "Do waves crash against the cliffs in the scene?",
+      "Is the beach covered with pebbles?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned in the upper third of the image.",
+      "The camera angle is low, near the shoreline, framing the lighthouse and ocean.",
+      "The ocean fills the lower two-thirds of the composition.",
+      "Waves and cliffs create a dynamic interplay in the midground."
+    ],
+    "questions": [
+      "Is the lighthouse positioned in the upper third of the image?",
+      "Does the ocean occupy the lower two-thirds of the composition?",
+      "Is the camera angle low near the shoreline?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by warm, golden hour light.",
+      "The sky is painted in vibrant shades of orange and pink.",
+      "The water appears greenish where sunlight penetrates beneath the surface.",
+      "The photograph captures the scene in high-resolution detail."
+    ],
+    "questions": [
+      "Is the scene illuminated by golden hour light?",
+      "Are the sky colors vibrant shades of orange and pink?",
+      "Does the water appear greenish beneath the surface in places?",
+      "Is the photograph captured in high-resolution detail?"
+    ]
+  }
+}

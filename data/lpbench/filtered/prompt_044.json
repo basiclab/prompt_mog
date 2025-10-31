@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "In the tranquil embrace of a secluded cove, a mesmerizing seascape unfolds beneath the watchful gaze of an old stone lighthouse perched on a rugged cliff. The scene captures the essence of untouched nature, where the gentle curve of the coastline cradles a sweeping expanse of clear turquoise water. From a high vantage point, the lighthouse stands sentinel at the center of the frame, casting long shadows over the jagged rocks that scatter the foreground. The viewer's eye is led from this historic beacon, across the sun-dappled waves, to a distant line where sea meets sky, blurred in the soft haze of an early morning fog. Sunlight filters through thin clouds, lending a golden glow to the water's surface and creating dramatic highlights on the rippling ocean, while deepening the serene blues and greens of the sea. The sky is an artist's palette of warm pastels, transitioning seamlessly from soft peach to gentle lavender, setting a calm, introspective mood. The natural elements—smooth stones, weathered driftwood, and delicate sea grasses—are captured in exquisite detail, each texture meticulously rendered to reflect the raw, unspoiled beauty of the coast. This scene is realized with the precision of an award-winning landscape photograph, where every detail is captured in sharp focus and the composition resonates with a timeless elegance, inviting the viewer to linger and absorb the peaceful seclusion of this coastal retreat.",
+  "semantic": {
+    "description": [
+      "An old stone lighthouse is perched on a rugged cliff.",
+      "The coastline forms a gentle curve around the turquoise water.",
+      "Delicate sea grasses line the edge of the sandy beach."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Does the coastline have a gentle curve?",
+      "Are sea grasses visible in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned at the center of the frame.",
+      "Rugged rocks are scattered across the foreground.",
+      "The viewer's perspective is from a high vantage point."
+    ],
+    "questions": [
+      "Is the lighthouse centrally positioned within the frame?",
+      "Are there rocks visible in the foreground?",
+      "Is the scene viewed from a high vantage point?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the golden glow of morning sunlight.",
+      "The water's surface has dramatic highlights.",
+      "The sky transitions from soft peach to gentle lavender."
+    ],
+    "questions": [
+      "Is the scene illuminated by morning sunlight?",
+      "Are there highlights on the surface of the water?",
+      "Does the sky feature pastel colors?"
+    ]
+  }
+}

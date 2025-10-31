@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As dawn breaks over the horizon, a sweeping vista of a serene coastal landscape emerges, dominated by the gentle lull of ocean waves against a sandy beach. The scene is presented from a wide-angle perspective, with the camera positioned at the water’s edge, enhancing the expanse of the tranquil seascape. In the foreground, delicate seashells and fragments of coral are scattered across the glistening wet sand, their intricate patterns illuminated by the soft, early morning light. The midground features a pair of elegant seagulls, captured mid-flight as they glide above the gentle surf, their wings gracefully catching the warm hues of the rising sun. In the background, a solitary fishing boat with colorful sails drifts lazily on the horizon, its reflection shimmering in the crystalline waters. The scene's primary lighting source is the golden sunlight of dawn, casting a delicate glow across the entire landscape, evoking a sense of quietude and reflection. The sky transitions from deep indigo to soft pink and orange pastels, mirrored in the calm ocean, creating a harmonious blend of cool and warm tones that establishes a mood of peaceful solitude. The overall composition feels like a masterful still from a nature documentary, rendered in exquisite detail, capturing the ethereal beauty of the coastal environment at its most serene. Shot with impeccable clarity and precision, the image showcases the nuances of light and texture, drawing the viewer into a moment of tranquil reflection, reminiscent of classic seascape paintings yet with the crystal-clear sharpness of modern professional photography.",
+  "semantic": {
+    "description": [
+      "A pair of seagulls is captured mid-flight in the midground.",
+      "A solitary fishing boat with colorful sails drifts on the horizon.",
+      "Seashells and coral fragments are scattered on the wet sand."
+    ],
+    "questions": [
+      "Are there seagulls flying in the scene?",
+      "Is there a fishing boat visible in the distance?",
+      "Do seashells appear on the beach?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at the water’s edge with a wide-angle view.",
+      "Seagulls are flying above the gentle surf in the midground.",
+      "The fishing boat is situated on the horizon, providing depth."
+    ],
+    "questions": [
+      "Is the camera positioned at the water's edge?",
+      "Are the seagulls positioned in the midground?",
+      "Does the fishing boat appear on the horizon?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the golden light of dawn.",
+      "The sky shifts from indigo to pink and orange pastels.",
+      "The overall mood is one of peaceful solitude."
+    ],
+    "questions": [
+      "Is the scene illuminated by dawn light?",
+      "Does the sky feature pink and orange tones?",
+      "Is the mood of the image peaceful?"
+    ]
+  }
+}

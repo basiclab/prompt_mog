@@ -1,0 +1,40 @@
+{
+  "theme": "Automotive Photography",
+  "prompt": "In the heart of a bustling, modern urban plaza, a sleek, futuristic hypercar embodies the fusion of cutting-edge technology and avant-garde design. The vehicle, with its aerodynamic curves and reflective chrome surfaces, stands proudly on a cobblestone square that exudes a blend of old-world charm and contemporary vibrancy. Towering skyscrapers frame the scene, their glass facades capturing the rhythm of the city through scattered reflections of neon lights and the moving figures of pedestrians. Viewed from a slightly low angle, the hypercar is centered in the frame, dominating the composition while the city life pulses around it. The camera captures this marvel of engineering under the vivid luminescence of streetlights, which play across its polished surfaces, highlighting its razor-sharp lines and intricate detailing. As dusk turns to evening, the soft glow of a nearby café spills light onto the scene, enhancing the warm ambiance of a summer night in the city. The color palette is an electric symphony of cool blues and metallic grays with fiery accents of red and orange from the car’s interior lights. This creates a dynamic tension, underscoring the vehicle's dual nature of power and elegance. The atmosphere is charged with energy and motion, as the breeze carries the distant hum of traffic and the aroma of fresh espresso. With professional-grade sharpness, the photograph captures every nuance of the car's design, a testament to the pinnacle of automotive craftsmanship. The image possesses a fine art quality, blending the precision of professional automotive photography with the expressive soul of street life, resulting in an unforgettable visual narrative.",
+  "semantic": {
+    "description": [
+      "A futuristic hypercar with aerodynamic curves is the main subject.",
+      "The vehicle is surrounded by towering skyscrapers and bustling urban life.",
+      "The hypercar's chrome surfaces reflect the vibrant city lights."
+    ],
+    "questions": [
+      "Is the main subject a futuristic hypercar?",
+      "Is the vehicle surrounded by skyscrapers?",
+      "Are the city lights reflected on the car's surface?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The hypercar is centered in the photographic frame.",
+      "The camera angle is slightly low, enhancing the car's imposing presence.",
+      "Skyscrapers frame the scene, creating a backdrop of urban life."
+    ],
+    "questions": [
+      "Is the hypercar centered in the frame?",
+      "Is the camera angle slightly low?",
+      "Are there skyscrapers framing the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is vivid, highlighting the hypercar's details.",
+      "A mix of cool blues and fiery reds form an electric color palette.",
+      "The image captures a blend of professional automotive photography and street life."
+    ],
+    "questions": [
+      "Is the lighting used to highlight the car's details?",
+      "Is the color palette a mix of cool and fiery tones?",
+      "Does the image blend professional photography with street life elements?"
+    ]
+  }
+}

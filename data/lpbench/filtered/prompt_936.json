@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In an expansive, dreamlike landscape where reality blends seamlessly with imagination, a colossal crystalline dragon floats gracefully above a mirror-like sea. The dragon possesses scales that sparkle with iridescent hues, reflecting both the deep blues of the ocean below and the fiery oranges of the dawning sky. Its eyes, glowing with a mystical light, survey the scene with a serene wisdom. Positioned just beyond the dragon's elegant, undulating form, a cluster of floating islands drifts, their surfaces lush with fantastical flora that seems to shift color as if breathing in unison with the world around them. A low vantage point emphasizes the scale of the scene, capturing the dragon as it arcs across the sky, casting a shimmering reflection upon the still waters below. The islands hover at varying heights, creating a tiered effect, with cascading waterfalls tumbling from edges into the water below, sending ripples that fan out in gentle, concentric circles. The air is thick with the golden light of sunrise, filtering through clouds that streak across the sky in fluid, wave-like patterns. This light imbues the scene with a soft, ethereal glow that seems to animate the entire panorama with a sense of wonder and magic. The color palette transitions smoothly from the warm hues of dawn to the cooler tones of the ocean, blending seamlessly to enhance the dreamlike quality of the landscape. Delicate wisps of mist cling to the edges of the islands, catching and diffusing the morning light in a dance of color and shadow. The overall composition is reminiscent of high fantasy illustrations, with an emphasis on clarity and detail. Captured in ultra-high definition, every scale of the dragon, every leaf of the floating islands is rendered with precision, making the scene a breathtaking tapestry of surrealism and beauty.",
+  "semantic": {
+    "description": [
+      "A colossal crystalline dragon floats above a vast mirror-like sea.",
+      "The dragon has iridescent scales reflecting ocean blues and fiery dawn oranges.",
+      "Floating islands with fantastical flora drift beyond the dragon's form."
+    ],
+    "questions": [
+      "Is there a crystalline dragon present in the scene?",
+      "Are the dragon's scales reflecting multiple colors?",
+      "Do the floating islands appear in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The dragon arcs across the sky, its reflection visible in the sea below.",
+      "Floating islands hover at varying heights with a tiered effect.",
+      "Waterfalls cascade from island edges into the water below."
+    ],
+    "questions": [
+      "Is the dragon's reflection visible in the water?",
+      "Are the floating islands positioned at different heights?",
+      "Do waterfalls descend from the islands into the sea?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is filled with golden sunrise hues, creating an ethereal glow.",
+      "Clouds streak across the sky in fluid, wave-like patterns.",
+      "The color palette seamlessly transitions from warm dawn hues to cool ocean tones."
+    ],
+    "questions": [
+      "Is the scene illuminated by the light of a sunrise?",
+      "Are the clouds in the sky shaped in wave-like patterns?",
+      "Does the color palette transition from warm to cool tones?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In the shadow of towering rocky cliffs and under a sweeping cerulean sky, an exhilarating rock climbing competition is in full swing. The scene unfolds on an expansive natural wall, where climbers are scattered across the rugged surface like determined specks against a vast canvas of ochre and sandstone. The camera captures the scene from a dynamic low angle, accentuating the sheer verticality and imposing nature of the cliff face. At center stage, a young climber, clad in a vivid red harness and chalk-covered hands, reaches up towards a narrow ledge, muscles taut with effort and concentration etched on her face. Below her, ropes snake across the ground, managed by a focused belayer who stands in the foreground, providing a sense of scale to the daunting ascent. Sunlight spills over the scene from the left, casting sharp contrasts and highlighting the intricate textures of the rock, each crevice and outcrop sharply defined. Despite the bright daylight, the atmosphere is charged with the quiet intensity of concentration and the occasional encouraging shout from the gathered crowd, whose muted hues of attire blend naturally with the earthy tones of the scene. The color palette is dominated by warm, sunlit browns and reds of the rock face, punctuated by the vibrant gear of the climbers. This moment captures the raw spirit of adventure and the primal challenge of man vs. nature, a testament to human endurance and skill. The resulting image possesses a documentary realism, with high-resolution clarity that celebrates the meticulous details of both the environment and the climbers in action, akin to an award-winning photo that tells its own epic tale.",
+  "semantic": {
+    "description": [
+      "The main subject is a rock climber ascending a vertical cliff face.",
+      "The climber wears a red harness and uses chalk for grip.",
+      "A belayer assists the climber from the ground, managing ropes."
+    ],
+    "questions": [
+      "Is the main subject a rock climber?",
+      "Does the climber use chalk on their hands?",
+      "Is there a belayer managing the ropes?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a low angle to emphasize the height of the cliff.",
+      "The climber is positioned centrally, drawing focus away from the cliff face.",
+      "Ropes trail across the ground, connecting climber and belayer."
+    ],
+    "questions": [
+      "Is the scene captured from a low angle perspective?",
+      "Is the climber centrally positioned in the composition?",
+      "Are there ropes trailing on the ground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Sunlight highlights the textures and colors of the rock face.",
+      "The photograph has a documentary realism, capturing action and detail.",
+      "Warm browns and reds dominate the color palette, enhancing natural tones."
+    ],
+    "questions": [
+      "Does sunlight enhance the textures of the rock face?",
+      "Is the photograph’s style documentary and realistic?",
+      "Are warm browns and reds the dominant colors?"
+    ]
+  }
+}

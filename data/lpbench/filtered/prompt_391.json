@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "A luxurious Mediterranean-style villa basks in the afternoon sun, its terracotta roof tiles reflecting the warmth of the golden light. Nestled within a verdant landscape of meticulously maintained olive groves and vibrant bougainvillea, the property stands as a testament to both traditional elegance and modern comfort. The scene is captured from a slightly elevated perspective, providing a comprehensive view of the front facade, framed by a pair of towering cypress trees that lend a sense of grandeur and privacy to the estate. The villa itself is a harmonious blend of stucco walls, arched windows, and wrought-iron balconies, creating an inviting and timeless aesthetic. An expansive stone patio extends from the villa, overlooking a sparkling infinity pool that seamlessly merges with the azure horizon beyond. The mid-afternoon sunlight casts intricate patterns through the wrought-ironwork, creating a dance of light and shadow across the tiled surfaces and enhancing the villa's intricate architectural details. The color palette features warm ochres and rich terracotta tones, punctuated by the lush greens of the surrounding foliage and the clear blue of the pool, evoking a sense of Mediterranean tranquility and sophistication. Inside, glimpses through the arched windows reveal tastefully appointed interiors, where plush furnishings and curated art pieces speak to the refined tastes of the occupants. Rendered in the style of high-end architectural photography, the image captures the villa's ambiance with crisp clarity and vibrant hues, ensuring each detail is meticulously presented in stunning 8K resolution.",
+  "semantic": {
+    "description": [
+      "The villa features Mediterranean-style architecture with terracotta roof tiles.",
+      "A pair of cypress trees frame the front facade of the villa.",
+      "An infinity pool extends from the villa towards the horizon."
+    ],
+    "questions": [
+      "Is the villa Mediterranean-style?",
+      "Are there cypress trees framing the villa?",
+      "Is there an infinity pool?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is viewed from a slightly elevated perspective.",
+      "Cypress trees are positioned on either side of the building's facade.",
+      "The infinity pool is positioned in front of the villa, extending outward."
+    ],
+    "questions": [
+      "Is the villa captured from an elevated perspective?",
+      "Are the cypress trees on either side of the villa?",
+      "Does the pool extend outward from the villa?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in mid-afternoon sunlight.",
+      "The color palette includes warm ochres and terracotta tones.",
+      "The photograph is rendered in high-end architectural photography style."
+    ],
+    "questions": [
+      "Is the scene lit by mid-afternoon sunlight?",
+      "Are warm ochres and terracotta tones present?",
+      "Is the style high-end architectural photography?"
+    ]
+  }
+}

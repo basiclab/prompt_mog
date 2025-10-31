@@ -1,0 +1,46 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "An elegant contemporary penthouse apartment unfolds its charm, sitting atop a state-of-the-art high-rise tower, set against the bustling backdrop of a metropolitan skyline. The expansive living room is showcased with panoramic floor-to-ceiling windows, drawing the viewer's gaze out to the sprawling city views beyond. Adjacent to the living room is a minimalist kitchen with sleek, polished white marble countertops and high-tech stainless steel appliances, epitomizing modern luxury and functionality. Warm, natural sunlight streams through the windows, casting soft reflections on the flawless glass surfaces and illuminating the subtle hues of the sophisticated interior palette. Shades of muted grays and soft blues dominate the color scheme, evoking a sense of calm and understated elegance, while bold art pieces add splashes of vibrant color. In the cozy reading nook, plush leather chairs invite relaxation, positioned strategically to capture both the natural light and a view of the cityscape. The high-quality image captures every detail with professional clarity, from the texture of the rich hardwood flooring to the intricacy of the modern light fixtures overhead, highlighting the seamless blend of style and functionality that defines this urban sanctuary.",
+  "semantic": {
+    "description": [
+      "A contemporary penthouse apartment is located atop a modern high-rise tower.",
+      "The living room features panoramic floor-to-ceiling windows.",
+      "A minimalist kitchen with white marble countertops is adjacent to the living room.",
+      "There are plush leather chairs in a cozy reading nook."
+    ],
+    "questions": [
+      "Is there a penthouse apartment in the scene?",
+      "Does the living room have floor-to-ceiling windows?",
+      "Is the kitchen adjacent to the living room?",
+      "Are there plush leather chairs in the reading nook?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The apartment sits atop a high-rise tower with a city skyline backdrop.",
+      "Panoramic windows in the living room provide a view of the cityscape.",
+      "The kitchen is positioned next to the living room within the open-plan space.",
+      "The reading nook is arranged to capture natural light and city views."
+    ],
+    "questions": [
+      "Is the apartment located in a high-rise tower?",
+      "Do the windows provide a view of the cityscape?",
+      "Is the kitchen part of an open-plan layout?",
+      "Is natural light available in the reading nook?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm sunlight illuminates the room, casting reflections on glass surfaces.",
+      "The interior palette includes muted grays and soft blues.",
+      "Bold art pieces add vibrant color to the otherwise muted decor.",
+      "Professional clarity highlights the texture of hardwood floors and light fixtures."
+    ],
+    "questions": [
+      "Is natural sunlight present in the room?",
+      "Are muted grays and soft blues part of the color scheme?",
+      "Do bold art pieces add vibrant color to the decor?",
+      "Is the texture of the hardwood floors visible with professional clarity?"
+    ]
+  }
+}

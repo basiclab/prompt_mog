@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the late afternoon sun casts its golden glow across the coastline, a scene of breathtaking beauty unfolds. At the heart of this tranquil tableau stands a weathered, solitary lighthouse, its whitewashed walls catching the sun’s last rays. Perched on a rugged promontory, it overlooks a dramatic stretch of coast where vast, rolling ocean waves crash against ancient, craggy cliffs. The lighthouse, a silent guardian, offers a reassuring presence amidst the dynamic and often relentless marine environment. The camera is situated at a low angle near the rocky shore, framing the lighthouse centrally while allowing the rocky outcrop to provide a sense of grandeur and scale. In the foreground, intricate tidal pools reflect the sky, creating a mirror that introduces an element of symmetry and draws the viewer's gaze towards the lighthouse. To the right, a curious sea lion basks on a sun-warmed rock, adding a playful touch to the dramatic setting. The midground captures the interplay between the churning sea and the steadfast land, while the background reveals a horizon where the azure ocean meets the soft pastels of the dusky sky. The scene is awash in warm, vibrant hues of amber and cerulean, with the setting sun throwing long shadows that dance among the rocks, lending texture and depth to the composition. The color palette of golden yellows and deep blues conveys a sense of serenity and timelessness, evoking feelings of nostalgia and tranquility. This scene is captured in the style of classic fine art photography, emphasizing the natural beauty and raw power of the coastal landscape. The clarity and sharpness of the image are indicative of a high-resolution capture, ensuring that every wave crest and grain of sand is rendered in exquisite detail, attesting to the technical mastery and professional quality of the composition.",
+  "semantic": {
+    "description": [
+      "A weathered lighthouse is centrally positioned, catching the sun's last rays.",
+      "A curious sea lion basks on a sun-warmed rock near the lighthouse.",
+      "The ocean waves crash against ancient, craggy cliffs beneath the lighthouse."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Is a sea lion present in the arrangement?",
+      "Are the ocean waves visible in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is at a low angle, framing the lighthouse centrally.",
+      "Tidal pools in the foreground reflect the sky, adding symmetry.",
+      "The midground shows the interplay between the ocean and cliffs."
+    ],
+    "questions": [
+      "Is the lighthouse centrally positioned in the composition?",
+      "Does the scene include reflections from tidal pools?",
+      "Is there a visible interaction between the ocean and the cliffs?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm, vibrant hues of amber and cerulean dominate the color palette.",
+      "The setting sun creates long shadows that add depth and texture.",
+      "The style reflects classic fine art photography with a focus on natural beauty."
+    ],
+    "questions": [
+      "Are warm hues like amber visible in the image?",
+      "Does the light from the setting sun create shadows?",
+      "Is the style reminiscent of fine art photography?"
+    ]
+  }
+}

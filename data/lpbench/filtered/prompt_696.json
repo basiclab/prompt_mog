@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a sleek and modern photography studio, a stunning array of artisanal coffee makers stands proudly, each unique in its design and craftsmanship. The coffee makers are meticulously arranged on a smooth, polished walnut table, meant to emphasize their distinct curves and textures. The camera captures the scene from above at a slight angle, allowing the viewer to appreciate the intricate details of each coffee maker's elegant design. In the foreground, the smallest coffee maker is positioned to lead the viewer's gaze deeper into the frame, where progressively larger models create a sense of depth and scale. Soft, diffused lighting emanates from recessed overhead fixtures, casting gentle shadows that enhance the textures and contours of the metal and ceramic surfaces. Adding to the ambiance, a hint of morning fog lingers in the air, giving the scene an ethereal quality as light interacts with the mist. The color scheme predominantly features warm brown and cream tones, with the occasional gleam of metal, creating a cozy and inviting atmosphere reminiscent of a sophisticated coffee shop. This palette evokes a sense of warmth and comfort, drawing the viewer into the scene with inviting hues. The image is styled in the tradition of high-end lifestyle photography, capturing the essence of luxury and refinement through meticulous attention to detail and composition. Every element is presented in razor-sharp focus, with a professional-grade lens capturing the nuanced textures and craftsmanship of each piece, rendering the scene in stunning high resolution. Despite its complexity, the composition maintains a clear focal point and exhibits an award-winning level of precision and artistry.",
+  "semantic": {
+    "description": [
+      "An array of artisanal coffee makers is prominently displayed in the studio.",
+      "Each coffee maker has a unique design and is crafted with high attention to detail.",
+      "Smooth metal and ceramic surfaces define the style of the coffee makers."
+    ],
+    "questions": [
+      "Are there artisanal coffee makers displayed in the studio?",
+      "Do the coffee makers have unique designs?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The coffee makers are arranged on a polished walnut table.",
+      "The camera captures the scene from above at a slight angle.",
+      "Smaller coffee makers are positioned in the foreground, leading to larger ones."
+    ],
+    "questions": [
+      "Is the camera angle slightly above the scene?",
+      "Are the coffee makers arranged on a table?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, diffused lighting enhances the textures and contours.",
+      "Warm brown and cream tones dominate the color scheme.",
+      "The image is styled in high-end lifestyle photography."
+    ],
+    "questions": [
+      "Does the lighting appear soft and diffused?",
+      "Are warm brown and cream tones present in the color palette?"
+    ]
+  }
+}

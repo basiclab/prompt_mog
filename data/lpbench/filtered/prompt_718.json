@@ -1,0 +1,37 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a meticulously arranged contemporary photography studio, a selection of artisanal coffee blends takes center stage, each encapsulated within sleek, matte black coffee bags adorned with minimalist gold foil branding. The bags stand in elegant alignment upon a handcrafted wooden table, its rich walnut grain providing a warm contrast to the cool tones of the packaging. This scene is captured from a slightly elevated angle that showcases the subtle variations in the bag sizes and emphasizes the premium quality of the products. In the background, a soft-focus coffee grinder and an antique espresso machine add context and depth, hinting at the craft and tradition behind the blends. The lighting is soft and diffuse, emanating from a large, overhead light source that bathes the scene in a gentle glow, highlighting the subtle textures of the materials and casting delicate shadows that enhance the dimensionality of the setup. The overall color palette is a harmonious blend of deep browns, soft creams, and muted golds, creating an inviting and sophisticated atmosphere that exudes warmth and luxury. An air of serene calmness pervades the room, heightened by the minimalist aesthetic and the absence of clutter, focusing the viewer's attention squarely on the products. The image embodies the essence of modern product photography with its precise composition and attention to detail, achieved through the use of high-resolution equipment that ensures every element is captured with crisp clarity and nuanced shading, resulting in a professional and award-worthy representation of a crafted coffee experience.",
+  "semantic": {
+    "description": [
+      "The scene displays artisanal coffee blends in matte black bags with gold foil branding.",
+      "A handcrafted wooden table is used as the base for the coffee bags.",
+      "An antique espresso machine and coffee grinder are placed in the background."
+    ],
+    "questions": [
+      "Are there coffee bags displayed in the scene?",
+      "Is the espresso machine placed in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The coffee bags are aligned on the wooden table and capture the center stage.",
+      "A slightly elevated camera angle showcases the depth and arrangement of the display.",
+      "Background elements like the espresso machine and grinder add context and depth."
+    ],
+    "questions": [
+      "Is a slightly elevated camera angle used to capture the scene?",
+      "Are the coffee bags aligned in the center of the composition?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, diffuse lighting creates a gentle glow over the scene.",
+      "The color palette blends deep browns, soft creams, and muted golds.",
+      "The style embodies modern product photography with a minimalist aesthetic."
+    ],
+    "questions": [
+      "Is there soft, diffuse lighting used in the scene?",
+      "Does the color palette include deep browns and muted golds?"
+    ]
+  }
+}

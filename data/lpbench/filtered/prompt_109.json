@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the expansive grasslands of the Serengeti, a compelling scene unfolds as a coalition of cheetahs, their sleek, spotted coats glistening under the midday sun, stalks gracefully through the golden savanna. The camera captures this magnificent display of natural prowess from a low vantage point, allowing the viewer to feel immersed in the cheetahs' environment. The foreground is dominated by tall, sunlit grasses that sway gently in the breeze, while in the midground, the cheetahs move with stealth and purpose, their muscles rippling under their taut skin. The distant horizon forms the backdrop, where a cluster of acacia trees punctuates the endless stretch of land, offering a glimpse of other wildlife subtly interwoven with the landscape. The blazing sun casts stark, elongated shadows across the scene, enhancing the dramatic quality of the moment as the cheetahs’ eyes are sharply focused on a distant herd of impalas. The bright, warm yellows of the savanna contrast strikingly with the dark spots of the cheetahs, creating a vibrant, dynamic palette. The mood is tense yet breathtakingly beautiful, embodying the raw elegance of predators in their natural habitat. Captured in a photojournalistic style, the image evokes the spirit of the wild, with a focus on capturing the natural behaviors of the cheetahs in exquisite detail. The photograph is rendered in high resolution, bringing out every minute detail from the dust particles lifted by the breeze to the intensity in the cheetahs’ eyes, epitomizing the craftsmanship of an award-winning wildlife photograph.",
+  "semantic": {
+    "description": [
+      "A coalition of cheetahs moves stealthily through the golden savanna.",
+      "The cheetahs feature sleek, spotted coats glistening in the sun.",
+      "A herd of impalas is present in the distant background."
+    ],
+    "questions": [
+      "Are there cheetahs visible in the scene?",
+      "Do the cheetahs have spotted coats?",
+      "Is there a herd of impalas in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at a low angle, near the ground.",
+      "Tall grasses in the foreground frame the scene.",
+      "Acacia trees are visible on the distant horizon."
+    ],
+    "questions": [
+      "Is the camera positioned at a low angle?",
+      "Are tall grasses present in the foreground?",
+      "Do acacia trees appear in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in bright, midday sunlight.",
+      "Stark shadows stretch across the ground.",
+      "The photograph employs a photojournalistic style."
+    ],
+    "questions": [
+      "Is bright sunlight illuminating the scene?",
+      "Do shadows stretch across the savanna?",
+      "Is the image captured in a photojournalistic style?"
+    ]
+  }
+}

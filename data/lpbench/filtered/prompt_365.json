@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Perched at the heart of a bustling metropolitan core, an elegantly designed contemporary skyscraper reaches toward the sky, its sleek lines and shimmering glass facade reflecting the vibrant tapestry of urban life below. This high-rise luxury condominium stands as a prime example of modern architectural prowess, characterized by its geometric design and innovative use of materials. Captured from a dramatic low-angle perspective, the building's imposing height and grand scale are accentuated, making it appear to dominate the cityscape. Its glass walls are tinted with soft hues of blue and silver, which not only offer privacy but also contribute to an ever-changing play of light and reflections, creating a dynamic interaction with the surrounding skyline. The scene is set against a crisp, clear morning sky, with the first warm rays of sunlight gently illuminating the structure, casting intricate patterns of light and shadow across its surface. The interplay of light accentuates the fine details of the design, such as the subtle curvatures of the facade and the gleaming metal accents, which glint with a golden hue as the sun rises higher in the sky. The immediate vicinity features lush rooftop gardens and outdoor lounge areas, visible from the balcony edges, suggesting an oasis of tranquility amidst urban vibrancy. Inside, the interiors boast sleek, minimalist aesthetics with a neutral color palette of ivory, charcoal, and soft greys, punctuated by accents of rich mahogany and brushed steel. The photographic style captures the essence of high-end architectural photography through crystal-clear focus, perfectly balanced exposures, and masterful composition that emphasizes both the grandeur and livability of the property. This image, crafted with professional precision, serves as an enticing invitation to potential buyers to envision their lives in this urban sanctuary, offering unparalleled views and unrivaled luxury.",
+  "semantic": {
+    "description": [
+      "A luxury condominium skyscraper stands tall in a metropolitan core.",
+      "The building features a sleek, geometric design and innovative materials.",
+      "Rooftop gardens and lounge areas are visible from the balconies."
+    ],
+    "questions": [
+      "Is there a skyscraper in the image?",
+      "Does the building feature geometric design elements?",
+      "Are rooftop gardens visible in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The skyscraper is captured from a low-angle perspective.",
+      "The building dominates the cityscape due to its height and scale.",
+      "Balconies offer views of the surrounding metropolitan area."
+    ],
+    "questions": [
+      "Is the building shown from a low-angle perspective?",
+      "Does the skyscraper dominate the cityscape?",
+      "Are the balconies present in the building design?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Glass walls are tinted with blue and silver hues.",
+      "The scene is set against a crisp, clear morning sky.",
+      "The photographic style captures high-end architectural details."
+    ],
+    "questions": [
+      "Are the glass walls tinted with blue and silver hues?",
+      "Is the sky clear in the image?",
+      "Is the photographic style high-end and professional?"
+    ]
+  }
+}

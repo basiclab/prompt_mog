@@ -1,0 +1,41 @@
+{
+  "theme": "Event Photography",
+  "prompt": "The grand ballroom of the opulent Victorian mansion is abuzz with celebration as the wedding reception unfolds in full swing. Guests clad in elegant attire mingle gracefully, their laughter blending with the soft strings of a live chamber orchestra. The intricate parquet floor gleams under the glow of a majestic chandelier that hangs from the ornately plastered ceiling, scattering light like droplets of starlight across the room. At the heart of the ballroom stands a sumptuous banquet table, adorned with a lavish spread of culinary delights and towering floral arrangements in hues of ivory and blush. In the background, the newlyweds share a tender dance, their silhouettes twirling in harmony against the gilded walls that speak of timeless elegance. Captured from an elevated angle, the scene showcases the grandeur of the venue, with the camera drawing the viewer's eye from the intricate details of the floral centerpieces in the foreground to the elegantly arched windows draped with rich velvet curtains in the background. Evening light pours through the windows, mingling with the soft amber glow of the chandelier, creating an ethereal ambiance that wraps the guests in a warm embrace. The color palette of deep burgundy, gold, and cream evokes a sense of romance and splendor, while the understated elegance of the decor marries traditional grandeur with contemporary grace. Shot in a fine art style, the photograph combines meticulous composition and lighting, capturing the essence of celebration and intimacy in an award-winning, high-resolution image that balances sharpness and depth with artistic flair, inviting viewers to immerse themselves in the joyful occasion.",
+  "semantic": {
+    "description": [
+      "The ballroom is filled with elegantly dressed guests celebrating a wedding reception.",
+      "A live chamber orchestra provides music for the event.",
+      "The newlyweds share a tender dance in the background."
+    ],
+    "questions": [
+      "Is the scene set in a grand ballroom?",
+      "Are the guests dressed in elegant attire?",
+      "Is there a live chamber orchestra present?",
+      "Are the newlyweds dancing in the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from an elevated angle, showcasing the ballroom's grandeur.",
+      "The banquet table is centrally located, adorned with floral arrangements.",
+      "Arched windows with velvet curtains are visible in the background."
+    ],
+    "questions": [
+      "Is the scene captured from an elevated perspective?",
+      "Is the banquet table adorned with floral arrangements?",
+      "Are the arched windows visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The chandelier creates a warm, amber glow throughout the ballroom.",
+      "The color palette includes deep burgundy, gold, and cream tones.",
+      "The photograph is styled in a fine art manner, combining elegance with contemporary grace."
+    ],
+    "questions": [
+      "Does the chandelier create a warm, amber glow?",
+      "Does the color palette include burgundy, gold, and cream?",
+      "Is the photograph styled in a fine art manner?"
+    ]
+  }
+}

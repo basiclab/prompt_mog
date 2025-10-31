@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As the sun ascends in the early morning sky, a remote coastal sanctuary unfurls in a breathtaking expanse, enveloped in a gentle, salty breeze. A solitary, weathered lighthouse stands resolute on a rocky promontory, its stoic silhouette outlined against the pale blush of dawn. Nearby, a pair of seabirds swoop and dive playfully, their movements gracefully echoing the rhythmic rise and fall of the ocean waves that crash against the rugged cliffs. The photographer captures this scene from a mid-level vantage point, aligning the lighthouse slightly off-center to the left, creating a dynamic balance with the vast, open sea that stretches endlessly to the right. In the foreground, smooth pebbles interspersed with clusters of seaweed form a natural border, leading the eye toward the midground, where the turbulent waters churn in frothy white crests. Beyond, the distant horizon blurs subtly against the sky, amplifying the sense of infinite openness. Bathed in the soft, diffused light of early dawn, the panorama is infused with a serene yet dynamic quality, as gentle shafts of sunlight filter through a thin veil of morning mist. This interplay of light casts delicate, elongated shadows that dance across the coastline, accentuating the textures of the rocky crags and enhancing the vividness of the scene. The color palette is a harmonious blend of soft, muted blues and grays, punctuated by the warm, subtle pinks and oranges of the early morning sky, creating an atmosphere of quiet contemplation and awe-inspiring beauty. The photographic style captures a fine art aesthetic, with an emphasis on detail and composition, ensuring every element—from the swirling sea foam to the lighthouse's ancient stone—contributes to the overall narrative. Taken with a high-resolution camera, the image boasts exceptional clarity and crispness, preserving the intricate details of the natural seascape in stunning fidelity.",
+  "semantic": {
+    "description": [
+      "A solitary lighthouse stands on a rocky promontory against the morning sky.",
+      "Seabirds are flying near the lighthouse, playfully interacting with the waves.",
+      "The ocean waves crash against the cliffs, creating frothy white crests."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are there seabirds present in the image?",
+      "Do the waves form white crests as they hit the cliffs?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is off-center to the left in the composition.",
+      "The horizon line is distant and subtly blends with the sky.",
+      "Pebbles and seaweed in the foreground lead toward the midground."
+    ],
+    "questions": [
+      "Is the lighthouse positioned off-center in the scene?",
+      "Does the horizon blend subtly with the sky in the background?",
+      "Are there pebbles and seaweed in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by soft, diffused early morning light.",
+      "The color palette includes muted blues and grays with pink and orange highlights.",
+      "The photo has a fine art aesthetic with emphasis on detail and composition."
+    ],
+    "questions": [
+      "Is the light in the scene soft and diffused?",
+      "Does the color palette include muted blues and grays?",
+      "Is the photographic style described as fine art?"
+    ]
+  }
+}

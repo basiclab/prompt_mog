@@ -1,0 +1,40 @@
+{
+  "theme": "Fashion Photography",
+  "prompt": "In a sumptuous art deco ballroom, models clad in breathtaking couture glide through the opulent space, embodying a symphony of grace and elegance. The room is adorned with gilded archways, marble floors, and large, intricately designed stained glass windows, which filter the afternoon sunlight into kaleidoscopic patterns across the polished floor. A meticulously curated fashion show is underway, with ensembles that blend luxurious silks and avant-garde cuts, each piece a masterpiece of modern design. The camera captures the scene from an elevated, three-quarter angle, allowing the viewer to appreciate the grandeur of the setting and the dynamic movement of the models as they proceed down the aisle, their garments flowing effortlessly with their every step. The depth of the room is accentuated by the rows of high-backed, plush velvet chairs occupied by an audience of elegantly dressed spectators. A soft, diffused spotlight highlights the shimmering details of sequins and beads, casting gentle shadows that add depth to the intricate textures of the fabric. The atmosphere is electric yet refined, balanced between the historic allure of the venue and the contemporary edge of the fashion on display. The color palette is rich with deep emerald greens, royal blues, and opulent golds, setting a regal tone that is both timeless and thoroughly modern. The scene is captured with the clarity and precision of high-end fashion photography, ensuring every stitch and fabric fold is seen in exquisite detail. As the show unfolds, the harmonious blend of classical and avant-garde styles in the models' attire captivates onlookers, making this a truly unforgettable showcase of fashion innovation.",
+  "semantic": {
+    "description": [
+      "The scene features models wearing luxurious couture in a fashion show.",
+      "Gilded archways and stained glass windows adorn the art deco ballroom.",
+      "An elegantly dressed audience watches the models proceed down the aisle."
+    ],
+    "questions": [
+      "Are the models wearing couture clothing?",
+      "Is there a fashion show taking place?",
+      "Is the audience elegantly dressed?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at an elevated, three-quarter angle for a wide view.",
+      "Rows of high-backed velvet chairs create depth in the ballroom.",
+      "Models are positioned in the midground as they walk down the aisle."
+    ],
+    "questions": [
+      "Is the camera positioned at an elevated angle?",
+      "Do rows of chairs create depth in the scene?",
+      "Are the models visible in the midground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, diffused spotlights highlight the sequins and beads on the garments.",
+      "The color palette includes deep greens, royal blues, and opulent golds.",
+      "The atmosphere is electric yet refined, balancing historic allure with modern edge."
+    ],
+    "questions": [
+      "Is there soft, diffused lighting in the scene?",
+      "Are deep greens and royal blues part of the color palette?",
+      "Does the atmosphere balance historic allure and modern style?"
+    ]
+  }
+}

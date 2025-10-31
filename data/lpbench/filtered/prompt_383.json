@@ -1,0 +1,37 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "A luxurious modern beachfront villa stands grandly along a pristine stretch of coastal sand, embracing the natural beauty of its surroundings. The villa is a celebration of contemporary architecture, with extensive use of glass and steel, allowing for panoramic ocean views from almost every room. Its clean lines and minimalist design elements offer a striking contrast to the wild and untamed beauty of the oceanfront landscape. The white sandy beach stretches out before the villa, leading to the edge of a crystal clear, turquoise sea that gently laps against the shore. The scene is captured from a slightly elevated perspective, placing the viewer at an angle that showcases the villa’s multiple levels and spacious terraces, which are adorned with lush green foliage and stylish outdoor furniture. In the foreground, a manicured lawn with tropical plants adds a touch of vibrant greenery, seamlessly transitioning into the natural beauty of the beach. The tranquil atmosphere is enhanced by the soft, warm glow of the evening sun setting behind the property, casting long shadows and creating a play of light and color across the scene. The entire composition is imbued with a sense of serenity and elegance, framed perfectly to highlight both the architectural brilliance of the villa and its harmonious integration into the coastal environment. The color palette features soothing earth tones and soft blues, creating a calming yet inviting mood. The image is rendered with high-resolution clarity, capturing every detail from the texture of the sandy beach to the subtle reflections on the villa's glass surfaces, embodying the high standards of professional luxury real estate photography. With an air of exclusivity, this image invites viewers to imagine the perfect blend of modern luxury living and the tranquil allure of beachfront serenity.",
+  "semantic": {
+    "description": [
+      "A modern beachfront villa stands prominently by the ocean.",
+      "The villa incorporates glass and steel in its contemporary design.",
+      "A manicured lawn with tropical plants is in the foreground."
+    ],
+    "questions": [
+      "Is there a modern villa featured in the scene?",
+      "Are tropical plants visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is positioned facing the ocean.",
+      "The scene is viewed from a slightly elevated perspective.",
+      "A sandy beach stretches out from the villa to the sea."
+    ],
+    "questions": [
+      "Is the villa facing towards the ocean?",
+      "Does the scene include a sandy beach?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is provided by the setting sun, creating a warm glow.",
+      "The image uses soothing earth tones and soft blues.",
+      "The scene is depicted with high-resolution clarity."
+    ],
+    "questions": [
+      "Is the lighting in the scene warm due to the setting sun?",
+      "Does the image have a clear and high-resolution depiction?"
+    ]
+  }
+}

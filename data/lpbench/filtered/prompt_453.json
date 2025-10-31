@@ -1,0 +1,40 @@
+{
+  "theme": "Portrait Photography",
+  "prompt": "In a secluded corner of a sun-drenched courtyard, an elderly couple stands poised before an exquisitely weathered stone wall, adorned with climbing ivy that casts intricate patterns of shadow and light. The couple, wearing finely tailored outfits that exude timeless elegance, holds hands with a gentle, enduring intimacy. The camera captures them at eye level, allowing the viewer to connect with the warmth in their expressions and the subtle grace in their stance. Positioned slightly off-center, they allow room for the surrounding environment's texture to enrich the composition. The courtyard stretches out behind them, leading the eye along a path bordered by meticulously tended flowerbeds filled with vibrant blooms. Soft afternoon sunlight filters through the high branches of nearby trees, creating dapples of light that dance across the scene, highlighting the couple's delicate features and the subtle wrinkles that tell stories of shared years. The light imbues the space with a gentle, atmospheric warmth, bouncing off the couple's faces with a flattering, golden hue. A palette of warm earth tones and floral pastels dominates the visual, with soft amber and pale pinks creating a serene, nostalgic ambiance. Captured in the style of classical portrait photography, the scene evokes the elegance of a bygone era while maintaining a certain contemporary freshness. The image is rendered in exquisite detail, allowing each leaf, petal, and texture of the stone to be almost palpable, resonating with the viewer on an emotional level. This masterful composition, reminiscent of award-winning photography, combines excellent resolution and clarity to create a lasting impression.",
+  "semantic": {
+    "description": [
+      "An elderly couple stands before a weathered stone wall.",
+      "The couple is wearing finely tailored outfits, holding hands.",
+      "Climbing ivy adorns the wall, adding intricate patterns."
+    ],
+    "questions": [
+      "Is the elderly couple standing before a stone wall?",
+      "Are the couple's outfits finely tailored?",
+      "Does the wall have climbing ivy on it?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene at eye level.",
+      "The couple is positioned slightly off-center in the frame.",
+      "The courtyard stretches out behind the couple."
+    ],
+    "questions": [
+      "Is the camera capturing the scene at eye level?",
+      "Are the couple slightly off-center in the frame?",
+      "Does the courtyard extend behind the couple?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft afternoon sunlight filters through tree branches.",
+      "The light creates dapples that dance across the scene.",
+      "A palette of warm earth tones and floral pastels dominates."
+    ],
+    "questions": [
+      "Is soft afternoon sunlight filtering through branches?",
+      "Are there dapples of light in the scene?",
+      "Is the color palette dominated by warm earth tones?"
+    ]
+  }
+}

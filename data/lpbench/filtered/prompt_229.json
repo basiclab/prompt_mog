@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "As the dusk settles in, an awe-inspiring atmospheric drama unfolds over a rugged coastal cliff. Amidst this natural spectacle, an ancient lighthouse, battered by winds and waves through countless storms, stands resolute at the cliff’s edge, its robust stone tower silhouetted against the tumultuous sky. Viewed from a high vantage point on the neighboring cliffs, the massive breadth of a supercell thunderstorm dominates the horizon, dark layers of cumulonimbus clouds swirling menacingly, reaching far into the deepening sky. The foreground is populated by wild, salt-resistant foliage clinging tenaciously to the rock face, lending scale to the towering storm beyond. The scene is captured at twilight, where the last remnants of daylight struggle through the dense atmosphere, casting an eerie, diffused glow that washes over the landscape. The interplay of natural light against storm shadows creates a stark contrast, highlighting the dramatic, electrifying beauty of the weather phenomenon. In this theater of nature's power, the color palette oscillates between foreboding grays and deep blues, punctuated by the occasional flash of lightning that momentarily brightens the scenery with its electric brilliance. The mood is one of sublime tension and raw beauty, as the forces of nature collide in a cinematic display. This scene is rendered in the style of high dynamic range landscape photography, showcasing an intense level of detail and dynamic range, with professional-grade sharpness and clarity, emphasizing the surreal dynamics of the approaching storm.",
+  "semantic": {
+    "description": [
+      "An ancient lighthouse stands on the edge of a rugged coastal cliff.",
+      "Massive cumulonimbus clouds dominate the sky, indicating an impending supercell storm.",
+      "Wild foliage grows on the cliff, resilient to the harsh coastal conditions."
+    ],
+    "questions": [
+      "Is there an ancient lighthouse in the scene?",
+      "Do the clouds indicate a supercell storm?",
+      "Is the scene set on a coastal cliff?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The viewpoint is from a high vantage point on neighboring cliffs.",
+      "The lighthouse is situated at the cliff edge, giving way to the expansive sea view.",
+      "Foreground foliage provides scale against the towering storm in the background."
+    ],
+    "questions": [
+      "Is the viewpoint from a high vantage point?",
+      "Is the lighthouse at the edge of the cliff?",
+      "Does the foliage provide scale for the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured at twilight with a diffused glow from the last daylight.",
+      "The lighting features stark contrasts between natural light and storm shadows.",
+      "The color palette includes deep blues and moody grays, with flashes of lightning."
+    ],
+    "questions": [
+      "Is the scene set during twilight?",
+      "Does the lighting create a stark contrast in the scene?",
+      "Are there deep blues in the color palette?"
+    ]
+  }
+}

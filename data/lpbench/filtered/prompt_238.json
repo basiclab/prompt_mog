@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "As the ferocious storm brews, an ancient, weather-beaten lighthouse stands sentinel on a harsh, rugged coastline, its weathered stones telling tales of countless tempests braved. The ocean roils with fury, each wave crashing relentlessly against the jagged cliffs that rise defiantly from the tumultuous sea. Viewed from a dramatic low angle, the lighthouse looms large in the foreground, anchored firmly against nature's raw power. The surrounding landscape is cast into stark relief as bolts of lightning split the sky from horizon to horizon, allowing fleeting glimpses of the storm's chaotic grandeur. The camera captures the lighthouse centered within the frame, its form silhouetted against the menacing, churning clouds that cascade across the sky in towering waves of gray. A midground of seething ocean waves serves as a reminder of the sea's unyielding might, while the background, a tapestry of darkened sky and luminous lightning, adds depth and tension to the scene. The atmosphere is charged with energy as heavy, dark clouds smother the landscape, creating a near-tangible weight beneath which nature's wrath unfolds. The stark contrast between the pale flashes of lightning and the oppressive darkness sets an ominous tone, with sharp, jagged shadows dancing across the ground. The storm's electric palette of deep indigos and steely grays is punctuated by the vivid white of lightning, forming an exquisite chiaroscuro effect that heightens the drama. Captured in the style of dramatic photojournalism, the scene resonates with the raw power and unpredictability of nature. The high-resolution image showcases sharp details and crisp contrast, allowing each crack in the lighthouse's stonework and every eddy in the turbulent sea to be meticulously observed.",
+  "semantic": {
+    "description": [
+      "An ancient lighthouse stands resiliently on a rugged coastline.",
+      "Lightning bolts frequently illuminate the stormy sky.",
+      "Waves crash violently against the jagged cliffs."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are waves visible crashing against cliffs?",
+      "Does lightning illuminate the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned prominently in the foreground.",
+      "The ocean waves form the midground of the scene.",
+      "The dark storm clouds create the background."
+    ],
+    "questions": [
+      "Is the lighthouse centered in the frame?",
+      "Are there ocean waves in the midground?",
+      "Do storm clouds make up the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting features stark contrasts between dark clouds and vivid lightning.",
+      "The color palette consists of deep indigos and steely grays punctuated by lightning white.",
+      "The scene is captured in a dramatic photojournalism style."
+    ],
+    "questions": [
+      "Is the lighting characterized by sharp contrasts?",
+      "Does the scene use a palette of deep indigos and grays?",
+      "Is the image captured in a photojournalism style?"
+    ]
+  }
+}

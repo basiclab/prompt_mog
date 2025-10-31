@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Perched atop a charming hillside, a lavish modern villa commands the horizon, offering sweeping panoramic views of the surrounding countryside. Its architecture is a masterful blend of contemporary design and sustainable living, featuring sleek lines, expansive glass facades, and eco-friendly materials. This property, encapsulating luxury and innovation, is captured from a slightly elevated aerial perspective, accentuating its prominent perch on the hillside and seamlessly integrating it with the expansive landscape. At the heart of the composition, a spacious terrace juts outward, framed by lush, native vegetation that both decorates the villa and fosters a seamless transition between the interior and the natural world. Morning light pours over the villa, casting a warm, inviting glow over its minimalist yet elegant design. The sun’s rays filter through strategically placed skylights, illuminating the open-plan living spaces and highlighting the textured surfaces and natural wood finishes that define the villa's interior. A gentle mist lingers at the base of the hillside, lending a soft atmospheric touch that enhances the tranquility of the scene. The color palette is a harmonious blend of muted earth tones, from the stone-gray exterior to the soft green of the surrounding vegetation, all under a baby blue sky. This creates a serene, inviting atmosphere that evokes a sense of peaceful, upscale living. The visual style is crisp and polished, aligning with the aesthetic of high-end real estate photography, combining technical precision with an artistic eye for capturing the allure of luxury living spaces. The image is rendered with remarkable clarity and sharpness, offering an immersive view that feels both inviting and aspirational, epitomizing quality and sophistication. Capturing the essence of high-end property marketing, this scene speaks to potential buyers seeking a harmonious blend of modern luxury and natural beauty.",
+  "semantic": {
+    "description": [
+      "The villa features sleek, modern architecture with expansive glass facades.",
+      "A spacious terrace is central to the villa's design, surrounded by native vegetation.",
+      "The villa's design includes eco-friendly materials and open-plan living spaces."
+    ],
+    "questions": [
+      "Does the villa have expansive glass facades?",
+      "Is there a spacious terrace visible in the scene?",
+      "Are eco-friendly materials part of the villa's design?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The villa is situated atop a hillside, providing panoramic views of the countryside.",
+      "The camera captures the villa from a slightly elevated aerial perspective.",
+      "The terrace is centrally located, framed by lush vegetation."
+    ],
+    "questions": [
+      "Is the villa situated on a hillside?",
+      "Is the camera perspective elevated?",
+      "Is the terrace centrally placed in the composition?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is warm and inviting, with morning light casting a glow over the villa.",
+      "The color palette includes muted earth tones and greens, under a blue sky.",
+      "The style is high-end real estate photography, emphasizing luxury and clarity."
+    ],
+    "questions": [
+      "Is the lighting described as warm and inviting?",
+      "Does the color palette feature muted earth tones?",
+      "Is the style consistent with high-end real estate photography?"
+    ]
+  }
+}

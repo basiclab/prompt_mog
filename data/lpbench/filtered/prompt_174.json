@@ -1,0 +1,39 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "Beneath the infinite expanse of a crystal-clear night sky, a solitary astrophotographer stands atop a weathered mesa in the desert, surrounded by the majestic silence of the cosmos. The photographer is clad in a dark hoodie to blend into the shadows, intent on capturing the celestial wonders above with an advanced DSLR camera mounted on a sturdy tripod. The scene is illuminated by the ethereal glow of the Milky Way, arcing gracefully across the sky, shimmering with countless stars that wink like distant pearls scattered on black velvet. Wisps of cosmic gas highlight the galaxy's spiral arms, casting a soft, spectral light. The scene is viewed from a low, wide-angle perspective that places the photographer and equipment prominently in the foreground, creating a sense of intimacy against the vast backdrop of the universe. To the left, a jagged outcrop of red sandstone juts into the frame, its rugged texture contrasting starkly against the smooth expanse of the sky. The desert floor, a canvas of muted earth tones, extends into the midground, partially illuminated by the faint, cool light of a crescent moon hanging low on the horizon. The atmosphere is serene and contemplative, captured in the mesmerizing dance of the stars. The overarching palette is composed of deep indigo and silver hues, interspersed with faint ribbons of rose and emerald from the scattered auroras at the horizon's edge. The image is rendered in the style of high-definition panoramic photography, capturing every detail with exceptional clarity and sharpness. The composition balances the grandeur of the universe with the quiet solitude of the observer, inviting viewers into a realm of endless discovery.",
+  "semantic": {
+    "description": [
+      "An astrophotographer stands on a mesa with a DSLR camera and tripod.",
+      "The Milky Way galaxy is prominently visible in the night sky.",
+      "A crescent moon is hanging low on the horizon."
+    ],
+    "questions": [
+      "Is the photographer using an advanced DSLR camera?",
+      "Does the scene include the Milky Way galaxy?",
+      "Is there a crescent moon visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a low, wide-angle perspective.",
+      "A jagged sandstone outcrop appears on the left side of the frame.",
+      "The photographer is positioned prominently in the foreground."
+    ],
+    "questions": [
+      "Is the sandstone outcrop positioned on the left side?",
+      "Does the photographer appear prominently in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image uses a deep indigo and silver color palette.",
+      "Faint ribbons of auroras add color to the horizon.",
+      "The scene is rendered in high-definition panoramic photography."
+    ],
+    "questions": [
+      "Is the color palette predominantly indigo and silver?",
+      "Are there faint ribbons of auroras visible in the scene?",
+      "Is the image described as high-definition panoramic photography?"
+    ]
+  }
+}

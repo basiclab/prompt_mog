@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "Under the soft light of a rising sun, an expansive seascape stretches towards the horizon, revealing the delicate interplay between the tranquil sea and its rugged surroundings. A weathered lighthouse stands tall on a rocky outcrop, its whitewashed surface catching the first rays of dawn. The lighthouse watches over the gently rolling waves that lap against the jagged rocks below, each wave cresting with a frothy white that contrasts the slate blue of the ocean. From a slightly elevated viewpoint, the camera captures this dynamic scene, framing the lighthouse to the left and allowing the rocky shoreline to curve out towards the right, leading the eye naturally into the heart of the composition. In the foreground, smooth pebbles glisten with a moist sheen, freshly washed by the ocean's advance, while in the midground, the sea stretches wide and vast, its surface a mosaic of rippling textures. The morning light, diffused through a thin layer of clouds, casts a gentle glow over the entire scene, softening the shadows and enhancing the serene atmosphere. The color palette is a harmonious blend of cool blues and soft grays, punctuated by the warm ochre of the rocks and the lighthouse's pale hue. This tranquil yet powerful scene is captured with a documentary style that emphasizes the raw beauty of nature. The high resolution renders every detail with clarity, from the grain of the lighthouse's paint to the distant seabirds gliding across the water, ensuring an immersive experience that transports the viewer to this idyllic coastal locale.",
+  "semantic": {
+    "description": [
+      "A weathered lighthouse stands on a rocky outcrop by the sea.",
+      "Waves gently lap against jagged rocks, creating frothy white crests.",
+      "Smooth pebbles in the foreground glisten with a moist sheen."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are the waves forming frothy crests against the rocks?",
+      "Are there smooth pebbles visible in the foreground?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned to the left of the frame.",
+      "The rocky shoreline curves out towards the right.",
+      "The scene is captured from a slightly elevated viewpoint."
+    ],
+    "questions": [
+      "Is the lighthouse positioned on the left side of the frame?",
+      "Does the shoreline curve towards the right?",
+      "Is the viewpoint elevated in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Morning light diffuses through thin clouds, creating a gentle glow.",
+      "Cool blues and soft grays dominate the color palette.",
+      "The scene is captured in a documentary style with high resolution."
+    ],
+    "questions": [
+      "Is there a gentle glow from the diffused morning light?",
+      "Does the color palette feature cool blues and soft grays?",
+      "Is the scene captured with a documentary style?"
+    ]
+  }
+}

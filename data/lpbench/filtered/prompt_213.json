@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under a brooding and restless sky, a dramatic weather spectacle unfolds over a vast, picturesque coastal landscape. Towering cumulonimbus clouds, swollen with moisture, dominate the heavens, their immense forms layered in shades of slate and charcoal, as they advance menacingly toward the shoreline. The scene is captured from a high vantage point, offering a sweeping view that stretches from the rugged cliffs in the foreground to the turbulent sea in the distance, creating a dynamic interplay between land and sky. In the foreground, waves crash fiercely against the weather-beaten rocks, sending plumes of spray into the air, while a lone seabird bravely soars against the gale, its silhouette starkly outlined against the churning clouds. Afternoon sunlight filters through rifts in the cloud cover, casting an eerie, diffused glow that dances across the landscape, accentuating the contrast between the storm's darkness and the fleeting moments of light. The overall color palette is dominated by deep grays and blues, with occasional bursts of white and gold where the light pierces through, evoking a mood of awe and trepidation at nature's raw power. Raindrops begin to speckle the photographer's lens, contributing to a sense of immediacy and engagement with the unfolding scene. The image captures the tumultuous essence of a storm in its prime, blending elements of fine art photography with the evocative style of romantic landscape painting, resulting in a composition that is both visually striking and technically superior. Crisp details of the rocky foreground and the dynamic movement of the clouds above add depth and character to the scene, making it a vivid portrayal of atmospheric drama.",
+  "semantic": {
+    "description": [
+      "Cumulonimbus clouds dominate the sky over the coastal landscape.",
+      "Waves crash against the weather-beaten rocks in the foreground.",
+      "A lone seabird flies against the backdrop of the churning storm."
+    ],
+    "questions": [
+      "Do cumulonimbus clouds fill the sky?",
+      "Are waves crashing against the rocks?",
+      "Is there a seabird flying in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a high vantage point over the coastline.",
+      "Rugged cliffs and ocean waves form part of the foreground composition.",
+      "The horizon stretches from the rocky coast to the expansive ocean."
+    ],
+    "questions": [
+      "Is the scene captured from a high vantage point?",
+      "Are rugged cliffs part of the foreground?",
+      "Does the horizon extend to the ocean?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is diffused with patches of sunlight breaking through clouds.",
+      "The color palette consists of deep grays, blues, and occasional golds.",
+      "The style blends fine art photography with romantic landscape painting."
+    ],
+    "questions": [
+      "Is the lighting described as diffused?",
+      "Are deep grays and blues dominant in the color palette?",
+      "Does the style mix fine art with romantic elements?"
+    ]
+  }
+}

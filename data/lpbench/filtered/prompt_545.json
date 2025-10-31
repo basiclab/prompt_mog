@@ -1,0 +1,37 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In a vibrant coastal arena, a thrilling beach volleyball match reaches its climax under a brilliant midday sun. Two teams, each comprising two athletes, face off on the sun-drenched sand, their bodies poised with a mix of explosive energy and strategic anticipation. At the center of this scene, the players are caught mid-action — one athlete leaps high above the net, arm extended, ready to unleash a powerful spike, while an opponent on the opposing side crouches low, eyes locked on the ball, preparing for a precise dig. The camera captures this moment from a low angle, emphasizing the heights achieved and the dynamic athleticism on display. Framed within the golden sand court, the players are sharply defined against a backdrop of shimmering turquoise waves that stretch into the horizon. Spectators in colorful beachwear line the periphery, blurred just enough to convey a sense of lively movement and excitement without distracting from the focal action. The intense sunlight casts crisp shadows across the sand, highlighting the players' muscular forms and athletic precision. A clear azure sky stretches above, amplifying the summery atmosphere and the vibrant energy of the scene. The color palette bursts with coastal blues and sandy golds, complemented by the athletes' brightly colored uniforms and the occasional flutter of beach towels from the crowd. This image adheres to an energetic sports photography style, capturing the decisive moment with both clarity and artistry. With high resolution and attention to detail, every grain of sand and droplet of sweat is visible, ensuring a professional-grade capture that celebrates the thrill and skill of competitive beach volleyball.",
+  "semantic": {
+    "description": [
+      "The scene features a beach volleyball match with two teams competing vigorously.",
+      "One player is captured mid-air, about to spike the volleyball.",
+      "Spectators in colorful beachwear line the edges of the sand court."
+    ],
+    "questions": [
+      "Does the scene depict a volleyball game on the beach?",
+      "Is there a player seen leaping above the net?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is low, emphasizing the height of the athlete's jump.",
+      "Players are centered in the frame with the ocean as the background.",
+      "Spectators are positioned around the periphery of the sand court."
+    ],
+    "questions": [
+      "Is the camera angle low to highlight the players' jump?",
+      "Are the players centered in the frame against the ocean backdrop?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Bright sunlight casts crisp shadows across the sand court.",
+      "The scene uses a vibrant palette of coastal blues and sandy golds.",
+      "The style captures the dynamic energy and skill of beach volleyball."
+    ],
+    "questions": [
+      "Is there bright sunlight casting shadows on the sand?",
+      "Does the color palette include coastal blues and sandy golds?"
+    ]
+  }
+}

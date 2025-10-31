@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "Under the vast dome of the midnight sky, a weathered barn stands in a sprawling field, far removed from the glow of city lights. The barn, aged and rustic, with its once-red paint now faded to a muted hue, imparts a sense of history and solitude against the backdrop of the celestial canvas. The photographer captures the scene from a low vantage point, the camera tilted upward, emphasizing the immense expanse of stars above while framing the barn as a humble observer of the cosmic display. To the left of the frame, a towering oak tree extends its bare branches toward the heavens, as if reaching out to touch the stars. In the distance, a faint silhouette of rolling hills is barely visible against the horizon, adding depth to the composition. The sky is a tapestry of countless stars, their light sharp and clear in the crisp night air. A band of the Milky Way stretches diagonally across the sky, its luminescence intersected occasionally by the streaks of shooting stars. The cold, clear air of the night allows the constellations to shine with exceptional clarity, creating a mesmerizing distraction from earthly thoughts. The scene is bathed in ethereal blue tones, with hints of silver where the starlight catches the barn's tin roof. This color palette creates a serene yet awe-inspiring mood, a mix of wonder and tranquility. The photograph employs techniques reminiscent of classic film astrophotography, capturing the delicate balance between the static earth and the eternal movement of the cosmos. With sharp focus and high resolution, each star appears crisply defined, highlighting the technical skill behind the lens.",
+  "semantic": {
+    "description": [
+      "A weathered barn stands alone in a sprawling, remote field.",
+      "An oak tree with bare branches is located to the left of the frame.",
+      "The night sky is filled with countless stars and a visible Milky Way."
+    ],
+    "questions": [
+      "Is there a barn in the scene?",
+      "Does the oak tree have bare branches?",
+      "Can the Milky Way be seen in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The barn is positioned prominently in the lower center of the frame.",
+      "The camera is set at a low angle, pointing upwards to capture the sky.",
+      "Rolling hills can be seen in the distance to add depth to the scene."
+    ],
+    "questions": [
+      "Is the camera positioned at a low angle?",
+      "Are the rolling hills visible in the distance?",
+      "Is the barn located at the lower center of the frame?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in ethereal blue tones with hints of silver.",
+      "The stars appear crisp and clear against the deep blue sky.",
+      "There is a classic film-like quality to the astrophotography style."
+    ],
+    "questions": [
+      "Are the stars presented sharply in the sky?",
+      "Is the color palette primarily made up of blue tones?",
+      "Does the image capture a classic astrophotography style?"
+    ]
+  }
+}

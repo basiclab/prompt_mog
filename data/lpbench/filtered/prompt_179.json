@@ -1,0 +1,40 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "On a remote, rocky shoreline under a sprawling, starlit sky, a lone lighthouse stands resolute against the gentle rhythm of the ocean waves. Nestled atop a craggy cliff, this weathered sentinel gazes unblinkingly across the sea, its aged stone surface bathed in the soft, ethereal glow of the moonlight. The scene is poised from a low vantage point, allowing the lighthouse to loom grandly against the canvas of celestial wonders above. In the foreground, jagged rocks add texture and contrast to the shimmering reflection of stars on the water's surface, while the background is dominated by the vast, expansive night sky. The Milky Way stretches across the heavens, a luminous river of stars and nebulas weaving through the deep, velvety blues and purples of the cosmos. High above, meteor showers leave fleeting trails of light, their brilliance captured in mid-flight, creating a sense of dynamic motion amidst the tranquil setting. The atmosphere is one of quiet solitude, punctuated by the distant call of seabirds and the soft murmur of the sea. The light from the lighthouse occasionally sweeps across the scene, adding a dramatic interplay of shadows and highlights, enhancing the visual story with rhythmic pulses of illumination. The color palette is a harmonious blend of cool midnight blues, luminous whites, and subtle hints of silvery gray, evoking a serene, contemplative mood. The image is crafted in the style of fine art astrophotography, emphasizing a masterful balance of detail and grandeur. With its crystal-clear resolution and sharp focus, the composition draws viewers into a world where time seems to stand still, inviting them to ponder the mysteries of the universe in this serene coastal wilderness.",
+  "semantic": {
+    "description": [
+      "A lone lighthouse stands on a rocky shoreline, overlooking the ocean.",
+      "The Milky Way is visible, stretching across the night sky.",
+      "Meteor showers create visible trails of light in the sky."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Can the Milky Way be seen across the sky?",
+      "Are meteor showers visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The lighthouse is positioned atop a craggy cliff near the ocean.",
+      "Jagged rocks are in the foreground, contrasting with the sea.",
+      "The scene is viewed from a low vantage point, emphasizing the sky."
+    ],
+    "questions": [
+      "Is the lighthouse located on a cliff?",
+      "Are there jagged rocks in the foreground?",
+      "Is the scene captured from a low perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is a mix of moonlight and occasional lighthouse beams.",
+      "Cool midnight blues and silvery grays dominate the color palette.",
+      "The image has a fine art astrophotography style with high detail."
+    ],
+    "questions": [
+      "Is there a mix of moonlight and lighthouse beams lighting the scene?",
+      "Does the color palette include cool blues and silvery grays?",
+      "Is the image captured in a fine art astrophotography style?"
+    ]
+  }
+}

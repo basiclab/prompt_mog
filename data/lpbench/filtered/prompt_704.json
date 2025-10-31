@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a pristine and contemporary studio setting, a collection of artisanal scented candles is elegantly positioned on a polished marble platform. Each candle, encased in hand-blown glass containers, showcases unique, intricate designs that mirror the elegance of their surroundings. The setting is enveloped in soft natural light filtering through a series of vertical skylights, casting a gentle glow that enhances the rich textures and delicate colors of the candles. From a high vantage point, the camera captures the scene in a wide-angle format, emphasizing the symmetrical arrangement of the product display. In the foreground, the marble surface reflects the carefully positioned candles, creating an optical harmony as the viewer's eye travels to the warmly lit midground, where subtle shadows add depth and emphasize the fine craftsmanship of each piece. The background reveals a minimalist backdrop, featuring smooth, muted tones that contrast with the vibrant hues of the candles, offering a balanced color palette that includes warm ambers, deep violets, and serene greens. These shades evoke a sense of tranquility and luxury, underscoring the artistic sophistication of the presentation. Soft ambient sounds of classic jazz music add a layer of sophistication, while the scent of blooming jasmine subtly pervades the air, complementing the visual elements with an olfactory dimension. The scene embodies the essence of high-end product photography, capturing the ambiance of serene elegance with precision and finesse. The photographic style embraces modern minimalism with a touch of artistic flair, utilizing high-resolution capture techniques to ensure sharpness and clarity, making each detail of the candles and the overall composition radiate with professional excellence.",
+  "semantic": {
+    "description": [
+      "A collection of artisanal scented candles is positioned on a polished marble platform.",
+      "Each candle is encased in a hand-blown glass container with intricate designs.",
+      "The scene includes the scent of blooming jasmine subtly pervading the air."
+    ],
+    "questions": [
+      "Is there a collection of scented candles featured in the scene?",
+      "Are the candles encased in hand-blown glass containers?",
+      "Is the scent of jasmine present in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a high vantage point in a wide-angle format.",
+      "Candles are symmetrically arranged on the marble platform.",
+      "The foreground features a reflective marble surface highlighting the candles."
+    ],
+    "questions": [
+      "Is the scene captured from a high vantage point?",
+      "Are the candles arranged symmetrically on the platform?",
+      "Does the foreground contain a reflective marble surface?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft natural light filters through skylights, casting a gentle glow.",
+      "The color palette includes warm ambers, deep violets, and serene greens.",
+      "The photographic style embraces modern minimalism with artistic flair."
+    ],
+    "questions": [
+      "Does soft natural light filter through the skylights?",
+      "Is the color palette composed of warm and serene tones?",
+      "Does the style of the photo embrace modern minimalism?"
+    ]
+  }
+}

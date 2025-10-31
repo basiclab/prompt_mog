@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In a chic, minimalist dining setting, a delectable assortment of gourmet sushi is meticulously arranged on a rectangular black slate platter, which serves as a striking backdrop for the vivid colors of the dishes. Set against a pristine white oak table, the sushi rolls—a harmonious medley of traditional nigiri and inventive maki—are artfully garnished with microgreens and edible flowers. The arrangements are precise, each piece a tiny work of culinary art, showcasing vibrant slices of fresh tuna, salmon, and avocado, all meticulously draped to catch the eye. Viewed from a slightly elevated angle, the platter appears centered in the frame, with other elements receding gently into the background, highlighting the plate's centrality within the scene. Soft, natural light streams in through large, frosted glass windows, lending a gentle, diffused illumination that enhances the vivid hues of the fish and the subtle textures of the rice. The warm afternoon light casts delicate shadows that dance around the edges of the platter, accentuating its sleek contour. The color palette is a refined balance of cool ocean blues and warm earthy tones, evoking a serene yet sophisticated atmosphere. The muted background ensures the sushi stands out, inviting the viewer to savor every detail from the glossy finish of the soy-glazed eel to the piquant zest of a lemon twist. In the style of high-end culinary photography, the image emphasizes clarity and detail, capturing the textures and freshness with sharp, professional precision. The overall composition exudes a sense of artisanal craftsmanship, promising a dining experience that is both visually and gastronomically exquisite.",
+  "semantic": {
+    "description": [
+      "A selection of gourmet sushi is arranged on a rectangular black slate platter.",
+      "The sushi includes traditional nigiri and inventive maki rolls.",
+      "The sushi is garnished with microgreens and edible flowers."
+    ],
+    "questions": [
+      "Is there an assortment of sushi on the platter?",
+      "Does the sushi include nigiri and maki rolls?",
+      "Are there edible flowers used as garnish?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The sushi platter is centered on a pristine white oak table.",
+      "The scene is viewed from a slightly elevated angle.",
+      "Elements in the background recede to highlight the platter's centrality."
+    ],
+    "questions": [
+      "Is the sushi platter centered on the table?",
+      "Is the viewing angle slightly elevated?",
+      "Are the background elements positioned to emphasize the platter?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, natural light diffuses through frosted glass windows.",
+      "The color palette is a mix of cool blues and warm earthy tones.",
+      "The style emphasizes clarity and detail in culinary photography."
+    ],
+    "questions": [
+      "Is there soft, natural light illuminating the scene?",
+      "Does the color palette include cool blues and warm earth tones?",
+      "Is the image styled with a focus on clarity and detail?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "The enchanting evening unfolds within the opulent surroundings of a historic castle, where an elegant 100th birthday celebration is in full swing. Invited guests, dressed in lavish evening attire, mingle under the high vaulted ceilings of a grand dining hall. The focal point of the scene is a long, ornately decorated banquet table set with fine china and antique silverware, positioned along the center of the room, drawing attention to the birthday honoree seated at the head table. From a slightly elevated vantage point, the camera captures the interplay of opulence and intimacy as guests offer toasts, their faces illuminated by the warm flicker of numerous candelabras adorning the table. The scene is bathed in a soft, golden glow emanating from a combination of wrought iron chandeliers and the natural light of the setting sun, streaming through the expansive arched windows. This creates a captivating contrast of light and shadow, enhancing the historical character of the stone walls and intricately carved wooden beams above. The color palette is rich and regal, dominated by deep burgundy tablecloths and lush green garlands intertwined with white roses cascading down the center of the table. These elements exude a sense of timeless elegance and nostalgia, conjuring an atmosphere of warmth and celebration. In a style reminiscent of classic portrait photography, the high dynamic range and sharp focus capture each cherished moment in exquisite detail, highlighting the joyful expressions and heartfelt connections shared among the guests. The photograph resonates with a sense of sophistication and artistry, akin to an award-winning composition, where every element harmonizes to tell the story of this momentous occasion.",
+  "semantic": {
+    "description": [
+      "Guests are dressed in lavish evening attire, mingling under high vaulted ceilings.",
+      "A long banquet table is set with fine china and antique silverware.",
+      "Candelabras adorn the table, casting a warm flickering light."
+    ],
+    "questions": [
+      "Are the guests dressed in formal evening attire?",
+      "Is there a long banquet table in the scene?",
+      "Do candelabras provide lighting on the table?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a slightly elevated vantage point.",
+      "The banquet table is positioned along the center of the room.",
+      "Guests are gathered around the table, with the honoree seated at the head."
+    ],
+    "questions": [
+      "Is the scene viewed from an elevated perspective?",
+      "Is the banquet table centrally located in the room?",
+      "Is the honoree seated at the head of the table?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in a soft, golden glow from chandeliers and setting sun.",
+      "The color palette features deep burgundy, lush green, and white tones.",
+      "The photograph uses a high dynamic range and sharp focus for detail."
+    ],
+    "questions": [
+      "Is the lighting in the scene warm and golden?",
+      "Are burgundy and green prominent in the color palette?",
+      "Does the photograph exhibit high dynamic range and sharp focus?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Landscape Photography",
+  "prompt": "In a remote corner of the earth, a sweeping vista unfolds where a vast desert plain meets the foothills of a rugged mountain range. The ochre dunes of the desert roll gently under the late afternoon sun, their sinuous patterns etching shadows across the landscape. This scene is viewed from a mid-range vantage point, capturing a panoramic view that stretches from the arid plain in the foreground, through rocky escarpments in the midground, to the towering peaks that form a dramatic backdrop. These mountains are jagged and formidable, their precipices sharply delineated against a clear azure sky. As the sun descends towards the horizon, its golden light bathes the landscape, accentuating the warm tones of the desert and casting long shadows from the sparse clumps of hardy vegetation scattered across the plain. The interplay of warm and cool colors creates a dynamic and evocative mood, with the glowing sands juxtaposed against the deepening blues of the evening sky. The atmosphere is tranquil, yet there is an underlying sense of the raw, untamed nature of the land. This landscape is rendered in ultra-high resolution, capturing the fine details of the rocky terrain, the delicate ripples in the sand, and the sharp edges of the peaks, embodying a masterful application of landscape photography techniques.",
+  "semantic": {
+    "description": [
+      "The landscape features a vast desert plain with ochre sand dunes.",
+      "A rugged mountain range forms the backdrop of the scene.",
+      "Sparse clumps of hardy vegetation are scattered across the desert plain."
+    ],
+    "questions": [
+      "Does the scene include a desert plain?",
+      "Are there mountains visible in the background?",
+      "Is there vegetation present in the landscape?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The vantage point provides a panoramic view from the desert plain to the mountains.",
+      "Sand dunes in the foreground roll gently under the sunlight.",
+      "Mountains in the background rise sharply against the sky."
+    ],
+    "questions": [
+      "Is the view panoramic, capturing both the plain and the mountains?",
+      "Are the dunes positioned in the foreground?",
+      "Do the mountains rise sharply in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The landscape is bathed in golden light from the late afternoon sun.",
+      "The color palette balances warm ochres and cool blues.",
+      "The photograph is rendered in ultra-high resolution."
+    ],
+    "questions": [
+      "Is the landscape illuminated by the late afternoon sun?",
+      "Are warm and cool colors used in the color scheme?",
+      "Is the photograph captured in ultra-high resolution?"
+    ]
+  }
+}

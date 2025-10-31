@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Nestled within a quiet, tree-lined avenue of an affluent suburban neighborhood, a stately Georgian-style mansion commands attention with its symmetrical façade and grand columned entrance. The home is surrounded by meticulously maintained gardens, where a symphony of colors from blooming azaleas and hydrangeas creates a picturesque backdrop. Captured from a slightly elevated perspective, the mansion's grandeur is emphasized, with the camera framing the front in a way that accentuates the elegance of the brickwork and the patterned slate roof. In the foreground, a circular gravel driveway leads up to the entrance, lined with neatly trimmed hedges. Beyond the house, lush landscaping melds naturally with the wooded area that borders the rear of the property, adding a sense of privacy and seclusion. The late afternoon sun bathes the scene in a warm, golden glow, casting long shadows across the lawn and highlighting the intricate details of the wrought iron accents on the windows and doors. The color palette is dominated by the rich red of the bricks, complemented by the crisp white of the columns and window frames, creating a timeless yet inviting atmosphere. The style is that of classic architectural photography, with a focus on symmetry and precision, providing a professional and polished look that captures the home's opulent charm and refined character. The image, with its crisp details and high resolution, ensures that every element, from the texture of the brick to the individual leaves of the shrubbery, is captured with clarity and finesse, underscoring the technical excellence of the photograph.",
+  "semantic": {
+    "description": [
+      "The mansion features a symmetrical façade with a grand columned entrance.",
+      "Meticulously maintained gardens surround the property with blooming azaleas and hydrangeas.",
+      "A circular gravel driveway leads to the entrance lined with trimmed hedges."
+    ],
+    "questions": [
+      "Is there a columned entrance on the mansion?",
+      "Are the gardens surrounding the property well-maintained?",
+      "Does a circular gravel driveway lead to the entrance?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The mansion is positioned centrally within the frame, emphasizing its symmetry.",
+      "A slightly elevated perspective captures the mansion within its suburban setting.",
+      "Lush landscaping extends naturally to a wooded area beyond the mansion."
+    ],
+    "questions": [
+      "Is the mansion centered in the frame?",
+      "Is there an elevated perspective showcasing the mansion?",
+      "Does the landscaping blend into a wooded area behind the property?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The late afternoon sun creates a warm, golden glow across the scene.",
+      "The color palette includes rich red bricks and crisp white columns.",
+      "The style reflects classic architectural photography with a focus on symmetry."
+    ],
+    "questions": [
+      "Does the late afternoon sun create a golden glow?",
+      "Is the color palette dominated by red bricks and white columns?",
+      "Does the photograph exhibit classic architectural photography style?"
+    ]
+  }
+}

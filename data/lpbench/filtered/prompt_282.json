@@ -1,0 +1,40 @@
+{
+  "theme": "Architecture Photography",
+  "prompt": "An elegant, centuries-old cathedral stands proudly in the heart of a historic European city, its stone facade adorned with intricate carvings and towering Gothic spires that reach toward the sky. The cathedral is captured in a wide-angle shot from the bustling city square in front, where cobblestone paths converge and tourists with cameras in hand gather to admire the architectural marvel. Flanking the cathedral, ornate street lamps and colorful flowerbeds add a touch of charm and lead viewers’ eyes to the detailed rose window perched high on the building's front. From this perspective, the cathedral's immense size is apparent, dwarfing the nearby buildings and creating a dramatic sense of scale. The late afternoon sun casts a warm glow, illuminating the carved stone figures and casting long, soft shadows across the square. The light enhances the textures of the weathered stones, while the crisp clarity of the atmosphere accentuates details like the delicate tracery of the spires and the vibrant stained glass. The scene is imbued with a palette of warm earth tones and rich greens, which together evoke a feeling of wonder and reverence. Wrought iron benches and pigeons hopping along the square add life and movement to the scene. Executed in the style of classic architectural photography, the image boasts high resolution and meticulous attention to detail, capturing every nuance of the historic edifice with exceptional clarity and precision.",
+  "semantic": {
+    "description": [
+      "A centuries-old cathedral with Gothic spires dominates the scene.",
+      "Tourists gather in the city square, capturing photos of the cathedral.",
+      "Ornate street lamps and flowerbeds flank the cathedral."
+    ],
+    "questions": [
+      "Is there a cathedral with Gothic architectural elements?",
+      "Are there tourists visible in the city square?",
+      "Do ornate street lamps appear in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The cathedral is positioned centrally, dwarfing nearby buildings.",
+      "Cobblestone paths lead the viewer’s eyes towards the cathedral.",
+      "The rose window is prominently visible high on the cathedral's facade."
+    ],
+    "questions": [
+      "Is the cathedral centrally positioned in the frame?",
+      "Do cobblestone paths appear to lead toward the cathedral?",
+      "Is a rose window visible on the cathedral's facade?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by late afternoon sunlight.",
+      "Warm earth tones and rich greens dominate the color palette.",
+      "The photographic style is classic architectural with high resolution."
+    ],
+    "questions": [
+      "Is the scene illuminated by sunlight?",
+      "Are warm earth tones present in the color palette?",
+      "Is the image styled as classic architectural photography?"
+    ]
+  }
+}

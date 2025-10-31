@@ -1,0 +1,40 @@
+{
+  "theme": "Macro Photography",
+  "prompt": "In the delicate dance of an overlooked world, a dew-laden spider web catches the morning's light at the heart of a vibrant wildflower meadow. A tiny, luminescent spider, reminiscent of a living jewel, traverses the gossamer threads with graceful precision. Each strand of silk glistens with a kaleidoscope of colors, as droplets of dew cling like clusters of pearls, refracting and scattering the dawn's soft light into a myriad of hues. The scene unfolds from an extremely close vantage point, putting the viewer in the intimate position of a fellow insect observer. The web, delicately center-framed, spans across the field of view, its tension palpable against the backdrop of blurred greens and yellows of the surrounding flora. Sunlight, filtered through the meadow's canopy, dances across the scene, casting intricate shadows and highlighting the intricate structure of the web. The gentle caress of the morning breeze adds a subtle, almost imperceptible movement, enhancing the ephemeral quality of the moment. The color palette is a soothing blend of cool morning blues and fresh meadow greens, interspersed with the occasional burst of warm gold where light strikes dew. The image exudes a tranquil serenity, capturing the fragile beauty of nature. Executed in the style of high-definition macro photography, the composition celebrates the exquisite details and textures of the scene, revealing the unseen wonders of the microcosm with crystal-clear precision.",
+  "semantic": {
+    "description": [
+      "A dew-laden spider web spans the field of view at the heart of a meadow.",
+      "A tiny, luminescent spider traverses the gossamer threads of the web.",
+      "Dew droplets cling to the web, refracting the morning light into vibrant hues."
+    ],
+    "questions": [
+      "Is there a spider visible on the web?",
+      "Are dew droplets present on the spider web?",
+      "Is the spider's movement graceful?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from an extremely close vantage point.",
+      "The spider web is delicately center-framed, spanning the field of view.",
+      "The web is positioned against a blurred background of meadow flora."
+    ],
+    "questions": [
+      "Is the web positioned centrally in the frame?",
+      "Is the background of the scene blurred?",
+      "Is the vantage point very close to the spider web?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Sunlight casts intricate shadows and highlights the web's structure.",
+      "The color palette features cool blues and greens with touches of gold.",
+      "The image is in the style of high-definition macro photography."
+    ],
+    "questions": [
+      "Is sunlight used to highlight the web's structure?",
+      "Does the color palette include cool blues and greens?",
+      "Is the image styled as high-definition macro photography?"
+    ]
+  }
+}

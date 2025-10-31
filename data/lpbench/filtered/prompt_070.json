@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "A sweeping coastal panorama unfolds as the viewer gazes upon the rugged cliffs that stand as silent sentinels by the shore. These ancient rock formations bear the marks of countless tides, their surfaces weathered from centuries of exposure to the relentless ocean. Below, the sea dances with life, its surface a mosaic of turquoise and deep blue, where sunlight plays in ephemeral patterns over the water. At the edge of a cliff, an old lighthouse stands, its bright beacon flashing rhythmically, guiding distant ships through the azure expanse. Nearby, seabirds wheel and dive, their calls a symphony of the sky and sea. This scene is captured from a high vantage point, revealing the vastness of the ocean that stretches into the horizon, blending seamlessly with the sky, where wisps of clouds gather in gentle clusters. The foreground features a windswept grassy field, where patches of wildflowers bloom in defiance of the salty breeze. Midground, the lighthouse commands attention atop its rocky pedestal, while the background dissolves into the vast seascape, where waves crash into frothy spray against the rocks below. The late afternoon sun casts a golden hue over the scene, its warm light reflecting off the water and painting the cliffs in soft shades of amber and ochre. Shadows lengthen dramatically, enhancing the rugged textures of the landscape. The color palette is dominated by a harmonious blend of cool blues and warm earth tones, evoking a sense of serene isolation and natural power. The photograph is composed with an eye for balance and symmetry, capturing the timeless dance between land and sea in high-resolution clarity, where every detail is crisp and vivid, a testament to the mastery of seascape photography.",
+  "semantic": {
+    "description": [
+      "The scene features rugged cliffs by the shore with a lighthouse on top.",
+      "Seabirds are flying around the area, adding life to the scene.",
+      "A mosaic of turquoise and deep blue colors covers the ocean surface."
+    ],
+    "questions": [
+      "Is there a lighthouse in the scene?",
+      "Are seabirds visible flying in the area?",
+      "Does the ocean feature a mix of turquoise and deep blue colors?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The photograph is taken from a high vantage point, overlooking the ocean.",
+      "The lighthouse is situated on a rocky pedestal at the edge of a cliff.",
+      "In the foreground, a windswept grassy field with patches of wildflowers is visible."
+    ],
+    "questions": [
+      "Is the photograph captured from a high vantage point?",
+      "Is the lighthouse positioned on the edge of a cliff?",
+      "Are wildflowers visible in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The late afternoon sun casts a warm golden hue over the scene.",
+      "Shadows are lengthening, enhancing the textures of the cliffs and landscape.",
+      "The color palette is a harmonious blend of cool blues and warm earth tones."
+    ],
+    "questions": [
+      "Is the warm golden hue created by the late afternoon sun present in the scene?",
+      "Are shadows enhancing the textures of the landscape?",
+      "Is the color palette a mix of cool blues and warm earth tones?"
+    ]
+  }
+}

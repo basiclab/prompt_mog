@@ -1,0 +1,41 @@
+{
+  "theme": "Landscape Photography",
+  "prompt": "A vast coastal landscape sprawls before the viewer, where the rugged cliffs of a weathered coastline rise dramatically from the foaming edge of an endless ocean. This scene is captured from a wide-angle perspective, enhancing the panoramic sweep of the seascape with the azure waters meeting the horizon under the gentle embrace of a fading twilight sky. The cliffs, adorned with wind-swept grasses and occasional wildflowers clinging to life, are bathed in the soft, ethereal glow of the setting sun, casting long shadows that dance across their jagged surfaces. The interplay of warm orange and pink hues from the sun contrasts beautifully with the deep blue waters below, creating a harmonious blend of colors that speaks of both calm and majesty. Mist rises gently from the waves that crash relentlessly against the base of the cliffs, adding a sense of movement and life to the scene while partially veiling the coastal expanse in a mysterious, dream-like quality. Seagulls glide effortlessly through the sky, their silhouettes cutting against the warm pastel tones, adding a dynamic element to the otherwise serene vista. The overall aesthetic adopts a fine art approach, with an emphasis on capturing the natural beauty and tranquility of the coastal environment. The image is executed with high precision, exhibiting meticulous attention to detail in every blade of grass and ripple of water, ensuring the composition offers a masterful and immersive viewing experience.",
+  "semantic": {
+    "description": [
+      "Rugged cliffs rise dramatically from the edge of an ocean.",
+      "Seagulls glide through the sky against a twilight backdrop.",
+      "Wind-swept grasses and wildflowers grow on the cliff edges."
+    ],
+    "questions": [
+      "Are there cliffs featured in the scene?",
+      "Do seagulls appear in the sky?",
+      "Is there ocean water in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a wide-angle perspective for a panoramic view.",
+      "Cliffs are in the foreground, with the ocean stretching to the horizon.",
+      "Seagulls are positioned against the sky, creating a dynamic focus."
+    ],
+    "questions": [
+      "Is the ocean visible stretching to the horizon?",
+      "Are seagulls positioned against the sky?",
+      "Is the scene captured from a wide-angle perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft with a warm glow from the setting sun.",
+      "The color palette includes warm oranges, pinks, and deep blues.",
+      "A fine art aesthetic emphasizes natural beauty and tranquility.",
+      "Mist adds a dream-like quality to the coastal scene."
+    ],
+    "questions": [
+      "Is the lighting soft with a warm glow?",
+      "Does the color palette feature warm oranges and pinks?",
+      "Is a fine art aesthetic used in the image?"
+    ]
+  }
+}

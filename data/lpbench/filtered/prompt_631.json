@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of a historic botanical garden, a lively wedding celebration is in full swing beneath the canopies of tall, ancient trees draped with elegant strings of twinkling fairy lights. A large, flower-adorned marquee serves as the focal point, its transparent fabric walls allowing guests inside to glimpse the lush, verdant surroundings as they gather for the evening festivities. The couple, adorned in traditional attire, stand at the center of the scene, surrounded by family and friends who are cheering and clapping, adding to the palpable sense of joy. The photographer captures this moment from a slightly elevated perspective, providing a sweeping view of the bustling crowd in the foreground, the lively dance floor in the midground, and the dimly lit garden path that leads deeper into the garden in the background. As dusk transitions into night, the setting is illuminated by the warm, golden glow of hanging lanterns, casting intricate patterns of light and shadow across the scene. The atmosphere is further enriched by the subtle, cool hues of twilight that seep into the edges of the frame, creating a vibrant yet intimate ambience. The color palette is a harmonious blend of soft pastels and rich greens, punctuated by the bright splashes of color from the floral arrangements that add an element of natural beauty and elegance to the celebration. The scene is depicted with a blend of documentary and fine art photography styles, capturing both candid moments of joy and the overall majesty of the setting. Crisp details are evident in the high-resolution image, showcasing the craftsmanship of the photographer whose lens brings every element of the scene into sharp focus, making the memory of this special day truly unforgettable.",
+  "semantic": {
+    "description": [
+      "The wedding celebration takes place in a historic botanical garden.",
+      "The couple stands at the center, surrounded by cheering guests.",
+      "Fairy lights adorn ancient trees throughout the garden."
+    ],
+    "questions": [
+      "Is the wedding celebration occurring in a garden?",
+      "Is the couple surrounded by guests?",
+      "Are there fairy lights in the trees?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The photographer captures the scene from a slightly elevated perspective.",
+      "The marquee is positioned centrally with guests visible inside.",
+      "A garden path leads off into the distance in the background."
+    ],
+    "questions": [
+      "Is the view captured from an elevated perspective?",
+      "Is the marquee centrally located in the scene?",
+      "Does a garden path lead into the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit by warm, golden hanging lanterns.",
+      "Twilight adds cool hues to the edges of the frame.",
+      "The image combines documentary and fine art photography styles."
+    ],
+    "questions": [
+      "Are there warm lanterns lighting the scene?",
+      "Do cool twilight hues appear in the frame?",
+      "Is the style a blend of documentary and fine art?"
+    ]
+  }
+}

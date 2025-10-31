@@ -11,7 +11,7 @@ SEED=(42 1234 21344 304516
       972534 987241 1182039)
 FIRST_TOP=1
 PORT=29500
-GAMMA=3.0
+GAMMA=0.8
 NUM_MODE=10
 SIGMA=0.05
 
@@ -28,7 +28,7 @@ print_help() {
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
-    echo "  --gamma FLOAT             Gamma for p-MoG (default: 3.0)"
+    echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
     echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
     echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
     echo "  -h, --help                Show this help message and exit"

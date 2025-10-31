@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "As dawn breaks on the horizon, a lush, rolling countryside is dramatically transformed under the brewing intensity of an approaching storm. A solitary, ancient oak tree stands majestically at the center of the scene, its gnarled branches reaching defiantly toward a tumultuous sky. The tree anchors the landscape, surrounded by an expansive field of wildflowers, swaying gently in the rising wind. The camera captures this scene from a low angle, emphasizing the towering presence of the oak and the vastness of the storm-laden clouds looming above. The horizon stretches out to the left of the frame, offering a glimpse of distant hills disappearing into the storm's oncoming embrace. Morning light struggles to pierce through the dense canopy of cumulonimbus clouds, casting diffused, ghostly shadows across the field and creating an eerie yet captivating chiaroscuro effect. Lightning sporadically illuminates the sky, casting quicksilver paths against the dark, brooding atmosphere. The color palette is dominated by cool grays and deep blues, punctuated by the vibrant greens of the landscape and the stark white flashes of lightning, conveying a mood of both serenity and impending drama. The scene is rendered in the style of hyper-realistic fine art photography, where every drop of rain and every blade of grass is captured in exquisite detail, offering an immersive experience. High dynamic range settings ensure the highlights of the lightning and the shadows of the clouds are perfectly balanced, resulting in a visually arresting tableau worthy of an award-winning gallery display.",
+  "semantic": {
+    "description": [
+      "An ancient oak tree stands at the center of the scene.",
+      "Wildflowers in the field sway gently in the rising wind.",
+      "Lightning sporadically illuminates the dark, stormy sky."
+    ],
+    "questions": [
+      "Is there an ancient oak tree in the scene?",
+      "Do wildflowers appear in the field?",
+      "Does the scene include lightning in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a low angle emphasizing the oak tree's height.",
+      "The horizon stretches to the left, showing distant hills.",
+      "The oak tree is positioned centrally in the composition."
+    ],
+    "questions": [
+      "Is the camera angle low?",
+      "Is the horizon visible to the left of the frame?",
+      "Is the oak tree centered in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene uses a cool gray and deep blue color palette.",
+      "Lighting creates a chiaroscuro effect through diffused shadows.",
+      "The style is hyper-realistic fine art photography with high detail."
+    ],
+    "questions": [
+      "Does the scene use a cool color palette?",
+      "Is there a chiaroscuro effect created by lighting?",
+      "Is the style hyper-realistic fine art photography?"
+    ]
+  }
+}

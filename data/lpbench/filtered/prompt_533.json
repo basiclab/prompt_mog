@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "A thrilling cycling race unfolds on a sunlit street lined with enthusiastic spectators, their cheers creating an atmosphere of intense competition. The main focus is on a group of cyclists, their sleek, aerodynamic jerseys glistening with sweat as they move in a tightly knit formation. Each cyclist showcases immense concentration and endurance, their muscular legs pedaling rhythmically with precision and power. The scene is captured from a dynamic low-angle perspective, enhancing the dramatic sense of speed and motion as the cyclists zoom past. The camera is positioned slightly behind and to the side, allowing for an expansive view that includes the leading racer in the foreground, with the peloton stretching out towards the vanishing point in the background. As midday sun casts long shadows across the pavement, the light is sharp and crisp, highlighting the vibrant colors of the cyclists' gear and the diverse attire of the onlookers. The photograph is enveloped in a warm, golden glow, with contrasting cool shadows providing depth and contrast. The atmosphere is electric, filled with anticipation and the tangible energy of competition. The color palette is a lively mix of bright reds, blues, and yellows, reflecting the vibrancy of the event and the excitement of the crowd. The detailed textures of the cyclists' jerseys and the reflective sheen of their bicycles are captured with stunning clarity, giving the image a sense of realism and vitality. The style is emblematic of high-action sports photography, utilizing crisp focus and high resolution to convey the immediacy and thrill of the race. With its vivid composition and expertly timed capture, the photograph embodies the essence of professional sports photography at its finest.",
+  "semantic": {
+    "description": [
+      "A group of cyclists wears aerodynamic jerseys and races down the street.",
+      "Enthusiastic spectators line the street, cheering for the cyclists.",
+      "The cyclists' jerseys are sweaty and glistening under the sunlight."
+    ],
+    "questions": [
+      "Are there cyclists participating in a race?",
+      "Do the cyclists wear aerodynamic jerseys?",
+      "Is there a crowd of spectators watching the race?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at a low angle from behind and to the side of the cyclists.",
+      "The lead cyclist is in the foreground with the peloton extending into the background.",
+      "The street is lined with spectators on both sides, adding depth to the scene."
+    ],
+    "questions": [
+      "Is the camera viewpoint a low angle?",
+      "Does the image include spectators lining the street?",
+      "Is the lead cyclist positioned in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit by midday sun casting sharp shadows on the pavement.",
+      "The color palette includes bright reds, blues, and yellows.",
+      "Crisp focus and high resolution capture the immediacy of the race."
+    ],
+    "questions": [
+      "Is the lighting provided by midday sun?",
+      "Are the colors in the image bright and vibrant?",
+      "Is the photograph captured with high resolution and crisp focus?"
+    ]
+  }
+}

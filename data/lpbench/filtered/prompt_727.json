@@ -1,0 +1,40 @@
+{
+  "theme": "Still Life Photography",
+  "prompt": "In the muted ambiance of a quaint, forgotten attic, a still life scene emerges with timeless elegance. A rustic, weather-beaten wooden table takes center stage, its surface scattered with a carefully curated collection of vintage inanimate objects. At the heart of this tableau rests an antique silver teapot, its polished surface reflecting the delicate interplay of light and shadow. Flanking it, a cluster of amber glass bottles glows softly, their translucent hues harmonizing beautifully with the rich, sepia tones of the setting. To the left, a plump, deep-purple plum nestles beside a small stack of well-thumbed, leather-bound books, their spines lined with faint golden lettering that catches the light just so. In the background, an old brass candlestick holds a half-burned candle, its wax drippings frozen in time, adding a narrative of poetic stillness. The camera captures this scene from a gentle eye-level perspective, inviting the viewer into the intimate space and allowing the viewer to appreciate the intricate details of the aged surfaces and antique materials. The soft, diffused light filters through a dusty, cobwebbed window, casting a gentle, ethereal glow across the tableau, enhancing the scene's nostalgic and reflective mood. Rich, warm earth tones dominate the color palette, balanced by occasional cool highlights that draw the eye across the composition. The mood conveys a sense of introspection and quiet contemplation, evoking memories of a bygone era. The photo exudes a fine art aesthetic, reminiscent of classic still life paintings, with meticulous attention to composition and texture, captured in crystal-clear detail that showcases professional photography excellence.",
+  "semantic": {
+    "description": [
+      "An antique silver teapot is the central object on the table.",
+      "A cluster of amber glass bottles complements the sepia tones.",
+      "A plump, deep-purple plum is placed near leather-bound books."
+    ],
+    "questions": [
+      "Is there an antique silver teapot present in the scene?",
+      "Does the composition include leather-bound books?",
+      "Are there amber glass bottles visible on the table?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The silver teapot is centrally positioned on the rustic table.",
+      "Amber bottles are arranged to the right of the teapot.",
+      "A candlestick is in the background, behind the main objects."
+    ],
+    "questions": [
+      "Is the teapot positioned at the center of the table?",
+      "Are the amber bottles arranged around the teapot?",
+      "Is there a candlestick located in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, diffused light filters through a dusty window.",
+      "Warm earth tones dominate the color palette.",
+      "The scene evokes a nostalgic and reflective mood."
+    ],
+    "questions": [
+      "Is the scene lit by soft, diffused light?",
+      "Are warm earth tones prevalent in the composition?",
+      "Does the image convey a nostalgic mood?"
+    ]
+  }
+}

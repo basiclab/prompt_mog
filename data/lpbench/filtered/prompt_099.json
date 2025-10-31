@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the midst of a remote boreal forest, a captivating wildlife scene unfolds as a stately moose, with its grand antlers reaching skyward, stands solemnly beside a shimmering, crystal-clear lake. The animal's dark brown coat contrasts strikingly against the verdant backdrop of towering pines and the reflective surface of the lake, creating a harmonious blend of wilderness and tranquility. The scene is observed from a low vantage point at the water's edge, emphasizing the moose's towering stature and the vastness of its natural habitat. Captured from a slight angle to the left, the composition draws the viewer's eye from the textured shore in the foreground to the densely forested background, where the green canopy stretches upward, dappling the landscape with filtered sunlight. Golden morning light streams through the branches, casting warm, soft glows across the scene, while the coolness of the lake introduces a serene, reflective quality. The gentle mist rising from the water adds depth and a mysterious allure, suggesting an early morning setting. The color palette is dominated by deep forest greens and rich browns, punctuated by the bright golden highlights of the morning sun, evoking a mood of quiet reverence and nature's majesty. The intricate textures of the moose's fur and the delicate ripples on the lake surface are rendered in high detail, capturing the essence of the wilderness in an awe-inspiring, award-worthy photograph that epitomizes the finesse of wildlife photography.",
+  "semantic": {
+    "description": [
+      "A stately moose stands beside a shimmering, crystal-clear lake.",
+      "The moose's dark brown coat contrasts with the verdant backdrop of pines.",
+      "A gentle mist rises from the water, enhancing the scene's mystical quality."
+    ],
+    "questions": [
+      "Is a moose visible in the scene?",
+      "Is the lake depicted as crystal-clear?",
+      "Does the scene include a backdrop of pine trees?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is observed from a low vantage point at the water's edge.",
+      "The moose's towering stature is emphasized by its proximity to the lake.",
+      "A slight left-angle composition draws the eye from the shore to the forest."
+    ],
+    "questions": [
+      "Is the scene observed from a low vantage point?",
+      "Does the composition include a view from the water's edge?",
+      "Is the moose positioned close to the lake?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Golden morning light streams through the branches, casting warm glows.",
+      "The color palette includes deep greens, rich browns, and golden highlights.",
+      "The intricate textures of the moose's fur are rendered in high detail."
+    ],
+    "questions": [
+      "Is there golden morning light present?",
+      "Are the colors predominantly deep greens and browns?",
+      "Is the moose's fur texture rendered in detail?"
+    ]
+  }
+}

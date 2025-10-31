@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "A rustic yet elegant dining table is beautifully set within a cozy corner of a sun-dappled farmhouse kitchen. At the center of the table, an artisanal sourdough loaf, freshly baked to a golden perfection, sits on a weathered wooden board. Its crust crackles invitingly, hinting at the tender crumb within. Accompanying the bread is a spread of homemade preserves—vibrant raspberry, deep plum, and zesty orange marmalade—each housed in small, clear glass jars that catch the sunlight, casting colorful reflections across the table surface. The scene is framed from a slightly elevated angle, allowing a comprehensive view of the table's bounty. To the left of the bread, a vintage butter dish holds a stick of creamy, pale yellow butter, a small silver butter knife resting beside it. Herb-infused olive oil in a rustic ceramic bowl invites a dash of indulgence, its surface dappled with flecks of rosemary that dance in the gentle morning light. A soft, diffused natural light bathes the setting, filtering through sheer linen curtains, creating a warm and inviting atmosphere. Shadows are soft and add depth to the textures of the bread and fabrics. The color palette is a harmonious blend of earthy browns, deep reds, and glowing yellows, evoking a sense of warmth and homeliness. The mood is intimate and nostalgic, reminiscent of leisurely weekend mornings spent savoring the simpler pleasures of life. Each element is captured in sharp focus, with meticulous attention to detail, showcasing the artisanal quality of the ingredients. The overall style embodies a fine art approach, capturing the rustic elegance and rich textures of the scene in high-resolution, evoking both the warmth of a country home and the sophistication of professional culinary presentation.",
+  "semantic": {
+    "description": [
+      "A freshly baked artisanal sourdough loaf sits in the center of the table.",
+      "Colorful homemade preserves are in small glass jars beside the bread.",
+      "A vintage butter dish with a stick of butter is placed to the left of the bread."
+    ],
+    "questions": [
+      "Is there a sourdough loaf on the table?",
+      "Are homemade preserves included in the scene?",
+      "Is there a butter dish visible next to the bread?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated angle, offering a comprehensive view.",
+      "The artisanal loaf is centrally placed on a weathered wooden board.",
+      "The table is set within the cozy corner of a sun-dappled farmhouse kitchen."
+    ],
+    "questions": [
+      "Is the viewpoint of the scene slightly elevated?",
+      "Is the bread centrally positioned on the table?",
+      "Is the scene set in a farmhouse kitchen?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The setting is bathed in soft, diffused natural light through sheer curtains.",
+      "The overall color palette features earthy browns, deep reds, and glowing yellows.",
+      "The image captures a fine art approach with sharp focus and rich textures."
+    ],
+    "questions": [
+      "Is the lighting in the scene soft and diffused?",
+      "Does the color palette include earthy browns and deep reds?",
+      "Is the image shot in a fine art photography style?"
+    ]
+  }
+}

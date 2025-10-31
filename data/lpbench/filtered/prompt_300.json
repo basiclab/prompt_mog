@@ -1,0 +1,40 @@
+{
+  "theme": "Architecture Photography",
+  "prompt": "Amidst a bustling, historical European city, a majestic opera house stands as an epitome of architectural triumph and cultural heritage. Its facade, adorned with intricate neoclassical sculptures and ornate columns, creates a grandiose impression. Viewed from a slightly elevated perspective, the marvel of its domed roof and expansive front courtyard, bustling with elegantly dressed patrons, is fully appreciated. Framing the scene are rows of meticulously aligned lampposts, echoing the architectural symmetry of the building itself, while cobblestone streets weave around, leading the eye further into the scene and offering glimpses of complementary historical buildings in the background. As dusk descends, the opera house is bathed in the soft, golden glow of vintage streetlights, casting long shadows that dance across the cobblestones and highlight the building's detailed carvings. The sky transitions from a deep lilac to indigo, creating a harmonious backdrop that enhances the warm facade tones and gives the image a serene, twilight ambiance. The mood is one of timeless elegance and anticipation, capturing the building's role as a beacon of culture and artistic excellence. The photograph is styled with a fine art, cinematic lens, capturing both minute architectural details and the overall imposing grandeur of the opera house with crystal-clear detail and high contrast. The result is a visually engaging composition that evokes the romance and history of the city, rendered in high resolution, with award-winning quality that conveys a sense of place and time effectively.",
+  "semantic": {
+    "description": [
+      "The main subject is a neoclassical opera house with ornate sculptures.",
+      "Elegant patrons are visible in the opera house's front courtyard.",
+      "The scene includes meticulously aligned vintage lampposts."
+    ],
+    "questions": [
+      "Is there an opera house in the scene?",
+      "Are there sculptures on the facade of the building?",
+      "Does the scene feature vintage lampposts?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The opera house is viewed from a slightly elevated perspective.",
+      "Vintage lampposts frame the scene symmetrically.",
+      "Cobblestone streets weave around the opera house courtyard."
+    ],
+    "questions": [
+      "Is the opera house viewed from an elevated perspective?",
+      "Are there cobblestone streets around the building?",
+      "Do the lampposts align symmetrically in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in soft, golden glow from streetlights at dusk.",
+      "The sky transitions from lilac to indigo, enhancing the warm facade tones.",
+      "Photograph styled with a fine art, cinematic lens and high contrast."
+    ],
+    "questions": [
+      "Is the scene lit by streetlights at dusk?",
+      "Does the sky transition from lilac to indigo?",
+      "Is the photograph styled with a cinematic lens?"
+    ]
+  }
+}

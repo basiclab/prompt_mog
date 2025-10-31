@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of a bustling city, an elegant wedding reception unfolds within the historic grandeur of a century-old cathedral. The main hall is adorned with opulent floral arrangements, where lush ivory roses intersperse with vibrant greenery along the length of the grand dining tables. Gleaming candelabras cast a warm glow over guests seated in lively conversations, their laughter mingling with the soft strains of a string quartet. The couple, radiant in their wedding attire, ascend an ornate staircase that sweeps elegantly behind them, surrounded by the architectural magnificence of vaulted ceilings and stained-glass windows that bathe the space in a kaleidoscope of colors. Captured from a high vantage point, the image conveys a sense of intimacy amidst the vastness, as the grandeur of the setting frames the intimate moments shared between the newlyweds and their guests. The golden light of late afternoon filters through high, arched windows, creating dramatic shadows that dance across the polished marble floors. The color palette is dominated by warm golds and rich mahogany hues, complemented by the delicate pastels of the floral displays. The atmosphere resonates with a sense of timeless elegance and celebration, accentuated by the cathedral's echoes of history and tradition. This image, with its attention to fine details and the richness of its composition, embodies the sophistication and joyous spirit of the occasion through a fine art lens. The photograph is impeccably composed and technically precise, capturing the essence of a momentous celebration in stunning detail and vibrant clarity.",
+  "semantic": {
+    "description": [
+      "The setting is a century-old cathedral hosting a wedding reception.",
+      "Lush ivory roses and greenery adorn the grand dining tables.",
+      "The couple ascends an ornate staircase in their wedding attire."
+    ],
+    "questions": [
+      "Is the wedding reception set in a cathedral?",
+      "Do the tables feature floral arrangements with ivory roses?",
+      "Are the couple ascending a staircase?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The couple is positioned prominently at the center of the scene.",
+      "Guests are seated around grand dining tables in lively conversation.",
+      "The scene is viewed from a high vantage point within the cathedral."
+    ],
+    "questions": [
+      "Is the scene captured from a high vantage point?",
+      "Are the guests seated around the tables?",
+      "Is the couple centrally positioned in the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Late afternoon light creates dramatic shadows across the space.",
+      "The color palette includes warm golds and rich mahogany hues.",
+      "The image reflects a fine art photography style."
+    ],
+    "questions": [
+      "Does the late afternoon light create dramatic shadows?",
+      "Is the color palette dominated by warm golds?",
+      "Is the image styled in a fine art photography approach?"
+    ]
+  }
+}

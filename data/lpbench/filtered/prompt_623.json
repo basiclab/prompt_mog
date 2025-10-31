@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "Against the backdrop of an elegantly draped marquee, a lavish wedding reception is in full swing under the watchful gaze of a starry night sky. The guests, adorned in sophisticated evening attire, mingle around circular tables that are meticulously set with fine china and sparkling crystal, surrounded by tasteful floral arrangements in shades of blush and ivory. In the center of the marquee, an expansive wooden dance floor offers space for couples to waltz gracefully under the gentle glow of soft, twinkling fairy lights that ensconce the entire venue. The scene is captured from an eye-level perspective, allowing the viewer to feel immersed in the vibrant celebration. The composition leads the eye from the intimate foreground of personalized place settings and handwritten menu cards, across the midground where an elegantly tiered wedding cake stands prominently on a pedestal, to the background where a live jazz band enchants the atmosphere with melodious tunes that drift on the cool evening breeze. Soft, ambient lighting from lanterns and candles placed strategically around the venue creates an inviting warmth, casting intricate shadows that dance across the guests' faces and attire. The scene is painted in a color palette that evokes romance and nostalgia, with warm creams and golds juxtaposed against deeper shades of navy and emerald. The air is filled with the mingling scents of gardenias and freshly baked pastries, accompanying the sound of joyous laughter and clinking glasses. This festive tableau is captured in the style of fine art photography, focusing on exquisite detail and emotional depth, achieving a masterful balance of composition, lighting, and focus. The photograph boasts high resolution and crisp clarity, with award-winning composition that highlights the elegance and grandeur of this memorable celebration.",
+  "semantic": {
+    "description": [
+      "Guests in sophisticated attire mingle around tables adorned with floral arrangements.",
+      "An expansive wooden dance floor is centrally located under twinkling fairy lights.",
+      "A live jazz band performs melodious tunes in the background."
+    ],
+    "questions": [
+      "Are the guests wearing evening attire?",
+      "Is there a live band performing at the event?",
+      "Does the scene include a lavishly decorated marquee?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from an eye-level perspective, creating an immersive experience.",
+      "Circular tables are positioned around a central dance floor within the marquee.",
+      "The wedding cake is prominently displayed on a pedestal in the midground."
+    ],
+    "questions": [
+      "Is the wedding cake prominently displayed within the scene?",
+      "Are the tables arranged around a central dance floor?",
+      "Is the scene captured from an eye-level perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and ambient, provided by lanterns and candles.",
+      "The color palette includes warm creams and golds with navy and emerald accents.",
+      "The photograph is styled in a fine art photography approach, with detailed focus."
+    ],
+    "questions": [
+      "Is the lighting soft and ambient throughout the scene?",
+      "Does the image feature a warm color palette with creams and golds?",
+      "Is this photograph styled in a fine art photography approach?"
+    ]
+  }
+}

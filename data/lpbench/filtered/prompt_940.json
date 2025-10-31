@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a surreal and whimsical realm, a towering ancient oak tree emerges from the misty depths of an ethereal ocean. Its expansive branches twist and weave, forming an intricate canopy of luminescent leaves that shimmer with an iridescent glow, casting a dappled array of colors onto the water below. The scene is viewed from a slightly elevated angle, capturing the tree’s full grandeur as it stretches upward, its roots disappearing into the calm, mirror-like surface of the ocean. Surrounding the tree, a flotilla of delicate, translucent jellyfish float lazily in the water, their gentle luminescence creating an enchanting dance of light beneath the surface. The horizon is a fantastical blend of twilight hues, where the sky transitions seamlessly from rich violets to deep indigos, peppered with twinkling stars that add an otherworldly sense of wonder. The light of the full moon bathes the scene in a soft, silvery glow, its reflections bouncing off the tranquil water and highlighting the delicate filigree of the oak’s branches. The mood is serene yet awe-inspiring, evoking a dreamlike state where reality and imagination intertwine seamlessly. The scene is captured using a fine art photography style, with meticulous attention to detail that showcases the intricate textures of the tree bark and the ethereal quality of the jellyfish. The overall composition is masterfully executed, maintaining sharp focus throughout, creating a professional and award-worthy photographic piece.",
+  "semantic": {
+    "description": [
+      "An ancient oak tree stands amidst an ethereal ocean, with luminescent leaves.",
+      "Translucent jellyfish float around the tree in the calm ocean waters.",
+      "The sky displays a blend of twilight hues with stars scattered across it."
+    ],
+    "questions": [
+      "Is there an ancient oak tree in the scene?",
+      "Are there jellyfish floating around the tree?",
+      "Is the sky filled with twilight colors and stars?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated angle for a full view of the tree.",
+      "The tree's branches stretch upward, with roots submerged in the ocean.",
+      "Jellyfish are positioned around the tree, creating a sense of depth."
+    ],
+    "questions": [
+      "Is the scene viewed from an elevated angle?",
+      "Are the tree roots submerged in the ocean?",
+      "Are jellyfish positioned around the tree?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The full moon casts a silvery glow over the entire scene.",
+      "The luminescent leaves create a dappled light effect on the water.",
+      "The scene captures the ethereal quality with fine art photography style."
+    ],
+    "questions": [
+      "Does the full moon cast a silvery glow?",
+      "Do the luminescent leaves create dappled light effects?",
+      "Is the scene captured in a fine art photography style?"
+    ]
+  }
+}

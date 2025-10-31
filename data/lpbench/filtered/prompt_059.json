@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "On the rugged coast of a secluded bay, a solitary shipwreck rests, half-submerged and battered by the relentless waves. The air is filled with the pungent scent of salt and the distant cry of seabirds echoing off the cliffs. This forgotten relic, a large wooden ship, stands as a testament to time, its hull split and sails tattered, as the ocean appears to reclaim its once-proud structure. In the foreground, barnacle-covered rocks jut out, surrounded by tide pools bustling with marine life, where tiny crabs scuttle and colorful sea anemones sway gently with the current. The scene is viewed from a high vantage point, offering a grand panorama that captures the shipwreck near the center, with cliffs framing the composition on either side. The foreground rocks transition smoothly into the midground of the crashing surf, while the distant horizon blends seamlessly into the vast expanse of the sea and sky. The light of an overcast afternoon casts a diffused glow across the scene, softening the harshness of the jagged rocks and muted colors of the ship. The steel gray of the waves contrasts with the occasional glint of silver as the water catches what little sunlight penetrates the cloud cover. There's an ethereal quality to the scene, enhanced by the gentle mist rising off the sea, imparting a ghostly aura to the shipwreck. The color palette leans towards cool tones, with predominantly grays and blues that evoke a sense of melancholy serenity. This atmospheric image captures the essence of seascape photography, blending the tangible textures of weathered wood and stone with the fluid movement of the ocean in a cohesive, high-resolution composition that highlights the intricate details of each element.",
+  "semantic": {
+    "description": [
+      "A large wooden shipwreck rests half-submerged on the rugged coast.",
+      "Barnacle-covered rocks surround tide pools bustling with marine life.",
+      "Seabirds are audible and echo off the cliffs in the background."
+    ],
+    "questions": [
+      "Is there a shipwreck visible in the scene?",
+      "Are there tide pools with marine life present?",
+      "Can seabirds be heard in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The vantage point is high, capturing a panoramic view of the bay.",
+      "The shipwreck is near the center of the composition.",
+      "Barnacle-covered rocks are in the foreground, leading into the midground surf."
+    ],
+    "questions": [
+      "Is the shipwreck near the center of the composition?",
+      "Are the rocks positioned in the foreground?",
+      "Does the perspective offer a panoramic view?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit with diffused afternoon light from an overcast sky.",
+      "A cool color palette of grays and blues dominates the image.",
+      "The scene has an ethereal quality, enhanced by mist rising off the sea."
+    ],
+    "questions": [
+      "Is the scene lit by diffused light from an overcast sky?",
+      "Does the color palette primarily consist of cool tones?",
+      "Is there mist rising off the sea, adding an ethereal quality?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "A dramatic display of nature's grandeur unfolds as a massive supercell thunderstorm looms ominously over a sprawling midwestern plain. The central focus is a cluster of mature oak trees, their gnarled branches reaching skyward as if in defiance of the tempest's approach. The scene is captured from a wide-angle perspective, emphasizing the vastness of the landscape and the sheer magnitude of the storm. The horizon stretches across the frame, anchoring the viewer's eye to the evenly spaced oaks in the midground, their silhouettes stark against the churning mass of dark, billowing cumulus clouds that dominate the background. In the foreground, a patchwork of sunlit wildflowers in radiant hues of purple, yellow, and white stands out against the muted greens and browns of the grassland, providing a vibrant contrast to the foreboding sky. The image captures the transition from late afternoon into early evening, with the sun casting an ethereal, golden glow across the scene, momentarily piercing through the tumultuous clouds with shafts of light that illuminate the landscape in a surreal and fleeting beauty. Shadows elongate across the ground, enhancing the sense of depth and drama. The color palette is a dynamic interplay of warm golden tones juxtaposed with cool grays and deep blues, evoking a mood of impending drama and anticipation. The photographic style is reminiscent of classic landscape art, with a high-resolution, finely detailed finish that captures every nuance of texture and form. The scene conveys both the serenity of the landscape and the awe-inspiring power of the storm, showcasing the inherent beauty and unpredictability of weather at its most intense. The image is technically precise, demonstrating masterful control over exposure and composition, resulting in a breathtaking depiction of atmospheric spectacle.",
+  "semantic": {
+    "description": [
+      "A massive supercell thunderstorm looms over the landscape.",
+      "A cluster of mature oak trees occupies the midground.",
+      "Sunlit wildflowers provide vibrant color in the foreground."
+    ],
+    "questions": [
+      "Is there a cluster of oak trees in the scene?",
+      "Are there wildflowers visible in the foreground?",
+      "Does the thunderstorm dominate the background?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a wide-angle perspective.",
+      "The horizon stretches across the frame, anchoring the eye.",
+      "Oak trees in the midground contrast against the stormy backdrop."
+    ],
+    "questions": [
+      "Is the scene viewed from a wide-angle perspective?",
+      "Are the oak trees positioned in the midground?",
+      "Does the horizon extend across the frame?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting transitions from late afternoon to early evening.",
+      "Golden sunlight pierces through the storm clouds.",
+      "The color palette combines warm golden tones with cool grays and blues."
+    ],
+    "questions": [
+      "Does the lighting transition from late afternoon to evening?",
+      "Is there golden sunlight piercing through the clouds?",
+      "Are the colors a mix of golden and cool tones?"
+    ]
+  }
+}

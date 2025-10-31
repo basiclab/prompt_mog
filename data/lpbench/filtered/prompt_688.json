@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "In a meticulously designed studio environment that epitomizes both style and functionality, a distinctive collection of gourmet kitchen knives is artfully displayed. The studio exudes an air of modern sophistication, with its sleek, industrial-inspired design featuring polished concrete floors and a backdrop of exposed brick walls. These knives, with their finely honed blades and ergonomic handles, are positioned with precision on a large reclaimed oak table that serves as the focal point. Viewed slightly from above, the arrangement captures the attention, showcasing the intricate Damascus steel patterns and the elegant curvature of each knife handle. The knives are aligned in alternating orientations, creating a dynamic composition that emphasizes their unique craftsmanship and design. Bathed in the soft glow of overhead pendant lights, the knives gleam under the controlled lighting setup, which highlights the contrast between the dark, matte handles and the shiny, polished blades. The lighting generates gentle shadows that imbue the scene with a dramatic yet sophisticated atmosphere. The color palette is dominated by the warm tones of the oak table and the subtle metallic sheen of the blades, complemented by the cool, neutral backdrop of the studio. This combination creates a balanced and inviting ambiance. The entire scene is captured in high-definition detail, with a focus on accentuating the textures and material quality of the knives. This approach not only elevates the aesthetic impact but also communicates the superior craftsmanship and luxury appeal of the product line. The photo achieves a cinematic quality, borrowing elements from both high-end lifestyle photography and traditional still life, ensuring that these kitchen essentials are portrayed not just as functional items, but as objects of desire and elegance.",
+  "semantic": {
+    "description": [
+      "A collection of gourmet kitchen knives is arranged on a reclaimed oak table.",
+      "The knives feature finely honed blades with Damascus steel patterns.",
+      "Ergonomic handles complement the design of the knives."
+    ],
+    "questions": [
+      "Are the kitchen knives displayed on a table?",
+      "Do the knives have Damascus steel patterns on the blades?",
+      "Are the knife handles described as ergonomic?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera angle is slightly above, showing the arrangement on the table.",
+      "Knives are aligned in alternating orientations to create a dynamic composition.",
+      "The scene captures the design elements within a modern studio environment."
+    ],
+    "questions": [
+      "Is the arrangement of the knives viewed from above?",
+      "Does the scene include knives positioned in alternating orientations?",
+      "Is the studio setting described within the composition?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting setup casts a soft glow that highlights material contrasts.",
+      "Warm tones of the oak table contrast with the metallic sheen of blades.",
+      "The photograph aims for a cinematic quality with high definition detail."
+    ],
+    "questions": [
+      "Is the lighting described as casting a soft glow on the knives?",
+      "Do the colors include warm tones from the oak and metallic sheen from the blades?",
+      "Is the image captured in high-definition detail?"
+    ]
+  }
+}

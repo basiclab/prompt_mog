@@ -1,0 +1,40 @@
+{
+  "theme": "Seascape Photography",
+  "prompt": "As dawn breaks over the horizon, a serene coastal seascape unfolds under the tender light of the early morning sun. A small, weathered fishing boat, its wood softened by years of salt and sea, drifts quietly upon the gentle waves. It lies anchored near a stretch of untouched golden sands, framed by tall, swaying grasses that whisper softly in the breeze. The scene is elevated by a high vantage point, offering an expansive view that captures the sweeping arc of the shoreline and the endless expanse of the azure ocean stretching out to meet the sky. The foreground is dominated by the golden beach, while the midground features the tranquil waters holding the fishing boat. In the background, low-lying clouds hover close to the horizon, tinged with the colors of emerging sunlight. The entire scene is enveloped in the delicate glow of the early morning, where warm sunlight filters through the mist, casting a soft, ethereal light that dances upon the water's surface. Shadows are subtle and diffuse, creating a sense of depth and calm as they stretch gently along the sands. The color palette is a harmonious blend of cool blues and warm golden hues, punctuated by the deep green of the grasses and the muted browns of the boat. This color harmony evokes a sense of peace and natural beauty, underscoring the tranquility of the moment. A flock of seagulls circles overhead, their calls echoing softly above the gentle lapping of waves. The entire scene captures the essence of quietude and timelessness, rendered in the style of classic seascape photography, with a focus on capturing detail and mood. The sharpness and clarity of the image ensure that every texture and color is beautifully rendered, inviting viewers to step into this serene coastal morning and experience its beauty firsthand.",
+  "semantic": {
+    "description": [
+      "A small, weathered fishing boat floats quietly on gentle waves.",
+      "Tall grasses frame the golden sands of the untouched beach.",
+      "A flock of seagulls circles overhead, calling softly."
+    ],
+    "questions": [
+      "Is there a fishing boat present in the scene?",
+      "Are there tall grasses framing the beach?",
+      "Is there a flock of seagulls visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a high vantage point, offering an expansive view.",
+      "The beachfront dominates the foreground, with midground waters holding the boat.",
+      "Low-lying clouds hover in the background, near the horizon."
+    ],
+    "questions": [
+      "Is the viewpoint elevated to provide a wide view?",
+      "Does the beach fill the foreground of the scene?",
+      "Are there clouds near the horizon in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the warm glow of early morning light.",
+      "The color palette includes cool blues and warm golden hues.",
+      "The photograph captures a classic seascape style with detailed textures."
+    ],
+    "questions": [
+      "Is the scene illuminated by early morning light?",
+      "Does the color palette feature cool blues and golden hues?",
+      "Is the photographic style classic seascape with detailed textures?"
+    ]
+  }
+}

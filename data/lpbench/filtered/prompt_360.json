@@ -1,0 +1,40 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Nestled in a serene suburban neighborhood, a contemporary two-story house stands proudly, its sleek architectural lines drawing the viewer's eye. The exterior boasts a mix of glass, wood, and stone, seamlessly blending modern aesthetics with natural elements. The facade is dominated by large windows that reflect the surrounding greenery and a meticulously maintained lawn that stretches out in front. Inside, the open-plan interior is revealed, with a spacious living room that invites relaxation. Soft, neutral tones adorn the walls, complementing the polished wooden floors. Plush couches and a minimalist coffee table are arranged around a modern fireplace, a focal point that adds warmth and comfort. The kitchen, visible from the living room, is a chef's dream with stainless steel appliances, a large island, and sleek cabinetry, all lit by pendant lights above. A dining area is adjacent, featuring a large table set for a family gathering, under a broad window that lets in ample natural light. The overall ambiance is one of welcoming sophistication, amplified by the soft glow of the late afternoon sun streaming through the windows. The scene captures the interplay of natural daylight and warm interior lighting, creating a cozy yet vibrant atmosphere. The interior’s muted color palette harmonizes with the exterior landscaping, establishing a seamless transition between indoor and outdoor spaces. The image is masterfully composed in high-resolution, capturing every texture and detail with crisp sharpness, akin to the style of a high-end architectural magazine.",
+  "semantic": {
+    "description": [
+      "The house features a contemporary two-story structure with large glass windows.",
+      "A spacious living room with plush couches and a minimalist coffee table is visible.",
+      "The kitchen includes stainless steel appliances and a large central island."
+    ],
+    "questions": [
+      "Is there a large window in the house facade?",
+      "Does the living room contain a modern fireplace?",
+      "Is there a dining area set for a family gathering?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The house is located in a serene suburban neighborhood with a well-maintained lawn.",
+      "The living room and kitchen are part of an open-plan interior layout.",
+      "The dining area is adjacent to the kitchen, near a broad window."
+    ],
+    "questions": [
+      "Is the house situated in a suburban neighborhood?",
+      "Are the living room and kitchen part of an open-plan layout?",
+      "Is the dining area located next to a broad window?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The exterior combines modern aesthetics with natural materials like wood and stone.",
+      "Natural daylight and warm interior lighting create a cozy atmosphere.",
+      "The interior features a muted color palette harmonizing with the exterior landscaping."
+    ],
+    "questions": [
+      "Does the exterior of the house use natural materials?",
+      "Is the atmosphere inside enhanced by natural daylight?",
+      "Is a muted color palette used in the interior design?"
+    ]
+  }
+}

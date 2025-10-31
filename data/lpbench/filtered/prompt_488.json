@@ -1,0 +1,40 @@
+{
+  "theme": "Fashion Photography",
+  "prompt": "In the grandeur of an expansive, neo-classical opera house, a fashion photoshoot is stylishly underway, blending the opulence of high fashion with classic elegance. The model, a statuesque figure draped in a flowing, crimson silk gown, stands poised at the center of the stage, her presence commanding the vastness of the elaborate interior. The dress, with its dramatic train and intricate, gold embroidery, cascades down the marble stairs, its luxuriant sheen contrasting against the muted tones of the aged marble. The scene is viewed from a slightly elevated angle, capturing the entirety of the stage with the model as the focal point. The plush velvet curtains hang open, framing her like a regal portrait against the ornate backdrop of gilded moldings and grand chandeliers. Intricacies of depth are introduced as rows of empty seats fan out in the foreground while the soaring domed ceiling of the opera house, adorned with frescoes and golden motifs, arcs overhead in the background. Soft, diffused lighting from the overhead chandeliers casts a gentle, warm glow over the scene, enriching the colors of the gown and accentuating the grandeur of the setting. Subtle highlights dance along the silk fabric, amplifying its texture, and the soft shadows delineate the architectural features, adding depth to the composition. The color palette emerges in rich reds and golds, with accents of deep mahogany and antique ivory, eliciting a mood of timeless luxury and sophistication. This visual narrative follows the style of haute couture editorial photography, combining meticulous attention to detail with artistic composition. The final image is masterfully captured in high resolution, showcasing the exquisite textures of the fabric and the intricate details of the opera house with sharp clarity, indicative of award-winning fashion photography endeavors.",
+  "semantic": {
+    "description": [
+      "A model stands on an opera house stage wearing a crimson silk gown with gold embroidery.",
+      "The gown features a dramatic train that cascades down marble stairs.",
+      "The setting is an ornate, neo-classical opera house with gilded moldings and chandeliers."
+    ],
+    "questions": [
+      "Is the model wearing a crimson gown?",
+      "Does the scene take place in an opera house?",
+      "Are there velvet curtains framing the stage?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The model is centered in the frame, standing on the stage.",
+      "The camera is at a slightly elevated angle capturing the full stage.",
+      "Rows of empty seats fan out in the foreground of the composition."
+    ],
+    "questions": [
+      "Is the model positioned on the stage?",
+      "Is the camera perspective slightly elevated?",
+      "Do the seats appear in the foreground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit by soft, diffused lighting from chandeliers.",
+      "Rich reds and golds dominate the color palette.",
+      "The image has a high resolution with sharp clarity."
+    ],
+    "questions": [
+      "Is the lighting in the scene soft and diffused?",
+      "Do red and gold tones dominate the color scheme?",
+      "Is the image captured with high resolution?"
+    ]
+  }
+}

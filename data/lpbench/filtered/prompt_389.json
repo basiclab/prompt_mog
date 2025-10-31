@@ -1,0 +1,46 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "Set in the heart of a verdant suburban neighborhood, a newly constructed high-end eco-friendly apartment complex captivates with its modern aesthetics and sustainable design principles. The building stands prominently amidst a lush landscape, showcasing vertical gardens that climb its facade, coupled with large, energy-efficient windows that invite ample natural light. Viewed from a slightly elevated angle, the composition frames the complex as the central focus, while allowing the viewer to appreciate the surrounding meticulously landscaped gardens that feature native plants and a series of winding pathways leading to an inviting communal area. The camera perspective captures the scene at midday, where the sunlight bathes the structure in soft, even light that accentuates the natural tones of the building materials, from the reclaimed wood cladding to the elegant stone façade. A gentle breeze sways the tall grasses in the foreground, adding a dynamic element that complements the building's sleek lines. The color palette is a harmonious blend of earthy tones and vibrant greens, reinforcing the theme of nature-inspired modernity while creating an atmosphere of serenity and sophistication. The scene's style reflects the precision of professional architectural photography, with a focus on clarity, detail, and a balanced composition that highlights both the property's grandeur and its integration with the natural environment. Masterful use of high-resolution imaging ensures every detail is sharp and vivid, making the photograph a compelling testament to environmentally conscious architecture.",
+  "semantic": {
+    "description": [
+      "A modern eco-friendly apartment complex stands prominently in a suburban neighborhood.",
+      "Vertical gardens ascend the building's facade, enhancing its sustainable design.",
+      "Large energy-efficient windows are a key feature of the apartment complex.",
+      "Native plants are arranged in landscaped gardens surrounding the complex."
+    ],
+    "questions": [
+      "Is there an eco-friendly apartment complex in the scene?",
+      "Does the building feature vertical gardens on its facade?",
+      "Are there energy-efficient windows on the building?",
+      "Is the surrounding landscape filled with native plants?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The apartment complex is centrally framed in the composition with surrounding gardens.",
+      "An elevated camera angle provides a clear view of the building and landscape.",
+      "Pathways wind through the landscaped gardens around the complex.",
+      "Tall grasses in the foreground add depth and movement to the scene."
+    ],
+    "questions": [
+      "Is the apartment complex centrally framed in the image?",
+      "Does the camera capture the scene from an elevated angle?",
+      "Are there pathways visible in the gardens around the building?",
+      "Do tall grasses appear in the foreground of the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is lit with soft, even light from the midday sun.",
+      "The color palette includes earthy tones and vibrant greens.",
+      "The photograph exhibits a style characteristic of architectural photography.",
+      "High-resolution imaging ensures sharpness and clarity in the details."
+    ],
+    "questions": [
+      "Is the scene illuminated by soft, even midday sunlight?",
+      "Does the color palette feature earthy tones and greens?",
+      "Is the style reflective of professional architectural photography?",
+      "Is the image captured in high resolution for clarity and detail?"
+    ]
+  }
+}

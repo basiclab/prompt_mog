@@ -1,0 +1,39 @@
+{
+  "theme": "Food Photography",
+  "prompt": "Centered on a polished, dark mahogany table, an artfully presented dish of gourmet French cuisine entices the senses. The dish, a meticulously arranged coq au vin, features succulent pieces of tender chicken delicately braised in rich, red Burgundy wine, complemented by a medley of vibrant vegetables like glazed pearl onions, earthy mushrooms, and crisp pancetta. The setting is an intimate dining room, exuding a timeless elegance with its soft, amber lighting cast by an ornate chandelier overhead. The warm glow highlights the delicate porcelain plate with subtle gold filigrees, drawing attention to the harmonious blend of colors on the dish. Captured from a slightly elevated angle, the composition allows the viewer to appreciate the intricate layers and textures of the food, each element thoughtfully placed, creating a dynamic yet balanced presentation. In the background, elegant crystal wine glasses catch the light, filled with a deep, ruby red wine that mirrors the rich hues of the dish itself. The ambient light is soft but directed, casting gentle shadows and accentuating the glossy sheen of the sauce that envelopes the entrée. This harmonious interplay of light and shadow creates an inviting atmosphere, enhancing the sumptuous details of the culinary masterpiece. The color palette is a symphony of deep reds, golden browns, and fresh greens, evoking a sense of warmth and sophistication. The scene captures the essence of fine dining, a testament to culinary artistry and the timeless allure of expertly crafted French cuisine. Photographed in high resolution, the image captures every detail, from the glistening wine reduction to the finely chopped herbs that garnish the plate, ensuring a feast for the eyes as well as the imagination.",
+  "semantic": {
+    "description": [
+      "The dish is a coq au vin, featuring tender chicken and vibrant vegetables.",
+      "A polished mahogany table serves as the base for the elegant dining setting.",
+      "A chandelier casts a soft amber light over the dining area."
+    ],
+    "questions": [
+      "Is the main dish a coq au vin?",
+      "Is the table made of polished mahogany?",
+      "Is there a chandelier providing light?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The dish is centered on the table, drawing the viewer's focus.",
+      "The scene is captured from a slightly elevated angle.",
+      "Crystal wine glasses are placed in the background, catching light."
+    ],
+    "questions": [
+      "Is the dish positioned centrally on the table?",
+      "Is the composition captured from an elevated perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The room features a warm, amber lighting ambiance.",
+      "The color palette includes deep reds, golden browns, and fresh greens.",
+      "The image is captured with high resolution to show detail."
+    ],
+    "questions": [
+      "Is the lighting in the room warm and amber?",
+      "Are deep reds part of the color palette?",
+      "Is the photograph taken in high resolution?"
+    ]
+  }
+}

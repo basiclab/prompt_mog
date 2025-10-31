@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "In the heart of a tempestuous evening, a solitary weather station stands sentinel on a desolate cliff, its silhouette stark against the unruly sky, where mammoth cumulonimbus clouds churn and boil in an electric frenzy. The station, battered by relentless winds and lashing rain, clings to the edge, embodying resilience amidst chaos. Violent streaks of lightning carve luminous paths through the darkness, illuminating the storm's ferocity and casting flickering shadows across the rugged landscape. Captured from a high vantage point, the scene centers the weather station, its antennae standing tall and defiant, framed by the swirling tempest above. The foreground, a rocky expanse, appears wet and shimmering, providing a textural contrast to the smooth, roiling clouds that dominate the midground. In the distance, the sea reflects the sky's menacing hues, a churning mirror of the atmosphere's rage. The dramatic contrast between darkness and light enhances the scene's dynamism, with the lightning casting brief, stark highlights that pierce the heavy gloom. The storm-battered landscape is rendered in a palette of steely grays and electric blues, punctuated by the searing intensity of the white lightning, creating an atmosphere of brooding intensity. This photographic capture is executed in the style of high-contrast, long-exposure storm photography, conveying the raw power and untamed beauty of nature. The sharpness of the image captures the intricate details of raindrops and cloud textures, achieving a professional level of clarity and depth that transports the viewer into the very heart of the storm.",
+  "semantic": {
+    "description": [
+      "The scene features a solitary weather station on a cliff's edge.",
+      "Mammoth cumulonimbus clouds are present in the sky.",
+      "Streaks of lightning illuminate the stormy sky."
+    ],
+    "questions": [
+      "Is there a weather station depicted in the scene?",
+      "Are mammoth cumulonimbus clouds visible in the sky?",
+      "Does the scene include streaks of lightning?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The weather station is centered in the composition against the sky.",
+      "The rocky foreground appears wet and shimmering.",
+      "The sea in the background reflects the sky's hues."
+    ],
+    "questions": [
+      "Is the weather station positioned at the center of the scene?",
+      "Does the rocky foreground appear wet?",
+      "Is the sea in the background reflecting the sky?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image employs a high-contrast, long-exposure technique.",
+      "A palette of steely grays and electric blues dominates the scene.",
+      "Lightning creates stark highlights in the otherwise dark scene."
+    ],
+    "questions": [
+      "Is the photograph captured in a high-contrast style?",
+      "Does the color palette include steely grays and electric blues?",
+      "Are there stark highlights created by lightning in the scene?"
+    ]
+  }
+}

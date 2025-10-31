@@ -1,0 +1,42 @@
+{
+  "theme": "Real Estate Photography",
+  "prompt": "A modern urban loft apartment presents itself as a harmonious blend of industrial chic and contemporary elegance, its high ceilings and expansive windows creating a sense of openness and light. The space, captured from a mid-level angle, allows viewers to fully appreciate the airy environment, with exposed brick walls adding a touch of rustic charm to the polished concrete floors. The living area, centrally framed, features a plush L-shaped sofa that faces a sleek, wall-mounted flat-screen television, while a large abstract painting injects vibrant colors into the neutral palette of the room. In the background, a minimalist kitchen is visible, its stainless steel appliances gleaming under the soft glow of pendant lights suspended above the island. The late afternoon sun filters through the windows, casting dynamic patterns of light and shadow across the room, enhancing the textures and depth of the materials used. The color scheme primarily consists of warm grays and soft browns, accentuated by occasional pops of bold color from the artwork and decorative cushions, creating a cozy yet sophisticated atmosphere. Rendered with an eye for detail and precision, the overall composition conveys a luxurious and welcoming home environment, combining the best of modern design principles and inviting warmth. The image captures the essence of urban living, portraying a space that is both stylish and functional, expertly balancing form and function with an artistic touch.",
+  "semantic": {
+    "description": [
+      "The loft features high ceilings and expansive windows, creating an open environment.",
+      "Exposed brick walls and polished concrete floors add industrial charm.",
+      "A plush L-shaped sofa faces a wall-mounted flat-screen television.",
+      "A large abstract painting adds vibrant colors to the room."
+    ],
+    "questions": [
+      "Does the loft have high ceilings?",
+      "Are there expansive windows in the loft?",
+      "Is there a wall-mounted flat-screen television?",
+      "Is there a large abstract painting in the room?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a mid-level angle, showcasing the space's openness.",
+      "The living area is centrally framed, with the sofa facing the television.",
+      "A minimalist kitchen is visible in the background behind the living area."
+    ],
+    "questions": [
+      "Is the space captured from a mid-level angle?",
+      "Is the living area centrally framed in the image?",
+      "Is there a kitchen visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The late afternoon sun casts patterns of light and shadow across the room.",
+      "The color scheme includes warm grays and soft browns with bold color accents.",
+      "The image conveys a luxurious and welcoming atmosphere."
+    ],
+    "questions": [
+      "Does the sunlight create patterns of light and shadow in the room?",
+      "Is there a combination of warm grays and soft browns in the color scheme?",
+      "Does the image convey a welcoming atmosphere?"
+    ]
+  }
+}

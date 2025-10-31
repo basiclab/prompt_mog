@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "In a striking portrayal of nature's raw power, a vast expanse of the ocean is in turmoil under an electrifying tempest. The focal point of this scene is a resilient old fishing trawler, its weathered wooden hull showing the scars of many a storm. It battles the fierce, crashing waves, cresting over them with determination. Above, the sky is a chaotic masterpiece of swirling clouds, deep gray and cobalt, illuminated intermittently by the jagged streaks of lightning that tear across the heavens. Captured from a slightly elevated perspective, this dramatic vista encapsulates the trawler's arduous journey through the tumultuous sea. With the trawler in the foreground, it dwarfs the towering waves that rise in the midground, while the background is dominated by a skyline of ominous storm clouds. Light flashes erratically, casting stark, fleeting highlights on the water's surface and throwing the vessel's silhouette into sharp relief against the darkened horizon. The color palette is dominated by moody blues and grays, with electric flashes of white sizzling through the sky, conveying a sense of urgency and drama. The sea's surface is a palette of textured metallic hues, reflecting and refracting the tumultuous sky above. The image adopts a cinematic, high-resolution aesthetic, reminiscent of classic storm-chasing photography. Fine details are crisply captured, from the foam curling at the wave peaks to the rivulets of rain cascading down the trawler's deck. The composition is expertly balanced to highlight the tension between man and nature, capturing the scene with a level of professional finesse that exemplifies award-winning photographic work.",
+  "semantic": {
+    "description": [
+      "A weathered fishing trawler battles through the stormy sea.",
+      "Lightning bolts frequently illuminate the dramatically clouded sky.",
+      "The ocean displays tumultuous waves and frothy crests."
+    ],
+    "questions": [
+      "Is a fishing trawler present in the scene?",
+      "Do lightning bolts appear in the sky?",
+      "Are the ocean's waves described as turbulent?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The trawler is positioned prominently in the foreground.",
+      "High waves rise in the midground around the trawler.",
+      "Storm clouds fill the background, creating a dramatic skyline."
+    ],
+    "questions": [
+      "Is the trawler in the foreground of the scene?",
+      "Are the waves depicted in the midground?",
+      "Do storm clouds occupy the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The image uses a moody palette of blues and grays.",
+      "Lightning illuminates the scene with harsh, sporadic flashes.",
+      "The style is reminiscent of classic storm-chasing photography."
+    ],
+    "questions": [
+      "Is the color palette mostly composed of blues and grays?",
+      "Does lightning provide intermittent illumination?",
+      "Is the style similar to storm-chasing photography?"
+    ]
+  }
+}

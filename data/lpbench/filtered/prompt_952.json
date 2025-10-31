@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a dreamlike realm woven from the threads of imagination, a colossal, majestic stag composed entirely of shimmering, translucent crystal stands poised on a tiny islet surrounded by a vast, ethereal sea. The stag's antlers extend gracefully into the sky, each branch twisting and swirling like an elaborate chandelier made of light, refracting the sun's rays into a spectrum of vibrant colors that dance across the water's surface. This mythical creature gazes serenely across the endless horizon, where the tranquil sea meets a sky filled with swirling clouds that seem to echo the shapes of the stag's antlers. The celestial backdrop, painted in hues of soft lavender and dusky rose, sets a tranquil and contemplative mood, as if time holds its breath in this surreal tableau. The scene is captured from a low angle, making the stag appear even more monumental against the vastness of the sweeping landscape. The islet, covered in lush moss and dotted with delicate, luminescent flowers, floats with an almost esoteric grace upon the gently undulating sea. In the distance, faint silhouettes of other crystal creatures, such as ethereal birds with gossamer wings, can be seen flitting across the otherworldly waters, their reflections shimmering like ghostly apparitions in the surreal seascape. The lighting is otherworldly and soft, with the golden glow of a setting sun casting long, delicate shadows that play across the scene, adding depth and a magical aura. The air shimmers gently with an iridescent sheen, creating a magical and tranquil atmosphere. The overall style recalls a fine art photography approach, with an emphasis on capturing the fantastical and ephemeral quality of this imaginary world. The composition is rich with detail and texture, inviting the viewer to gaze into the endless expanse and lose themselves in the fantastical vision. With 8K resolution and exquisite attention to detail, the image is a testament to professional mastery, evoking a sense of wonder and awe.",
+  "semantic": {
+    "description": [
+      "A colossal stag made of translucent crystal stands on a tiny islet.",
+      "The stag's antlers are elaborate, refracting light into vibrant colors.",
+      "Faint silhouettes of other crystal creatures are visible in the distance."
+    ],
+    "questions": [
+      "Is there a stag made of crystal in the scene?",
+      "Do the stag's antlers refract light into colors?",
+      "Are there other crystal creatures visible in the distance?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The stag is positioned centrally on a small islet within the sea.",
+      "The scene is captured from a low angle, enhancing the stag's monumental appearance.",
+      "Silhouettes of other creatures are in the background, adding depth."
+    ],
+    "questions": [
+      "Is the stag centered on the islet?",
+      "Is the scene captured from a low angle?",
+      "Are there silhouettes of creatures in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft, with a golden glow from a setting sun.",
+      "The scene has an iridescent shimmer, creating a magical atmosphere.",
+      "The color palette includes soft lavender and dusky rose tones."
+    ],
+    "questions": [
+      "Is the lighting soft with a golden glow?",
+      "Does the scene have an iridescent shimmer?",
+      "Is the color palette made up of soft lavender and dusky rose tones?"
+    ]
+  }
+}

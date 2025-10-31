@@ -1,0 +1,39 @@
+{
+  "theme": "Architecture Photography",
+  "prompt": "In a bustling urban hub, a strikingly innovative art gallery stands as a testament to contemporary architectural prowess. The building's exterior features an elaborate facade composed of interlocking geometric panels, each angled to catch varying intensities of natural light throughout the day. Visitors approach from a wide promenade lined with meticulously manicured shrubs, drawing their attention to the main entrance—a colossal archway bordered by seamless glass walls that reflect the vibrant cityscape beyond. This captivating structure is viewed from street level, where pedestrians are dwarfed by its towering presence, creating a vivid contrast that accentuates the gallery's monumental scale. The camera angle captures the edifice from its grand frontal perspective, allowing its symmetry and intricate detailing to take center stage. As the sun sets, the facade is bathed in the warm hues of dusk, creating a dynamic interplay of shadow and illumination over its textured surface. The glow from interior lighting seeps through the glass panels, casting a soft, ambient light around the building, while distant city lights begin to twinkle as a lively backdrop. The color palette is dominated by cool grays and metallic silvers, punctuated by the warm glow of artificial lights, establishing an atmosphere of both modernity and warmth. Within the foreground, visitors are seen interacting with the structure, their silhouettes providing a sense of scale and life to this architectural marvel. The building's clean lines and bold geometric forms are rendered in a high-definition, ultra-realistic style, emphasizing the precision and sophistication of its design. This architectural photography example epitomizes technical excellence, showcasing sharpness and clarity in every detail, and reflecting the skillful mastery of a seasoned professional architectural photographer.",
+  "semantic": {
+    "description": [
+      "The art gallery is made of interlocking geometric panels.",
+      "A wide promenade leads up to the building's entrance.",
+      "Pedestrians walk in front of the towering gallery."
+    ],
+    "questions": [
+      "Does the building have a geometric facade?",
+      "Is there a promenade leading to the entrance?",
+      "Are pedestrians visible in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The structure is captured from a street-level perspective.",
+      "The camera angle shows the building's front, emphasizing symmetry.",
+      "Pedestrians appear small compared to the towering structure."
+    ],
+    "questions": [
+      "Is the building shown from the front angle?",
+      "Are the pedestrians smaller than the building?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is primarily lit by warm dusk lighting.",
+      "A cool gray and metallic color palette dominates the image.",
+      "The photograph is in ultra-realistic style with precise details."
+    ],
+    "questions": [
+      "Is the image lit by warm lighting?",
+      "Does the photograph feature a cool gray color scheme?",
+      "Is the style of the image ultra-realistic?"
+    ]
+  }
+}

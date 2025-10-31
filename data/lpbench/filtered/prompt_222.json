@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "An expansive meadow stretches out under a tumultuous sky, where a fierce thunderstorm is brewing, displaying nature's raw power and unpredictability. Lightning cascades from dark cumulonimbus clouds, illuminating the scene with intermittent flashes of stark brilliance. The meadow is lush with verdant grasses, their vibrant greens contrasting sharply with the ominous hues above. A single, ancient gnarled tree stands defiantly at the center of this dramatic tableau, its twisted branches stretched towards the heavens as if challenging the storm's fury. Captured from a low angle, the tree appears monumental against the roiling sky, while the vastness of the landscape extends infinitely into the horizon. In the foreground, a small pond reflects the electric sky, perfectly mirroring the cloud formations and lightning bursts. The atmospheric conditions are charged with moisture and tension, as the oppressive weight of the impending storm looms over the tranquil meadow, creating a palpable sense of anticipation. Despite the chaos above, the overall scene retains a harmonious balance with warm earth tones from the meadow and cool grays and purples dominating the sky. The dynamic range of light creates stark contrasts and deep shadows, giving the image depth and intensity. This photograph embraces the spirit of fine art landscape photography, with a focus on capturing the transient and sublime aspects of weather phenomena. Taken with a high-resolution camera, the image exhibits impeccable sharpness and detail, from the individual blades of grass in the meadow to the intricate textures of the storm clouds, resulting in a composition that is both visually arresting and emotionally evocative.",
+  "semantic": {
+    "description": [
+      "An expansive meadow is the main subject of the scene.",
+      "A single ancient gnarled tree stands prominently in the meadow.",
+      "Dark cumulonimbus clouds cover the sky, indicating an approaching storm."
+    ],
+    "questions": [
+      "Does the scene feature a meadow?",
+      "Is there an ancient gnarled tree in the image?",
+      "Are there cumulonimbus clouds present in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The tree is centrally positioned against the turbulent sky.",
+      "A pond in the foreground reflects the sky's dramatic elements.",
+      "The perspective is from a low angle, enhancing the tree's stature."
+    ],
+    "questions": [
+      "Is the tree centered in the composition?",
+      "Does the foreground include a pond reflecting the sky?",
+      "Is the perspective captured from a low angle?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting creates a dynamic range with contrasts and deep shadows.",
+      "The color palette mixes the meadow's warm tones with cool stormy hues.",
+      "The photograph emulates fine art landscape photography techniques."
+    ],
+    "questions": [
+      "Is there a dynamic range of lighting with contrasts?",
+      "Does the color palette combine warm and cool tones effectively?",
+      "Is the photographic style akin to fine art landscape photography?"
+    ]
+  }
+}

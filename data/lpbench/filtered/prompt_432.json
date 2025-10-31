@@ -1,0 +1,40 @@
+{
+  "theme": "Aerial Photography",
+  "prompt": "From the dizzying heights of an aerial perspective, a vast and intricate wetland unfurls beneath an expansive sky, offering a breathtaking view of its complex network of winding waterways and lush marshlands. The scene is captured from a drone hovering above the wetlands, revealing a remarkable tapestry of interconnected channels, ponds, and islands teeming with wildlife. The foreground is dominated by a shimmering mosaic of shallow water pools, their surfaces reflecting the sky's azure hues. Interspersed among these water bodies are dense patches of emerald green reeds, their tips gently swaying in the breeze. The midground transitions into a vast open expanse of marshland, where flocks of white herons glide gracefully across the frame, their wings casting fleeting shadows on the water below. In the background, a distant line of dark forests outlines the horizon, framing the wetlands in a natural border. The scene is bathed in the soft, golden light of late afternoon, which casts a warm glow across the landscape, enhancing the vividness of the natural colors. Wisps of mist hover over the cooler water areas, creating an ethereal contrast against the rich greens and blues. The overall mood is one of serene beauty and tranquility, with the wetlands appearing like a living painting from this elevated perspective. The photographic style is reminiscent of fine art landscape photography, with a focus on capturing the scene's dynamic interplay of light and shadow, texture, and reflection. Rendered in high definition, the image boasts exquisite detail, from the patterns formed by the vegetation to the ripples on the water's surface, conveying a sense of masterful control and professional skill.",
+  "semantic": {
+    "description": [
+      "A network of winding waterways and marshlands is visible from above.",
+      "Dense patches of emerald green reeds are scattered among shallow water pools.",
+      "Flocks of white herons glide across the frame, casting shadows on the water."
+    ],
+    "questions": [
+      "Does the scene feature a network of waterways?",
+      "Are there patches of reeds visible in the wetlands?",
+      "Are flocks of white herons present in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The drone captures the wetlands from a high vantage point.",
+      "Shallow water pools dominate the foreground of the image.",
+      "A line of dark forests outlines the background horizon."
+    ],
+    "questions": [
+      "Is the view captured from a high vantage point?",
+      "Are the shallow water pools in the foreground?",
+      "Is there a line of forests outlining the horizon?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the soft, golden light of late afternoon.",
+      "Mist hovers over cooler water areas, creating ethereal contrasts.",
+      "The photographic style is reminiscent of fine art landscape photography."
+    ],
+    "questions": [
+      "Is the scene lit with late afternoon sunlight?",
+      "Does mist create an ethereal effect in the image?",
+      "Is the photographic style similar to fine art landscape photography?"
+    ]
+  }
+}

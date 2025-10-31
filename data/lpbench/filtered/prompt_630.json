@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "Under a sprawling, silk-draped marquee, a lavish wedding reception buzzes with life as twilight casts a lavender hue over the verdant, rolling hills surrounding the venue. The setting offers a harmonious blend of elegance and nature, with ornate chandeliers suspended from the high canopy, casting warm, golden light that dances across the polished oak flooring. Crisp white tables, elegantly adorned with crystal glassware and opulent centerpieces of roses, lilies, and cascading greenery, stand symmetrically arranged throughout the space. Guests, clad in evening finery, mingle effortlessly, their soft murmurs and laughter blending with the gentle strains of a string quartet positioned towards the back near a grand, gently flowing fountain. Captured from a slightly elevated angle, the view aligns perfectly with the length of the lavish feasting table, creating a sense of depth that leads the eye from the intimate foreground details to the expansive panoramic view of the idyllic landscape through the marquee's transparent walls. The soft, ambient glow from the chandeliers contrasts with the deepening night sky, rich with hues of indigo and peach, creating a visually striking palette. This interplay of light and color enhances the romantic and celebratory mood, emphasizing the joyful elegance of the occasion. The style of the photograph embodies the essence of fine art photography, with a focus on capturing the intricate details and grand scale with award-worthy precision and clarity, offering a timeless glimpse into this enchanting evening of celebration and love.",
+  "semantic": {
+    "description": [
+      "A silk-draped marquee serves as the venue for the wedding reception.",
+      "Ornate chandeliers hang from the canopy, illuminating the scene.",
+      "Guests are dressed in evening finery, adding to the elegant atmosphere."
+    ],
+    "questions": [
+      "Is the wedding reception held under a marquee?",
+      "Are there ornate chandeliers hanging in the venue?",
+      "Are guests dressed in formal or evening attire?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a slightly elevated angle.",
+      "Tables are symmetrically arranged under the marquee.",
+      "The string quartet is positioned at the back near a fountain."
+    ],
+    "questions": [
+      "Is the scene captured from an elevated perspective?",
+      "Are the tables under the marquee symmetrically arranged?",
+      "Is there a string quartet located near a fountain?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Twilight casts a lavender hue over the scene, enhancing its mood.",
+      "Golden light from chandeliers contrasts with the indigo night sky.",
+      "The photograph showcases a fine art photography style."
+    ],
+    "questions": [
+      "Does twilight create a lavender hue in the scene?",
+      "Is there a contrast between golden light and the night sky?",
+      "Is the photograph styled in a fine art photography approach?"
+    ]
+  }
+}

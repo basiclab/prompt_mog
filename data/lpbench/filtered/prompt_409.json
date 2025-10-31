@@ -1,0 +1,40 @@
+{
+  "theme": "Aerial Photography",
+  "prompt": "Suspended high above a sprawling coastal lagoon, the scene captures an exquisite mosaic of vibrant marine life and delicate ecosystems. The lagoon, framed by sandy shores and lush mangroves, reflects the midday sun in shimmering patches of azure and turquoise, creating a sparkling watercolor effect. Schools of fish dart in iridescent shoals beneath the translucent waters, visible even from this lofty aerial perspective. The camera lens, positioned high above, provides a panoramic view that encompasses the vastness of the lagoon while meticulously detailing the subtle movements of sea turtles navigating between coral reefs. Clustered around the lagoon's edges, clusters of stilted wooden huts stand as testaments to human adaptability, their shadows stretching long across the sand as if reaching towards the horizon. The surrounding rainforest, a rich tapestry of deep greens, encroaches eagerly towards the water, its canopy undulating like a living sea. Midday sunlight casts a crisp, bright ambience over the scene, emphasizing the vibrant interplay between land, water, and sky. The color palette is a vivid array of blues and greens, accented by the earthy tones of the mangroves and the colorful fish below. This composition exudes a serene yet dynamic energy, capturing the lagoon's beauty and biodiversity. Rendered with high-resolution clarity, this masterful composition balances artistic elegance with documentary precision, reminiscent of National Geographic's storied visual narratives.",
+  "semantic": {
+    "description": [
+      "The scene features a coastal lagoon with vibrant marine life and delicate ecosystems.",
+      "Schools of fish are visible in iridescent shoals beneath the water's surface.",
+      "Clusters of stilted wooden huts are positioned around the lagoon's edges."
+    ],
+    "questions": [
+      "Is there a coastal lagoon in the scene?",
+      "Are schools of fish visible beneath the water?",
+      "Do the wooden huts appear to be built on stilts?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera lens is positioned above, providing a panoramic view of the lagoon.",
+      "Stilted huts are clustered around the edges of the lagoon.",
+      "The rainforest is located around the lagoon, with its canopy moving towards the water."
+    ],
+    "questions": [
+      "Is the camera positioned high above the lagoon?",
+      "Are the stilted huts located around the lagoon's edges?",
+      "Does the rainforest encroach towards the water?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Midday sunlight casts a bright ambience over the scene.",
+      "The color palette features vivid blues, greens, and earthy tones.",
+      "The composition reflects a serene yet dynamic energy."
+    ],
+    "questions": [
+      "Is the scene illuminated by midday sunlight?",
+      "Are vivid blues and greens part of the color palette?",
+      "Does the composition convey a serene yet dynamic energy?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "On an expansive stadium court, the tension is palpable as the final match of an international tennis tournament unfolds under the vibrant afternoon sun. Two world-class athletes, each embodying a distinct blend of grace and power, face off at opposite ends of the court. Their swift, precise movements create an almost rhythmic dance as they volley the neon-yellow tennis ball back and forth with astounding speed. The hard surface of the court contrasts sharply against the bright white lines marking the boundaries, and the net stands taut at its center, a symbolic barrier and point of challenge. The audience's collective breath seems to hang in the air, mixing with the rhythmic thud of sneakers against the surface and the sharp crack of racket meeting ball. In the foreground, the camera captures the scene from a low angle, offering a dramatic upward perspective that accentuates the athletic prowess on display. The background fades into soft focus, emphasizing the immediacy and intensity of the competition. Deep shadows are cast across the court as the sun, positioned low in the sky, casts warm, golden light that highlights the players' silhouettes and the vibrant green of the surface. This lighting imbues the scene with a cinematic quality, where every movement seems bathed in a halo of light. The color palette is marked by the vivid green of the court and the crisp white of the players' attire, accented by the neon-yellow of the ball, creating a dynamic visual contrast that enhances the scene's energy. Shot in high resolution, the image's clarity and detail capture every bead of sweat, every muscle strain, reflecting the physical and mental endurance of the competitors. With a photojournalistic style, the image conveys not just the action but the emotion and drama of high-stakes sportsmanship, making it a testament to athletic excellence and competitive spirit.",
+  "semantic": {
+    "description": [
+      "Two athletes are competing in an intense tennis match on a stadium court.",
+      "The players volley a neon-yellow tennis ball back and forth rapidly.",
+      "The match is part of an international tennis tournament held under the afternoon sun."
+    ],
+    "questions": [
+      "Are there two athletes participating in the tennis match?",
+      "Is a neon-yellow tennis ball used in the match?",
+      "Is the match taking place during an international tennis tournament?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a low angle, emphasizing the players' movements and athleticism.",
+      "The court surface is divided by a taut net, central to the competitive activity.",
+      "The background of the image fades into a soft focus, highlighting the foreground action."
+    ],
+    "questions": [
+      "Is the scene captured from a low camera angle?",
+      "Is there a net dividing the court between the two players?",
+      "Does the background fade into a soft focus?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm, golden sunlight casts dramatic shadows across the tennis court.",
+      "The vibrant green of the court contrasts with the players' crisp white attire.",
+      "The image is shot in high resolution, capturing detail with a photojournalistic style."
+    ],
+    "questions": [
+      "Does golden sunlight create shadows on the tennis court?",
+      "Is there a contrast between the green court and the white attire of the players?",
+      "Is the photo captured in high resolution?"
+    ]
+  }
+}

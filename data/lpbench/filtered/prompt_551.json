@@ -1,0 +1,40 @@
+{
+  "theme": "Sports Photography",
+  "prompt": "In a sprawling gymnastics arena filled with energetic buzz, a moment of athletic finesse and grace unfolds under the intense scrutiny of judges and an expectant audience. The spotlight centers on a young gymnast, her body poised in a breathtaking mid-air rotation above the floor exercise mat, her muscles taut and defined. Her leotard sparkles under the glaring lights, illustrating a blend of delicate artistry and sheer athletic power. The arena, a vast expanse with towering high beams and gleaming apparatuses, frames her leap with a sense of grandeur and anticipation. This exhilarating scene is captured from a low-angle perspective, emphasizing the height and elegance of her leap, while the audience, barely in the periphery, seem to hold their collective breath, eyes wide and focused. The dense atmosphere buzzes with anticipation as the first sounds of her landing echo in the cavernous space, promising a flawless finish. Morning light filters through high windows, casting a golden hue that bathes the gymnast in an ethereal glow. The light dances across the polished wooden floor and apparatus, creating a dynamic interplay of shadows and highlights that augment the drama of the scene. The color palette swathes the arena in warm earth tones juxtaposed with vivid splashes of the gymnast's vibrant uniform, creating a vivid tableau of competition and artistry. The arena walls bear the soft pastels of the sports banners that flutter gently, adding to the ambiance of an elite sporting event. Captured in the style of high dynamic range sports photography, the image boasts crystal-clear resolution, the gymnast's expression of focus and determination frozen in stunning clarity. This remarkable moment, a testament to human effort and artistic mastery, is immortalized in exceptionally sharp detail and vibrant color, evoking both the tension of competition and the timeless elegance of gymnastics.",
+  "semantic": {
+    "description": [
+      "The scene depicts a young gymnast mid-air above a floor exercise mat.",
+      "A vibrant leotard sparkles under the stage lights, worn by the gymnast.",
+      "Judges and an audience observe the performance with intense focus."
+    ],
+    "questions": [
+      "Is there a gymnast performing a leap?",
+      "Is the gymnast wearing a leotard?",
+      "Are there judges observing the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The gymnast is centered in the frame, emphasizing her mid-air rotation.",
+      "The scene is captured from a low-angle perspective, enhancing the leap's height.",
+      "The audience is positioned in the periphery, creating depth in the composition."
+    ],
+    "questions": [
+      "Is the gymnast centered in the frame?",
+      "Is the perspective of the scene from a low angle?",
+      "Is there an audience visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Morning light casts a golden hue over the gymnast and arena.",
+      "Warm earth tones dominate the background with vibrant uniform colors.",
+      "The image is captured in high dynamic range sports photography style."
+    ],
+    "questions": [
+      "Is there a golden hue from morning light in the scene?",
+      "Are warm earth tones present in the arena's background?",
+      "Is the image captured in a high dynamic range style?"
+    ]
+  }
+}

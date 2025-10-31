@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In the heart of an aesthetically modern kitchen, a stunning array of culinary artistry is displayed on a luxurious, polished marble countertop. At the center of this gastronomic tableau is a beautifully plated dish of vibrant Southeast Asian cuisine, its presentation a symphony of colors and textures that invites admiration. The dish features succulent, perfectly seared scallops nestled on a bed of fragrant jasmine rice, accompanied by a delicate mango salsa and garnished with microgreens. This culinary composition is captured from a slightly elevated angle, allowing for a complete view of the plate and an appreciation of the intricate garnishing art. Surrounding the main dish are artisanal porcelain bowls containing an assortment of colorful side dishes, which include a tangy papaya salad and crisp vegetable spring rolls artfully arranged in a radial pattern. The kitchen is bathed in warm, natural sunlight streaming through large, floor-to-ceiling windows, casting soft, dappling shadows across the countertop and adding depth and contrast to the scene. The light reflects gently off the glossy surfaces, enhancing the dish's appeal and drawing out the colors' vibrancy. A palette of warm earth tones, with accents of fresh green and bright citrus hues, creates a lively yet sophisticated atmosphere that embodies both the excitement and elegance of world-class cuisine. The overall composition is captured in the style of fine art food photography, with each element meticulously in focus, ensuring that every detail—from the rice's texture to the scallops' caramelization—is crisp and inviting. This visual feast is presented with the technical precision and artistry expected of a world-renowned culinary studio, where every plate is not just a meal but an edible masterpiece.",
+  "semantic": {
+    "description": [
+      "The dish features perfectly seared scallops on jasmine rice with mango salsa.",
+      "Artisanal porcelain bowls contain colorful side dishes like papaya salad and vegetable spring rolls.",
+      "The kitchen setting is modern, with a polished marble countertop."
+    ],
+    "questions": [
+      "Is there a dish with scallops in the scene?",
+      "Are there side dishes presented in artisan bowls?",
+      "Is the countertop made of marble?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is viewed from a slightly elevated angle.",
+      "Side dishes are arranged in a radial pattern around the main dish.",
+      "Natural sunlight streams through floor-to-ceiling windows, enhancing depth."
+    ],
+    "questions": [
+      "Is the scene captured from an elevated angle?",
+      "Are the side dishes arranged around the main dish?",
+      "Is natural light illuminating the scene?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Warm earth tones with accents of green and citrus hues create a vibrant atmosphere.",
+      "The composition is in the style of fine art food photography.",
+      "The lighting includes natural sunlight casting soft shadows across the scene."
+    ],
+    "questions": [
+      "Is the color palette composed of warm earth tones and citrus accents?",
+      "Is the photography style reminiscent of fine art food photography?",
+      "Is there natural sunlight contributing to the atmosphere?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In a dreamlike expanse where reality blends seamlessly with fantasy, a colossal spiral staircase emerges from the depths of a tranquil, glass-like lake, spiraling up into the swirling pastel sky. Each step of the staircase is crafted from shimmering crystal, reflecting and refracting the colors of the dawn—a kaleidoscope of pinks, lavenders, and soft golden hues. Atop this ethereal structure stands a solitary figure draped in flowing, iridescent robes that catch the morning light, their gaze directed towards the horizon where the sky meets the watery abyss. The scene is captured from a mid-level perspective, allowing the viewer to appreciate the dramatic ascent of the staircase and the vastness of the surrounding landscape. In the foreground, delicate water lilies float serenely, their petals gently caressing the mirrored surface of the lake. Midground elements include a series of small, verdant islands, each dotted with fantastical flora that seem to pulse with a life of their own. The distant background reveals the faint outline of dreamlike mountains, their peaks lost in the mist. The light is diffused and soft, emanating from an unseen sun, casting subtle, elongated shadows across the scene and enveloping it in a warm, magical aura. A gentle breeze stirs, causing the staircase to emit soft, melodic chimes that harmonize with the whispering wind. The color palette is dominated by cool pastels and iridescent glows, creating an atmospheric harmony that conveys tranquility and wonder. This surreal vision is rendered with the precision of high-definition photographic art, capturing every minute detail with clarity and elegance, ensuring that the otherworldly splendor is both believable and mesmerizing.",
+  "semantic": {
+    "description": [
+      "A colossal spiral staircase emerges from the tranquil lake, spiraling into the sky.",
+      "A solitary figure stands atop the staircase in flowing iridescent robes.",
+      "Delicate water lilies float on the mirrored surface of the lake."
+    ],
+    "questions": [
+      "Is there a spiral staircase in the scene?",
+      "Is the figure dressed in iridescent robes?",
+      "Do water lilies appear on the lake's surface?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a mid-level perspective, enhancing depth perception.",
+      "The staircase rises prominently from the foreground, leading the eye upwards.",
+      "Midground features include verdant islands with fantastical flora."
+    ],
+    "questions": [
+      "Is the staircase a prominent element in the foreground?",
+      "Are there small islands with flora in the midground?",
+      "Is the scene captured from a mid-level perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is soft and diffused, creating a warm, magical atmosphere.",
+      "A pastel and iridescent color palette dominates, enhancing tranquility.",
+      "The scene is rendered with high-definition photographic precision."
+    ],
+    "questions": [
+      "Does the scene feature diffused lighting with a magical quality?",
+      "Is the color palette predominantly pastel and iridescent?",
+      "Is the image rendered with high-definition precision?"
+    ]
+  }
+}

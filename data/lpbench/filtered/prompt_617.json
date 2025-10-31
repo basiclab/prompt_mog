@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "Under a sprawling canopy of stars, a wedding celebration unfurls in the heart of a majestic, open-air courtyard surrounded by elegantly weathered stone walls. The focal point of this gathering is a beautifully adorned altar, where a couple stands hand in hand, encircled by flickering candlelight that dances upon their smiling faces. Guests, dressed in elegantly tailored attire, watch in rapt attention, their expressions a mix of joy and nostalgia, reflecting the deep emotional significance of the occasion. The scene is captured from a slightly elevated vantage point, offering a comprehensive view of both the couple at the altar and the assembled guests, seated in neat rows of burgundy-cushioned chairs. In the foreground, guests can be seen mingling, their laughter and chatter adding warmth to the festive atmosphere, while the background fades into a lush tapestry of gently swaying trees, their leaves whispering stories caught in the gentle evening breeze. The courtyard is bathed in the soft glow of strategically placed lanterns, their golden light throwing gentle shadows that sketch intricate patterns across the stone floor. This interplay of light and shadow infuses the scene with a sense of romance and intimacy, further enhanced by a color palette dominated by rich earth tones, complemented by the soft pastels of the floral arrangements adorning the altar. The overall composition is captured in the style of classic wedding photography, combining documentary elements with a subtle artistic flair to convey both the spontaneous joy and timeless elegance of the event. The photograph is produced with extraordinary clarity, every nuance of expression and every fold of fabric rendered in high resolution, creating a truly enchanting and unforgettable portrait of love and celebration.",
+  "semantic": {
+    "description": [
+      "An elegantly adorned altar serves as the focal point of the wedding celebration.",
+      "Guests are dressed in elegantly tailored attire, adding sophistication to the scene.",
+      "The couple stands hand in hand, surrounded by flickering candlelight."
+    ],
+    "questions": [
+      "Is there an altar where the couple stands?",
+      "Are the guests dressed in elegant attire?",
+      "Is the couple holding hands in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a slightly elevated viewpoint, offering a broad perspective.",
+      "Guests are seated in neat rows of burgundy-cushioned chairs.",
+      "The background features gently swaying trees."
+    ],
+    "questions": [
+      "Is the scene captured from an elevated perspective?",
+      "Are the guests seated in neat rows?",
+      "Is there a background with swaying trees?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The courtyard is bathed in the soft glow of strategically placed lanterns.",
+      "The interplay of light and shadow creates a romantic and intimate atmosphere.",
+      "A color palette dominated by rich earth tones complements the floral pastels."
+    ],
+    "questions": [
+      "Is the courtyard illuminated by lanterns?",
+      "Does the light and shadow create a romantic atmosphere?",
+      "Is the color palette dominated by rich earth tones?"
+    ]
+  }
+}

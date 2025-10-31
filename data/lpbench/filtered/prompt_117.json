@@ -1,0 +1,40 @@
+{
+  "theme": "Wildlife Photography",
+  "prompt": "In the heart of a sun-drenched African grassland, a dynamic scene unfolds as a group of graceful gazelles races across a stretch of golden savanna. The gazelles, their sleek coats shimmering in the high afternoon sun, dance across the landscape with an elegant fluidity that speaks to their innate agility and speed. Viewed from a slightly elevated angle, the camera captures the full sweep of their bounding leaps, bringing the viewer right into the midst of their synchronized flight. The composition centers on the leading gazelle, its antlers sharply outlined against the endless blue sky, while the rest of the herd fans out like a living cascade across the frame. In the background, a distant line of acacia trees marks the horizon, adding a sense of distance and depth to the composition. The entire scene is infused with the intense, unwavering light that typifies midday in the savanna, enhancing the stark contrasts between sunlit coats and the shadows they cast on the ground. A gentle breeze stirs the tall grasses, their whispering motion adding a tactile dimension to the visual narrative. The color palette is a powerful blend of warm earth tones, dominated by the golden hues of the grasses, the coppery glow of the gazelle coats, and the deep blue of the sky. This harmony of colors evokes a vivid sense of the untamed beauty of the wilderness. The artistic style captures the essence of wildlife photography at its finest, showcasing both the technical precision required to freeze such high-speed action and the artistic vision to frame it within the vast, unspoiled splendor of its natural setting. The resulting image is of high resolution, revealing every detail from the texture of the gazelle's fur to the individual blades of grass, making it a testament to professional expertise and a striking tribute to the sheer vitality of life on the African plains.",
+  "semantic": {
+    "description": [
+      "A group of gazelles is racing across a sun-drenched African savanna.",
+      "The leading gazelle's antlers are sharply outlined against the sky.",
+      "Distant acacia trees mark the horizon in the background."
+    ],
+    "questions": [
+      "Is there a group of gazelles visible in the scene?",
+      "Are the gazelle's antlers outlined against the sky?",
+      "Is the savanna landscape sun-drenched?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the gazelles from a slightly elevated angle.",
+      "The leading gazelle is centered in the frame, with others fanning out behind it.",
+      "The horizon is defined by a line of acacia trees in the distance."
+    ],
+    "questions": [
+      "Is the camera angle slightly elevated?",
+      "Is the leading gazelle in the center of the frame?",
+      "Are there trees marking the horizon line?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by intense midday sunlight.",
+      "A warm color palette dominates, featuring golden and coppery tones.",
+      "The style captures both technical precision and artistic vision."
+    ],
+    "questions": [
+      "Is the scene lit by intense midday sunlight?",
+      "Does the color palette include warm earth tones?",
+      "Is the style indicative of wildlife photography?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In the heart of a vibrant, upscale modern kitchen, an array of exquisite culinary creations is laid out with meticulous artistry. The setting is an expansive kitchen island made from polished white marble, its glossy surface reflecting the ambient glow of pendant lights hanging above. The main attraction is a meticulously plated gourmet dish, featuring a succulent seared duck breast, elegantly fanned out beside a quenelle of smooth, creamy sweet potato puree. Vibrant greens from a fresh micro herb garnish provide a striking contrast against the rich, amber tones of a glossy reduction sauce, artfully drizzled around the plate's border. Surrounding this centerpiece is a collection of complementary dishes: a small bowl of golden-brown truffle fries, a ramekin of tangy, sun-dried tomato tapenade, and a delicate glass carafe of rich, ruby-red wine, poised on the edge of the island. The scene is captured from a slightly elevated angle with the main dish occupying a prominent position in the center of the frame, drawing the viewer's eye and allowing the surrounding elements to frame it harmoniously. Soft, diffused lighting emanates from above, casting gentle shadows that enhance the textures of each ingredient without overpowering the composition. The color palette balances earthy browns and golds of the duck and fries with the deep, inviting burgundy of the wine, creating a warm, inviting atmosphere. The photographic style is reminiscent of high-end culinary magazines, with sharp focus highlighting every detail, from the fine grains of salt sprinkled atop the fries to the glossy sheen of the reduction. This image embodies the pinnacle of gourmet cuisine, capturing not just the visual allure of the food but also the anticipation of its flavors.",
+  "semantic": {
+    "description": [
+      "A gourmet dish features a seared duck breast with sweet potato puree.",
+      "Micro herbs are used as garnish on the main dish for contrast.",
+      "The kitchen island is made of polished white marble."
+    ],
+    "questions": [
+      "Is there a seared duck breast on the plate?",
+      "Are micro herbs used as a garnish?",
+      "Is the kitchen island made of marble?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The main dish is centered prominently on the marble island.",
+      "The image is captured from a slightly elevated angle.",
+      "Complementary dishes surround the main dish, framing it harmoniously."
+    ],
+    "questions": [
+      "Is the main dish centered in the scene?",
+      "Is the image taken from an elevated angle?",
+      "Are there complementary dishes around the main dish?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "Soft, diffused lighting enhances the textures of the food.",
+      "The color palette includes earthy browns, golds, and deep burgundy.",
+      "The style resembles high-end culinary magazine photography."
+    ],
+    "questions": [
+      "Is there soft, diffused lighting in the scene?",
+      "Does the color palette include earthy tones and deep burgundy?",
+      "Is the photographic style similar to a high-end culinary magazine?"
+    ]
+  }
+}

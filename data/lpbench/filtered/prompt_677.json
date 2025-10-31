@@ -1,0 +1,40 @@
+{
+  "theme": "Food Photography",
+  "prompt": "In an intimate, dimly lit corner of a rustic French bistro, an exquisite plate of culinary artistry commands attention atop a petite, circular oak table. The main dish, a tender duck breast, rests atop a bed of vibrant saffron-infused couscous, surrounded by a delicate drizzle of glossy balsamic reduction. The table is adorned with a simple, linen napkin and polished silverware, adding a touch of elegance to the setting. The camera is positioned at eye level, capturing the dish from a slightly oblique angle that highlights the textural contrast between the crispy skin of the duck and the fluffy grains below. In the background, softly flickering candlelight casts a warm, inviting glow, while the foreground is dominated by the rich, savory tones of the meal. The ambiance is further enriched by the diffused light of a nearby window, creating soft highlights on the glass carafe of deep red wine that accompanies the meal. The color palette harmonizes earthy browns with golden yellows and deep burgundies, evoking a sense of warmth and indulgence. The photograph captures the scene in the style of classic fine dining photography, focusing on the intricate presentation and impeccable plating. The image is rendered with sharp precision and high resolution, ensuring every detail is crisp and inviting, from the glistening sauce to the subtle marbling on the duck. The overall effect is one of refined sophistication, inviting viewers to savor both the visual and culinary experience.",
+  "semantic": {
+    "description": [
+      "The main dish is a tender duck breast on saffron-infused couscous.",
+      "The plate is surrounded by a delicate drizzle of balsamic reduction.",
+      "A glass carafe of deep red wine accompanies the meal."
+    ],
+    "questions": [
+      "Is the main dish a duck breast?",
+      "Is there a drizzle of balsamic reduction?",
+      "Is wine present in the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The dish is positioned atop a petite, circular oak table.",
+      "The camera captures the scene from a slightly oblique angle.",
+      "Candlelight flickers softly in the background."
+    ],
+    "questions": [
+      "Is the dish on a circular table?",
+      "Is the camera angle slightly oblique?",
+      "Is candlelight visible in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting creates soft highlights on the glass carafe.",
+      "The color palette uses earthy browns and golden yellows.",
+      "The image is styled with classic fine dining photography aesthetics."
+    ],
+    "questions": [
+      "Does the lighting highlight the glass carafe?",
+      "Are earthy browns part of the color palette?",
+      "Is the style that of fine dining photography?"
+    ]
+  }
+}

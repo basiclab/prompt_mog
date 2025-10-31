@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "On the expansive plains of the Midwest, an electrifying meteorological drama unfolds as a vast supercell thunderstorm approaches with menacing intent. The scene is grounded by an ancient oak tree, its gnarled branches twisting skyward in defiance against the tempest, while fields of golden wheat ripple in the tumultuous winds that herald the storm's arrival. The camera captures this spectacle from a low angle, placing the viewer at the edge of the field, with the oak tree towering into the frame's midground, creating a powerful sense of scale against the backdrop of the expansive sky. As if painted by an unseen hand, the horizon is dominated by a tapestry of swirling, slate-gray clouds, whose ominous forms churn and shift, lit erratically by forked lightning that dances unpredictably across the heavens. The late afternoon light filters through the storm's periphery, casting a diffuse glow that softens the edges of the scene while enhancing the contrast between the darkening sky and the vibrant crops below. In this moment, the color palette shifts between the cool, foreboding grays of the storm and the warm, earthy tones of the landscape, setting a mood of tense anticipation and raw natural beauty. The image is crafted in the style of documentary photography, capturing the raw veracity of the unfolding spectacle with striking clarity and precise detail. The photographic quality is of the highest standard, with each bolt of lightning rendered in sharp focus, the textures of the tree's ancient bark meticulously defined, and the scene's dark, brooding atmosphere preserved with masterful skill. The composition not only evokes a profound sense of awe but also highlights the relentless and unpredictable power of nature at its most formidable.",
+  "semantic": {
+    "description": [
+      "A vast supercell thunderstorm looms over the Midwest plains.",
+      "An ancient oak tree stands resilient amid the approaching storm.",
+      "Golden wheat fields ripple under the influence of strong winds."
+    ],
+    "questions": [
+      "Is there a supercell thunderstorm approaching?",
+      "Does the scene include an oak tree?",
+      "Are the wheat fields visible in the composition?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera adopts a low angle, emphasizing the height of the oak tree.",
+      "The oak tree is positioned prominently in the image's midground.",
+      "Lightning bolts streak across the sky, illuminating the cloud formations."
+    ],
+    "questions": [
+      "Is the scene captured from a low angle?",
+      "Is the oak tree in the midground of the composition?",
+      "Are lightning bolts visible in the sky?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured in the style of documentary photography.",
+      "The color palette contrasts cool storm grays with warm earth tones.",
+      "The atmosphere conveys a mood of tense anticipation and raw beauty."
+    ],
+    "questions": [
+      "Is the image captured with a documentary photography style?",
+      "Does the color palette include cool grays and warm earth tones?",
+      "Is the mood of the scene tense and anticipative?"
+    ]
+  }
+}

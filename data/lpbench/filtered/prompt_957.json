@@ -1,0 +1,40 @@
+{
+  "theme": "Surreal Photography",
+  "prompt": "In this surreal landscape where reality merges seamlessly with imagination, a vast, incandescent jellyfish floats gracefully above an ethereal cityscape, its tendrils trailing like delicate ribbons of light against a twilight backdrop. The city sprawls beneath, a tapestry of shimmering glass and metal structures that seem to dance in the reflective glow from the jellyfish's luminescent body. From an aerial viewpoint, the scene unfolds dramatically, with the jellyfish positioned centrally, dominating the composition as it hovers majestically in the foreground. Its size dwarfs the city's tallest skyscrapers, creating a striking juxtaposition between organic and urban elements. The sky is a canvas of muted indigo and lilac hues, with stars beginning to twinkle as dusk descends, casting a serene, otherworldly ambiance over the landscape. Soft, ambient light filters through the jellyfish's translucent body, speckling the city below with patterns of light and shadow that ebb and flow like tides. Streetlights flicker to life, their glow intermingling with the jellyfish's ethereal illumination to create a mosaic of warm and cool tones that ripple across the scene. The atmosphere is imbued with a sense of tranquility and wonder, inviting viewers to ponder the mysteries of this fantastical setting. In the style of fine art surreal photography, the image is captured with a cinematic perspective, blending dreamlike elements with intricate detail to create a visually arresting tableau. The photograph's exceptional clarity and detail, rendered in high resolution, reveal the delicate textures of the jellyfish's tentacles and the glassy surfaces of the city buildings, ensuring a captivating and immersive viewer experience.",
+  "semantic": {
+    "description": [
+      "A colossal, glowing jellyfish floats above a futuristic cityscape.",
+      "The jellyfish's long, luminous tendrils trail gracefully in the air.",
+      "Stars begin to twinkle in the early evening sky."
+    ],
+    "questions": [
+      "Is there a glowing jellyfish present in the scene?",
+      "Does the scene include a futuristic cityscape?",
+      "Are stars visible in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The jellyfish is centrally positioned, dominating the foreground.",
+      "The cityscape spreads out below the jellyfish, filling the midground.",
+      "Tall buildings appear small compared to the massive jellyfish."
+    ],
+    "questions": [
+      "Is the jellyfish centrally positioned in the scene?",
+      "Does the city stretch out beneath the jellyfish?",
+      "Are the buildings smaller than the jellyfish?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is captured in the style of fine art surreal photography.",
+      "The color palette features muted indigo and lilac hues.",
+      "The image combines ambient light with the jellyfish's glow for a dreamlike effect."
+    ],
+    "questions": [
+      "Is the scene depicted using surreal photography style?",
+      "Does the color palette include indigo and lilac tones?",
+      "Is there a mix of ambient light with the jellyfish's glow?"
+    ]
+  }
+}

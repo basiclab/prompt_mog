@@ -1,0 +1,38 @@
+{
+  "theme": "Aerial Photography",
+  "prompt": "From the lofty vantage of a circling drone, a sprawling golden wheat field spreads in rhythmic undulations, stretching to meet the distant horizon where azure sky kisses the earth. At the heart of this expansive tableau stands a solitary, ancient windmill, its robust structure weathered by countless seasons yet standing resilient against the whispering breeze. The drone captures this scene with a slight tilt towards the northwest, placing the windmill modestly off-center, allowing the vastness of the field to dominate the frame. Feathered lines of tractor trails carve deliberate patterns into the crops, guiding the gaze inwards towards the historic edifice. As the sun sets, the light dances softly across the landscape, casting the windmill's elongated shadow as a diagonal streak across the golden sea. The soft hues of dusk, a harmonious blend of gentle pinks and purples, overlay the scene, suggesting tranquility and nostalgia. The colors shift subtly from the cool lavender of the distant sky to the warm amber tones that caress the rippling waves of wheat, promoting a serene and reflective mood. The style echoes the poetic realism of landscape photography, capturing the textures of the field and the windmill with meticulous detail and clarity. Achieved through state-of-the-art drone technology, the image exudes professional precision, revealing every grain of wheat as well as the crumbling masonry of the windmill. Such a composition promises a breathtaking view that is both masterful in technique and evocative in emotion, destined to linger in the viewer's memory long after the scene fades from view.",
+  "semantic": {
+    "description": [
+      "A solitary, ancient windmill stands in the heart of a golden wheat field.",
+      "Tractor trails create deliberate patterns within the expansive wheat field.",
+      "The wheat field extends to meet a distant horizon under an azure sky."
+    ],
+    "questions": [
+      "Is there an ancient windmill in the scene?",
+      "Do tractor trails form patterns in the wheat field?",
+      "Is the wheat field visible in the image?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The windmill is positioned slightly off-center in the composition.",
+      "The drone's perspective offers a view from a high elevation with a tilt northwest.",
+      "The horizon line meets the sky where the wheat field ends."
+    ],
+    "questions": [
+      "Is the windmill slightly off-center in the aerial view?",
+      "Is the image captured from a high elevation viewpoint?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the soft hues of a sunset.",
+      "There are gentle pinks and purples blending in the sky.",
+      "The image employs a poetic realism style with detailed textures."
+    ],
+    "questions": [
+      "Is the image illuminated by sunset lighting?",
+      "Are soft hues of pink and purple present in the sky?"
+    ]
+  }
+}

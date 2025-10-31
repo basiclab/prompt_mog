@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under a churning, ominous sky, a lone mariner battles the elements in a small, weathered sailboat. The vessel is tossed violently by the tumultuous waves of a storm-swept ocean, its sails flapping wildly against the gale-force winds. Lightning slashes across the sky, illuminating the dramatic silhouette of the mariner who clings determinedly to the helm. This breathtaking scene is captured from a distance that allows the entirety of the turbulent seascape to dominate the composition, while still maintaining a dramatic focus on the determined figure at the vessel's stern. The camera angle is slightly elevated, providing a sweeping view of the horizon where the sea meets the dark, brooding sky. In the foreground, the crests of boiling waves catch errant flashes of lightning, creating stark contrasts between the white froth and the deep green of the ocean depths. The atmosphere is heavy with moisture and charged with electricity, the ever-present threat of the storm palpable in the air. The scene is awash in deep blues and stark silvers, with occasional bursts of electric white from the lightning, enhancing the mood of danger and isolation. The overall artistic style echoes the sublime artistry of maritime paintings, capturing the raw power of nature in vivid detail. Each element of the scene is rendered with high definition clarity, showcasing the dramatic play of light and shadow across the tempestuous seascape, the technical execution immaculate enough for an award-winning photograph.",
+  "semantic": {
+    "description": [
+      "A lone mariner navigates a small sailboat amidst a violent storm at sea.",
+      "Lightning strikes illuminate the silhouette of the mariner holding the helm.",
+      "The sailboat is buffeted by gale-force winds and churning waves."
+    ],
+    "questions": [
+      "Does the scene feature a mariner on a sailboat?",
+      "Is the mariner holding the helm of the boat?",
+      "Are there lightning strikes visible in the sky?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The scene is captured from a slightly elevated perspective.",
+      "The mariner and sailboat are centered within the expansive stormy seascape.",
+      "The horizon, where the sea meets the sky, spans the upper background."
+    ],
+    "questions": [
+      "Is the camera perspective slightly elevated?",
+      "Is the mariner and sailboat centered in the scene?",
+      "Does the horizon appear in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene features a color palette of deep blues and stark silvers.",
+      "Flashes of lightning create dramatic contrasts with the dark sky.",
+      "The atmosphere is charged, evoking a mood of danger and isolation."
+    ],
+    "questions": [
+      "Is the color palette composed of deep blues and silvers?",
+      "Do lightning flashes create contrast with the sky?",
+      "Is the mood of the scene one of danger and isolation?"
+    ]
+  }
+}

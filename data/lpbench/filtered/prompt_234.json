@@ -1,0 +1,40 @@
+{
+  "theme": "Weather Photography",
+  "prompt": "Under an immense, brooding sky, a solitary ancient oak tree stands defiantly against the tempestuous forces of nature, its knotted branches reaching skyward, seemingly entwined with the swirling mass of cumulonimbus clouds overhead. The scene is set in a vast, uninterrupted field, the earth dark and sodden from the relentless onslaught of torrential rain. Viewed from a low angle, the camera captures the dramatic confrontation between the mighty tree and the encroaching storm, emphasizing the tree's resilience against the chaotic backdrop. In the foreground, a cascade of rain-soaked grass bends under the weight of the powerful winds, creating a sense of movement and urgency that guides the eye toward the center of the frame where the tree towers, alone but unyielding. Behind, the horizon is a churning cauldron of dark clouds, occasionally illuminated by the electric forks of lightning that split the sky with their brilliant intensity, casting fleeting shadows across the land. The atmosphere is charged with a palpable tension, as if the world holds its breath in anticipation of the storm's full fury. The palette of the scene is a mix of ominous grays and deep blues, interspersed with the stark white of lightning, embodying the storm's mercurial nature. This dramatic interplay of light and shadow sets a somber yet awe-inspiring mood, capturing the raw power and majestic beauty of nature's elemental forces. The image is crafted in a style reminiscent of classic landscape photography, emphasizing the atmospheric grandeur and meticulous attention to detail. Each raindrop, each blade of grass, is rendered with clarity and precision, the scene a testament to professional skill and artistic vision.",
+  "semantic": {
+    "description": [
+      "A solitary ancient oak tree stands against the backdrop of a stormy sky.",
+      "Cumulonimbus clouds swirl dramatically overhead, signaling an impending storm.",
+      "Forks of lightning periodically illuminate the darkened sky."
+    ],
+    "questions": [
+      "Is there an ancient oak tree in the scene?",
+      "Are cumulonimbus clouds present in the sky?",
+      "Is the sky occasionally illuminated by lightning?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a low angle, emphasizing the tree's height.",
+      "The oak tree is centered in the frame, drawing focus amid the storm.",
+      "Rain-soaked grass in the foreground bends under the strong winds."
+    ],
+    "questions": [
+      "Is the camera positioned at a low angle?",
+      "Is the oak tree centered in the composition?",
+      "Does the grass in the foreground appear affected by wind?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The color palette features ominous grays and deep blues.",
+      "The scene captures the dramatic interplay of light and shadow.",
+      "The image exhibits a style reminiscent of classic landscape photography."
+    ],
+    "questions": [
+      "Does the color palette include ominous grays and deep blues?",
+      "Is there a dramatic interplay of light and shadow?",
+      "Is the style reminiscent of classic landscape photography?"
+    ]
+  }
+}

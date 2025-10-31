@@ -1,0 +1,40 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the heart of a verdant countryside estate, an outdoor wedding ceremony unfolds under a sprawling, centuries-old oak tree. The tree's gnarled branches stretch wide, draped with flowing strands of delicate fairy lights that twinkle softly against the backdrop of a fading sunset sky. Guests, dressed in an array of elegant attire, are seated in neat rows of white wooden chairs that form a semi-circle facing the altar. The couple stands before a rustic arch adorned with clusters of fresh white roses, baby's breath, and eucalyptus leaves, their hands gently clasped as they exchange vows. This intimate moment is captured from a slightly elevated perspective, ensuring the lush landscape is visible in the background, creating a harmonious balance between the human elements and nature's grandeur. The ceremony is bathed in the gentle light of dusk, with the last golden rays of sunlight piercing through the leaves, casting dappled shadows across the scene. The lighting blends seamlessly with the soft glow of the fairy lights, crafting an atmosphere of romantic serenity. The color palette is a harmonious blend of soft whites, greens, and the warm hues of the setting sun, lending an ethereal and joyful mood to the occasion. Subtle textures of lace, silk, and the rough bark of the oak lend depth and richness to the visual experience. The overall style reflects a blend of fine art photography with a keen attention to natural light and composition, resulting in an image that exudes elegance and warmth, captured in stunning high resolution to ensure every detail is meticulously rendered.",
+  "semantic": {
+    "description": [
+      "Guests in elegant attire sit in rows of white wooden chairs.",
+      "The couple stands before a rustic floral arch exchanging vows.",
+      "Fairy lights twinkle gently against the oak tree's branches."
+    ],
+    "questions": [
+      "Are the guests seated in white wooden chairs?",
+      "Is the couple exchanging vows in front of an arch?",
+      "Do the fairy lights hang from the tree?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The wedding is set beneath a large oak tree with spreading branches.",
+      "Guests are arranged in a semi-circle facing the altar.",
+      "The scene is captured from an elevated perspective to show the landscape."
+    ],
+    "questions": [
+      "Is the wedding held under an oak tree?",
+      "Are the guests arranged in a semi-circle?",
+      "Is the scene captured from an elevated perspective?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is bathed in the gentle light of dusk.",
+      "The color palette consists of whites, greens, and warm sunset hues.",
+      "Fairy lights contribute a soft, romantic glow to the atmosphere."
+    ],
+    "questions": [
+      "Is the ceremony illuminated by the light of dusk?",
+      "Does the color palette include sunset hues?",
+      "Do the fairy lights add a romantic glow?"
+    ]
+  }
+}

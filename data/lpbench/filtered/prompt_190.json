@@ -1,0 +1,46 @@
+{
+  "theme": "Astrophotography",
+  "prompt": "In a serene and distant corner of the globe, an ancient stone lighthouse stands proudly on an isolated cliff overlooking an infinite ocean. The lighthouse, weathered by centuries of Atlantic winds and majestic sea sprays, offers a timeless reminder of humanity’s enduring desire to reach out into the cosmos. As night falls, the scene transforms under the vast, star-studded canopy of the sky, where countless celestial bodies shimmer in the crystalline clarity of the atmosphere above. A lone astronomer, clad in a sturdy jacket to fend off the ocean's chill, stands beside a sophisticated telescope, casting her gaze upward, enraptured by the celestial dance unfolding. The camera captures the scene from a slightly elevated angle, framing the lighthouse to the right with the expansive ocean unfolding to the left, and the telescope prominently in the midground. This perspective enhances the feeling of solitude and devotion, as the astronomer's silhouette is dwarfed by the vast universe overhead. The scene is bathed in the gentle, silvery glow of the moonlight mingling with the faint hues of the Milky Way, creating an ethereal ambiance that is punctuated by the occasional meteor streaking across the sky. The color palette is dominated by deep midnight blues and silvery whites, interspersed with the subtle greens and purples of the distant nebulae. This combination evokes a sense of mystery and wonder, inviting viewers to ponder the infinite possibilities of the universe. The photographic style is reminiscent of classic astrophotography, with an emphasis on long exposure, capturing sharp, detailed star trails that contrast strikingly against the dark silhouette of the cliffside. The image possesses an 8K resolution quality, ensuring every detail, from the texture of the lighthouse's stones to the astronomer's focused expression, is rendered with professional sharpness and precision.",
+  "semantic": {
+    "description": [
+      "An ancient stone lighthouse stands on an isolated cliff.",
+      "A lone astronomer uses a sophisticated telescope.",
+      "The night sky is filled with countless stars and celestial bodies.",
+      "The scene includes a vast, expansive ocean."
+    ],
+    "questions": [
+      "Is there an ancient lighthouse in the scene?",
+      "Does the astronomer use a telescope?",
+      "Are there many stars visible in the sky?",
+      "Is the ocean part of the scene?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera captures the scene from a slightly elevated angle.",
+      "The lighthouse is positioned to the right in the frame.",
+      "The telescope is prominently placed in the midground.",
+      "The ocean unfolds to the left of the lighthouse."
+    ],
+    "questions": [
+      "Is the camera perspective slightly elevated?",
+      "Is the lighthouse positioned on the right?",
+      "Is the telescope prominently in the midground?",
+      "Does the ocean appear to the left of the lighthouse?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The scene is illuminated by moonlight and the Milky Way.",
+      "The color palette includes deep blues and silvery whites.",
+      "The style emphasizes classic astrophotography with long exposure.",
+      "The image possesses an 8K resolution quality."
+    ],
+    "questions": [
+      "Is the scene illuminated by moonlight?",
+      "Are deep blues and silvery whites part of the color palette?",
+      "Does the style emphasize classic astrophotography?",
+      "Is the image rendered in 8K resolution quality?"
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "theme": "Product Photography",
+  "prompt": "Inside a meticulously crafted photography studio, a collection of premium leather goods is displayed with striking precision. The scene centers around an elegant display of handcrafted leather wallets, belts, and briefcases that exude a sense of luxury and artisanal craftsmanship. These items, each boasting fine stitching and rich textures, rest atop a sleek, dark walnut table that contrasts beautifully with the products' soft leather finishes. The camera captures the scene from a slightly elevated angle, providing a comprehensive view that emphasizes the uniformity and attention to detail placed in the arrangement. In the foreground, a single wallet, artfully opened to showcase its compartments, serves as a focal point, inviting viewers to appreciate its intricate design and flawless execution. As one's gaze moves to the midground, the carefully aligned belts with shining buckles and the polished briefcases subtly reflect the soft studio lighting. The background is a blurred gradient of muted earth tones, ensuring all attention remains directed towards the meticulously arranged leather goods. Warm, diffused lighting floods the studio, accentuating the rich brown and tan hues of the leather, adding depth and dimension to their textures. Highlights play gently across the surfaces, creating a harmonious balance between light and shadow that enriches the tactile visual experience. The color palette is a thoughtfully curated blend of earthy browns, subtle tans, and hints of gold from metallic accents, conveying a mood of refined elegance and understated luxury. The overall style is reminiscent of high-end commercial photography, captured with a sense of professionalism and precision that speaks to the quality of both the products and the photographic technique. The image is sharp and highly detailed, with each element of the scene meticulously crafted to draw in the discerning eye of a potential consumer, embodying a standard of excellence matched only by the premium nature of the items it displays.",
+  "semantic": {
+    "description": [
+      "A collection of premium leather goods is elegantly displayed.",
+      "Handcrafted leather wallets, belts, and briefcases are prominent in the scene.",
+      "The leather goods feature fine stitching and rich textures."
+    ],
+    "questions": [
+      "Are there handcrafted leather wallets in the scene?",
+      "Does the display include leather belts?",
+      "Is the focus on premium leather goods?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at a slightly elevated angle.",
+      "A single wallet is prominently featured in the foreground.",
+      "Belts and briefcases are positioned in the midground."
+    ],
+    "questions": [
+      "Is the camera angle slightly elevated?",
+      "Is there a wallet prominently displayed in the foreground?",
+      "Are the belts and briefcases placed in the midground?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The lighting is warm and diffused, enhancing the leather's hues.",
+      "The color palette includes earthy browns, tans, and gold accents.",
+      "The style reflects high-end commercial photography."
+    ],
+    "questions": [
+      "Is the lighting warm and diffused?",
+      "Does the color palette feature earthy browns and tans?",
+      "Is the style reminiscent of high-end commercial photography?"
+    ]
+  }
+}

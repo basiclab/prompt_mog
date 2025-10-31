@@ -1,0 +1,46 @@
+{
+  "theme": "Event Photography",
+  "prompt": "In the ornate ballroom of a grand historical hotel, a lavish wedding celebration is in full bloom, seamlessly blending opulence with heartfelt intimacy. White lilies and pink roses, meticulously arranged in gilded vases, adorn every table, while shimmering fairy lights cascade like waterfalls from the vaulted ceilings. The bride, dressed in a stunning vintage lace gown, gracefully sweeps across the polished marble floor, her train flowing elegantly behind her. Her groom, in a tailored midnight-blue tuxedo, holds her hand gently, their eyes locked in a timeless gaze, capturing a moment of pure connection. Guests, clad in elegant evening attire, mingle around the couple, their laughter and conversations merging into a soft, joyous murmur. The photographer captures this enchanting scene from a slightly elevated angle near the entrance, allowing the viewer to take in the grandeur of the room. In the foreground, the couple takes center stage, while the large gilded mirrors and cascading drapes frame the background, enhancing the room's depth and creating a stunning visual symmetry. Evening light, filtered through the tall, arched windows, bathes the ballroom in a soft, golden glow, casting delicate shadows that dance along the walls. The atmosphere is one of romantic elegance, with a color palette dominated by creamy whites, soft pinks, and rich golds, evoking a sense of warmth and timeless beauty. The photographer employs a documentary photojournalism style to authentically capture this cherished event with a sharp focus on both the grand scenery and the intimate details, resulting in an image that is both professionally composed and emotionally resonant.",
+  "semantic": {
+    "description": [
+      "The bride wears a stunning vintage lace gown with an elegant train.",
+      "White lilies and pink roses are arranged in gilded vases on the tables.",
+      "Guests are dressed in elegant evening attire, mingling joyously around the couple.",
+      "The groom is in a tailored midnight-blue tuxedo, holding the bride's hand."
+    ],
+    "questions": [
+      "Is the bride wearing a vintage lace gown?",
+      "Are there white lilies and pink roses on the tables?",
+      "Are the guests dressed in elegant evening attire?",
+      "Is the groom wearing a midnight-blue tuxedo?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The photographer captures the scene from a slightly elevated angle near the entrance.",
+      "The couple is centered in the foreground with large mirrors in the background.",
+      "Shimmering fairy lights cascade from the vaulted ceilings.",
+      "The tall, arched windows allow evening light to filter into the ballroom."
+    ],
+    "questions": [
+      "Is the scene captured from a slightly elevated angle?",
+      "Are the couple centered in the foreground?",
+      "Do the fairy lights cascade from the ceiling?",
+      "Is there light filtering through tall, arched windows?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The evening light bathes the ballroom in a soft, golden glow.",
+      "The color palette features creamy whites, soft pinks, and rich golds.",
+      "The atmosphere is one of romantic elegance and timeless beauty.",
+      "A documentary photojournalism style captures the event authentically."
+    ],
+    "questions": [
+      "Does the ballroom have a soft, golden glow?",
+      "Is the color palette dominated by creamy whites and soft pinks?",
+      "Is the atmosphere romantically elegant?",
+      "Is a documentary photojournalism style used?"
+    ]
+  }
+}
