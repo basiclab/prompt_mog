@@ -21,7 +21,7 @@ To generate the long prompts similar to `LPBench`, run the following command:
 
 ```bash
 # Step 1: Generate a pool of long prompts
- python misc/dataset_gen/generate_long_prompt.py --num-prompts-for-topic 60
+python misc/dataset_gen/generate_long_prompt.py --num-prompts-for-topic 60
 
 # Step 2: Filter the prompts
 python misc/dataset_gen/post_process_data.py --data-root data/lpbench --num_prompts_per_topic 60 --num_remain_per_topic 40

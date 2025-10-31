@@ -1,0 +1,48 @@
+{
+  "theme": "Event Photography",
+  "prompt": "The scene captures the enchanting celebration of a timeless wedding in a picturesque garden setting, brimming with natural elegance and sophistication. Under the watchful canopy of towering willow trees draped in delicate fairy lights, a couple stands at the altar, surrounded by a semi-circle of joyful guests seated on white wooden chairs. Each chair is adorned with small bouquets of lavender and baby’s breath, lending an air of softness and charm. The couple, resplendent in their attire, exchange vows with serene expressions, their hands tenderly entwined, as a soft breeze gently rustles the leaves. The camera is positioned at eye level, ensuring an intimate yet comprehensive view of the event, capturing both the couple and their reverent audience in a balanced composition. The foreground is occupied by a decorative aisle runner made of rose petals, leading the eye toward the altar, while the willow trees create a natural frame in the background. The afternoon sun bathes the scene in a warm, golden glow, accentuating the vibrant green of the grass and the soft pastels of the floral arrangements. Shadows dance playfully among the guests, who are illuminated with gentle dapples of light filtering through the leaves. The color palette is a harmonious blend of greens, whites, and lavenders, evoking a mood of tranquil joy and understated elegance. The overall style is reminiscent of lifestyle photography, capturing candid interactions and spontaneous expressions of emotion with a soft focus that adds a dreamy quality. The image is characterized by its high resolution and fine detail, ensuring each tender moment is preserved with clarity and precision, a testament to professional artistry and technical prowess.",
+  "semantic": {
+    "description": [
+      "The wedding scene takes place under towering willow trees with fairy lights.",
+      "A couple stands at the altar, exchanging vows in front of joyful guests.",
+      "White wooden chairs with floral decorations are arranged in a semi-circle."
+    ],
+    "questions": [
+      "Is the couple exchanging vows at the altar?",
+      "Are there fairy lights hanging from the willow trees?",
+      "Are the guests seated on white wooden chairs?"
+    ]
+  },
+  "spatial": {
+    "description": [
+      "The camera is positioned at eye level, providing an intimate view.",
+      "A rose petal aisle runner leads toward the altar in the foreground.",
+      "Willow trees form a natural frame in the background of the scene."
+    ],
+    "questions": [
+      "Is the camera angle positioned at eye level?",
+      "Does a rose petal aisle runner lead to the altar?",
+      "Do willow trees create a frame in the background?"
+    ]
+  },
+  "stylistic": {
+    "description": [
+      "The afternoon sun casts a warm, golden glow over the scene.",
+      "Shadows create playful dapples of light among the guests.",
+      "The color palette consists of greens, whites, and lavenders."
+    ],
+    "questions": [
+      "Is the scene bathed in a warm, golden glow?",
+      "Are playful dapples of light present among the guests?",
+      "Is the color palette predominantly greens, whites, and lavenders?"
+    ]
+  },
+  "rewritten_prompts": [
+    "The image depicts a magical wedding celebration set in a beautiful garden, full of elegance and charm. A couple stands under tall willow trees, adorned with fairy lights, exchanging vows with joy, surrounded by happy guests on white wooden chairs, each decorated with lavender and baby’s breath. Captured at eye level, the scene features rose petals leading to the altar, and willow trees framing the background as the golden afternoon sun highlights the vibrant greenery and soft floral hues. Shadows play among guests, presenting a mood of serene happiness and elegance, with colors of greens, whites, and lavenders. The style reflects lifestyle photography with candid captures and a soft focus, offering a dreamy quality. The high-resolution image showcases fine details and professionalism.",
+    "The photograph illustrates a charming wedding in a scenic garden, rich in elegance and grace. Under a canopy of tall willow trees with fairy lights, a couple stands at the altar among smiling guests seated on white chairs decorated with lavender and baby’s breath. The eye-level shot offers an intimate view, with rose petals lining the aisle and willow trees in the background. The warm afternoon light enhances the green grass and floral pastels, with shadows playfully dancing through the leaves. The blend of greens, whites, and lavenders creates a tranquil and elegant atmosphere. The image, in the style of lifestyle photography, captures candid interactions and emotions with a soft, dreamy focus, characterized by high resolution and detailed artistry.",
+    "Shown is an enchanting wedding scene in a picturesque garden, filled with natural beauty and classic style. The couple stands beneath willow trees with fairy lights, surrounded by guests on white wooden chairs, each with small lavender bouquets, as they exchange vows with tender expressions. The camera, positioned at eye level, captures the scene with rose petals in the foreground and willow trees framing behind. The warm sun bathes the setting in golden hues, highlighting the greenery and soft floral tones. Shadows dance lightly among the guests, casting a serene, elegant mood. The harmonious color palette of greens, whites, and lavenders reflects tranquil joy. The lifestyle photography style captures candid moments with a soft, dreamy focus, in high resolution, showcasing the artistry involved.",
+    "The scene shows a timeless wedding celebration in a lovely garden setting, full of natural grace and charm. Under tall willow trees with fairy lights, the couple stands at the altar, surrounded by guests sitting on white chairs adorned with lavender and baby’s breath. The image, taken at eye level, reveals a path of rose petals leading to the altar, with the willow trees creating a natural frame. The afternoon sun casts a warm glow, enhancing the vibrant greens and pastel florals, while shadows play among the guests. The color blend of greens, whites, and lavenders gives a mood of joyful serenity and understated elegance. Captured in lifestyle photography style, the image preserves candid emotions with a dreamy, soft focus in high resolution, reflecting professional skill.",
+    "This image captures an elegant wedding in an idyllic garden setting, brimming with timeless beauty. The couple stands beneath willow trees adorned with fairy lights, exchanging vows surrounded by guests on white chairs with lavender and baby’s breath. The scene is shot at eye level, with a rose-petal aisle leading to the altar, framed by towering willow trees. The afternoon sun bathes the scene, highlighting the lush green grass and pastel floral hues, while shadows dance among the guests. A harmonious palette of greens, whites, and lavenders evokes a tranquil, joyful mood. The style, reminiscent of lifestyle photography, captures spontaneous emotions with a soft, dreamy quality, in high resolution, showcasing fine detail and artistic skill.",
+    "A picturesque wedding scene unfolds in a serene garden, exuding elegance and sophistication. Beneath the canopy of willow trees with delicate fairy lights, the couple stands at the altar, surrounded by guests seated on white wooden chairs, each accented with lavender and baby’s breath. The image is taken eye-level, focusing on a rose-petal-lined path leading to the altar, with the willow trees framing the background. The afternoon sun casts a warm glow, accentuating the rich greenery and floral pastels. Shadows gently play among the guests, creating a tranquil, elegant atmosphere. The colors blend greens, whites, and lavenders harmoniously, reflecting a mood of serene joy. The lifestyle photography style captures candid emotions with soft focus, preserved in high resolution, highlighting professional artistry."
+  ]
+}
