@@ -66,17 +66,17 @@ The outputs will be saved to `data/lpbench/rewritten`.
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_1 \
-    --first_num 1
+    --first_top 1
 ./script/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_3 \
-    --first_num 3
+    --first_top 3
 ./script/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_3 \
-    --first_num 5
+    --first_top 5
 
 # Score the diversity
 ./script/scoring_diversity.sh --output_root_dir outputs/long_prompt

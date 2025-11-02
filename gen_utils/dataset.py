@@ -57,7 +57,7 @@ class ShortPromptDataset(Dataset):
 
 
 class RewrittenPromptDataset(Dataset):
-    def __init__(self, root_dir: str, index: int = 0):
+    def __init__(self, root_dir: str, index: int = 0, *_, **__):
         self.root_dir = root_dir
         prompt_files = sorted(
             list(glob.glob(os.path.join(self.root_dir, "*.json"))),
