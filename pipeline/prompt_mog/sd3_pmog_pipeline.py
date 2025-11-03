@@ -28,6 +28,7 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
         gamma: float = 3.0,
         num_mode: int = 10,
         sigma: float = 0.05,
+        generator: torch.Generator | None = None,
     ):
         """
         We perform PMoG to clip embeddings and t5 embeddings separately.
@@ -75,6 +76,7 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
                 num_mode=num_mode,
                 sigma=sigma,
                 batch_size=batch_size,
+                generator=generator,
             )
 
             t5_prompt_embed = self._get_t5_prompt_embeds(
@@ -89,6 +91,7 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
                 num_mode=num_mode,
                 sigma=sigma,
                 batch_size=batch_size,
+                generator=generator,
             )
 
             clip_prompt_embeds = torch.nn.functional.pad(

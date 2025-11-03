@@ -19,6 +19,7 @@ class CogView4PMOGPipeline(CogView4Pipeline):
         gamma: float = 3.0,
         num_mode: int = 10,
         sigma: float = 0.05,
+        generator: torch.Generator | None = None,
     ):
         device = device or self._execution_device
 
@@ -39,6 +40,7 @@ class CogView4PMOGPipeline(CogView4Pipeline):
             num_mode=num_mode,
             sigma=sigma,
             batch_size=batch_size * num_images_per_prompt,
+            generator=generator,
         )
 
         if do_classifier_free_guidance and negative_prompt_embeds is None:

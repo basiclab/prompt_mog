@@ -58,8 +58,6 @@ def main(
             device=device,
             model_type=model_type,
         )
-    if model_type == "pmog":
-        pipe.encode_prompt = partial(pipe.encode_prompt, gamma=gamma, num_mode=num_mode, sigma=sigma)
 
     pipe.set_progress_bar_config(disable=True)
     if hasattr(pipe, "set_logger_level"):
@@ -135,6 +133,14 @@ def main(
             torch.Generator(device="cpu").manual_seed(seed + base_starting_idx + i)
             for i in range(len(prompts))
         ]
+        if model_type == "pmog":
+            pipe.encode_prompt = partial(
+                pipe.encode_prompt,
+                gamma=gamma,
+                num_mode=num_mode,
+                sigma=sigma,
+                generator=generator[0],  # batch size is 1 for now
+            )
         images = pipe(
             prompt=prompts,
             generator=generator,

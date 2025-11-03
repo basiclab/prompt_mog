@@ -16,6 +16,7 @@ class QwenPMOGPipeline(QwenImagePipeline):
         gamma: float = 3.0,
         num_mode: int = 10,
         sigma: float = 0.05,
+        generator: torch.Generator | None = None,
     ):
         device = device or self._execution_device
 
@@ -40,6 +41,7 @@ class QwenPMOGPipeline(QwenImagePipeline):
             num_mode=num_mode,
             sigma=sigma,
             batch_size=batch_size * num_images_per_prompt,
+            generator=generator,
         )
 
         return prompt_embeds, prompt_embeds_mask

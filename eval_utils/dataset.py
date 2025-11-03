@@ -45,6 +45,7 @@ class GeneratedImageDataset(Dataset):
             prompt = json.load(f)
 
         prompt["prompt"] = prompt["prompt"].strip().lower()
-        image_path = os.path.join(self.gen_root_dir, f"gen_{idx:03d}.png")
+        img_idx = int(os.path.basename(self.prompt_files[idx]).split("_")[-1].split(".")[0])
+        image_path = os.path.join(self.gen_root_dir, f"gen_{img_idx:03d}.png")
         image = Image.open(image_path)
         return {"prompt": prompt, "image": image}

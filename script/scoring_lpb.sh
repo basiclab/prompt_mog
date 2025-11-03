@@ -77,6 +77,7 @@ for model_name in ${MODEL_NAME[@]}; do
         $CMD eval_utils/eval_lpb.py \
             --gen_root_dir ${OUTPUT_ROOT_DIR}/${model_name}/${seed} \
             --prompt_root_dir $PROMPT_ROOT_DIR \
+            --partial_num ${PARTIAL_NUM} \
             $ARGS
     done
 done

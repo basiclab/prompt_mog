@@ -20,6 +20,7 @@ class FluxPMOGPipeline(FluxPipeline):
         gamma: float = 3.0,
         num_mode: int = 10,
         sigma: float = 0.05,
+        generator: torch.Generator | None = None,
     ) -> tuple[torch.FloatTensor, torch.FloatTensor, torch.LongTensor]:
         device = device or self._execution_device
 
@@ -60,6 +61,7 @@ class FluxPMOGPipeline(FluxPipeline):
                 num_mode=num_mode,
                 sigma=sigma,
                 batch_size=batch_size,
+                generator=generator,
             )
 
         if self.text_encoder is not None:
