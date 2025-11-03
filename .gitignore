@@ -216,5 +216,5 @@ data
 !data/lpbench/rewritten
 outputs
 notebook
-script/run_temp.sh
+scripts/run_temp.sh
 record.txt

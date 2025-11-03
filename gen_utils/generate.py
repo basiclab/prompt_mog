@@ -113,13 +113,13 @@ def main(
 
         # check if the output images and text files already exist
         while (
-            os.path.exists(os.path.join(output_root_dir, save_names[0]))
+            len(prompts) > 0
+            and os.path.exists(os.path.join(output_root_dir, save_names[0]))
             and os.path.exists(
                 os.path.join(
                     output_root_dir, save_names[0].replace(".txt", ".png").replace("prompt_", "gen_")
                 )
             )
-            and len(prompts) > 0
         ):
             prompts.pop(0)
             save_names.pop(0)

@@ -58,35 +58,35 @@ The outputs will be saved to `data/lpbench/rewritten`.
 
 ```bash
 # Generate images
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type long \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/long_prompt
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_1 \
     --first_top 1
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_3 \
     --first_top 3
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type short \
     --prompt_root_dir data/lpbench/filtered \
     --output_root_dir outputs/short_prompt_3 \
     --first_top 5
 
 # Score the diversity
-./script/scoring_diversity.sh --output_root_dir outputs/long_prompt
-./script/scoring_diversity.sh --output_root_dir outputs/short_prompt
+./scripts/scoring_diversity.sh --output_root_dir outputs/long_prompt
+./scripts/scoring_diversity.sh --output_root_dir outputs/short_prompt
 ```
 
 ### Prompt-MoG
 
 ```bash
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type long \
     --model_type pmog \
     --prompt_root_dir data/lpbench/filtered \
@@ -96,7 +96,7 @@ The outputs will be saved to `data/lpbench/rewritten`.
 ### Chunking
 
 ```bash
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type long \
     --model_type chunk \
     --prompt_root_dir data/lpbench/filtered \
@@ -106,23 +106,23 @@ The outputs will be saved to `data/lpbench/rewritten`.
 ### Prompt Rewriting
 
 ```bash
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type rewritten \
     --prompt_root_dir data/lpbench/rewritten \
     --output_root_dir outputs/rewritten_prompt \
     --model_type short
 
 # Score the diversity
-./script/scoring_diversity.sh --output_root_dir outputs/rewritten_prompt
+./scripts/scoring_diversity.sh --output_root_dir outputs/rewritten_prompt
 
 # Score the CLIP and VQA score
-./script/scoring_lbp.sh --output_root_dir outputs/rewritten_prompt
+./scripts/scoring_lbp.sh --output_root_dir outputs/rewritten_prompt
 ```
 
 ### GenEval
 
 ```bash
-./script/gen_image.sh \
+./scripts/gen_image.sh \
     --dataset_type gen_eval \
     --prompt_root_dir data/geneval \
     --output_root_dir outputs/gen_eval_prompt
