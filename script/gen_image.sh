@@ -8,7 +8,7 @@ NUM_PROCESSES=4
 MODE="multi"
 SEED=(42 1234 21344 304516 405671 693042)
 FIRST_TOP=1
-PARTIAL_NUM=100
+PARTIAL_NUM="None"
 PORT=29500
 GAMMA=0.8
 NUM_MODE=10
@@ -26,7 +26,7 @@ print_help() {
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
-    echo "  --partial_num INT         Partial number for long prompts (default: 100)"
+    echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
     echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"

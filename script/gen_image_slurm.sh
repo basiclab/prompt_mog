@@ -8,6 +8,7 @@ MODEL_TYPE="short"
 NUM_PROCESSES=4
 MODE="multi"
 FIRST_TOP=1
+PARTIAL_NUM="None"
 GAMMA=0.8
 NUM_MODE=10
 SIGMA=0.1
@@ -30,6 +31,7 @@ print_help() {
     echo "  --num_processes INT       Number of processes (default: 4)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
+    echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
     echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
     echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
@@ -55,6 +57,7 @@ while [[ "$#" -gt 0 ]]; do
         --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
         --port) PORT="$2"; shift ;;
         --first_top) FIRST_TOP="$2"; shift ;;
+        --partial_num) PARTIAL_NUM="$2"; shift ;;
         --gamma) GAMMA="$2"; shift ;;
         --num_mode) NUM_MODE="$2"; shift ;;
         --sigma) SIGMA="$2"; shift ;;
@@ -96,6 +99,7 @@ source .venv/bin/activate
     --num_processes ${NUM_PROCESSES} \\
     --mode ${MODE} \\
     --first_top ${FIRST_TOP} \\
+    --partial_num ${PARTIAL_NUM} \\
     --gamma ${GAMMA} \\
     --num_mode ${NUM_MODE} \\
     --sigma ${SIGMA}
