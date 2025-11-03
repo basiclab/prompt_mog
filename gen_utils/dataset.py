@@ -9,23 +9,50 @@ GLOBAL_SEED = 343223
 
 
 class LongPromptDataset(Dataset):
-    def __init__(self, root_dir: str, *_, **__):
+    def __init__(self, root_dir: str, partial_num: int | None = None, *_, **__):
         self.root_dir = root_dir
         prompt_files = sorted(
             list(glob.glob(os.path.join(self.root_dir, "*.json"))),
             key=lambda x: int(os.path.basename(x).split("_")[-1].split(".")[0]),
         )
-        self.prompts = []
-        for prompt_file in prompt_files:
-            with open(prompt_file, "r") as f:
-                prompt = json.load(f)
-            self.prompts.append(prompt["prompt"].strip().lower())
+
+        if partial_num is not None:
+            theme_dict = {}
+            themes = []
+            for prompt_file in prompt_files:
+                with open(prompt_file, "r") as f:
+                    prompt = json.load(f)
+                theme = prompt["theme"]
+                if theme not in theme_dict:
+                    theme_dict[theme] = []
+                    themes.append(theme)  # already sorted
+                theme_dict[theme].append(
+                    {
+                        "prompt": prompt["prompt"].strip().lower(),
+                        "file": os.path.basename(prompt_file).replace(".json", ".txt"),
+                    }
+                )
+
+            self.prompts = []
+            for theme in themes:
+                self.prompts.extend(theme_dict[theme][:partial_num])
+        else:
+            self.prompts = []
+            for prompt_file in prompt_files:
+                with open(prompt_file, "r") as f:
+                    prompt = json.load(f)
+                self.prompts.append(
+                    {
+                        "prompt": prompt["prompt"].strip().lower(),
+                        "file": os.path.basename(prompt_file).replace(".json", ".txt"),
+                    }
+                )
 
     def __len__(self):
         return len(self.prompts)
 
-    def __getitem__(self, idx):
-        return {"prompt": self.prompts[idx]}
+    def __getitem__(self, idx) -> dict[str, str]:
+        return self.prompts[idx]
 
 
 class ShortPromptDataset(Dataset):
@@ -52,12 +79,12 @@ class ShortPromptDataset(Dataset):
     def __len__(self):
         return len(self.prompts)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx) -> dict[str, str]:
         return {"prompt": self.prompts[idx]}
 
 
 class RewrittenPromptDataset(Dataset):
-    def __init__(self, root_dir: str, index: int = 0, *_, **__):
+    def __init__(self, root_dir: str, prompt_index: int = 0, *_, **__):
         self.root_dir = root_dir
         prompt_files = sorted(
             list(glob.glob(os.path.join(self.root_dir, "*.json"))),
@@ -67,12 +94,12 @@ class RewrittenPromptDataset(Dataset):
         for prompt_file in prompt_files:
             with open(prompt_file, "r") as f:
                 prompt = json.load(f)
-            self.prompts.append(prompt["rewritten_prompts"][index])
+            self.prompts.append(prompt["rewritten_prompts"][prompt_index])
 
     def __len__(self):
         return len(self.prompts)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx) -> dict[str, str]:
         return {"prompt": self.prompts[idx]}
 
 
@@ -89,5 +116,5 @@ class GenEvalDataset(Dataset):
     def __len__(self):
         return len(self.prompts)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx) -> dict[str, str]:
         return {"prompt": self.prompts[idx]}

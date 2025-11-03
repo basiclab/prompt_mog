@@ -8,6 +8,7 @@ NUM_PROCESSES=4
 MODE="multi"
 SEED=(42 1234 21344 304516 405671 693042)
 FIRST_TOP=1
+PARTIAL_NUM=100
 PORT=29500
 GAMMA=0.8
 NUM_MODE=10
@@ -25,6 +26,7 @@ print_help() {
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
+    echo "  --partial_num INT         Partial number for long prompts (default: 100)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
     echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
@@ -43,6 +45,7 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;; 
         --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
         --port) PORT="$2"; shift ;;
+        --partial_num) PARTIAL_NUM="$2"; shift ;;
         --first_top) FIRST_TOP="$2"; shift ;;
         --gamma) GAMMA="$2"; shift ;;
         --num_mode) NUM_MODE="$2"; shift ;;
@@ -90,6 +93,7 @@ for model_name_type in ${MODEL_NAME_PAIR[@]}; do
             --dataset_type ${DATASET_TYPE} \
             --model_type ${MODEL_TYPE} \
             --first_top ${FIRST_TOP} \
+            --partial_num ${PARTIAL_NUM} \
             --gamma ${GAMMA} \
             --num_mode ${NUM_MODE} \
             --sigma ${SIGMA} \

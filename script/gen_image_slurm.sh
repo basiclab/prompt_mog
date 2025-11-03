@@ -70,11 +70,9 @@ while [[ "$#" -gt 0 ]]; do
 done
 IFS=$OLDIFS
 
-# Function to generate and submit SLURM job
 submit_slurm_job() {
     TEMP_SLURM="temp_${SLURM_JOB_NAME}_$$.slurm"
     
-    # Create SLURM script (without quotes on EOF to allow variable expansion)
     cat > ${TEMP_SLURM} << SLURM_EOF
 #!/bin/bash
 #SBATCH --job-name=${SLURM_JOB_NAME}
@@ -111,17 +109,14 @@ source .venv/bin/activate
     --output_root_dir ${OUTPUT_ROOT_DIR}
 SLURM_EOF
     
-    # Create logs directory if it doesn't exist
     mkdir -p logs
     
-    # Submit the job
     echo "Submitting SLURM job with script: ${TEMP_SLURM}"
     source .venv/bin/activate
-    # sbatch ${TEMP_SLURM}
+    sbatch ${TEMP_SLURM}
     
     echo "Temporary SLURM script saved as: ${TEMP_SLURM}"
     echo "You can delete it after the job is submitted, or keep it for reference"
 }
 
-# Main execution
 submit_slurm_job

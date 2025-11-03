@@ -35,6 +35,7 @@ def main(
     required_memory: int = 1,
     batch_size: int = 1,
     num_workers: int = 4,
+    partial_num: int | None = None,  # for long prompts only
     prompt_index: int = 0,  # for rewritten prompts only
     first_top: int = 1,  # for short prompts only
     # p-mog generation parameters
@@ -73,7 +74,12 @@ def main(
     with open(config_path, "r") as f:
         gen_params = json.load(f)
 
-    dataset = DATASET_MAPPING[dataset_type](root_dir=prompt_root_dir, index=prompt_index, first_top=first_top)
+    dataset = DATASET_MAPPING[dataset_type](
+        root_dir=prompt_root_dir,
+        partial_num=partial_num,  # for long prompts only
+        prompt_index=prompt_index,  # for rewritten prompts only
+        first_top=first_top,  # for short prompts only
+    )
     dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=num_workers, shuffle=False)
 
     dataloader = accelerator.prepare(dataloader)
@@ -98,14 +104,27 @@ def main(
             elif remainder != 0:
                 continue
         prompts = batch["prompt"]
+        save_names = (
+            batch["file"]
+            if "file" in batch
+            else [
+                f"prompt_{save_index:03d}.txt"
+                for save_index in range(base_starting_idx, base_starting_idx + len(prompts))
+            ]
+        )
 
         # check if the output images and text files already exist
         while (
-            os.path.exists(os.path.join(output_root_dir, f"gen_{base_starting_idx:03d}.png"))
-            and os.path.exists(os.path.join(output_root_dir, f"prompt_{base_starting_idx:03d}.txt"))
+            os.path.exists(os.path.join(output_root_dir, save_names[0]))
+            and os.path.exists(
+                os.path.join(
+                    output_root_dir, save_names[0].replace(".txt", ".png").replace("prompt_", "gen_")
+                )
+            )
             and len(prompts) > 0
         ):
             prompts.pop(0)
+            save_names.pop(0)
             base_starting_idx += 1
         if len(prompts) == 0:
             starting_idx += batch_size * accelerator.num_processes
@@ -123,9 +142,11 @@ def main(
         ).images
         images = images[: len(prompts)]
 
-        for prompt, image in zip(prompts, images, strict=True):
-            image.save(os.path.join(output_root_dir, f"gen_{base_starting_idx:03d}.png"))
-            with open(os.path.join(output_root_dir, f"prompt_{base_starting_idx:03d}.txt"), "w") as f:
+        for prompt, image, save_name in zip(prompts, images, save_names, strict=True):
+            image.save(
+                os.path.join(output_root_dir, save_name.replace(".txt", ".png").replace("prompt_", "gen_"))
+            )
+            with open(os.path.join(output_root_dir, save_name), "w") as f:
                 f.write(prompt)
             base_starting_idx += 1
         starting_idx += batch_size * accelerator.num_processes
