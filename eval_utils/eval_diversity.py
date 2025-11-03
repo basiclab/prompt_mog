@@ -5,7 +5,7 @@ import os
 import torch
 import tyro
 from PIL import Image
-from tqdm import trange
+from tqdm import tqdm
 from transformers import AutoImageProcessor, AutoModel
 
 from eval_utils.vendi import (
@@ -32,14 +32,17 @@ def main(
     num_of_seeds = len(list_of_folder)
 
     list_of_images = list(glob.glob(os.path.join(gen_img_dir, list_of_folder[0], "gen_*.png")))
-    num_of_images_per_seed = len(list_of_images)
+    list_of_images.sort()
+    list_of_id_of_image = [
+        int(os.path.basename(image).split("_")[-1].split(".")[0]) for image in list_of_images
+    ]
 
     dino_model = AutoModel.from_pretrained(semantic_model_name).to(device)
     dino_processor = AutoImageProcessor.from_pretrained(semantic_model_name)
     inception_model = get_inception(pool=True).to(device)
     inception_transform = inception_transforms()
 
-    for image_idx in trange(num_of_images_per_seed, ncols=0, leave=False):
+    for image_idx in tqdm(list_of_id_of_image, ncols=0, leave=False):
         if os.path.exists(os.path.join(save_path, f"diversity_{image_idx:03d}.json")) and not overwrite:
             continue
 
@@ -83,7 +86,7 @@ def main(
             json.dump(diversity_scores, f)
 
     average_diversity_scores = {}
-    for image_idx in range(num_of_images_per_seed):
+    for image_idx in list_of_id_of_image:
         with open(os.path.join(save_path, f"diversity_{image_idx:03d}.json"), "r") as f:
             diversity_scores = json.load(f)
         for key, value in diversity_scores.items():

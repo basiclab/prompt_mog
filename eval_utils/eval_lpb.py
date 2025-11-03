@@ -133,6 +133,7 @@ def submit_to_vqa_model(
 def main(
     gen_root_dir: str,
     prompt_root_dir: str = "data/long_prompt",
+    partial_num: int | None = None,
     dtype: Literal["none", "fp16", "bf16"] = "bf16",
     batch_size: int = 1,
     num_workers: int = 4,
@@ -147,7 +148,11 @@ def main(
         clip_model, clip_processor = build_siglip_model(device, dtype)
     answer_token_idx = vqa_processor.tokenizer.encode("Yes")[0]
 
-    dataset = GeneratedImageDataset(prompt_root_dir=prompt_root_dir, gen_root_dir=gen_root_dir)
+    dataset = GeneratedImageDataset(
+        prompt_root_dir=prompt_root_dir,
+        gen_root_dir=gen_root_dir,
+        partial_num=partial_num,
+    )
     dataloader = DataLoader(
         dataset,
         batch_size=batch_size,

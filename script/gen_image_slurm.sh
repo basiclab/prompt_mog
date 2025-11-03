@@ -84,6 +84,7 @@ submit_slurm_job() {
 #SBATCH --nodes=${SLURM_NODES}
 #SBATCH --gpus-per-node=${NUM_PROCESSES}
 #SBATCH --cpus-per-task=${SLURM_NUM_CPUS}
+#SBATCH --mem-per-cpu=32G
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
 #SBATCH --mail-type=END,FAIL
@@ -107,7 +108,8 @@ source .venv/bin/activate
 ./scripts/scoring_lpb.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\
     --num_processes ${NUM_PROCESSES} \\
-    --mode ${MODE}
+    --mode ${MODE} \\
+    --partial_num ${PARTIAL_NUM}
 
 ./scripts/scoring_diversity.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR}

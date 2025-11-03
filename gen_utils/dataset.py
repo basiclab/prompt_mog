@@ -17,7 +17,7 @@ class LongPromptDataset(Dataset):
         )
 
         if partial_num is not None:
-            theme_dict = {}
+            theme_dict: dict[str, list[str]] = {}
             themes = []
             for prompt_file in prompt_files:
                 with open(prompt_file, "r") as f:
