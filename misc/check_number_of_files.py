@@ -12,9 +12,15 @@ import tyro
 
 
 class StructureChecker:
-    def __init__(self, root_path: Path, check_score: bool = True):
+    def __init__(
+        self,
+        root_path: Path,
+        target_num: int = 1000,
+        check_score: bool = True,
+    ):
         self.root_path = Path(root_path)
         self.check_score = check_score
+        self.target_num = target_num
         self.errors = []
         self.warnings = []
 
@@ -105,19 +111,19 @@ class StructureChecker:
         # Check counts
         errors_in_folder = []
 
-        if len(gen_files) != 1000:
-            errors_in_folder.append(f"gen*.png: {len(gen_files)}/1000")
+        if len(gen_files) != self.target_num:
+            errors_in_folder.append(f"gen*.png: {len(gen_files)}/{self.target_num}")
 
-        if len(prompt_files) != 1000:
-            errors_in_folder.append(f"prompt*.txt: {len(prompt_files)}/1000")
+        if len(prompt_files) != self.target_num:
+            errors_in_folder.append(f"prompt*.txt: {len(prompt_files)}/{self.target_num}")
 
         # Only check scores if flag is enabled
         if self.check_score:
             score_files = [f for f in files if f.name.startswith("score") and f.suffix == ".json"]
             avg_score_file = num_folder_path / "average_score.json"
 
-            if len(score_files) != 1000:
-                errors_in_folder.append(f"score*.json: {len(score_files)}/1000")
+            if len(score_files) != self.target_num:
+                errors_in_folder.append(f"score*.json: {len(score_files)}/{self.target_num}")
 
             if not avg_score_file.exists():
                 errors_in_folder.append("average_score.json: missing")
@@ -130,9 +136,11 @@ class StructureChecker:
                 print(f"{prefix}     - {err}")
         else:
             if self.check_score:
-                print(f"{prefix} ✓ All files present (1000 gen, 1000 prompt, 1000 score, 1 average_score)")
+                print(
+                    f"{prefix} ✓ All files present ({self.target_num} gen, {self.target_num} prompt, {self.target_num} score, 1 average_score)"
+                )
             else:
-                print(f"{prefix} ✓ All files present (1000 gen, 1000 prompt)")
+                print(f"{prefix} ✓ All files present ({self.target_num} gen, {self.target_num} prompt)")
 
     def check_diversity_folder(self, diversity_path: Path, parent_name: str) -> bool:
         """Check the diversity folder for correct files."""
@@ -152,14 +160,14 @@ class StructureChecker:
         # Check counts
         errors_in_folder = []
 
-        if len(diversity_files) != 1000:
+        if len(diversity_files) != self.target_num:
             # Subtract 1 if average_diversity.json is included in the count
             actual_count = len(diversity_files)
             if avg_diversity_file in diversity_files:
                 actual_count -= 1
 
-            if actual_count != 1000:
-                errors_in_folder.append(f"diversity*.json: {actual_count}/1000")
+            if actual_count != self.target_num:
+                errors_in_folder.append(f"diversity*.json: {actual_count}/{self.target_num}")
 
         if not avg_diversity_file.exists():
             errors_in_folder.append("average_diversity.json: missing")
@@ -171,7 +179,7 @@ class StructureChecker:
             for err in errors_in_folder:
                 print(f"{prefix}     - {err}")
         else:
-            print(f"{prefix} ✓ All files present (1000 diversity, 1 average_diversity)")
+            print(f"{prefix} ✓ All files present ({self.target_num} diversity, 1 average_diversity)")
 
     def print_summary(self) -> int:
         """Print summary of validation results."""
@@ -196,12 +204,12 @@ class StructureChecker:
         return len(self.errors) == 0
 
 
-def main(root_path: Path, check_score: bool = True):
+def main(root_path: Path, target_num: int = 1000, check_score: bool = True):
     root_path = root_path.expanduser().resolve()
     if not root_path.is_dir():
         raise ValueError(f"Not a directory: {root_path}")
 
-    checker = StructureChecker(root_path, check_score)
+    checker = StructureChecker(root_path, target_num, check_score)
     checker.check_structure()
     return checker.print_summary()
 

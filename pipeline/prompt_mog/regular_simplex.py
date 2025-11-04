@@ -199,5 +199,5 @@ def perform_pmog(
     # As these tokens are always the first and last token in the sequence, we "conveniently" index them by [0, 1, -1]
     # A rigorous approach would be to use the tokenizer to get the indices of the special tokens.
     sampled_prompt_embeds[:, [0, 1, -1]] = prompt_embeds[:, [0, 1, -1]]
-    prompt_embeds = sampled_prompt_embeds
-    return prompt_embeds
+
+    return sampled_prompt_embeds

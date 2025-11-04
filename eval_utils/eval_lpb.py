@@ -163,9 +163,13 @@ def main(
     dataloader = accelerator.prepare(dataloader)
     starting_idx = accelerator.process_index * batch_size
 
+    model_name, seed_name = os.path.basename(os.path.dirname(gen_root_dir)), os.path.basename(gen_root_dir)
+    if len(model_name) > 8:
+        model_name = model_name[:8] + "..."
+
     for batch in tqdm.tqdm(
         dataloader,
-        desc="Evaluating",
+        desc=f"Evaluating [model: {model_name}] [seed: {seed_name}]",
         disable=not accelerator.is_main_process,
         total=len(dataloader),
         ncols=0,

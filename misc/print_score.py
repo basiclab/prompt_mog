@@ -90,7 +90,7 @@ def seed_sort_key(name):
 
 def format_plain(rows, col_means, col_stds, show_labels=True):
     w0 = 8
-    w = 15
+    w = 6
 
     lines = []
     if show_labels:
@@ -187,7 +187,6 @@ def main(
         col_stds = [0.0 for _ in cols_transposed]
 
     # add diversity scores
-    count = 0
     diversity_scores = {"inception-embeddings-vendi": [], "dino-embeddings-vendi": []}
     for json_file in (root / "diversity").glob("diversity_*.json"):
         with open(json_file, "r") as f:

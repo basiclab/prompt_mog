@@ -71,14 +71,14 @@ def main(
     output_folder: str = "data/lpbench/rewritten",
     num_variants: int = 6,
     model: str = "gpt-4o",  # implicitly means `gpt-4o-2024-08-06`
-    workers: int | None = 8,
+    max_workers: int | None = 8,
 ):
     os.makedirs(output_folder or ".", exist_ok=True)
     prompts = sorted(glob.glob(os.path.join(data_folder, "*.json")))
     targets = [p for p in prompts if not os.path.exists(os.path.join(output_folder, os.path.basename(p)))]
     if not targets:
         return
-    max_workers = workers or max(1, multiprocessing.cpu_count() - 1)
+    max_workers = max_workers or max(1, multiprocessing.cpu_count() - 1)
     with ProcessPoolExecutor(max_workers=max_workers) as ex:
         futures = [ex.submit(_process_file, p, output_folder, num_variants, model) for p in targets]
         for _ in tqdm(as_completed(futures), total=len(futures), desc="Rewriting prompts", ncols=0):

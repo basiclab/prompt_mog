@@ -23,6 +23,7 @@ dependencies = [
     "spacy==3.8.7",
     "pip==25.2",
     "datasets==4.2.0",
+    "google-genai>=1.48.0",
 ]
 
 [tool.uv]
