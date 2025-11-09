@@ -153,7 +153,11 @@ def sample_from_mog(
     noise = torch.randn((centers.shape[0], centers.shape[2]), dtype=dtype, generator=gen2, device="cpu")
     noise = noise.to(device)
 
-    samples = centers[torch.arange(centers.shape[0], device=device), choices] + noise * sigma
+    samples = centers[torch.arange(centers.shape[0], device=device), choices] + noise * sigma.unsqueeze(1)
+    # selected_centers = centers[torch.arange(centers.shape[0], device=device), choices]
+
+    # distance_to_centers = torch.linalg.norm(samples - selected_centers, dim=-1)
+    # print(distance_to_centers)
     return samples
 
 
@@ -166,7 +170,7 @@ def perform_pmog(
     generator: torch.Generator | None = None,
 ) -> torch.Tensor:
     """
-    Perform pMoG (prompt Mixture of Gaussians) sampling.
+    Perform PMoG sampling.
 
     Args:
         prompt_embeds: input prompt embeddings
@@ -183,14 +187,21 @@ def perform_pmog(
     # convert the cosine similarity to the euclidean distance. This process suppose that the prompt embeddings have the same norm.
     norm_of_prompt_embeds = torch.linalg.norm(prompt_embeds, dim=1)
     gamma_euclidean = norm_of_prompt_embeds * math.sqrt(2 * (1 - gamma))
+    effective_sigma = (sigma * gamma_euclidean) / math.sqrt(prompt_embeds.shape[-1])
 
+    # print(gamma_euclidean)
     # Split generator for independent operations
     gen1, gen2 = split_generator(generator, n=2)
 
     reformulated_prompt_centers = centers_on_sphere(
         prompt_embeds.float(), gamma=gamma_euclidean, num_mode=num_mode, generator=gen1
     )
-    sampled_prompt_embeds = sample_from_mog(reformulated_prompt_centers, sigma=sigma, generator=gen2)
+
+    sampled_prompt_embeds = sample_from_mog(
+        centers=reformulated_prompt_centers,
+        sigma=effective_sigma,
+        generator=gen2,
+    )
     sampled_prompt_embeds = sampled_prompt_embeds.reshape(batch_size, -1, prompt_embeds.shape[-1])
     sampled_prompt_embeds = sampled_prompt_embeds.to(dtype=prompt_embeds.dtype)
     prompt_embeds = prompt_embeds.reshape(batch_size, -1, prompt_embeds.shape[-1])

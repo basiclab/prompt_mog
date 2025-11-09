@@ -7,7 +7,7 @@ MODE="single"
 PORT=29500
 SEED=(42 1234 21344 304516 405671 693042)
 OVERWRITE=false
-MODEL_NAME=(sd3 flux cogview4 qwen)
+MODEL_LIST=(sd3 flux cogview4 qwen)
 PARTIAL_NUM="None"
 
 print_help() {
@@ -20,7 +20,7 @@ print_help() {
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: single)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
     echo "  --overwrite               Overwrite existing scores (default: false)"
-    echo "  --model_name MODE         Model name: 'flux' or 'sd3' or 'cogview4' or 'qwen' (default: all)"
+    echo "  --model_list LIST         Model list: 'flux' or 'sd3' or 'cogview4' or 'qwen' (default: all)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  -h, --help                Show this help message and exit"
 }
@@ -34,7 +34,7 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;;
         --port) PORT="$2"; shift ;;
         --overwrite) OVERWRITE="$2"; shift ;;
-        --model_name) IFS=',' read -ra MODEL_NAME <<< "$2"; shift ;;
+        --model_list) IFS=',' read -ra MODEL_LIST <<< "$2"; shift ;;
         --partial_num) PARTIAL_NUM="$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
@@ -71,7 +71,7 @@ if [ "$OVERWRITE" = true ]; then
 fi
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
-for model_name in ${MODEL_NAME[@]}; do
+for model_name in ${MODEL_LIST[@]}; do
     for seed in ${SEED[@]}; do
         echo "Scoring ${model_name} for seed ${seed}"
         $CMD eval_utils/eval_lpb.py \

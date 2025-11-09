@@ -1,3 +1,7 @@
+from .cad.cogview_cad_pipeline import CogView4CADPipeline
+from .cad.flux_cad_pipeline import FluxCADPipeline
+from .cad.qwen_cad_pipeline import QwenCADPipeline
+from .cad.sd3_cad_pipeline import SD3CADPipeline
 from .chuck_prompt.cogview4_chunk_pipeline import CogView4PromptChunkPipeline
 from .chuck_prompt.flux_chunk_pipeline import FluxPromptChunkPipeline
 from .chuck_prompt.qwen_image_chunk_pipeline import QwenImagePromptChunkPipeline
@@ -26,4 +30,8 @@ __all__ = [
     "QwenImagePipeline",
     "StableDiffusion3Pipeline",
     "CogView4Pipeline",
+    "FluxCADPipeline",
+    "QwenCADPipeline",
+    "SD3CADPipeline",
+    "CogView4CADPipeline",
 ]

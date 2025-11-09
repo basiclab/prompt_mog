@@ -24,11 +24,11 @@ DATASET_MAPPING = {
 
 
 def main(
-    prompt_root_dir: str,
     output_root_dir: str,
     pretrained_name: str,
+    prompt_root_dir: str = "data/lpbench/filtered",
     dataset_type: Literal["long", "short", "rewritten", "geneval"] = "long",
-    model_type: Literal["pmog", "chunk", "short"] = "short",
+    model_type: Literal["pmog", "chunk", "short", "cad"] = "short",
     config_root: str = "configs",
     mixed_precision: Literal["none", "fp16", "bf16"] = "bf16",
     seed: int = 42,
@@ -48,6 +48,23 @@ def main(
 
     if accelerator.is_main_process:
         os.makedirs(output_root_dir, exist_ok=True)
+        with open(os.path.join(output_root_dir, "parameters.json"), "w") as f:
+            json.dump(
+                {
+                    "model_name": pretrained_name,
+                    "model_type": model_type,
+                    "dataset_type": dataset_type,
+                    "mixed_precision": mixed_precision,
+                    "seed": seed,
+                    "partial_num": partial_num,
+                    "prompt_index": prompt_index,
+                    "first_top": first_top,
+                    "gamma": gamma,
+                    "num_mode": num_mode,
+                    "sigma": sigma,
+                },
+                f,
+            )
 
     # setup pipeline for the generation model
     with accelerator.main_process_first():

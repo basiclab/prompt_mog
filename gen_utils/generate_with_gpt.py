@@ -22,7 +22,6 @@ def submit_task(client: OpenAI, model: str, prompt: str, size: str) -> str:
         prompt=prompt,
         size=size,
     )
-
     return response.data[0].b64_json
 
 
@@ -57,7 +56,7 @@ def process_prompt_file(
 
 def main(
     prompt_root_dir: str = "data/lpbench/filtered",
-    output_root_dir: str = "outputs/gpt_image_1",
+    output_root_dir: str = "outputs/long_prompt/gpt_image_1",
     model: str = "gpt-image-1",
     size: str = "1024x1024",
     max_workers: int = 5,

@@ -21,7 +21,7 @@ print_help() {
     echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
     echo "  --output_root_dir PATH    Output directory (default: outputs/origin)"
     echo "  --dataset_type TYPE       Dataset type: 'long' or 'short' or 'rewritten' or 'geneval' (default: long)"
-    echo "  --model_type TYPE         Model type: 'pmog' or 'chunk' or 'short' (default: short)"
+    echo "  --model_type TYPE         Model type: 'pmog' or 'chunk' or 'short' or 'cad' (default: short)"
     echo "  --num_processes INT       Number of processes (default: 4)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
@@ -68,10 +68,10 @@ else
 fi
 
 MODEL_NAME_PAIR=(
-    "black-forest-labs/FLUX.1-Krea-dev,flux"
-    "stabilityai/stable-diffusion-3.5-large,sd3"
-    "THUDM/CogView4-6B,cogview4"
-    "Qwen/Qwen-Image,qwen"
+    "stabilityai/stable-diffusion-3.5-large,sd3,0.65,10,0.1"
+    "black-forest-labs/FLUX.1-Krea-dev,flux,0.65,10,0.1"
+    "THUDM/CogView4-6B,cogview4,0.85,10,0.1"
+    "Qwen/Qwen-Image,qwen,0.85,10,0.1"
 )
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
@@ -80,6 +80,9 @@ for model_name_type in ${MODEL_NAME_PAIR[@]}; do
     set -- $model_name_type
     model_name=$1
     model_type=$2
+    gamma=$3
+    num_mode=$4
+    sigma=$5
     echo "Generating images with model: ${model_type}"
     IFS=$OLDIFS  # restore the original IFS
     SEED_INDEX=0
@@ -94,9 +97,9 @@ for model_name_type in ${MODEL_NAME_PAIR[@]}; do
             --model_type ${MODEL_TYPE} \
             --first_top ${FIRST_TOP} \
             --partial_num ${PARTIAL_NUM} \
-            --gamma ${GAMMA} \
-            --num_mode ${NUM_MODE} \
-            --sigma ${SIGMA} \
+            --gamma ${gamma} \
+            --num_mode ${num_mode} \
+            --sigma ${sigma} \
             --prompt_index ${SEED_INDEX}
         SEED_INDEX=$((SEED_INDEX + 1))
     done

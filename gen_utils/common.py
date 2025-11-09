@@ -5,15 +5,19 @@ import torch
 import transformers
 
 from pipeline import (
+    CogView4CADPipeline,
     CogView4Pipeline,
     CogView4PMOGPipeline,
     CogView4PromptChunkPipeline,
+    FluxCADPipeline,
     FluxPipeline,
     FluxPMOGPipeline,
     FluxPromptChunkPipeline,
+    QwenCADPipeline,
     QwenImagePipeline,
     QwenImagePromptChunkPipeline,
     QwenPMOGPipeline,
+    SD3CADPipeline,
     SD3PMOGPipeline,
     SD3PromptChunkPipeline,
     StableDiffusion3Pipeline,
@@ -37,10 +41,17 @@ PMOG_PIPELINE_MAPPING = {
     "qwen": QwenPMOGPipeline,
     "cogview4": CogView4PMOGPipeline,
 }
+CAD_PIPELINE_MAPPING = {
+    "flux": FluxCADPipeline,
+    "sd3": SD3CADPipeline,
+    "qwen": QwenCADPipeline,
+    "cogview4": CogView4CADPipeline,
+}
 NAME_TO_PIPELINE_MAPPING = {
     "pmog": PMOG_PIPELINE_MAPPING,
     "chunk": CHUNK_PIPELINE_MAPPING,
     "short": ORIGINAL_PIPELINE_MAPPING,
+    "cad": CAD_PIPELINE_MAPPING,
 }
 
 DETYPE_MAPPING = {
@@ -68,8 +79,17 @@ def create_pipeline(
     dtype: torch.dtype,
     use_balance: bool,
     device: torch.device,
-    model_type: Literal["pmog", "chunk", "short"] = "short",
-) -> FluxPipeline | StableDiffusion3Pipeline | CogView4Pipeline | QwenImagePipeline:
+    model_type: Literal["pmog", "chunk", "short", "cad"] = "short",
+) -> (
+    FluxPipeline
+    | StableDiffusion3Pipeline
+    | CogView4Pipeline
+    | QwenImagePipeline
+    | FluxCADPipeline
+    | SD3CADPipeline
+    | QwenCADPipeline
+    | CogView4CADPipeline
+):
     pipe_kwargs = {"torch_dtype": dtype}
     assert model_type in NAME_TO_PIPELINE_MAPPING, f"Unknown model type: {model_type}"
     pipeline_mapping = NAME_TO_PIPELINE_MAPPING[model_type]

@@ -6,7 +6,6 @@ from collections import Counter
 
 import matplotlib.pyplot as plt
 import numpy as np
-import scienceplots  # noqa: F401
 import spacy
 import tyro
 from constant import SPATIAL_PHRASES, SPATIAL_SINGLE, STYLISTIC_PHRASES, STYLISTIC_SINGLE
@@ -16,7 +15,9 @@ from matplotlib.patches import Rectangle
 from spacy.matcher import PhraseMatcher
 
 try:
-    plt.style.use("science")
+    import scienceplots  # noqa: F401
+
+    plt.style.use(["science"])
     plt.rcParams["font.family"] = "Times New Roman"
 except Exception:
     pass

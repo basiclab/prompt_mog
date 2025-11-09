@@ -66,12 +66,12 @@ def get_pixel_vectors(images: list[PIL.Image.Image]) -> np.ndarray:
     return np.stack([np.array(img).flatten() for img in images], 0)
 
 
-def pixel_vendi_score(images: list[PIL.Image.Image], resize: int = 32) -> float:
+def pixel_vendi_score(images: list[PIL.Image.Image], normalize: bool = True) -> float:
     X = get_pixel_vectors(images)
     n, d = X.shape
     if n < d:
-        return score_X(X)
-    return score_dual(X)
+        return score_X(X, normalize=normalize)
+    return score_dual(X, normalize=normalize)
 
 
 def get_inception(pretrained: bool = True, pool: bool = True) -> torch.nn.Module:

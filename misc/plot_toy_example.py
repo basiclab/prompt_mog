@@ -1,176 +1,159 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import scienceplots  # noqa: F401
 import tyro
-from matplotlib.colors import LinearSegmentedColormap
-from matplotlib.offsetbox import AnchoredText
 
-from eval_utils.vendi import pixel_vendi_score
+from eval_utils.vendi import score_K
 
-plt.style.use(["science"])
+try:
+    import scienceplots  # noqa: F401
+
+    plt.style.use(["science"])
+    plt.rcParams["font.family"] = "Times New Roman"
+except Exception:
+    pass
+
 plt.rcParams.update(
     {
-        "font.family": "Times New Roman",
         "axes.linewidth": 0.8,
         "axes.titleweight": "semibold",
         "xtick.major.size": 3,
         "ytick.major.size": 3,
     }
 )
-rng = np.random.default_rng(10)
+
+rng = np.random.default_rng(0)
 
 
-def make_cmap(hex_color: str = "#C81E1E") -> LinearSegmentedColormap:
-    return LinearSegmentedColormap.from_list("white_to_color", ["#fffaf7", hex_color], N=256)
+def gaussian_pdf_1d(x: np.ndarray, mu: float, sigma: float) -> np.ndarray:
+    return (1.0 / (np.sqrt(2 * np.pi) * sigma)) * np.exp(-0.5 * ((x - mu) / sigma) ** 2)
 
 
-CMAP = make_cmap("#C81E1E")  # crimsonish red
-CONTOUR_LINE = "#3a3a3a"
+def mog_pdf_1d(x: np.ndarray, mus: np.ndarray, sigma: float) -> np.ndarray:
+    k = len(mus)
+    p = np.zeros_like(x, dtype=float)
+    for m in mus:
+        p += gaussian_pdf_1d(x, m, sigma)
+    return p / k  # uniform weights
 
 
-def circle_centers(k: int, r: float = 3.0) -> np.ndarray:
-    ang = np.linspace(0, 2 * np.pi, k, endpoint=False)
-    return np.stack([r * np.cos(ang), r * np.sin(ang)], axis=1)  # (k, 2)
+def numeric_entropy_1d(x: np.ndarray, p: np.ndarray) -> float:
+    p = np.clip(p, 1e-300, None)
+    return float(-np.trapezoid(p * np.log(p), x))
 
 
-def gaussian_pdf(xy: np.ndarray, mu: np.ndarray, sig: float) -> np.ndarray:
-    cov_inv = np.eye(2) / (sig**2)
-    diff = xy - mu
-    expo = np.einsum("...i,ij,...j->...", diff, cov_inv, diff)
-    norm = 1.0 / (2 * np.pi * (sig**2))
-    return norm * np.exp(-0.5 * expo)
+def component_means_1d(n: int, delta: float) -> np.ndarray:
+    start = -delta * (n - 1) / 2.0
+    return np.array([start + i * delta for i in range(n)], dtype=float)
 
 
-def mixture_density_grid(
-    centers: np.ndarray, sig: float, weights: np.ndarray | None = None, lim: float = 4.2, res: int = 300
-) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    if weights is None:
-        weights = np.full(centers.shape[0], 1.0 / centers.shape[0])
-    xs = np.linspace(-lim, lim, res)
-    ys = np.linspace(-lim, lim, res)
-    X, Y = np.meshgrid(xs, ys, indexing="xy")
-    XY = np.stack([X, Y], axis=-1)  # (res,res,2)
-    Z = np.zeros_like(X)
-    for w, mu in zip(weights, centers, strict=True):
-        Z += w * gaussian_pdf(XY, mu, sig)
-    return xs, ys, Z
+def sample_mog_1d(mus: np.ndarray, sigma: float, size: int) -> np.ndarray:
+    k = len(mus)
+    choices = rng.integers(0, k, size=size)
+    return mus[choices] + rng.normal(scale=sigma, size=size)
 
 
-def samples_from_mog(centers: np.ndarray, sig: float, total_samples: int = 3000) -> np.ndarray:
-    """For each global sample: draw one sample per component, draw Dirichlet weightscombine."""
-    k = centers.shape[0]
-    choices = rng.integers(0, k, size=total_samples)
-    points = centers[choices] + rng.normal(scale=sig, size=(total_samples, 2))
-    return points
-
-
-def prettify_axes(ax: plt.Axes, lim: float = 4.2):
-    ax.set_aspect("equal", "box")
-    ax.set_xlim(-lim, lim)
-    ax.set_ylim(-lim, lim)
-    for spine in ["top", "right"]:
+def prettify_axes(
+    ax: plt.Axes,
+    remove_spines: list[str] = ["top", "right"],  # noqa: B006
+):
+    for spine in remove_spines:
         ax.spines[spine].set_visible(False)
     ax.tick_params(
-        top=False,
-        right=False,
+        top="top" not in remove_spines,
+        right="right" not in remove_spines,
         which="both",
         direction="out",
         length=3,
         width=0.6,
-        labelsize=13,
+        labelsize=12.5,
     )
-    ax.text(
-        0.015,
-        0.985,
-        "y",
-        transform=ax.transAxes,
-        ha="left",
-        va="top",
-        fontsize=18,
-        fontstyle="italic",
-    )
-    ax.text(
-        0.985,
-        0.015,
-        "x",
-        transform=ax.transAxes,
-        ha="right",
-        va="bottom",
-        fontsize=18,
-        fontstyle="italic",
-    )
-
-
-def draw_panel(
-    k: int,
-    radius: float,
-    sigma: float,
-    n_samples: int,
-    grid_lim: float,
-    grid_res: int,
-    levels: int,
-    scatter_size: float,
-    ax: plt.Axes,
-    title: str | None = None,
-):
-    centers = circle_centers(k, r=radius)
-    samples = samples_from_mog(centers, sigma, total_samples=n_samples)
-    xs, ys, Z = mixture_density_grid(centers, sigma, lim=grid_lim, res=grid_res)
-
-    ax.contourf(xs, ys, Z, levels=levels, cmap=CMAP, antialiased=True)
-    ax.scatter(samples[:, 0], samples[:, 1], s=scatter_size, alpha=0.35, ec="none", color="#8B0000")
-    prettify_axes(ax, lim=grid_lim)
-
-    vendi_score = pixel_vendi_score(samples)
-    at = AnchoredText(
-        f" Vendi ({title}): {vendi_score:.2f}",
-        prop=dict(size=14.5),
-        frameon=True,
-        loc="upper right",
-        borderpad=0.6,
-    )
-    at.patch.set_boxstyle("round,pad=0.3,rounding_size=0.8")
-    at.patch.set_alpha(0.9)
-    ax.add_artist(at)
 
 
 def main(
-    n: int = 2,  # number of modes
-    radius: float = 3.0,
     sigma: float = 0.5,
-    n_samples: int = 1000,
-    grid_lim: float = 4.2,
-    grid_res: int = 400,
-    levels: int = 22,
-    scatter_size: float = 12,
+    delta_mult: float = 6.0,  # separation in units of sigma (≈ disjoint support)
+    viz_ns: tuple[int, ...] = (1, 2, 4, 8),
+    ns: tuple[int, ...] = (1, 2, 3, 4, 6, 8, 10, 12, 16),
+    sample_size: int = 300,  # number of samples per n to compute Vendi
+    grid_dx: float = 1e-3,
+    margin_sigmas: float = 6.0,
+    figsize: tuple[float, float] = (7.0, 4.5),
     save_path: str = "assets/toy_example.pdf",
 ):
-    _, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.8, 4.6), constrained_layout=True)
-    draw_panel(
-        k=n,
-        radius=radius,
-        sigma=sigma,
-        n_samples=n_samples,
-        grid_lim=grid_lim,
-        grid_res=grid_res,
-        levels=levels,
-        scatter_size=scatter_size,
-        ax=ax1,
-        title=f"{n} modes",
+    delta = delta_mult * sigma
+
+    n_max = max(viz_ns)
+    mus_max = component_means_1d(n_max, delta)
+    lo = mus_max.min() - margin_sigmas * sigma
+    hi = mus_max.max() + margin_sigmas * sigma
+    x = np.arange(lo, hi, grid_dx)
+
+    # Figure with two vertical subplots (no titles/axis labels on top panel)
+    fig, (ax_pdf, ax_bottom) = plt.subplots(2, 1, figsize=figsize, constrained_layout=True)
+
+    # --- Top: mixture PDFs for selected n ---
+    for n in viz_ns:
+        mus = component_means_1d(n, delta)
+        p = mog_pdf_1d(x, mus, sigma)
+        ax_pdf.plot(x, p, label=f"n={n}", linewidth=1.6)
+    ax_pdf.legend(frameon=False, fontsize=11.5, loc="upper right")
+    prettify_axes(ax_pdf)
+
+    # --- Bottom: entropy vs n (left y) and vendi vs n (right y) ---
+    h_single = 0.5 * np.log(2 * np.pi * np.e * sigma**2)  # 1D Gaussian entropy
+    H_numeric, H_theory, vendi_vals = [], [], []
+
+    max_row_score = None
+    for n in ns[::-1]:
+        mus = component_means_1d(n, delta)
+        lo_n = mus.min() - margin_sigmas * sigma
+        hi_n = mus.max() + margin_sigmas * sigma
+        x_n = np.arange(lo_n, hi_n, grid_dx)
+        p_n = mog_pdf_1d(x_n, mus, sigma)
+        Hn = numeric_entropy_1d(x_n, p_n)
+        H_numeric.append(Hn)
+        H_theory.append(h_single + np.log(n))
+
+        xs = sample_mog_1d(mus, sigma, sample_size)
+        xs = xs.reshape(-1, 1)
+        sim = np.abs(xs - xs.T)
+        if max_row_score is None:
+            max_row_score = np.amax(sim, axis=1, keepdims=True)
+        vendi = float(score_K(sim / max_row_score, normalize=False))
+        vendi_vals.append(vendi)
+
+    H_numeric = H_numeric[::-1]
+    H_theory = H_theory[::-1]
+    vendi_vals = vendi_vals[::-1]
+
+    axH = ax_bottom
+    ln1 = axH.plot(ns, H_numeric, marker="o", linewidth=1.6, label=r"Estimated $H_n$")
+    ln2 = axH.plot(ns, H_theory, marker="o", linestyle="--", linewidth=1.2, label=r"$h+\log n$")
+    axH.set_xticks([0] + list(ns))
+    axH.set_xticklabels([r"$n=$"] + [str(v) for v in ns], fontsize=12.5)
+    axH.set_xlim(0, max(ns) + 1)
+
+    axV = axH.twinx()
+    vendi_clean = [np.nan if v is None else v for v in vendi_vals]
+    ln3 = axV.plot(ns, vendi_clean, marker="s", linewidth=1.4, label="Vendi Score (VS)", color="orange")
+
+    handles = ln1 + ln2 + ln3
+    labels = [h.get_label() for h in handles]
+    axH.legend(handles, labels, frameon=False, fontsize=11.5, loc="lower right")
+
+    prettify_axes(axH)
+    prettify_axes(axV, remove_spines=["top"])
+    axH.text(
+        0.0, 1.02, r"$(H_n)$", transform=axH.transAxes, ha="left", va="bottom", fontsize=12.5, clip_on=False
     )
-    draw_panel(
-        k=n + 1,
-        radius=radius,
-        sigma=sigma,
-        n_samples=n_samples,
-        grid_lim=grid_lim,
-        grid_res=grid_res,
-        levels=levels,
-        scatter_size=scatter_size,
-        ax=ax2,
-        title=f"{n + 1} modes",
+    axH.text(
+        1.0, 1.02, r"$(VS)$", transform=axH.transAxes, ha="right", va="bottom", fontsize=12.5, clip_on=False
     )
+
     plt.savefig(save_path, bbox_inches="tight")
+    print(f"Saved figure to: {save_path}")
+    for n, Hn, Ht, v in zip(ns, H_numeric, H_theory, vendi_vals, strict=True):
+        print(f"n={n:>2d} | H_n={Hn:.3f} | h+log n={Ht:.3f} | Vendi={v if v is not None else 'N/A'}")
 
 
 if __name__ == "__main__":

@@ -132,7 +132,7 @@ def submit_to_vqa_model(
 @torch.inference_mode()
 def main(
     gen_root_dir: str,
-    prompt_root_dir: str = "data/long_prompt",
+    prompt_root_dir: str = "data/lpbench/filtered",
     partial_num: int | None = None,
     dtype: Literal["none", "fp16", "bf16"] = "bf16",
     batch_size: int = 1,
@@ -161,8 +161,6 @@ def main(
         collate_fn=collate_fn,
     )
     dataloader = accelerator.prepare(dataloader)
-    starting_idx = accelerator.process_index * batch_size
-
     model_name, seed_name = os.path.basename(os.path.dirname(gen_root_dir)), os.path.basename(gen_root_dir)
     if len(model_name) > 8:
         model_name = model_name[:8] + "..."
@@ -175,38 +173,37 @@ def main(
         ncols=0,
         leave=False,
     ):
-        base_starting_idx = starting_idx
         if accelerator.gradient_state.end_of_dataloader:
             start_of_data_index = accelerator.process_index * batch_size
             remainder = accelerator.gradient_state.remainder
             if remainder != 0 and remainder > start_of_data_index:
                 remainder -= start_of_data_index
-                batch = batch[:remainder]
+                batch = {k: v[:remainder] for k, v in batch.items()}
             elif remainder != 0:
                 continue
 
+        prompts = batch["prompt"]
+        images = batch["image"]
+        save_names = batch["file"]
+
         while (
-            os.path.exists(os.path.join(gen_root_dir, f"score_{base_starting_idx:03d}.json"))
-            and not overwrite
-            and len(batch) > 0
+            len(prompts) > 0 and not overwrite and os.path.exists(os.path.join(gen_root_dir, save_names[0]))
         ):
-            batch.pop(0)
-            base_starting_idx += 1
-        if len(batch) == 0:
-            starting_idx += batch_size * accelerator.num_processes
+            prompts.pop(0)
+            images.pop(0)
+            save_names.pop(0)
+        if len(prompts) == 0:
             continue
 
-        for image_text_pair in batch:
+        for prompt, image, save_name in zip(prompts, images, save_names, strict=True):
             recorded_score = {}
-            preprocessed_clip_image = clip_processor(
-                images=[image_text_pair["image"]], return_tensors="pt"
-            ).to(device)
-            base_image = base64_encode_image(image_text_pair["image"], "PNG")
+            preprocessed_clip_image = clip_processor(images=[image], return_tensors="pt").to(device)
+            base_image = base64_encode_image(image, "PNG")
             for eval_type in EVAL_TYPE:
                 recorded_score[eval_type] = {}
 
                 # chunk clip score
-                annotation = image_text_pair["prompt"][eval_type]["description"]
+                annotation = prompt[eval_type]["description"]
                 preprocessed_clip_text = clip_processor(
                     text=annotation, padding="max_length", truncation=True, return_tensors="pt"
                 ).to(device)
@@ -218,7 +215,7 @@ def main(
 
                 # vqa score
                 single_score = 0
-                questions = image_text_pair["prompt"][eval_type]["questions"]
+                questions = prompt[eval_type]["questions"]
                 for question in questions:
                     vqa_score = submit_to_vqa_model(
                         model=vqa_model,
@@ -231,17 +228,15 @@ def main(
                 recorded_score[eval_type]["vqa_score"] = single_score / len(questions)
 
             # save the score
-            with open(os.path.join(gen_root_dir, f"score_{base_starting_idx:03d}.json"), "w") as f:
+            with open(os.path.join(gen_root_dir, save_name), "w") as f:
                 json.dump(recorded_score, f, indent=2)
-            base_starting_idx += 1
-
-        starting_idx += batch_size * accelerator.num_processes
 
     accelerator.wait_for_everyone()  # since we need to compute the average score on the main process
     # compute the average score (only on the main process)
     if accelerator.is_main_process:
         average_score = {}
-        for prompt_idx in range(len(dataset)):
+        for prompt_idx in dataset.prompt_files:
+            prompt_idx = int(os.path.basename(prompt_idx).split("_")[-1].split(".")[0])
             score_path = os.path.join(gen_root_dir, f"score_{prompt_idx:03d}.json")
             if not os.path.exists(score_path):
                 raise FileNotFoundError(f"Score file not found: {score_path}")

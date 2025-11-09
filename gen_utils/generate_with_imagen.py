@@ -61,10 +61,10 @@ def process_prompt_file(
 
 def main(
     prompt_root_dir: str = "data/lpbench/filtered",
-    output_root_dir: str = "outputs/gemini_image_1",
+    output_root_dir: str = "outputs/long_prompt/imagen4",
     model: str = "imagen-4.0-generate-001",
     aspect_ratio: str = "1:1",  # 1024x1024 by default
-    max_workers: int = 5,
+    max_workers: int = 1,
 ):
     prompt_files = sorted(glob.glob(os.path.join(prompt_root_dir, "*.json")))
 
