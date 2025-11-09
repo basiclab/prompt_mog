@@ -19,7 +19,7 @@ print_help() {
     echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
     echo "  --output_root_dir PATH    Output directory (default: outputs/origin)"
     echo "  --dataset_type TYPE       Dataset type: 'long' or 'short' or 'rewritten' or 'geneval' (default: long)"
-    echo "  --model_type TYPE         Model type: 'pmog' or 'chunk' or 'short' or 'cad' (default: short)"
+    echo "  --model_type TYPE         Model type: 'pmog' or 'chunk' or 'short' or 'cads' (default: short)"
     echo "  --num_processes INT       Number of processes (default: 4)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"

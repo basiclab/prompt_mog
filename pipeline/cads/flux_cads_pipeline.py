@@ -1,81 +1,67 @@
 from typing import Any, Callable
 
+import numpy as np
 import torch
-from diffusers.pipelines.stable_diffusion_3.pipeline_stable_diffusion_3 import (
-    MultiPipelineCallbacks,
-    PipelineCallback,
+from diffusers.pipelines.flux.pipeline_flux import (
+    FluxPipelineOutput,
     PipelineImageInput,
-    StableDiffusion3PipelineOutput,
     calculate_shift,
     retrieve_timesteps,
 )
 
-from pipeline.cad.cad_scheduler import cads_linear_schedule, noise_adding
-from pipeline.vanilla import StableDiffusion3Pipeline
+from pipeline.cads.cads_scheduler import cads_linear_schedule, noise_adding
+from pipeline.vanilla import FluxPipeline
 
 
-class SD3CADPipeline(StableDiffusion3Pipeline):
+class FluxCADSPipeline(FluxPipeline):
     @torch.no_grad()
     def __call__(
         self,
         prompt: str | list[str] = None,
         prompt_2: str | list[str] | None = None,
-        prompt_3: str | list[str] | None = None,
+        negative_prompt: str | list[str] = None,
+        negative_prompt_2: str | list[str] | None = None,
+        true_cfg_scale: float = 1.0,
         height: int | None = None,
         width: int | None = None,
         num_inference_steps: int = 28,
         sigmas: list[float] | None = None,
-        guidance_scale: float = 7.0,
-        negative_prompt: str | list[str] = None,
-        negative_prompt_2: str | list[str] | None = None,
-        negative_prompt_3: str | list[str] | None = None,
+        guidance_scale: float = 3.5,
         num_images_per_prompt: int | None = 1,
         generator: torch.Generator | list[torch.Generator] | None = None,
         latents: torch.FloatTensor | None = None,
         prompt_embeds: torch.FloatTensor | None = None,
-        negative_prompt_embeds: torch.FloatTensor | None = None,
         pooled_prompt_embeds: torch.FloatTensor | None = None,
-        negative_pooled_prompt_embeds: torch.FloatTensor | None = None,
         ip_adapter_image: PipelineImageInput | None = None,
         ip_adapter_image_embeds: list[torch.Tensor] | None = None,
+        negative_ip_adapter_image: PipelineImageInput | None = None,
+        negative_ip_adapter_image_embeds: list[torch.Tensor] | None = None,
+        negative_prompt_embeds: torch.FloatTensor | None = None,
+        negative_pooled_prompt_embeds: torch.FloatTensor | None = None,
         output_type: str | None = "pil",
         return_dict: bool = True,
         joint_attention_kwargs: dict[str, Any] | None = None,
-        clip_skip: int | None = None,
-        callback_on_step_end: Callable[[int, int, dict], None]
-        | PipelineCallback
-        | MultiPipelineCallbacks
-        | None = None,
+        callback_on_step_end: Callable[[int, int, dict], None] | None = None,
         callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
-        max_sequence_length: int = 256,
-        skip_guidance_layers: list[int] | None = None,
-        skip_layer_guidance_scale: float = 2.8,
-        skip_layer_guidance_stop: float = 0.2,
-        skip_layer_guidance_start: float = 0.01,
-        mu: float | None = None,
+        max_sequence_length: int = 512,
         # fixed param for CAD
         tau1: float = 0.6,
         tau2: float = 0.9,
         noise_scale: float = 0.25,
         mixing_factor: float = 1.0,
         rescale: bool = True,
-    ):
+    ) -> tuple[torch.Tensor] | FluxPipelineOutput:
         height = height or self.default_sample_size * self.vae_scale_factor
         width = width or self.default_sample_size * self.vae_scale_factor
-
-        if isinstance(callback_on_step_end, (PipelineCallback, MultiPipelineCallbacks)):
-            callback_on_step_end_tensor_inputs = callback_on_step_end.tensor_inputs
 
         # 1. Check inputs. Raise error if not correct
         self.check_inputs(
             prompt,
             prompt_2,
-            prompt_3,
             height,
             width,
             negative_prompt=negative_prompt,
             negative_prompt_2=negative_prompt_2,
-            negative_prompt_3=negative_prompt_3,
             prompt_embeds=prompt_embeds,
             negative_prompt_embeds=negative_prompt_embeds,
             pooled_prompt_embeds=pooled_prompt_embeds,
@@ -85,9 +71,8 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
         )
 
         self._guidance_scale = guidance_scale
-        self._skip_layer_guidance_scale = skip_layer_guidance_scale
-        self._clip_skip = clip_skip
         self._joint_attention_kwargs = joint_attention_kwargs
+        self._current_timestep = None
         self._interrupt = False
 
         # 2. Define call parameters
@@ -105,40 +90,43 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
             if self.joint_attention_kwargs is not None
             else None
         )
+        has_neg_prompt = negative_prompt is not None or (
+            negative_prompt_embeds is not None and negative_pooled_prompt_embeds is not None
+        )
+        do_true_cfg = true_cfg_scale > 1 and has_neg_prompt
         (
             prompt_embeds,
-            negative_prompt_embeds,
             pooled_prompt_embeds,
-            negative_pooled_prompt_embeds,
+            text_ids,
         ) = self.encode_prompt(
             prompt=prompt,
             prompt_2=prompt_2,
-            prompt_3=prompt_3,
-            negative_prompt=negative_prompt,
-            negative_prompt_2=negative_prompt_2,
-            negative_prompt_3=negative_prompt_3,
-            do_classifier_free_guidance=self.do_classifier_free_guidance,
             prompt_embeds=prompt_embeds,
-            negative_prompt_embeds=negative_prompt_embeds,
             pooled_prompt_embeds=pooled_prompt_embeds,
-            negative_pooled_prompt_embeds=negative_pooled_prompt_embeds,
             device=device,
-            clip_skip=self.clip_skip,
             num_images_per_prompt=num_images_per_prompt,
             max_sequence_length=max_sequence_length,
             lora_scale=lora_scale,
         )
-
-        if self.do_classifier_free_guidance:
-            if skip_guidance_layers is not None:
-                original_prompt_embeds = prompt_embeds
-                original_pooled_prompt_embeds = pooled_prompt_embeds
-            prompt_embeds = torch.cat([negative_prompt_embeds, prompt_embeds], dim=0)
-            pooled_prompt_embeds = torch.cat([negative_pooled_prompt_embeds, pooled_prompt_embeds], dim=0)
+        if do_true_cfg:
+            (
+                negative_prompt_embeds,
+                negative_pooled_prompt_embeds,
+                negative_text_ids,
+            ) = self.encode_prompt(
+                prompt=negative_prompt,
+                prompt_2=negative_prompt_2,
+                prompt_embeds=negative_prompt_embeds,
+                pooled_prompt_embeds=negative_pooled_prompt_embeds,
+                device=device,
+                num_images_per_prompt=num_images_per_prompt,
+                max_sequence_length=max_sequence_length,
+                lora_scale=lora_scale,
+            )
 
         # 4. Prepare latent variables
-        num_channels_latents = self.transformer.config.in_channels
-        latents = self.prepare_latents(
+        num_channels_latents = self.transformer.config.in_channels // 4
+        latents, latent_image_ids = self.prepare_latents(
             batch_size * num_images_per_prompt,
             num_channels_latents,
             height,
@@ -150,50 +138,72 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
         )
 
         # 5. Prepare timesteps
-        scheduler_kwargs = {}
-        if self.scheduler.config.get("use_dynamic_shifting", None) and mu is None:
-            _, _, height, width = latents.shape
-            image_seq_len = (height // self.transformer.config.patch_size) * (
-                width // self.transformer.config.patch_size
-            )
-            mu = calculate_shift(
-                image_seq_len,
-                self.scheduler.config.get("base_image_seq_len", 256),
-                self.scheduler.config.get("max_image_seq_len", 4096),
-                self.scheduler.config.get("base_shift", 0.5),
-                self.scheduler.config.get("max_shift", 1.16),
-            )
-            scheduler_kwargs["mu"] = mu
-        elif mu is not None:
-            scheduler_kwargs["mu"] = mu
+        sigmas = np.linspace(1.0, 1 / num_inference_steps, num_inference_steps) if sigmas is None else sigmas
+        if hasattr(self.scheduler.config, "use_flow_sigmas") and self.scheduler.config.use_flow_sigmas:
+            sigmas = None
+        image_seq_len = latents.shape[1]
+        mu = calculate_shift(
+            image_seq_len,
+            self.scheduler.config.get("base_image_seq_len", 256),
+            self.scheduler.config.get("max_image_seq_len", 4096),
+            self.scheduler.config.get("base_shift", 0.5),
+            self.scheduler.config.get("max_shift", 1.15),
+        )
         timesteps, num_inference_steps = retrieve_timesteps(
             self.scheduler,
             num_inference_steps,
             device,
             sigmas=sigmas,
-            **scheduler_kwargs,
+            mu=mu,
         )
         num_warmup_steps = max(len(timesteps) - num_inference_steps * self.scheduler.order, 0)
         self._num_timesteps = len(timesteps)
 
-        # 6. Prepare image embeddings
-        if (
-            ip_adapter_image is not None and self.is_ip_adapter_active
-        ) or ip_adapter_image_embeds is not None:
-            ip_adapter_image_embeds = self.prepare_ip_adapter_image_embeds(
+        # handle guidance
+        if self.transformer.config.guidance_embeds:
+            guidance = torch.full([1], guidance_scale, device=device, dtype=torch.float32)
+            guidance = guidance.expand(latents.shape[0])
+        else:
+            guidance = None
+
+        if (ip_adapter_image is not None or ip_adapter_image_embeds is not None) and (
+            negative_ip_adapter_image is None and negative_ip_adapter_image_embeds is None
+        ):
+            negative_ip_adapter_image = np.zeros((width, height, 3), dtype=np.uint8)
+            negative_ip_adapter_image = [
+                negative_ip_adapter_image
+            ] * self.transformer.encoder_hid_proj.num_ip_adapters
+
+        elif (ip_adapter_image is None and ip_adapter_image_embeds is None) and (
+            negative_ip_adapter_image is not None or negative_ip_adapter_image_embeds is not None
+        ):
+            ip_adapter_image = np.zeros((width, height, 3), dtype=np.uint8)
+            ip_adapter_image = [ip_adapter_image] * self.transformer.encoder_hid_proj.num_ip_adapters
+
+        if self.joint_attention_kwargs is None:
+            self._joint_attention_kwargs = {}
+
+        image_embeds = None
+        negative_image_embeds = None
+        if ip_adapter_image is not None or ip_adapter_image_embeds is not None:
+            image_embeds = self.prepare_ip_adapter_image_embeds(
                 ip_adapter_image,
                 ip_adapter_image_embeds,
                 device,
                 batch_size * num_images_per_prompt,
-                self.do_classifier_free_guidance,
+            )
+        if negative_ip_adapter_image is not None or negative_ip_adapter_image_embeds is not None:
+            negative_image_embeds = self.prepare_ip_adapter_image_embeds(
+                negative_ip_adapter_image,
+                negative_ip_adapter_image_embeds,
+                device,
+                batch_size * num_images_per_prompt,
             )
 
-            if self.joint_attention_kwargs is None:
-                self._joint_attention_kwargs = {"ip_adapter_image_embeds": ip_adapter_image_embeds}
-            else:
-                self._joint_attention_kwargs.update(ip_adapter_image_embeds=ip_adapter_image_embeds)
-
-        # 7. Denoising loop
+        # 6. Denoising loop
+        # We set the index here to remove DtoH sync, helpful especially during compilation.
+        # Check out more details here: https://github.com/huggingface/diffusers/pull/11696
+        self.scheduler.set_begin_index(0)
         with self.progress_bar(total=num_inference_steps) as progress_bar:
             for i, t in enumerate(timesteps):
                 if self.interrupt:
@@ -209,58 +219,52 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
                     rescale=rescale,
                     generator=generator,
                 )
-                if skip_guidance_layers is not None:
-                    original_input_prompt_embeds = noise_adding(
-                        embeddings=original_prompt_embeds,
+                if do_true_cfg:
+                    negative_input_prompt_embeds = noise_adding(
+                        embeddings=negative_prompt_embeds,
                         gamma=gamma,
                         noise_scale=noise_scale,
-                        psi=mixing_factor,
+                        mixing_factor=mixing_factor,
                         rescale=rescale,
                         generator=generator,
                     )
 
-                # expand the latents if we are doing classifier free guidance
-                latent_model_input = torch.cat([latents] * 2) if self.do_classifier_free_guidance else latents
+                self._current_timestep = t
+                if image_embeds is not None:
+                    self._joint_attention_kwargs["ip_adapter_image_embeds"] = image_embeds
                 # broadcast to batch dimension in a way that's compatible with ONNX/Core ML
-                timestep = t.expand(latent_model_input.shape[0])
+                timestep = t.expand(latents.shape[0]).to(latents.dtype)
 
-                noise_pred = self.transformer(
-                    hidden_states=latent_model_input,
-                    timestep=timestep,
-                    encoder_hidden_states=input_prompt_embeds,
-                    pooled_projections=pooled_prompt_embeds,
-                    joint_attention_kwargs=self.joint_attention_kwargs,
-                    return_dict=False,
-                )[0]
+                with self.transformer.cache_context("cond"):
+                    noise_pred = self.transformer(
+                        hidden_states=latents,
+                        timestep=timestep / 1000,
+                        guidance=guidance,
+                        pooled_projections=pooled_prompt_embeds,
+                        encoder_hidden_states=input_prompt_embeds,
+                        txt_ids=text_ids,
+                        img_ids=latent_image_ids,
+                        joint_attention_kwargs=self.joint_attention_kwargs,
+                        return_dict=False,
+                    )[0]
 
-                # perform guidance
-                if self.do_classifier_free_guidance:
-                    noise_pred_uncond, noise_pred_text = noise_pred.chunk(2)
-                    noise_pred = noise_pred_uncond + self.guidance_scale * (
-                        noise_pred_text - noise_pred_uncond
-                    )
-                    should_skip_layers = (
-                        True
-                        if i > num_inference_steps * skip_layer_guidance_start
-                        and i < num_inference_steps * skip_layer_guidance_stop
-                        else False
-                    )
-                    if skip_guidance_layers is not None and should_skip_layers:
-                        timestep = t.expand(latents.shape[0])
-                        latent_model_input = latents
-                        noise_pred_skip_layers = self.transformer(
-                            hidden_states=latent_model_input,
-                            timestep=timestep,
-                            encoder_hidden_states=original_input_prompt_embeds,
-                            pooled_projections=original_pooled_prompt_embeds,
+                if do_true_cfg:
+                    if negative_image_embeds is not None:
+                        self._joint_attention_kwargs["ip_adapter_image_embeds"] = negative_image_embeds
+
+                    with self.transformer.cache_context("uncond"):
+                        neg_noise_pred = self.transformer(
+                            hidden_states=latents,
+                            timestep=timestep / 1000,
+                            guidance=guidance,
+                            pooled_projections=negative_pooled_prompt_embeds,
+                            encoder_hidden_states=negative_input_prompt_embeds,
+                            txt_ids=negative_text_ids,
+                            img_ids=latent_image_ids,
                             joint_attention_kwargs=self.joint_attention_kwargs,
                             return_dict=False,
-                            skip_layers=skip_guidance_layers,
                         )[0]
-                        noise_pred = (
-                            noise_pred
-                            + (noise_pred_text - noise_pred_skip_layers) * self._skip_layer_guidance_scale
-                        )
+                    noise_pred = neg_noise_pred + true_cfg_scale * (noise_pred - neg_noise_pred)
 
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
@@ -279,7 +283,6 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
 
                     latents = callback_outputs.pop("latents", latents)
                     prompt_embeds = callback_outputs.pop("prompt_embeds", prompt_embeds)
-                    pooled_prompt_embeds = callback_outputs.pop("pooled_prompt_embeds", pooled_prompt_embeds)
 
                 # call the callback, if provided
                 if i == len(timesteps) - 1 or (
@@ -287,12 +290,13 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
                 ):
                     progress_bar.update()
 
+        self._current_timestep = None
+
         if output_type == "latent":
             image = latents
-
         else:
+            latents = self._unpack_latents(latents, height, width, self.vae_scale_factor)
             latents = (latents / self.vae.config.scaling_factor) + self.vae.config.shift_factor
-
             image = self.vae.decode(latents, return_dict=False)[0]
             image = self.image_processor.postprocess(image, output_type=output_type)
 
@@ -302,4 +306,4 @@ class SD3CADPipeline(StableDiffusion3Pipeline):
         if not return_dict:
             return (image,)
 
-        return StableDiffusion3PipelineOutput(images=image)
+        return FluxPipelineOutput(images=image)

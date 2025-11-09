@@ -10,11 +10,11 @@ from diffusers.pipelines.cogview4.pipeline_cogview4 import (
     retrieve_timesteps,
 )
 
-from pipeline.cad.cad_scheduler import cads_linear_schedule, noise_adding
+from pipeline.cads.cads_scheduler import cads_linear_schedule, noise_adding
 from pipeline.vanilla import CogView4Pipeline
 
 
-class CogView4CADPipeline(CogView4Pipeline):
+class CogView4CADSPipeline(CogView4Pipeline):
     @torch.no_grad()
     def __call__(
         self,

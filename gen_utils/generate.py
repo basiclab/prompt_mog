@@ -28,7 +28,7 @@ def main(
     pretrained_name: str,
     prompt_root_dir: str = "data/lpbench/filtered",
     dataset_type: Literal["long", "short", "rewritten", "geneval"] = "long",
-    model_type: Literal["pmog", "chunk", "short", "cad"] = "short",
+    model_type: Literal["pmog", "chunk", "short", "cads"] = "short",
     config_root: str = "configs",
     mixed_precision: Literal["none", "fp16", "bf16"] = "bf16",
     seed: int = 42,
