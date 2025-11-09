@@ -7,15 +7,17 @@ MODEL_TYPE="short"
 NUM_PROCESSES=4
 MODE="multi"
 SEED=(42 1234 21344 304516 405671 693042)
-FIRST_TOP=1
 PARTIAL_NUM="None"
 PORT=29500
-GAMMA=0.8
-NUM_MODE=10
-SIGMA=0.05
+FLUX_GAMMA=0.7
+FLUX_NUM_MODE=50
+FLUX_SIGMA=0.25
+QWEN_GAMMA=0.85
+QWEN_NUM_MODE=50
+QWEN_SIGMA=0.25
 
 print_help() {
-    echo "Usage: bash gen_image.sh [OPTIONS]"
+    echo "Usage: bash gen_image_ablation.sh [OPTIONS]"
     echo ""
     echo "Options:"
     echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
@@ -27,10 +29,12 @@ print_help() {
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
-    echo "  --first_top INT           First top for short prompts (default: 1)"
-    echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
-    echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
+    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.7)"
+    echo "  --flux_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --flux_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
+    echo "  --qwen_gamma FLOAT        Gamma for p-MoG (default: 0.85)"
+    echo "  --qwen_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --qwen_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
     echo "  -h, --help                Show this help message and exit"
 }
 
@@ -46,10 +50,12 @@ while [[ "$#" -gt 0 ]]; do
         --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
         --port) PORT="$2"; shift ;;
         --partial_num) PARTIAL_NUM="$2"; shift ;;
-        --first_top) FIRST_TOP="$2"; shift ;;
-        --gamma) GAMMA="$2"; shift ;;
-        --num_mode) NUM_MODE="$2"; shift ;;
-        --sigma) SIGMA="$2"; shift ;;
+        --flux_gamma) FLUX_GAMMA="$2"; shift ;;
+        --flux_num_mode) FLUX_NUM_MODE="$2"; shift ;;
+        --flux_sigma) FLUX_SIGMA="$2"; shift ;;
+        --qwen_gamma) QWEN_GAMMA="$2"; shift ;;
+        --qwen_num_mode) QWEN_NUM_MODE="$2"; shift ;;
+        --qwen_sigma) QWEN_SIGMA="$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
     esac
@@ -68,11 +74,10 @@ else
 fi
 
 MODEL_NAME_PAIR=(
-    "stabilityai/stable-diffusion-3.5-large,sd3,0.7,50,0.25"
-    "black-forest-labs/FLUX.1-Krea-dev,flux,0.7,50,0.25"
-    "THUDM/CogView4-6B,cogview4,0.95,50,0.2"
-    "Qwen/Qwen-Image,qwen,0.85,50,0.25"
+    "black-forest-labs/FLUX.1-Krea-dev,flux"
+    "Qwen/Qwen-Image,qwen"
 )
+
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 for model_name_type in ${MODEL_NAME_PAIR[@]}; do
@@ -80,39 +85,30 @@ for model_name_type in ${MODEL_NAME_PAIR[@]}; do
     set -- $model_name_type
     model_name=$1
     model_type=$2
-    gamma=$3
-    num_mode=$4
-    sigma=$5
     echo "Generating images with model: ${model_type}"
     IFS=$OLDIFS  # restore the original IFS
-    SEED_INDEX=0
-
-    if [ "$MODEL_TYPE" = "df" ]; then
-        $CMD gen_utils/generate_df.py \
+    if [ "$model_type" = "flux" ]; then
+        GAMMA=${FLUX_GAMMA}
+        NUM_MODE=${FLUX_NUM_MODE}
+        SIGMA=${FLUX_SIGMA}
+    elif [ "$model_type" = "qwen" ]; then
+        GAMMA=${QWEN_GAMMA}
+        NUM_MODE=${QWEN_NUM_MODE}
+        SIGMA=${QWEN_SIGMA}
+    fi
+    for seed in ${SEED[@]}; do
+        $CMD gen_utils/generate.py \
             --pretrained_name ${model_name} \
             --prompt_root_dir ${PROMPT_ROOT_DIR} \
-            --output_root_dir ${OUTPUT_ROOT_DIR}/${model_type} \
+            --output_root_dir ${OUTPUT_ROOT_DIR}/${model_type}/${seed} \
             --mixed_precision bf16 \
-            --seeds ${SEED[@]} \
+            --seed ${seed} \
             --dataset_type ${DATASET_TYPE} \
-            --model_type ${MODEL_TYPE}
-    else
-        for seed in ${SEED[@]}; do
-            $CMD gen_utils/generate.py \
-                --pretrained_name ${model_name} \
-                --prompt_root_dir ${PROMPT_ROOT_DIR} \
-                --output_root_dir ${OUTPUT_ROOT_DIR}/${model_type}/${seed} \
-                --mixed_precision bf16 \
-                --seed ${seed} \
-                --dataset_type ${DATASET_TYPE} \
-                --model_type ${MODEL_TYPE} \
-                --first_top ${FIRST_TOP} \
-                --partial_num ${PARTIAL_NUM} \
-                --gamma ${gamma} \
-                --num_mode ${num_mode} \
-                --sigma ${sigma} \
-                --prompt_index ${SEED_INDEX}
-            SEED_INDEX=$((SEED_INDEX + 1))
-        done
-    fi
+            --model_type ${MODEL_TYPE} \
+            --partial_num ${PARTIAL_NUM} \
+            --gamma ${GAMMA} \
+            --num_mode ${NUM_MODE} \
+            --sigma ${SIGMA} \
+            --no-perform_rotation
+    done
 done

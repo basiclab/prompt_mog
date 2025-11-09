@@ -6,14 +6,16 @@ DATASET_TYPE="long"
 MODEL_TYPE="short"
 NUM_PROCESSES=4
 MODE="multi"
-FIRST_TOP=1
 PARTIAL_NUM="None"
-GAMMA=0.8
-NUM_MODE=10
-SIGMA=0.05
+FLUX_GAMMA=0.7
+FLUX_NUM_MODE=50
+FLUX_SIGMA=0.25
+QWEN_GAMMA=0.85
+QWEN_NUM_MODE=50
+QWEN_SIGMA=0.25
 
 print_help() {
-    echo "Usage: bash gen_and_scoring.sh [OPTIONS]"
+    echo "Usage: bash gen_and_scoring_ablation.sh [OPTIONS]"
     echo ""
     echo "Options:"
     echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
@@ -25,9 +27,12 @@ print_help() {
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
-    echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
-    echo "  -h, --help                Show this help message and exit"
+    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.7)"
+    echo "  --flux_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --flux_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
+    echo "  --qwen_gamma FLOAT        Gamma for p-MoG (default: 0.85)"
+    echo "  --qwen_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --qwen_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
 }
 
 OLDIFS=$IFS
@@ -40,10 +45,12 @@ while [[ "$#" -gt 0 ]]; do
         --num_processes) NUM_PROCESSES="$2"; shift ;;
         --mode) MODE="$2"; shift ;; 
         --partial_num) PARTIAL_NUM="$2"; shift ;;
-        --first_top) FIRST_TOP="$2"; shift ;;
-        --gamma) GAMMA="$2"; shift ;;
-        --num_mode) NUM_MODE="$2"; shift ;;
-        --sigma) SIGMA="$2"; shift ;;
+        --flux_gamma) FLUX_GAMMA="$2"; shift ;;
+        --flux_num_mode) FLUX_NUM_MODE="$2"; shift ;;
+        --flux_sigma) FLUX_SIGMA="$2"; shift ;;
+        --qwen_gamma) QWEN_GAMMA="$2"; shift ;;
+        --qwen_num_mode) QWEN_NUM_MODE="$2"; shift ;;
+        --qwen_sigma) QWEN_SIGMA="$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
     esac
@@ -53,18 +60,20 @@ IFS=$OLDIFS
 
 source .venv/bin/activate
 
-./scripts/gen_image.sh \
+./scripts/ablation/gen_image_ablation.sh \
     --prompt_root_dir ${PROMPT_ROOT_DIR} \
     --output_root_dir ${OUTPUT_ROOT_DIR} \
     --dataset_type ${DATASET_TYPE} \
     --model_type ${MODEL_TYPE} \
     --num_processes ${NUM_PROCESSES} \
     --mode ${MODE} \
-    --first_top ${FIRST_TOP} \
     --partial_num ${PARTIAL_NUM} \
-    --gamma ${GAMMA} \
-    --num_mode ${NUM_MODE} \
-    --sigma ${SIGMA}
+    --flux_gamma ${FLUX_GAMMA} \
+    --flux_num_mode ${FLUX_NUM_MODE} \
+    --flux_sigma ${FLUX_SIGMA} \
+    --qwen_gamma ${QWEN_GAMMA} \
+    --qwen_num_mode ${QWEN_NUM_MODE} \
+    --qwen_sigma ${QWEN_SIGMA}
 
 ./scripts/scoring_lpb.sh \
     --output_root_dir ${OUTPUT_ROOT_DIR} \

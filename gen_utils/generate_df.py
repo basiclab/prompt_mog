@@ -1,7 +1,6 @@
 import json
 import logging
 import os
-from functools import partial
 from typing import Literal
 
 import torch
@@ -11,15 +10,12 @@ from accelerate import Accelerator
 from torch.utils.data import DataLoader
 
 from gen_utils.common import DETYPE_MAPPING, check_used_balance, create_pipeline, setup_logging
-from gen_utils.dataset import GenEvalDataset, LongPromptDataset, RewrittenPromptDataset, ShortPromptDataset
+from gen_utils.dataset import LongPromptDataset
 
 # avoid the warning of tokenizers parallelism
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 DATASET_MAPPING = {
-    "rewritten": RewrittenPromptDataset,
     "long": LongPromptDataset,
-    "short": ShortPromptDataset,
-    "geneval": GenEvalDataset,
 }
 
 
@@ -27,28 +23,22 @@ def main(
     output_root_dir: str,
     pretrained_name: str,
     prompt_root_dir: str = "data/lpbench/filtered",
-    dataset_type: Literal["long", "short", "rewritten", "geneval"] = "long",
-    model_type: Literal["pmog", "chunk", "short", "cads"] = "short",
+    dataset_type: Literal["long"] = "long",
+    model_type: Literal["df"] = "df",
     config_root: str = "configs",
     mixed_precision: Literal["none", "fp16", "bf16"] = "bf16",
-    seed: int = 42,
+    seeds: list[int] = [42, 1234],  # noqa: B006
     required_memory: int = 1,
     batch_size: int = 1,
     num_workers: int = 4,
-    partial_num: int | None = None,  # for long prompts only
-    prompt_index: int = 0,  # for rewritten prompts only
-    first_top: int = 1,  # for short prompts only
-    # p-mog generation parameters
-    gamma: float = 0.8,  # define in cosine similarity
-    num_mode: int = 10,
-    sigma: float = 0.05,
-    perform_rotation: bool = True,
 ):
     accelerator = Accelerator()
     device = accelerator.device
 
     if accelerator.is_main_process:
-        os.makedirs(output_root_dir, exist_ok=True)
+        for seed in seeds:
+            os.makedirs(os.path.join(output_root_dir, str(seed)), exist_ok=True)
+
         with open(os.path.join(output_root_dir, "parameters.json"), "w") as f:
             json.dump(
                 {
@@ -56,14 +46,7 @@ def main(
                     "model_type": model_type,
                     "dataset_type": dataset_type,
                     "mixed_precision": mixed_precision,
-                    "seed": seed,
-                    "partial_num": partial_num,
-                    "prompt_index": prompt_index,
-                    "first_top": first_top,
-                    "gamma": gamma,
-                    "num_mode": num_mode,
-                    "sigma": sigma,
-                    "perform_rotation": perform_rotation,
+                    "seeds": seeds,
                 },
                 f,
             )
@@ -91,12 +74,10 @@ def main(
     with open(config_path, "r") as f:
         gen_params = json.load(f)
 
-    dataset = DATASET_MAPPING[dataset_type](
-        root_dir=prompt_root_dir,
-        partial_num=partial_num,  # for long prompts only
-        prompt_index=prompt_index,  # for rewritten prompts only
-        first_top=first_top,  # for short prompts only
-    )
+    # gen_params["height"] = gen_params["height"] // 2
+    # gen_params["width"] = gen_params["width"] // 2
+
+    dataset = DATASET_MAPPING[dataset_type](root_dir=prompt_root_dir)
     dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=num_workers, shuffle=False)
 
     dataloader = accelerator.prepare(dataloader)
@@ -107,7 +88,7 @@ def main(
         shown_name = model_name[:8] + "..."
     for batch in tqdm.tqdm(
         dataloader,
-        desc=f"Generating [model: {shown_name}] [seed: {seed}] ",
+        desc=f"Generating [model: {shown_name}]",
         disable=not accelerator.is_main_process,
         total=len(dataloader),
         ncols=0,
@@ -136,10 +117,12 @@ def main(
         # check if the output images and text files already exist
         while (
             len(prompts) > 0
-            and os.path.exists(os.path.join(output_root_dir, save_names[0]))
+            and os.path.exists(os.path.join(output_root_dir, str(seeds[0]), save_names[0]))
             and os.path.exists(
                 os.path.join(
-                    output_root_dir, save_names[0].replace(".txt", ".png").replace("prompt_", "gen_")
+                    output_root_dir,
+                    str(seeds[0]),
+                    save_names[0].replace(".txt", ".png").replace("prompt_", "gen_"),
                 )
             )
         ):
@@ -154,28 +137,25 @@ def main(
         generator = [
             torch.Generator(device="cpu").manual_seed(seed + base_starting_idx + i)
             for i in range(len(prompts))
+            for seed in seeds
         ]
-        if model_type == "pmog":
-            pipe.encode_prompt = partial(
-                pipe.encode_prompt,
-                gamma=gamma,
-                num_mode=num_mode,
-                sigma=sigma,
-                perform_rotation=perform_rotation,
-                generator=generator[0],  # batch size is 1 for now
-            )
         images = pipe(
             prompt=prompts,
             generator=generator,
+            num_images_per_prompt=len(seeds),
             **gen_params,
         ).images
-        images = images[: len(prompts)]
 
-        for prompt, image, save_name in zip(prompts, images, save_names, strict=True):
+        prompts = prompts * len(seeds)
+        save_names = save_names * len(seeds)
+
+        for prompt, image, seed, save_name in zip(prompts, images, seeds, save_names, strict=True):
             image.save(
-                os.path.join(output_root_dir, save_name.replace(".txt", ".png").replace("prompt_", "gen_"))
+                os.path.join(
+                    output_root_dir, str(seed), save_name.replace(".txt", ".png").replace("prompt_", "gen_")
+                )
             )
-            with open(os.path.join(output_root_dir, save_name), "w") as f:
+            with open(os.path.join(output_root_dir, str(seed), save_name), "w") as f:
                 f.write(prompt)
             base_starting_idx += 1
         starting_idx += batch_size * accelerator.num_processes

@@ -7,11 +7,13 @@ DATASET_TYPE="long"
 MODEL_TYPE="short"
 NUM_PROCESSES=4
 MODE="multi"
-FIRST_TOP=1
 PARTIAL_NUM="None"
-GAMMA=0.8
-NUM_MODE=10
-SIGMA=0.1
+FLUX_GAMMA=0.7
+FLUX_NUM_MODE=50
+FLUX_SIGMA=0.25
+QWEN_GAMMA=0.85
+QWEN_NUM_MODE=50
+QWEN_SIGMA=0.25
 
 # SLURM configuration
 SLURM_ACCOUNT="MST114467"
@@ -21,7 +23,7 @@ SLURM_PARTITION="normal"
 SLURM_NODES=1
 
 print_help() {
-    echo "Usage: bash gen_and_scoring_slurm.sh [OPTIONS]"
+    echo "Usage: bash gen_and_scoring_ablation_slurm.sh [OPTIONS]"
     echo ""
     echo "Options:"
     echo "  --prompt_root_dir PATH    Path to prompts (default: data/long_prompt)"
@@ -30,11 +32,13 @@ print_help() {
     echo "  --model_type TYPE         Model type: 'pmog' or 'chunk' or 'short' or 'cads' (default: short)"
     echo "  --num_processes INT       Number of processes (default: 4)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
-    echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
-    echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
-    echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
+    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.7)"
+    echo "  --flux_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --flux_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
+    echo "  --qwen_gamma FLOAT        Gamma for p-MoG (default: 0.85)"
+    echo "  --qwen_num_mode INT       Number of modes for p-MoG (default: 50)"
+    echo "  --qwen_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
     echo ""
     echo "SLURM Options:"
     echo "  --job_name NAME           SLURM job name (default: image_gen)"
@@ -56,11 +60,13 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;; 
         --seed) IFS=',' read -ra SEED <<< "$2"; shift ;;
         --port) PORT="$2"; shift ;;
-        --first_top) FIRST_TOP="$2"; shift ;;
         --partial_num) PARTIAL_NUM="$2"; shift ;;
-        --gamma) GAMMA="$2"; shift ;;
-        --num_mode) NUM_MODE="$2"; shift ;;
-        --sigma) SIGMA="$2"; shift ;;
+        --flux_gamma) FLUX_GAMMA="$2"; shift ;;
+        --flux_num_mode) FLUX_NUM_MODE="$2"; shift ;;
+        --flux_sigma) FLUX_SIGMA="$2"; shift ;;
+        --qwen_gamma) QWEN_GAMMA="$2"; shift ;;
+        --qwen_num_mode) QWEN_NUM_MODE="$2"; shift ;;
+        --qwen_sigma) QWEN_SIGMA="$2"; shift ;;
         --job_name) SLURM_JOB_NAME="$2"; shift ;;
         --partition) SLURM_PARTITION="$2"; shift ;;
         --account) SLURM_ACCOUNT="$2"; shift ;;
@@ -92,18 +98,20 @@ submit_slurm_job() {
 
 source .venv/bin/activate
 
-./scripts/gen_image.sh \\
+./scripts/ablation/gen_image_ablation.sh \\
     --prompt_root_dir ${PROMPT_ROOT_DIR} \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\
     --dataset_type ${DATASET_TYPE} \\
     --model_type ${MODEL_TYPE} \\
     --num_processes ${NUM_PROCESSES} \\
     --mode ${MODE} \\
-    --first_top ${FIRST_TOP} \\
     --partial_num ${PARTIAL_NUM} \\
-    --gamma ${GAMMA} \\
-    --num_mode ${NUM_MODE} \\
-    --sigma ${SIGMA}
+    --flux_gamma ${FLUX_GAMMA} \\
+    --flux_num_mode ${FLUX_NUM_MODE} \\
+    --flux_sigma ${FLUX_SIGMA} \\
+    --qwen_gamma ${QWEN_GAMMA} \\
+    --qwen_num_mode ${QWEN_NUM_MODE} \\
+    --qwen_sigma ${QWEN_SIGMA} \\
 
 ./scripts/scoring_lpb.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\

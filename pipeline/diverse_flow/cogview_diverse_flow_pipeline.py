@@ -10,11 +10,11 @@ from diffusers.pipelines.cogview4.pipeline_cogview4 import (
     retrieve_timesteps,
 )
 
-from pipeline.cads.cads_scheduler import cads_linear_schedule, noise_adding
+from pipeline.diverse_flow.df_kernel import compute_dpp_gradient, compute_gamma_schedule
 from pipeline.vanilla import CogView4Pipeline
 
 
-class CogView4CADSPipeline(CogView4Pipeline):
+class CogView4DiverseFlowPipeline(CogView4Pipeline):
     @torch.no_grad()
     def __call__(
         self,
@@ -42,12 +42,13 @@ class CogView4CADSPipeline(CogView4Pipeline):
         | None = None,
         callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
         max_sequence_length: int = 1024,
-        # CADS specific parameters
-        tau1: float = 0.6,
-        tau2: float = 0.9,
-        noise_scale: float = 0.25,
-        mixing_factor: float = 1.0,
-        rescale: bool = True,
+        # DiverseFlow specific parameters
+        enable_diverseflow: bool = True,
+        diverseflow_strength: float = 1.0,
+        kernel_spread: float = 1.0,
+        use_quality_constraint: bool = True,
+        quality_percentile: float = 0.95,
+        min_quality: float = 0.01,
     ) -> CogView4PipelineOutput | tuple:
         if isinstance(callback_on_step_end, (PipelineCallback, MultiPipelineCallbacks)):
             callback_on_step_end_tensor_inputs = callback_on_step_end.tensor_inputs
@@ -150,25 +151,7 @@ class CogView4CADSPipeline(CogView4Pipeline):
                 if self.interrupt:
                     continue
 
-                timestep_ratio = 1 - i / (len(timesteps) - 1)
-                gamma = cads_linear_schedule(timestep_ratio, tau1, tau2)
-                input_prompt_embeds = noise_adding(
-                    embeddings=prompt_embeds,
-                    gamma=gamma,
-                    noise_scale=noise_scale,
-                    psi=mixing_factor,
-                    rescale=rescale,
-                    generator=generator,
-                )
-                if self.do_classifier_free_guidance:
-                    negative_input_prompt_embeds = noise_adding(
-                        embeddings=negative_prompt_embeds,
-                        gamma=gamma,
-                        noise_scale=noise_scale,
-                        psi=mixing_factor,
-                        rescale=rescale,
-                        generator=generator,
-                    )
+                t_norm = t.item() / 1000.0
 
                 self._current_timestep = t
                 latent_model_input = latents.to(transformer_dtype)
@@ -179,7 +162,7 @@ class CogView4CADSPipeline(CogView4Pipeline):
                 with self.transformer.cache_context("cond"):
                     noise_pred_cond = self.transformer(
                         hidden_states=latent_model_input,
-                        encoder_hidden_states=input_prompt_embeds,
+                        encoder_hidden_states=prompt_embeds,
                         timestep=timestep,
                         original_size=original_size,
                         target_size=target_size,
@@ -193,7 +176,7 @@ class CogView4CADSPipeline(CogView4Pipeline):
                     with self.transformer.cache_context("uncond"):
                         noise_pred_uncond = self.transformer(
                             hidden_states=latent_model_input,
-                            encoder_hidden_states=negative_input_prompt_embeds,
+                            encoder_hidden_states=negative_prompt_embeds,
                             timestep=timestep,
                             original_size=original_size,
                             target_size=target_size,
@@ -206,6 +189,30 @@ class CogView4CADSPipeline(CogView4Pipeline):
                     )
                 else:
                     noise_pred = noise_pred_cond
+
+                # Compute DiverseFlow gradient
+                if enable_diverseflow and num_images_per_prompt > 1:
+                    dpp_grad = compute_dpp_gradient(
+                        latents,
+                        noise_pred,
+                        t_norm,
+                        kernel_spread=kernel_spread,
+                        use_quality=use_quality_constraint,
+                        quality_percentile=quality_percentile,
+                        min_quality=min_quality,
+                    )
+
+                    # Compute time-varying strength
+                    gamma = compute_gamma_schedule(
+                        t_norm,
+                        dpp_grad,
+                        noise_pred,
+                        base_strength=diverseflow_strength,
+                    )
+
+                    # Modify velocity with diversity gradient
+                    # Paper Equation 10: dxt = [vθ(xt,t) - γ(t)∇ log L] dt
+                    noise_pred = noise_pred - gamma * dpp_grad
 
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
 

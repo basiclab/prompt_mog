@@ -8,11 +8,11 @@ from diffusers.pipelines.qwenimage.pipeline_qwenimage import (
     retrieve_timesteps,
 )
 
-from pipeline.cads.cads_scheduler import cads_linear_schedule, noise_adding
+from pipeline.diverse_flow.df_kernel import compute_dpp_gradient, compute_gamma_schedule
 from pipeline.vanilla import QwenImagePipeline
 
 
-class QwenCADSPipeline(QwenImagePipeline):
+class QwenDiverseFlowPipeline(QwenImagePipeline):
     @torch.no_grad()
     def __call__(
         self,
@@ -37,12 +37,13 @@ class QwenCADSPipeline(QwenImagePipeline):
         callback_on_step_end: Callable[[int, int, dict], None] | None = None,
         callback_on_step_end_tensor_inputs: list[str] = ["latents"],  # noqa: B006
         max_sequence_length: int = 512,
-        # CADS specific parameters
-        tau1: float = 0.6,
-        tau2: float = 0.9,
-        noise_scale: float = 0.25,
-        mixing_factor: float = 1.0,
-        rescale: bool = True,
+        # DiverseFlow specific parameters
+        enable_diverseflow: bool = True,
+        diverseflow_strength: float = 1.0,
+        kernel_spread: float = 1.0,
+        use_quality_constraint: bool = True,
+        quality_percentile: float = 0.95,
+        min_quality: float = 0.01,
     ):
         height = height or self.default_sample_size * self.vae_scale_factor
         width = width or self.default_sample_size * self.vae_scale_factor
@@ -158,25 +159,7 @@ class QwenCADSPipeline(QwenImagePipeline):
                 if self.interrupt:
                     continue
 
-                timestep_ratio = 1 - i / (len(timesteps) - 1)
-                gamma = cads_linear_schedule(timestep_ratio, tau1, tau2)
-                input_prompt_embeds = noise_adding(
-                    embeddings=prompt_embeds,
-                    gamma=gamma,
-                    noise_scale=noise_scale,
-                    psi=mixing_factor,
-                    rescale=rescale,
-                    generator=generator,
-                )
-                if do_true_cfg:
-                    negative_input_prompt_embeds = noise_adding(
-                        embeddings=negative_prompt_embeds,
-                        gamma=gamma,
-                        noise_scale=noise_scale,
-                        psi=mixing_factor,
-                        rescale=rescale,
-                        generator=generator,
-                    )
+                t_norm = t.item() / 1000.0
                 self._current_timestep = t
                 # broadcast to batch dimension in a way that's compatible with ONNX/Core ML
                 timestep = t.expand(latents.shape[0]).to(latents.dtype)
@@ -186,7 +169,7 @@ class QwenCADSPipeline(QwenImagePipeline):
                         timestep=timestep / 1000,
                         guidance=guidance,
                         encoder_hidden_states_mask=prompt_embeds_mask,
-                        encoder_hidden_states=input_prompt_embeds,
+                        encoder_hidden_states=prompt_embeds,
                         img_shapes=img_shapes,
                         txt_seq_lens=txt_seq_lens,
                         attention_kwargs=self.attention_kwargs,
@@ -200,7 +183,7 @@ class QwenCADSPipeline(QwenImagePipeline):
                             timestep=timestep / 1000,
                             guidance=guidance,
                             encoder_hidden_states_mask=negative_prompt_embeds_mask,
-                            encoder_hidden_states=negative_input_prompt_embeds,
+                            encoder_hidden_states=negative_prompt_embeds,
                             img_shapes=img_shapes,
                             txt_seq_lens=negative_txt_seq_lens,
                             attention_kwargs=self.attention_kwargs,
@@ -211,6 +194,30 @@ class QwenCADSPipeline(QwenImagePipeline):
                     cond_norm = torch.norm(noise_pred, dim=-1, keepdim=True)
                     noise_norm = torch.norm(comb_pred, dim=-1, keepdim=True)
                     noise_pred = comb_pred * (cond_norm / noise_norm)
+
+                # Compute DiverseFlow gradient
+                if enable_diverseflow and num_images_per_prompt > 1:
+                    dpp_grad = compute_dpp_gradient(
+                        latents,
+                        noise_pred,
+                        t_norm,
+                        kernel_spread=kernel_spread,
+                        use_quality=use_quality_constraint,
+                        quality_percentile=quality_percentile,
+                        min_quality=min_quality,
+                    )
+
+                    # Compute time-varying strength
+                    gamma = compute_gamma_schedule(
+                        t_norm,
+                        dpp_grad,
+                        noise_pred,
+                        base_strength=diverseflow_strength,
+                    )
+
+                    # Modify velocity with diversity gradient
+                    # Paper Equation 10: dxt = [vθ(xt,t) - γ(t)∇ log L] dt
+                    noise_pred = noise_pred - gamma * dpp_grad
 
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype

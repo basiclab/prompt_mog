@@ -72,6 +72,7 @@ def _pack_on_sphere(
     device: torch.device | None = None,
     dtype: torch.dtype | None = None,
     generator: torch.Generator | None = None,
+    perform_rotation: bool = True,
 ) -> torch.Tensor:
     """
     Return n unit vectors in R^d, well-separated on S^{d-1}.
@@ -84,7 +85,10 @@ def _pack_on_sphere(
     V = torch.zeros((num_mode, dim), device=device, dtype=dtype)
     V[:, : num_mode - 1] = Uv
     R = _random_orthogonal(dim, device=device, dtype=dtype, generator=generator)
-    P = (R @ V.T).T  # (n, d)
+    if perform_rotation:
+        P = (R @ V.T).T  # (n, d)
+    else:
+        P = V
     P = P / (torch.linalg.norm(P, dim=1, keepdim=True) + 1e-12)
     return P
 
@@ -94,6 +98,7 @@ def centers_on_sphere(
     gamma: float,
     num_mode: int,
     generator: torch.Generator | None = None,
+    perform_rotation: bool = True,
 ) -> torch.Tensor:
     """
     Build MoG centers at equal distance gamma from Ec and maximally separated.
@@ -115,9 +120,14 @@ def centers_on_sphere(
     # Split the generator for independent random operations
     gen1, gen2 = split_generator(generator, n=2)
 
-    U = _pack_on_sphere(num_mode, d, device=device, dtype=dtype, generator=gen1)  # (n, d)
-    R = _random_orthogonal(d, device=device, dtype=dtype, generator=gen2)
-    Urot = (R @ U.T).T  # (n, d)
+    U = _pack_on_sphere(
+        num_mode, d, device=device, dtype=dtype, generator=gen1, perform_rotation=perform_rotation
+    )  # (n, d)
+    if perform_rotation:
+        R = _random_orthogonal(d, device=device, dtype=dtype, generator=gen2)
+        Urot = (R @ U.T).T  # (n, d)
+    else:
+        Urot = U
     C = Ec[:, None, :] + gamma[:, None, None] * Urot.unsqueeze(0)  # (B, n, d)
 
     return C
@@ -168,6 +178,7 @@ def perform_pmog(
     sigma: float,
     batch_size: int,
     generator: torch.Generator | None = None,
+    perform_rotation: bool = True,
 ) -> torch.Tensor:
     """
     Perform PMoG sampling.
@@ -194,7 +205,11 @@ def perform_pmog(
     gen1, gen2 = split_generator(generator, n=2)
 
     reformulated_prompt_centers = centers_on_sphere(
-        prompt_embeds.float(), gamma=gamma_euclidean, num_mode=num_mode, generator=gen1
+        Ec=prompt_embeds.float(),
+        gamma=gamma_euclidean,
+        num_mode=num_mode,
+        generator=gen1,
+        perform_rotation=perform_rotation,
     )
 
     sampled_prompt_embeds = sample_from_mog(
