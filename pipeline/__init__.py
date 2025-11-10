@@ -10,10 +10,10 @@ from .diverse_flow.cogview_diverse_flow_pipeline import CogView4DiverseFlowPipel
 from .diverse_flow.flux_diverse_flow_pipeline import FluxDiverseFlowPipeline
 from .diverse_flow.qwen_diverse_flow_pipeline import QwenDiverseFlowPipeline
 from .diverse_flow.sd3_diverse_flow_pipeline import SD3DiverseFlowPipeline
-from .prompt_mog.cogview_pmog_pipeline import CogView4PMOGPipeline
-from .prompt_mog.flux_pmog_pipeline import FluxPMOGPipeline
-from .prompt_mog.qwen_pmog_pipeline import QwenPMOGPipeline
-from .prompt_mog.sd3_pmog_pipeline import SD3PMOGPipeline
+from .prompt_mog.cogview_pmog_pipeline import CogView4PMoGPipeline
+from .prompt_mog.flux_pmog_pipeline import FluxPMoGPipeline
+from .prompt_mog.qwen_pmog_pipeline import QwenPMoGPipeline
+from .prompt_mog.sd3_pmog_pipeline import SD3PMoGPipeline
 from .vanilla import (
     CogView4Pipeline,
     FluxPipeline,
@@ -26,20 +26,20 @@ __all__ = [
     "FluxPromptChunkPipeline",
     "FluxCADSPipeline",
     "FluxDiverseFlowPipeline",
-    "FluxPMOGPipeline",
+    "FluxPMoGPipeline",
     "StableDiffusion3Pipeline",
     "SD3PromptChunkPipeline",
     "SD3CADSPipeline",
     "SD3DiverseFlowPipeline",
-    "SD3PMOGPipeline",
+    "SD3PMoGPipeline",
     "QwenImagePipeline",
     "QwenImagePromptChunkPipeline",
     "QwenCADSPipeline",
     "QwenDiverseFlowPipeline",
-    "QwenPMOGPipeline",
+    "QwenPMoGPipeline",
     "CogView4Pipeline",
     "CogView4PromptChunkPipeline",
     "CogView4CADSPipeline",
     "CogView4DiverseFlowPipeline",
-    "CogView4PMOGPipeline",
+    "CogView4PMoGPipeline",
 ]

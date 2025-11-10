@@ -7,7 +7,7 @@ MODEL_TYPE="short"
 NUM_PROCESSES=4
 MODE="multi"
 PARTIAL_NUM="None"
-FLUX_GAMMA=0.7
+FLUX_GAMMA=0.6
 FLUX_NUM_MODE=50
 FLUX_SIGMA=0.25
 QWEN_GAMMA=0.85
@@ -27,7 +27,7 @@ print_help() {
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
     echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.7)"
+    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.6)"
     echo "  --flux_num_mode INT       Number of modes for p-MoG (default: 50)"
     echo "  --flux_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
     echo "  --qwen_gamma FLOAT        Gamma for p-MoG (default: 0.85)"

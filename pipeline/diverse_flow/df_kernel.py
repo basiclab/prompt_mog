@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+from diffusers.pipelines.pipeline_utils import DiffusionPipeline
 from scipy.stats import chi2
 
 
@@ -46,6 +47,7 @@ def estimate_source_sample(
 
 
 def extract_features(
+    pipeline: DiffusionPipeline,
     images: torch.FloatTensor,
 ) -> torch.FloatTensor:
     """
@@ -59,7 +61,25 @@ def extract_features(
     Returns:
         Feature vectors [B, D]
     """
-    return images.flatten(start_dim=1)
+    if hasattr(pipeline, "image_encoder") and pipeline.image_encoder is not None:
+        images = (images / pipeline.vae.config.scaling_factor) + pipeline.vae.config.shift_factor
+        images = pipeline.vae.decode(images, return_dict=False)[0]
+        images = pipeline.image_processor.postprocess(images, output_type="pt")
+
+        # Normalize images for CLIP (assuming images are in [-1, 1])
+        images_norm = (images + 1) / 2  # Convert to [0, 1]
+        images_norm = F.interpolate(images_norm, size=(224, 224), mode="bilinear", align_corners=False)
+        # CLIP expects specific normalization
+        mean = torch.tensor([0.48145466, 0.4578275, 0.40821073]).view(1, 3, 1, 1).to(images.device)
+        std = torch.tensor([0.26862954, 0.26130258, 0.27577711]).view(1, 3, 1, 1).to(images.device)
+        images_norm = (images_norm - mean) / std
+        features = pipeline.image_encoder.get_image_features(images_norm)
+        features = features / features.norm(dim=-1, keepdim=True)
+        return features
+    else:
+        # Fallback: use flattened latent features
+        # Note: This is less robust as mentioned in the paper
+        return images.flatten(start_dim=1)
 
 
 def compute_dpp_kernel(
@@ -155,6 +175,7 @@ def compute_dpp_gradient(
     xt: torch.FloatTensor,
     velocity: torch.FloatTensor,
     t: float,
+    pipeline: DiffusionPipeline,
     kernel_spread: float = 1.0,
     use_quality: bool = True,
     quality_percentile: float = 0.95,
@@ -188,75 +209,107 @@ def compute_dpp_gradient(
     device = xt.device
     dtype = xt.dtype
 
-    with torch.no_grad():  # No autograd needed - we compute gradients analytically!
-        # Estimate target samples
-        x1_hat = estimate_target_sample(xt, velocity, t)
+    x1_hat = estimate_target_sample(xt, velocity, t)
 
-        # Extract features (memory efficient version)
-        if use_latent_space:
-            # Use flattened latent features directly (no CLIP, much faster)
+    if use_latent_space:
+        # ============================================================
+        # LATENT SPACE: Analytical gradients (fast, no CLIP needed)
+        # ============================================================
+        with torch.no_grad():
             features = x1_hat.flatten(start_dim=1).float()  # [K, D]
-        else:
-            # Use CLIP features (better but slower/more memory)
-            features = extract_features(x1_hat).float()
 
-        # Compute quality if enabled
+            # Compute quality if enabled
+            quality = None
+            if use_quality:
+                quality = compute_quality(xt, velocity, t, quality_percentile, min_quality)
+
+            # Compute DPP kernel
+            L = compute_dpp_kernel(features, quality, kernel_spread)
+
+            # Compute DPP log-likelihood gradient w.r.t. kernel
+            eigenvalues = torch.linalg.eigvalsh(L)
+            eigenvalues = torch.clamp(eigenvalues, min=1e-6)
+
+            try:
+                L_inv = torch.linalg.inv(L + 1e-4 * torch.eye(k, device=device, dtype=L.dtype))
+                L_plus_I_inv = torch.linalg.inv(L + torch.eye(k, device=device, dtype=L.dtype))
+                grad_L = L_inv - L_plus_I_inv  # [K, K]
+            except Exception:
+                L_inv = torch.linalg.pinv(L + 1e-4 * torch.eye(k, device=device, dtype=L.dtype))
+                L_plus_I_inv = torch.linalg.pinv(L + torch.eye(k, device=device, dtype=L.dtype))
+                grad_L = L_inv - L_plus_I_inv
+
+            # Compute pairwise distances
+            dist_sq = torch.cdist(features, features, p=2).pow(2)
+            upper_triangle = dist_sq[torch.triu(torch.ones(k, k, device=device), diagonal=1) == 1]
+            median_dist = (
+                torch.median(upper_triangle)
+                if upper_triangle.numel() > 0
+                else torch.tensor(1.0, device=device)
+            )
+            median_dist = torch.clamp(median_dist, min=1e-6)
+
+            # Analytical gradient: ∂L[i,j]/∂f[i] = -2h * L[i,j] * (f[i]-f[j]) / median
+            grad_features = torch.zeros_like(features)
+            for i in range(k):
+                for j in range(k):
+                    if i != j:
+                        diff = features[i] - features[j]
+                        coef = -2.0 * kernel_spread * L[i, j] * grad_L[i, j] / median_dist
+                        grad_features[i] += coef * diff
+
+            # Apply quality weighting
+            if quality is not None:
+                for i in range(k):
+                    grad_features[i] *= quality[i]
+
+            # Since features = x̂_1.flatten(), ∂features/∂x̂_1 is just reshape
+            grad_xt = grad_features.view_as(x1_hat).to(dtype)
+
+            # Free memory
+            del features, L, eigenvalues, grad_L, dist_sq
+
+    else:
+        # ============================================================
+        # CLIP FEATURES: Use autograd (correct but slower)
+        # ============================================================
+        # We need to backprop through CLIP encoder properly
+
+        # Step 1: Extract features (with gradient tracking for x1_hat)
+        # Create FRESH computation graph for each call
+        x1_hat_for_grad = x1_hat.detach().requires_grad_(True)
+        features = extract_features(pipeline, x1_hat_for_grad).float()
+
+        # Step 2: Compute DPP kernel
         quality = None
         if use_quality:
-            quality = compute_quality(xt, velocity, t, quality_percentile, min_quality)
+            with torch.no_grad():
+                quality = compute_quality(xt, velocity, t, quality_percentile, min_quality)
 
-        # Compute DPP kernel in float32 for stability
         L = compute_dpp_kernel(features, quality, kernel_spread)
 
-        # Compute DPP log-likelihood
-        # LL = log det(L) - log det(L + I)
-        eigenvalues = torch.linalg.eigvalsh(L.float())
+        # Step 3: Compute DPP log-likelihood
+        eigenvalues = torch.linalg.eigvalsh(L)
         eigenvalues = torch.clamp(eigenvalues, min=1e-6)
+        log_det_L = torch.sum(torch.log(eigenvalues))
+        log_det_L_plus_I = torch.sum(torch.log(eigenvalues + 1))
+        log_likelihood = log_det_L - log_det_L_plus_I
 
-        # Compute analytical gradient of DPP log-likelihood w.r.t. kernel
-        # ∂LL/∂L = L^(-1) - (L+I)^(-1)
-        try:
-            L_inv = torch.linalg.inv(L + 1e-4 * torch.eye(k, device=device, dtype=L.dtype))
-            L_plus_I_inv = torch.linalg.inv(L + torch.eye(k, device=device, dtype=L.dtype))
-            grad_L = L_inv - L_plus_I_inv  # [K, K]
-        except Exception as e:
-            print(f"Error in computing DPP gradient: {e}")
-            # If inversion fails, use pseudoinverse
-            L_inv = torch.linalg.pinv(L + 1e-4 * torch.eye(k, device=device, dtype=L.dtype))
-            L_plus_I_inv = torch.linalg.pinv(L + torch.eye(k, device=device, dtype=L.dtype))
-            grad_L = L_inv - L_plus_I_inv
+        # Step 4: Compute gradient w.r.t. x1_hat
+        # Use create_graph=False to not build second-order graph
+        grad_x1_hat = torch.autograd.grad(
+            outputs=log_likelihood,
+            inputs=x1_hat_for_grad,
+            create_graph=False,  # Important: don't create second-order graph
+            retain_graph=False,  # Important: free the graph after this
+        )[0]
 
-        # Compute pairwise distances for gradient computation
-        dist_sq = torch.cdist(features, features, p=2).pow(2)
-        upper_triangle = dist_sq[torch.triu(torch.ones(k, k, device=device), diagonal=1) == 1]
-        median_dist = (
-            torch.median(upper_triangle) if upper_triangle.numel() > 0 else torch.tensor(1.0, device=device)
-        )
-        median_dist = torch.clamp(median_dist, min=1e-6)
+        # Detach to prevent any graph retention
+        grad_xt = grad_x1_hat.detach().to(dtype)
 
-        # Compute gradient w.r.t. features analytically
-        # For RBF kernel: ∂L[i,j]/∂f[i] = -2 * h * L[i,j] * (f[i] - f[j]) / median(D)
-        grad_features = torch.zeros_like(features)  # [K, D]
+        # Free memory
+        del features, L, eigenvalues, x1_hat_for_grad, grad_x1_hat
 
-        for i in range(k):
-            for j in range(k):
-                if i != j:
-                    # Gradient contribution from L[i,j]
-                    diff = features[i] - features[j]  # [D]
-                    coef = -2.0 * kernel_spread * L[i, j] * grad_L[i, j] / median_dist
-                    grad_features[i] += coef * diff
-
-        # Apply quality weighting if enabled
-        if quality is not None:
-            for i in range(k):
-                grad_features[i] *= quality[i]
-
-        # Map gradient back to latent space
-        # Since we're using analytical gradients, we can directly reshape
-        grad_xt = grad_features.view_as(x1_hat).to(dtype)
-
-    # Free memory
-    del features, L, eigenvalues, grad_L, dist_sq
     if device.type == "cuda":
         torch.cuda.empty_cache()
 

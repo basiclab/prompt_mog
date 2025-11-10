@@ -4,7 +4,7 @@ from pipeline.prompt_mog.regular_simplex import perform_pmog
 from pipeline.vanilla import QwenImagePipeline
 
 
-class QwenPMOGPipeline(QwenImagePipeline):
+class QwenPMoGPipeline(QwenImagePipeline):
     def encode_prompt(
         self,
         prompt: str | list[str],
@@ -17,6 +17,7 @@ class QwenPMOGPipeline(QwenImagePipeline):
         num_mode: int = 10,
         sigma: float = 0.05,
         generator: torch.Generator | None = None,
+        perform_rotation: bool = False,
     ):
         device = device or self._execution_device
 
@@ -42,6 +43,7 @@ class QwenPMOGPipeline(QwenImagePipeline):
             sigma=sigma,
             batch_size=batch_size * num_images_per_prompt,
             generator=generator,
+            perform_rotation=perform_rotation,
         )
 
         return prompt_embeds, prompt_embeds_mask

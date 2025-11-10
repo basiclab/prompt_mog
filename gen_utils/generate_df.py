@@ -74,9 +74,6 @@ def main(
     with open(config_path, "r") as f:
         gen_params = json.load(f)
 
-    # gen_params["height"] = gen_params["height"] // 2
-    # gen_params["width"] = gen_params["width"] // 2
-
     dataset = DATASET_MAPPING[dataset_type](root_dir=prompt_root_dir)
     dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=num_workers, shuffle=False)
 

@@ -10,9 +10,6 @@ SEED=(42 1234 21344 304516 405671 693042)
 FIRST_TOP=1
 PARTIAL_NUM="None"
 PORT=29500
-GAMMA=0.8
-NUM_MODE=10
-SIGMA=0.05
 
 print_help() {
     echo "Usage: bash gen_image.sh [OPTIONS]"
@@ -28,9 +25,6 @@ print_help() {
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
-    echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
-    echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
     echo "  -h, --help                Show this help message and exit"
 }
 
@@ -47,9 +41,6 @@ while [[ "$#" -gt 0 ]]; do
         --port) PORT="$2"; shift ;;
         --partial_num) PARTIAL_NUM="$2"; shift ;;
         --first_top) FIRST_TOP="$2"; shift ;;
-        --gamma) GAMMA="$2"; shift ;;
-        --num_mode) NUM_MODE="$2"; shift ;;
-        --sigma) SIGMA="$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
     esac
@@ -69,7 +60,7 @@ fi
 
 MODEL_NAME_PAIR=(
     "stabilityai/stable-diffusion-3.5-large,sd3,0.7,50,0.25"
-    "black-forest-labs/FLUX.1-Krea-dev,flux,0.7,50,0.25"
+    "black-forest-labs/FLUX.1-Krea-dev,flux,0.6,50,0.25"
     "THUDM/CogView4-6B,cogview4,0.95,50,0.2"
     "Qwen/Qwen-Image,qwen,0.85,50,0.25"
 )

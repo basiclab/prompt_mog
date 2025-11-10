@@ -3,7 +3,7 @@ from typing import Any, Callable
 import numpy as np
 import torch
 from diffusers.image_processor import PipelineImageInput
-from diffusers.pipelines.flux.pipeline_flux import FluxPipelineOutput
+from diffusers.pipelines.flux.pipeline_flux import FluxPipelineOutput, calculate_shift, retrieve_timesteps
 
 from pipeline.diverse_flow.df_kernel import compute_dpp_gradient, compute_gamma_schedule
 from pipeline.vanilla import FluxPipeline
@@ -174,8 +174,6 @@ class FluxDiverseFlowPipeline(FluxPipeline):
         )
 
         # 5. Prepare timesteps
-        from diffusers.pipelines.flux.pipeline_flux import calculate_shift, retrieve_timesteps
-
         sigmas = np.linspace(1.0, 1 / num_inference_steps, num_inference_steps) if sigmas is None else sigmas
         if hasattr(self.scheduler.config, "use_flow_sigmas") and self.scheduler.config.use_flow_sigmas:
             sigmas = None
@@ -294,6 +292,7 @@ class FluxDiverseFlowPipeline(FluxPipeline):
                         latents,
                         noise_pred,
                         t_norm,
+                        pipeline=self,
                         kernel_spread=kernel_spread,
                         use_quality=use_quality_constraint,
                         quality_percentile=quality_percentile,

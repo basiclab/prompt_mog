@@ -8,9 +8,6 @@ NUM_PROCESSES=4
 MODE="multi"
 FIRST_TOP=1
 PARTIAL_NUM="None"
-GAMMA=0.8
-NUM_MODE=10
-SIGMA=0.05
 
 print_help() {
     echo "Usage: bash gen_and_scoring.sh [OPTIONS]"
@@ -24,9 +21,6 @@ print_help() {
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: multi)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
     echo "  --first_top INT           First top for short prompts (default: 1)"
-    echo "  --gamma FLOAT             Gamma for p-MoG (default: 0.8)"
-    echo "  --num_mode INT            Number of modes for p-MoG (default: 10)"
-    echo "  --sigma FLOAT             Sigma for p-MoG (default: 0.05)"
     echo "  -h, --help                Show this help message and exit"
 }
 
@@ -41,9 +35,6 @@ while [[ "$#" -gt 0 ]]; do
         --mode) MODE="$2"; shift ;; 
         --partial_num) PARTIAL_NUM="$2"; shift ;;
         --first_top) FIRST_TOP="$2"; shift ;;
-        --gamma) GAMMA="$2"; shift ;;
-        --num_mode) NUM_MODE="$2"; shift ;;
-        --sigma) SIGMA="$2"; shift ;;
         -h|--help) print_help; exit 0 ;;
         *) echo "Unknown parameter: $1"; print_help; exit 1 ;;
     esac
@@ -61,10 +52,7 @@ source .venv/bin/activate
     --num_processes ${NUM_PROCESSES} \
     --mode ${MODE} \
     --first_top ${FIRST_TOP} \
-    --partial_num ${PARTIAL_NUM} \
-    --gamma ${GAMMA} \
-    --num_mode ${NUM_MODE} \
-    --sigma ${SIGMA}
+    --partial_num ${PARTIAL_NUM}
 
 ./scripts/scoring_lpb.sh \
     --output_root_dir ${OUTPUT_ROOT_DIR} \

@@ -4,7 +4,7 @@ from pipeline.prompt_mog.regular_simplex import perform_pmog
 from pipeline.vanilla import CogView4Pipeline
 
 
-class CogView4PMOGPipeline(CogView4Pipeline):
+class CogView4PMoGPipeline(CogView4Pipeline):
     def encode_prompt(
         self,
         prompt: str | list[str],
@@ -20,6 +20,7 @@ class CogView4PMOGPipeline(CogView4Pipeline):
         num_mode: int = 10,
         sigma: float = 0.05,
         generator: torch.Generator | None = None,
+        perform_rotation: bool = False,
     ):
         device = device or self._execution_device
 
@@ -41,6 +42,7 @@ class CogView4PMOGPipeline(CogView4Pipeline):
             sigma=sigma,
             batch_size=batch_size * num_images_per_prompt,
             generator=generator,
+            perform_rotation=perform_rotation,
         )
 
         if do_classifier_free_guidance and negative_prompt_embeds is None:

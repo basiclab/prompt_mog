@@ -6,7 +6,7 @@ from pipeline.prompt_mog.regular_simplex import perform_pmog
 from pipeline.vanilla import FluxPipeline
 
 
-class FluxPMOGPipeline(FluxPipeline):
+class FluxPMoGPipeline(FluxPipeline):
     def encode_prompt(
         self,
         prompt: str | list[str],
@@ -21,6 +21,7 @@ class FluxPMOGPipeline(FluxPipeline):
         num_mode: int = 10,
         sigma: float = 0.05,
         generator: torch.Generator | None = None,
+        perform_rotation: bool = False,
     ) -> tuple[torch.FloatTensor, torch.FloatTensor, torch.LongTensor]:
         device = device or self._execution_device
 
@@ -35,6 +36,7 @@ class FluxPMOGPipeline(FluxPipeline):
 
         prompt = [prompt] if isinstance(prompt, str) else prompt
         assert len(prompt) == 1, "Only one prompt is supported for now"
+        batch_size = len(prompt)
 
         if prompt_embeds is None:
             prompt_2 = prompt_2 or prompt
@@ -54,14 +56,14 @@ class FluxPMOGPipeline(FluxPipeline):
                 max_sequence_length=max_sequence_length,
                 device=device,
             )
-            batch_size = prompt_embeds.shape[0]
             prompt_embeds = perform_pmog(
                 prompt_embeds=prompt_embeds,
                 gamma=gamma,
                 num_mode=num_mode,
                 sigma=sigma,
-                batch_size=batch_size,
+                batch_size=batch_size * num_images_per_prompt,
                 generator=generator,
+                perform_rotation=perform_rotation,
             )
 
         if self.text_encoder is not None:

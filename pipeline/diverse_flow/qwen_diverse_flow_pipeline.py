@@ -201,6 +201,7 @@ class QwenDiverseFlowPipeline(QwenImagePipeline):
                         latents,
                         noise_pred,
                         t_norm,
+                        pipeline=self,
                         kernel_spread=kernel_spread,
                         use_quality=use_quality_constraint,
                         quality_percentile=quality_percentile,

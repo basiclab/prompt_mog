@@ -6,7 +6,7 @@ from pipeline.prompt_mog.regular_simplex import perform_pmog
 from pipeline.vanilla import StableDiffusion3Pipeline
 
 
-class SD3PMOGPipeline(StableDiffusion3Pipeline):
+class SD3PMoGPipeline(StableDiffusion3Pipeline):
     def encode_prompt(
         self,
         prompt: str | list[str],
@@ -29,6 +29,7 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
         num_mode: int = 10,
         sigma: float = 0.05,
         generator: torch.Generator | None = None,
+        perform_rotation: bool = False,
     ):
         """
         We perform PMoG to clip embeddings and t5 embeddings separately.
@@ -75,8 +76,9 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
                 gamma=gamma,
                 num_mode=num_mode,
                 sigma=sigma,
-                batch_size=batch_size,
+                batch_size=batch_size * num_images_per_prompt,
                 generator=generator,
+                perform_rotation=perform_rotation,
             )
 
             t5_prompt_embed = self._get_t5_prompt_embeds(
@@ -90,8 +92,9 @@ class SD3PMOGPipeline(StableDiffusion3Pipeline):
                 gamma=gamma,
                 num_mode=num_mode,
                 sigma=sigma,
-                batch_size=batch_size,
+                batch_size=batch_size * num_images_per_prompt,
                 generator=generator,
+                perform_rotation=perform_rotation,
             )
 
             clip_prompt_embeds = torch.nn.functional.pad(

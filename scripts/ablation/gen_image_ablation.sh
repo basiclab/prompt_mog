@@ -9,7 +9,7 @@ MODE="multi"
 SEED=(42 1234 21344 304516 405671 693042)
 PARTIAL_NUM="None"
 PORT=29500
-FLUX_GAMMA=0.7
+FLUX_GAMMA=0.6
 FLUX_NUM_MODE=50
 FLUX_SIGMA=0.25
 QWEN_GAMMA=0.85
@@ -29,7 +29,7 @@ print_help() {
     echo "  --seed LIST               Comma-separated list of seeds (default: 42)"
     echo "  --port INT                Port number for multi-gpu mode (default: 29500)"
     echo "  --partial_num INT         Partial number for long prompts (default: None)"
-    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.7)"
+    echo "  --flux_gamma FLOAT        Gamma for p-MoG (default: 0.6)"
     echo "  --flux_num_mode INT       Number of modes for p-MoG (default: 50)"
     echo "  --flux_sigma FLOAT        Sigma for p-MoG (default: 0.25)"
     echo "  --qwen_gamma FLOAT        Gamma for p-MoG (default: 0.85)"
@@ -77,7 +77,6 @@ MODEL_NAME_PAIR=(
     "black-forest-labs/FLUX.1-Krea-dev,flux"
     "Qwen/Qwen-Image,qwen"
 )
-
 
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 for model_name_type in ${MODEL_NAME_PAIR[@]}; do
