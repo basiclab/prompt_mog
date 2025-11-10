@@ -218,7 +218,8 @@ class QwenDiverseFlowPipeline(QwenImagePipeline):
 
                     # Modify velocity with diversity gradient
                     # Paper Equation 10: dxt = [vθ(xt,t) - γ(t)∇ log L] dt
-                    noise_pred = noise_pred - gamma * dpp_grad
+                    # ummm, without 0.6, the results will be very worse...
+                    noise_pred = noise_pred - gamma * 0.6 * dpp_grad
 
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype

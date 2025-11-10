@@ -213,6 +213,7 @@ class CogView4DiverseFlowPipeline(CogView4Pipeline):
 
                     # Modify velocity with diversity gradient
                     # Paper Equation 10: dxt = [vθ(xt,t) - γ(t)∇ log L] dt
+                    # Interesting, this one does not requires 0.6...
                     noise_pred = noise_pred - gamma * dpp_grad
 
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
