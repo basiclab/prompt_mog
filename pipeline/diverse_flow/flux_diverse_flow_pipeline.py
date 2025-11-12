@@ -309,7 +309,7 @@ class FluxDiverseFlowPipeline(FluxPipeline):
 
                     # Modify velocity with diversity gradient
                     # Paper Equation 10: dxt = [vθ(xt,t) - γ(t)∇ log L] dt
-                    noise_pred = noise_pred - gamma * 0.6 * dpp_grad
+                    noise_pred = noise_pred - gamma * dpp_grad
 
                 # Compute previous noisy sample x_t -> x_t-1 (Euler step)
                 latents_dtype = latents.dtype

@@ -116,10 +116,12 @@ source .venv/bin/activate
 ./scripts/scoring_lpb.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\
     --num_processes ${NUM_PROCESSES} \\
+    --model_list flux,qwen \\
     --mode ${MODE} \\
     --partial_num ${PARTIAL_NUM}
 
 ./scripts/scoring_diversity.sh \\
+    --model_list flux,qwen \\
     --output_root_dir ${OUTPUT_ROOT_DIR}
 SLURM_EOF
     

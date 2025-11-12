@@ -35,6 +35,22 @@ wheels = [
 ]
 
 [[package]]
+name = "aesthetic-predictor-v2-5"
+version = "2024.12.18.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "accelerate" },
+    { name = "numpy" },
+    { name = "torch" },
+    { name = "torchvision" },
+    { name = "transformers" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ae/21/cff7a0cae389a4e6ab1167ad4c3df317963034e31bc4ad958f1bfc8226dc/aesthetic_predictor_v2_5-2024.12.18.1.tar.gz", hash = "sha256:3e9ce37aa38061c633fd024a94ce3ee393562b5f328b8d6daa3c8623331956c8", size = 5577482, upload-time = "2024-12-18T11:29:42.821Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1d/00/3a7d1a4fa9edca866b52805369bdbb2a4c71cf90cd56792c6921054ebc4f/aesthetic_predictor_v2_5-2024.12.18.1-py2.py3-none-any.whl", hash = "sha256:7b99b52ed896e46f0edbbac6d01ec32695f6f9919fcde853cfb0936656782638", size = 28115, upload-time = "2024-12-18T11:29:38.285Z" },
+]
+
+[[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1206,6 +1222,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "accelerate" },
+    { name = "aesthetic-predictor-v2-5" },
     { name = "datasets" },
     { name = "diffusers" },
     { name = "einops" },
@@ -1239,6 +1256,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "accelerate", specifier = "==1.10.1" },
+    { name = "aesthetic-predictor-v2-5", specifier = ">=2024.12.18.1" },
     { name = "datasets", specifier = "==4.2.0" },
     { name = "diffusers", specifier = "==0.35.1" },
     { name = "einops", specifier = "==0.8.1" },

@@ -6,24 +6,18 @@ from statistics import mean, stdev
 import tyro
 
 COLS = [
-    ("semantic", "clip_score"),
     ("semantic", "vqa_score"),
-    ("spatial", "clip_score"),
     ("spatial", "vqa_score"),
-    ("stylistic", "clip_score"),
     ("stylistic", "vqa_score"),
-    ("average", "clip_score"),
     ("average", "vqa_score"),
+    ("average", "aesthetic_score"),
 ]
 HEADER_LABELS = [
-    "semantic-clip",
     "semantic-vqa",
-    "spatial-clip",
     "spatial-vqa",
-    "stylistic-clip",
     "stylistic-vqa",
-    "average-clip",
     "average-vqa",
+    "average-aesthetic",
 ]
 
 
@@ -35,25 +29,19 @@ def load_seed_scores(seed_dir: Path):
         with fp.open("r", encoding="utf-8") as f:
             data = json.load(f)
 
-        s_clip = float(data["semantic"]["clip_score"]) * 100.0
         s_vqa = float(data["semantic"]["vqa_score"]) * 100.0
-        sp_clip = float(data["spatial"]["clip_score"]) * 100.0
         sp_vqa = float(data["spatial"]["vqa_score"]) * 100.0
-        st_clip = float(data["stylistic"]["clip_score"]) * 100.0
         st_vqa = float(data["stylistic"]["vqa_score"]) * 100.0
+        as_score = float(data["aesthetic_score"])
 
-        avg_clip = (s_clip + sp_clip + st_clip) / 3.0
         avg_vqa = (s_vqa + sp_vqa + st_vqa) / 3.0
 
         return {
-            ("semantic", "clip_score"): s_clip,
             ("semantic", "vqa_score"): s_vqa,
-            ("spatial", "clip_score"): sp_clip,
             ("spatial", "vqa_score"): sp_vqa,
-            ("stylistic", "clip_score"): st_clip,
             ("stylistic", "vqa_score"): st_vqa,
-            ("average", "clip_score"): avg_clip,
             ("average", "vqa_score"): avg_vqa,
+            ("average", "aesthetic_score"): as_score,
         }
     except Exception as e:
         print(f"[warn] Skipping {fp}: {e}", file=sys.stderr)
@@ -144,10 +132,7 @@ def format_latex(rows, col_means, col_stds, show_labels=True):
     def fmt_mean_std(m, s):
         return f"{m:.2f} {{\\scriptsize $\\pm$ {s:.2f}}}"
 
-    summary_cells = [
-        fmt_mean_std(m, s) if col_idx > len(col_means) - 5 else fmt_num(m)
-        for col_idx, (m, s) in enumerate(zip(col_means, col_stds, strict=True))
-    ]
+    summary_cells = [fmt_mean_std(m, s) for m, s in zip(col_means, col_stds, strict=True)]
     if show_labels:
         summary_cells = ["mean"] + summary_cells
     lines.append(join_cells(summary_cells))

@@ -77,7 +77,7 @@ def main(
     sample_size: int = 300,  # number of samples per n to compute Vendi
     grid_dx: float = 1e-3,
     margin_sigmas: float = 6.0,
-    figsize: tuple[float, float] = (7.0, 4.5),
+    figsize: tuple[float, float] = (7.0, 4),
     save_path: str = "assets/toy_example.pdf",
 ):
     delta = delta_mult * sigma

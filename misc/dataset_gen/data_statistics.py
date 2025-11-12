@@ -275,12 +275,10 @@ def main(
             b = ax_top.barh(0, value, left=left, color=color, height=0.5, label=dataset)
             bars_top.append(b[0])
 
-            if target_id in [0, 2]:
+            if target_id in [0, 1, 2]:
                 left += value
                 continue
             plot_value = value
-            if target_id == 1:
-                plot_value = sum(avg_lengths[:3])
             ax_top.text(
                 left + value / 2,
                 0,

@@ -95,7 +95,7 @@ def _pack_on_sphere(
 
 def centers_on_sphere(
     Ec: torch.Tensor,
-    gamma: float,
+    gamma: torch.Tensor,
     num_mode: int,
     generator: torch.Generator | None = None,
     perform_rotation: bool = True,

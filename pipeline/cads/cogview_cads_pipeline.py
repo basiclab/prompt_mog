@@ -44,10 +44,10 @@ class CogView4CADSPipeline(CogView4Pipeline):
         max_sequence_length: int = 1024,
         # CADS specific parameters
         tau1: float = 0.6,
-        tau2: float = 0.9,
-        noise_scale: float = 0.25,
+        tau2: float = 1.0,
+        noise_scale: float = 0.2,
         mixing_factor: float = 1.0,
-        rescale: bool = True,
+        rescale: bool = False,
     ) -> CogView4PipelineOutput | tuple:
         if isinstance(callback_on_step_end, (PipelineCallback, MultiPipelineCallbacks)):
             callback_on_step_end_tensor_inputs = callback_on_step_end.tensor_inputs
@@ -160,15 +160,6 @@ class CogView4CADSPipeline(CogView4Pipeline):
                     rescale=rescale,
                     generator=generator,
                 )
-                if self.do_classifier_free_guidance:
-                    negative_input_prompt_embeds = noise_adding(
-                        embeddings=negative_prompt_embeds,
-                        gamma=gamma,
-                        noise_scale=noise_scale,
-                        psi=mixing_factor,
-                        rescale=rescale,
-                        generator=generator,
-                    )
 
                 self._current_timestep = t
                 latent_model_input = latents.to(transformer_dtype)
@@ -193,7 +184,7 @@ class CogView4CADSPipeline(CogView4Pipeline):
                     with self.transformer.cache_context("uncond"):
                         noise_pred_uncond = self.transformer(
                             hidden_states=latent_model_input,
-                            encoder_hidden_states=negative_input_prompt_embeds,
+                            encoder_hidden_states=negative_prompt_embeds,
                             timestep=timestep,
                             original_size=original_size,
                             target_size=target_size,

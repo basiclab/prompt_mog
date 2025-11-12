@@ -31,6 +31,7 @@ model_list = [
 def main(
     data_root: str = "data/lpbench/filtered",
     config_root: str = "configs",
+    cache_dir: str = "assets/model_runtime",
     num_runs: int = 5,
     num_images_per_prompt: int = 6,
     model_list: list[tuple[str, str]] = model_list,
@@ -63,6 +64,15 @@ def main(
             gen_params = json.load(f)
 
         for model_type in ["short", "pmog", "cads", "df"]:
+            result_file = os.path.join(cache_dir, f"{model_name}_{model_type}.json")
+
+            if os.path.exists(result_file):
+                print(f"\n--- Pipeline Type: {model_type} (loading from cache) ---")
+                with open(result_file, "r") as f:
+                    runtime_results[model_name][model_type] = json.load(f)
+                print(f"Loaded: avg={runtime_results[model_name][model_type]['avg']:.2f}s")
+                continue
+
             print(f"\n--- Pipeline Type: {model_type} ---")
             pipe = create_pipeline(pretrained_name, torch.bfloat16, False, "cuda", model_type)
             pipe.set_progress_bar_config(disable=True)
@@ -78,7 +88,6 @@ def main(
                     generator=generator,  # batch size is 1 for now
                 )
 
-            # Warmup run
             print("Warmup run...")
             pipe(
                 prompt=selected_prompt,
@@ -96,19 +105,13 @@ def main(
                 start_event = torch.cuda.Event(enable_timing=True)
                 end_event = torch.cuda.Event(enable_timing=True)
 
-                # Record start time
                 start_event.record()
-
                 pipe(
                     prompt=selected_prompt,
                     num_images_per_prompt=num_images_per_prompt,
                     **gen_params,
                 )
-
-                # Record end time
                 end_event.record()
-
-                # Wait for completion
                 torch.cuda.synchronize()
 
                 # Get elapsed time in milliseconds and convert to seconds
@@ -128,7 +131,11 @@ def main(
                 "all": runtimes,
             }
 
+            with open(result_file, "w") as f:
+                json.dump(runtime_results[model_name][model_type], f, indent=2)
+
             print(f"Average: {avg_runtime:.2f}s, Min: {min_runtime:.2f}s, Max: {max_runtime:.2f}s")
+            print(f"Saved to {result_file}")
 
             del pipe
             torch.cuda.empty_cache()
@@ -167,7 +174,9 @@ def main(
 
     if plot:
         models = list(runtime_results.keys())
-        x = np.arange(len(models))
+        x = np.arange(len(models)) * 1.2
+
+        color_map = plt.get_cmap("tab20b")
 
         short_times = []
         pmog_times = []
@@ -182,13 +191,19 @@ def main(
 
         fig, ax = plt.subplots(figsize=(8, 3))
 
-        width = 0.18
+        width = 0.25
 
-        bars1 = ax.bar(x - 1.5 * width, short_times, width, label="Short", color="royalblue", alpha=0.8)
-        bars2 = ax.bar(x - 0.5 * width, pmog_times, width, label="+ PMoG", color="lightcoral", alpha=0.8)
-        bars3 = ax.bar(x + 0.5 * width, cads_times, width, label="+ CADS", color="lightgreen", alpha=0.8)
+        bars1 = ax.bar(
+            x - 1.5 * width, short_times, width, label="Original", color=color_map.colors[4], alpha=0.8
+        )
+        bars2 = ax.bar(
+            x - 0.5 * width, pmog_times, width, label="+ PMoG", color=color_map.colors[5], alpha=0.8
+        )
+        bars3 = ax.bar(
+            x + 0.5 * width, cads_times, width, label="+ CADS", color=color_map.colors[6], alpha=0.8
+        )
         bars4 = ax.bar(
-            x + 1.5 * width, df_times, width, label="+ Diverse Flow", color="lightyellow", alpha=0.8
+            x + 1.5 * width, df_times, width, label="+ Diverse Flow", color=color_map.colors[7], alpha=0.8
         )
 
         y_max = max(max(short_times), max(pmog_times), max(cads_times), max(df_times))
@@ -205,54 +220,58 @@ def main(
                 f"{s:.2f}s",
                 ha="center",
                 va="bottom",
-                fontsize=10,
+                fontsize=12,
+                rotation=-17,
                 fontweight="bold",
             )
-
-            pmog_diff = ((p - s) / s * 100) if s > 0 else 0.0
-            cads_diff = ((c - s) / s * 100) if s > 0 else 0.0
-            df_diff = ((d - s) / s * 100) if s > 0 else 0.0
 
             ax.text(
                 bar2.get_x() + bar2.get_width() / 2,
                 bar2.get_height() + y_max * 0.02,
-                f"{p:.2f}s\n({pmog_diff:+.1f}%)",
+                f"{p:.2f}s",
                 ha="center",
                 va="bottom",
-                fontsize=8,
+                fontsize=12,
+                rotation=-17,
                 fontweight="bold",
             )
+
             ax.text(
                 bar3.get_x() + bar3.get_width() / 2,
                 bar3.get_height() + y_max * 0.02,
-                f"{c:.2f}s\n({cads_diff:+.1f}%)",
+                f"{c:.2f}s",
                 ha="center",
                 va="bottom",
-                fontsize=8,
+                fontsize=12,
+                rotation=-17,
                 fontweight="bold",
             )
+
             ax.text(
                 bar4.get_x() + bar4.get_width() / 2,
                 bar4.get_height() + y_max * 0.02,
-                f"{d:.2f}s\n({df_diff:+.1f}%)",
+                f"{d:.2f}s",
                 ha="center",
                 va="bottom",
-                fontsize=8,
+                fontsize=12,
+                rotation=-17,
                 fontweight="bold",
             )
 
         display_names = {
-            "sd3.5-large": "SD3.5-Large",
-            "flux.1-krea-dev": "Flux.1-Krea.Dev",
-            "cogview4-6b": "CogView4-6B",
-            "qwen-image": "Qwen-Image",
+            "sd3": "SD3.5-Large",
+            "flux": "Flux.1-Krea.Dev",
+            "cogview4": "CogView4-6B",
+            "qwen": "Qwen-Image",
         }
 
         ax.set_yticks([])
         ax.set_xticks(x)
-        ax.set_xticklabels([display_names.get(m, m) for m in models], fontsize=12)
-        ax.legend(fontsize=10, ncols=2, loc="upper center")
-        ax.set_ylim(0, y_max * 1.35)
+        ax.set_xticklabels([display_names.get(m, m) for m in models], fontsize=14)
+        ax.legend(fontsize=13, ncols=4, loc="upper center")
+        ax.set_ylim(0, y_max * 1.4)
+
+        plt.tight_layout()
         plt.savefig(plot_save_path, bbox_inches="tight", pad_inches=0.02)
 
 
