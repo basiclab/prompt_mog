@@ -77,7 +77,7 @@ def main(
     sample_size: int = 300,  # number of samples per n to compute Vendi
     grid_dx: float = 1e-3,
     margin_sigmas: float = 6.0,
-    figsize: tuple[float, float] = (7.0, 4),
+    figsize: tuple[float, float] = (7.0, 2.5),
     save_path: str = "assets/toy_example.pdf",
 ):
     delta = delta_mult * sigma
@@ -96,7 +96,7 @@ def main(
         mus = component_means_1d(n, delta)
         p = mog_pdf_1d(x, mus, sigma)
         ax_pdf.plot(x, p, label=f"n={n}", linewidth=1.6)
-    ax_pdf.legend(frameon=False, fontsize=11.5, loc="upper right")
+    ax_pdf.legend(frameon=False, fontsize=11.5, ncols=2, loc="upper right", bbox_to_anchor=(1, 1.1))
     prettify_axes(ax_pdf)
 
     # --- Bottom: entropy vs n (left y) and vendi vs n (right y) ---
@@ -139,7 +139,7 @@ def main(
 
     handles = ln1 + ln2 + ln3
     labels = [h.get_label() for h in handles]
-    axH.legend(handles, labels, frameon=False, fontsize=11.5, loc="lower right")
+    axH.legend(handles, labels, frameon=False, fontsize=11.5, loc="lower right", bbox_to_anchor=(1, -0.1))
 
     prettify_axes(axH)
     prettify_axes(axV, remove_spines=["top"])

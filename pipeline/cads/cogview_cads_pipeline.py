@@ -44,8 +44,8 @@ class CogView4CADSPipeline(CogView4Pipeline):
         max_sequence_length: int = 1024,
         # CADS specific parameters
         tau1: float = 0.6,
-        tau2: float = 1.0,
-        noise_scale: float = 0.2,
+        tau2: float = 0.95,
+        noise_scale: float = 0.25,
         mixing_factor: float = 1.0,
         rescale: bool = False,
     ) -> CogView4PipelineOutput | tuple:

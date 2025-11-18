@@ -198,7 +198,7 @@ def count_genai_bench(*_, **__) -> list[str]:
     return prompts
 
 
-def count_lpbench(data_root_dir: str) -> list[str]:
+def count_lpd_bench(data_root_dir: str) -> list[str]:
     data_files = glob.glob(os.path.join(data_root_dir, "filtered/*.json"))
     prompts = []
     for data_file in data_files:
@@ -224,7 +224,7 @@ target_dataset = {
     "geneval": (count_geneval, "GenEval"),
     "dpg_bench": (count_dpg_bench, "DPG-Bench"),
     "genai_bench": (count_genai_bench, "GenAI-Bench"),
-    "lpbench": (count_lpbench, r"\textbf{LPBench}"),
+    "lpbench": (count_lpd_bench, r"\textbf{LPD-Bench}"),
 }
 
 
@@ -251,26 +251,44 @@ def main(
         stylistic_coverages = [metrics[dataset_name]["stylistic_coverage"] for dataset_name in dataset_names]
         balance_indices = [metrics[dataset_name]["avg_balance_index"] for dataset_name in dataset_names]
 
-        metrics = ["Spatial Coverage", "Stylistic Coverage", "Balance Score"]
-        metric_data = [spatial_coverages, stylistic_coverages, balance_indices]
         dataset_colors = dict(
             zip(dataset_names, plt.cm.Blues(np.linspace(0.4, 0.8, len(dataset_names))), strict=True)
         )
+
+        # Create figure with GridSpec
+        # Adjusted width ratios to 2:1 for coverage:balance
         fig = plt.figure(figsize=(7, 3.2), constrained_layout=False)
+        gs = GridSpec(
+            nrows=3,
+            ncols=2,
+            height_ratios=[1, 0.05, 2.5],
+            width_ratios=[2, 1],
+            hspace=-0.1,
+            wspace=0.05,
+            figure=fig,
+        )
 
-        gs = GridSpec(nrows=2, ncols=1, height_ratios=[1, 2.2], hspace=-0.1, figure=fig)
+        # Top subplot - Average Length (spans both columns)
+        ax_top = fig.add_subplot(gs[0, :])
 
-        ax_top = fig.add_subplot(gs[0, 0])
-        ax_bottom = fig.add_subplot(gs[1, 0])
-
-        avg_lengths = [int(round(v)) for v in avg_lengths]
+        avg_lengths_int = [int(round(v)) for v in avg_lengths]
         colors_sorted = [dataset_colors[dataset_name] for dataset_name in dataset_names]
 
-        left = 0
-        max_value = max(avg_lengths)
+        original_left = left = 850
+        ax_top.text(
+            0.01,
+            0.5,
+            "(a) Avg. Length",
+            transform=ax_top.transAxes,
+            fontsize=11,
+            fontweight="bold",
+            va="center",
+            ha="left",
+            fontfamily="times new roman",
+        )
         bars_top = []
         for target_id, (value, dataset, color) in enumerate(
-            zip(avg_lengths, dataset_names, colors_sorted, strict=True)
+            zip(avg_lengths_int, dataset_names, colors_sorted, strict=True)
         ):
             b = ax_top.barh(0, value, left=left, color=color, height=0.5, label=dataset)
             bars_top.append(b[0])
@@ -282,7 +300,7 @@ def main(
             ax_top.text(
                 left + value / 2,
                 0,
-                f"{plot_value}" if plot_value != max_value else rf"avg. length: \textbf{{{plot_value}}}",
+                f"{plot_value}",
                 ha="center",
                 va="center",
                 fontsize=10,
@@ -291,11 +309,10 @@ def main(
             left += value
 
         bar_height = 0.5
-        eps = left * 0.002
         ax_top.add_patch(
             Rectangle(
-                (eps / 2, -bar_height / 2),
-                left - eps,
+                (original_left, -bar_height / 2),
+                left - original_left,
                 bar_height * 1.01,
                 linewidth=0.8,
                 edgecolor="black",
@@ -309,21 +326,25 @@ def main(
         ax_top.set_xlim(0, left + 2)
         ax_top.set_ylim(-0.85, 0.85)
 
-        x = np.arange(len(metrics))
+        # LEFT SUBPLOT - Coverage Metrics
+        ax_left = fig.add_subplot(gs[2, 0])
+
+        coverage_metrics = ["(b.1) Spatial Coverage", "(b.2) Stylistic Coverage"]
+        coverage_data = [spatial_coverages, stylistic_coverages]
+
+        x_left = np.arange(len(coverage_metrics))
         bar_width = 0.14
 
         bars_for_legend = []
         labels_for_legend = []
 
         for i, dataset in enumerate(dataset_names):
-            vals = [metric_data[m][i] for m in range(len(metrics))]
+            vals = [coverage_data[m][i] for m in range(len(coverage_metrics))]
             color = dataset_colors[dataset]
-            # Center the 5 bars around each x position
-            offsets = x + (i - len(dataset_names) / 2) * bar_width + bar_width / 2
-            bars = ax_bottom.bar(offsets, vals, width=bar_width, color=color, label=dataset)
-            # annotate values
+            offsets = x_left + (i - len(dataset_names) / 2) * bar_width + bar_width / 2
+            bars = ax_left.bar(offsets, vals, width=bar_width, color=color, label=dataset)
             for bar, val in zip(bars, vals, strict=True):
-                ax_bottom.text(
+                ax_left.text(
                     bar.get_x() + bar.get_width() / 2,
                     bar.get_height() + 0.02,
                     f"{val:.2f}",
@@ -331,33 +352,64 @@ def main(
                     va="bottom",
                     fontsize=9,
                 )
-            # Collect one handle per dataset for the shared legend
             bars_for_legend.append(bars[0])
             labels_for_legend.append(dataset)
 
-        # Bottom axes aesthetics
-        ax_bottom.set_xticks(x)
-        ax_bottom.set_xticklabels(metrics, fontsize=10)
-        ax_bottom.set_yticks([])
-        ax_bottom.set_ylim(0, 1.1)
-        ax_bottom.set_xlim(-0.4, len(metrics) - 0.6)
-        ax_bottom.grid(axis="y", linestyle="--", alpha=0.5)
-        ax_bottom.set_axisbelow(True)
+        ax_left.set_xticks(x_left)
+        ax_left.set_xticklabels(coverage_metrics, fontsize=11, fontfamily="times new roman")
+        ax_left.set_yticks([])
+        ax_left.set_ylim(0, 1.1)
+        ax_left.set_xlim(-0.4, len(coverage_metrics) - 0.6)
+        ax_left.grid(axis="y", linestyle="--", alpha=0.5)
+        ax_left.set_axisbelow(True)
+
+        # RIGHT SUBPLOT - Balance Score
+        ax_right = fig.add_subplot(gs[2, 1])
+
+        balance_metrics = ["(c) Balance Score"]
+        balance_data = [balance_indices]
+
+        x_right = np.arange(len(balance_metrics))
+
+        for i, dataset in enumerate(dataset_names):
+            vals = [balance_data[m][i] for m in range(len(balance_metrics))]
+            color = dataset_colors[dataset]
+            offsets = x_right + (i - len(dataset_names) / 2) * bar_width + bar_width / 2
+            bars = ax_right.bar(offsets, vals, width=bar_width, color=color, label=dataset)
+            for bar, val in zip(bars, vals, strict=True):
+                ax_right.text(
+                    bar.get_x() + bar.get_width() / 2,
+                    bar.get_height() + 0.02,
+                    f"{val:.2f}",
+                    ha="center",
+                    va="bottom",
+                    fontsize=9,
+                    fontfamily="times new roman",
+                )
+
+        ax_right.set_xticks(x_right)
+        ax_right.set_xticklabels(balance_metrics, fontsize=11)
+        ax_right.set_yticks([])
+        ax_right.set_ylim(0, 1.1)
+        ax_right.set_xlim(-0.4, len(balance_metrics) - 0.6)
+        ax_right.grid(axis="y", linestyle="--", alpha=0.5)
+        ax_right.set_axisbelow(True)
 
         fig.legend(
             handles=bars_for_legend,
             labels=labels_for_legend,
             loc="lower center",
-            bbox_to_anchor=(0.51, 0.8),
+            bbox_to_anchor=(0.515, 0.82),
             ncol=len(dataset_names),
             frameon=False,
-            fontsize=8.5,
-            handlelength=1.2,
+            fontsize=9,
+            handlelength=0.8,
             handleheight=0.8,
+            columnspacing=1.5,
         )
 
-        fig.subplots_adjust(bottom=0.18)
-        fig.savefig(plot_save_path, bbox_inches="tight", pad_inches=0.02)
+        fig.subplots_adjust(bottom=0.11)
+        fig.savefig(plot_save_path, bbox_inches="tight", pad_inches=0.03)
 
 
 if __name__ == "__main__":
