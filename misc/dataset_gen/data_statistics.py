@@ -199,7 +199,7 @@ def count_genai_bench(*_, **__) -> list[str]:
 
 
 def count_lpd_bench(data_root_dir: str) -> list[str]:
-    data_files = glob.glob(os.path.join(data_root_dir, "filtered/*.json"))
+    data_files = glob.glob(os.path.join(data_root_dir, "*.json"))
     prompts = []
     for data_file in data_files:
         with open(data_file, "r") as f:
@@ -224,7 +224,7 @@ target_dataset = {
     "geneval": (count_geneval, "GenEval"),
     "dpg_bench": (count_dpg_bench, "DPG-Bench"),
     "genai_bench": (count_genai_bench, "GenAI-Bench"),
-    "lpbench": (count_lpd_bench, r"\textbf{LPD-Bench}"),
+    "lpd_bench": (count_lpd_bench, r"\textbf{LPD-Bench}"),
 }
 
 

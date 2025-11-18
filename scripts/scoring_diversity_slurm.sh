@@ -5,7 +5,7 @@ OUTPUT_ROOT_DIR="outputs/long_prompt"
 MODEL_LIST="sd3,flux,cogview4,qwen"
 
 # SLURM configuration
-SLURM_ACCOUNT="MST114467"
+SLURM_ACCOUNT="YOUR_ACCOUNT"
 SLURM_NUM_CPUS=8
 SLURM_JOB_NAME="image_gen"
 SLURM_PARTITION="normal"
@@ -21,7 +21,7 @@ print_help() {
     echo "SLURM Options:"
     echo "  --job_name NAME           SLURM job name (default: image_gen)"
     echo "  --partition NAME          SLURM partition (default: normal)"
-    echo "  --account NAME            SLURM account (default: MST114114)"
+    echo "  --account NAME            SLURM account (default: YOUR_ACCOUNT)"
     echo "  --num_cpus INT            Number of CPUs per node (default: 8)"
     echo "  --nodes INT               Number of nodes (default: 1)"
     echo "  -h, --help                Show this help message and exit"

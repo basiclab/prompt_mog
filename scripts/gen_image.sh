@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROMPT_ROOT_DIR="data/lpbench/filtered"
+PROMPT_ROOT_DIR="data/lpd_bench"
 OUTPUT_ROOT_DIR="outputs/long_prompt"
 DATASET_TYPE="long"
 MODEL_TYPE="short"
