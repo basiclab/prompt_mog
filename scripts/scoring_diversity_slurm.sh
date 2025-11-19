@@ -15,7 +15,7 @@ print_help() {
     echo "Usage: bash gen_and_scoring_slurm.sh [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  --output_root_dir PATH    Output directory (default: outputs/origin)"
+    echo "  --output_root_dir PATH    Output directory (default: outputs/long_prompt)"
     echo "  --model_list LIST         Model list (default: sd3,flux,cogview4,qwen)"
     echo ""
     echo "SLURM Options:"

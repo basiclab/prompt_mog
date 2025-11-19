@@ -14,7 +14,7 @@ print_help() {
     echo "Usage: bash scoring_lbp.sh [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  --prompt_root_dir PATH    Path to prompts (default: data/lpbench/filtered)"
+    echo "  --prompt_root_dir PATH    Path to prompts (default: data/lpd_bench)"
     echo "  --output_root_dir PATH    Output root directory (default: outputs/long_prompt)"
     echo "  --num_processes INT       Number of processes (default: 1)"
     echo "  --mode MODE               Execution mode: 'single' or 'multi' (default: single)"
