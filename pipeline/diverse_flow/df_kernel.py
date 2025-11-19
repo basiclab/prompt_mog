@@ -9,19 +9,6 @@ def estimate_target_sample(
     velocity: torch.FloatTensor,
     t: float,
 ) -> torch.FloatTensor:
-    """
-    Estimate target sample x1 from current sample xt. (clean data)
-
-    Paper Equation 2: x̂₁ = xₜ + vθ(xₜ, t)(1 - t)
-
-    Args:
-        xt: Current sample at time t
-        velocity: Velocity field output vθ(xₜ, t)
-        t: Current timestep (normalized to [0, 1])
-
-    Returns:
-        Estimated target sample
-    """
     return xt - t * velocity
 
 
@@ -30,19 +17,6 @@ def estimate_source_sample(
     velocity: torch.FloatTensor,
     t: float,
 ) -> torch.FloatTensor:
-    """
-    Estimate source sample x0 from current sample xt.  (noisy data)
-
-    Paper Equation 3: x̂₀ = xₜ - vθ(xₜ, t) * t
-
-    Args:
-        xt: Current sample at time t
-        velocity: Velocity field output vθ(xₜ, t)
-        t: Current timestep (normalized to [0, 1])
-
-    Returns:
-        Estimated source sample
-    """
     return xt + velocity * (1 - t)
 
 
@@ -50,17 +24,6 @@ def extract_features(
     pipeline: DiffusionPipeline,
     images: torch.FloatTensor,
 ) -> torch.FloatTensor:
-    """
-    Extract features from images for computing distances.
-
-    Uses CLIP image encoder if available, otherwise returns flattened images.
-
-    Args:
-        images: Batch of images [B, C, H, W]
-
-    Returns:
-        Feature vectors [B, D]
-    """
     if hasattr(pipeline, "image_encoder") and pipeline.image_encoder is not None:
         images = (images / pipeline.vae.config.scaling_factor) + pipeline.vae.config.shift_factor
         images = pipeline.vae.decode(images, return_dict=False)[0]
@@ -77,8 +40,6 @@ def extract_features(
         features = features / features.norm(dim=-1, keepdim=True)
         return features
     else:
-        # Fallback: use flattened latent features
-        # Note: This is less robust as mentioned in the paper
         return images.flatten(start_dim=1)
 
 
@@ -87,19 +48,6 @@ def compute_dpp_kernel(
     quality: torch.FloatTensor | None = None,
     kernel_spread: float = 1.0,
 ) -> torch.FloatTensor:
-    """
-    Compute DPP kernel matrix L.
-
-    Paper Equation 6: L^(ij) = exp(-h * ||x̂ᵢ - x̂ⱼ||² / median(U(D)))
-
-    Args:
-        features: Feature vectors [K, D]
-        quality: Optional quality vector [K] for quality-weighted kernel
-        kernel_spread: Kernel spread parameter h
-
-    Returns:
-        Kernel matrix L [K, K]
-    """
     # Compute pairwise squared distances
     dtype = features.dtype
     dist_sq = torch.cdist(features.float(), features.float(), p=2).pow(2)  # [K, K]
@@ -135,21 +83,6 @@ def compute_quality(
     percentile: float = 0.95,
     min_quality: float = 0.01,
 ) -> torch.FloatTensor:
-    """
-    Compute quality constraint based on estimated source sample.
-
-    Paper Equation 9: Penalizes samples that deviate too far from Gaussian source.
-
-    Args:
-        xt: Current samples [K, C, H, W]
-        velocity: Velocity field output [K, C, H, W]
-        t: Current timestep (normalized)
-        percentile: Percentile for radius threshold
-        min_quality: Minimum quality value ϵ
-
-    Returns:
-        Quality vector [K]
-    """
     # Estimate source sample
     x0_hat = estimate_source_sample(xt, velocity, t)
 
@@ -182,29 +115,6 @@ def compute_dpp_gradient(
     min_quality: float = 0.01,
     use_latent_space: bool = True,
 ) -> torch.FloatTensor:
-    """
-    Compute gradient of DPP log-likelihood with respect to current samples.
-
-    MEMORY OPTIMIZED VERSION:
-    - Uses analytical gradients (no backprop!)
-    - Works in latent or CLIP feature space
-    - Processes in float32 only for kernel computation
-
-    Paper Equation 8: LL = log det(L) - log det(L + I)
-
-    Args:
-        xt: Current samples [K, C, H, W]
-        velocity: Velocity field output [K, C, H, W]
-        t: Current timestep (normalized)
-        kernel_spread: Kernel spread parameter h
-        use_quality: Whether to use quality constraint
-        quality_percentile: Percentile for quality radius
-        min_quality: Minimum quality value
-        use_latent_space: Use latent space (fast) vs CLIP features (slow but better)
-
-    Returns:
-        DPP gradient [K, C, H, W]
-    """
     k = xt.shape[0]
     device = xt.device
     dtype = xt.dtype
@@ -212,9 +122,6 @@ def compute_dpp_gradient(
     x1_hat = estimate_target_sample(xt, velocity, t)
 
     if use_latent_space:
-        # ============================================================
-        # LATENT SPACE: Analytical gradients (fast, no CLIP needed)
-        # ============================================================
         with torch.no_grad():
             features = x1_hat.flatten(start_dim=1).float()  # [K, D]
 
@@ -270,13 +177,6 @@ def compute_dpp_gradient(
             del features, L, eigenvalues, grad_L, dist_sq
 
     else:
-        # ============================================================
-        # CLIP FEATURES: Use autograd (correct but slower)
-        # ============================================================
-        # We need to backprop through CLIP encoder properly
-
-        # Step 1: Extract features (with gradient tracking for x1_hat)
-        # Create FRESH computation graph for each call
         x1_hat_for_grad = x1_hat.detach().requires_grad_(True)
         features = extract_features(pipeline, x1_hat_for_grad).float()
 
@@ -322,27 +222,10 @@ def compute_gamma_schedule(
     velocity: torch.FloatTensor,
     base_strength: float = 1.0,
 ) -> float:
-    """
-    Compute time-varying diversity strength γ(t).
-
-    The paper mentions γ(t) follows "the schedule of the probability path normalized
-    by the norm of the DPP gradient."
-
-    Args:
-        t: Current timestep (normalized)
-        dpp_grad: DPP gradient
-        velocity: Velocity field output
-        base_strength: Base strength multiplier
-
-    Returns:
-        Diversity strength γ(t)
-    """
     # Normalize by gradient norms
     dpp_norm = torch.norm(dpp_grad.flatten()) + 1e-8
     vel_norm = torch.norm(velocity.flatten()) + 1e-8
 
-    # Scale based on timestep and gradient ratio
-    # Stronger diversity in early timesteps, weaker near the end
     time_weight = t  # Increase strength as we progress
     gamma = base_strength * time_weight * (vel_norm / dpp_norm)
 
