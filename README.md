@@ -173,52 +173,16 @@ The outputs will be saved to `data/lpd_bench/rewritten`.
 <summary>Exploring the gamma</summary>
 
 ```bash
-# [0.1, 0.35, 0.6, 0.85, 1.1]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_gamma_flux_1.1_qwen_1.1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 1.1 \
-    --qwen_gamma 1.1
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_gamma_flux_0.85_qwen_0.85 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.85 \
-    --qwen_gamma 0.85
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_gamma_flux_0.6_qwen_0.6 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.6 \
-    --qwen_gamma 0.6
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_gamma_flux_0.35_qwen_0.35 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.35 \
-    --qwen_gamma 0.35
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_gamma_flux_0.1_qwen_0.1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.1 \
-    --qwen_gamma 0.1
-
+for gamma in 1.1 0.85 0.6 0.35 0.1; do
+  ./scripts/ablation/gen_and_scoring_ablation.sh \
+      --prompt_root_dir data/lpd_bench \
+      --output_root_dir outputs/ablation_gamma_flux_${gamma}_qwen_${gamma} \
+      --dataset_type long \
+      --model_type pmog \
+      --partial_num 8 \
+      --flux_gamma ${gamma} \
+      --qwen_gamma ${gamma}
+done
 ```
 
 </details>
@@ -227,51 +191,16 @@ The outputs will be saved to `data/lpd_bench/rewritten`.
 <summary>Exploring the sigma</summary>
 
 ```bash
-# [0, 0.25, 0.5, 0.75, 1.0]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_sigma_flux_1.0_qwen_1.0 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 1.0 \
-    --qwen_sigma 1.0
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_sigma_flux_0.75_qwen_0.75 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.75 \
-    --qwen_sigma 0.75
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_sigma_flux_0.5_qwen_0.5 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.5 \
-    --qwen_sigma 0.5
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_sigma_flux_0.25_qwen_0.25 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.25 \
-    --qwen_sigma 0.25
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_sigma_flux_0.0_qwen_0.0 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.0 \
-    --qwen_sigma 0.0
+for sigma in 1.0 0.75 0.5 0.25 0.0; do
+  ./scripts/ablation/gen_and_scoring_ablation.sh \
+      --prompt_root_dir data/lpd_bench \
+      --output_root_dir outputs/ablation_sigma_flux_${sigma}_qwen_${sigma} \
+      --dataset_type long \
+      --model_type pmog \
+      --partial_num 8 \
+      --flux_sigma ${sigma} \
+      --qwen_sigma ${sigma}
+done
 ```
 
 </details>
@@ -280,52 +209,16 @@ The outputs will be saved to `data/lpd_bench/rewritten`.
 <summary>Exploring the mode</summary>
 
 ```bash
-# [1, 25, 50, 75, 100]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_mode_flux_100_qwen_100 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 100 \
-    --qwen_num_mode 100
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_mode_flux_75_qwen_75 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 75 \
-    --qwen_num_mode 75
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_mode_flux_50_qwen_50 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 50 \
-    --qwen_num_mode 50
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_mode_flux_25_qwen_25 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 25 \
-    --qwen_num_mode 25
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpd_bench \
-    --output_root_dir outputs/ablation_mode_flux_1_qwen_1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 1 \
-    --qwen_num_mode 1
-
+for mode in 100 75 50 25 1; do
+  ./scripts/ablation/gen_and_scoring_ablation.sh \
+      --prompt_root_dir data/lpd_bench \
+      --output_root_dir outputs/ablation_mode_flux_${mode}_qwen_${mode} \
+      --dataset_type long \
+      --model_type pmog \
+      --partial_num 8 \
+      --flux_num_mode ${mode} \
+      --qwen_num_mode ${mode}
+done
 ```
 
 </details>
