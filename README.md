@@ -34,7 +34,7 @@ Bo-Kai Ruan, Teng-Fang Hsiao, Ling Lo, Yi-Lun Wu, Hong-Han Shuai
 |     ![DiverseFlow](assets/compare/qwen/700_df.jpg)     |
 
 >[!NOTE]
-> We provide the python package for LPD-Bench evaluation. Please check the [`lpd_eval` branch](https://github.com/basiclab/prompt_mog/tree/lpd_eval) for more details.
+> We provide the python package for LPD-Bench evaluation. Please check the [`lpd-eval` branch](https://github.com/basiclab/prompt_mog/tree/lpd-eval) for more details.
 
 ## 📦 Installation
 
