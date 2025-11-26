@@ -1,6 +1,6 @@
 <div id="top" align="center">
 
-# PromptMoG: Prompt Embedding Mixture-of-Gaussian Sampling
+# PromptMoG: Prompt Embedding MoG Sampling
 
 **A plug-and-play framework for enhancing diversity in long-prompt image generation**
 
