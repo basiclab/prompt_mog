@@ -18,9 +18,9 @@ Bo-Kai Ruan, Teng-Fang Hsiao, Ling Lo, Yi-Lun Wu, Hong-Han Shuai
 | ![CogView4](assets/compare/cogview4/453_long_prompt.jpg) |
 |                  **+PromptMoG (Ours)**                   |
 |    ![PromptMoG](assets/compare/cogview4/453_pmog.jpg)    |
-|                        **+CADS**                         |
+|                        +CADS                         |
 |      ![CADS](assets/compare/cogview4/453_cads.jpg)       |
-|                     **+DiverseFlow**                     |
+|                     +DiverseFlow                     |
 |    ![DiverseFlow](assets/compare/cogview4/453_df.jpg)    |
 
 |                       Qwen-Image                       |
@@ -28,9 +28,9 @@ Bo-Kai Ruan, Teng-Fang Hsiao, Ling Lo, Yi-Lun Wu, Hong-Han Shuai
 | ![Qwen-Image](assets/compare/qwen/700_long_prompt.jpg) |
 |                 **+PromptMoG (Ours)**                  |
 |     ![PromptMoG](assets/compare/qwen/700_pmog.jpg)     |
-|                       **+CADS**                        |
+|                       +CADS                        |
 |       ![CADS](assets/compare/qwen/700_cads.jpg)        |
-|                    **+DiverseFlow**                    |
+|                    +DiverseFlow                    |
 |     ![DiverseFlow](assets/compare/qwen/700_df.jpg)     |
 
 >[!NOTE]
