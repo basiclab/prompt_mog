@@ -211,10 +211,4 @@ pyrightconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,linux,python
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-data
-!data/lpbench/filtered
-!data/lpbench/rewritten
-outputs
-notebook
-scripts/run_temp.sh
-record.txt
+output*

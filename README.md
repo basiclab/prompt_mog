@@ -1,290 +1,112 @@
-# README
+# LPD-Bench Evaluation Toolkit
+
+Toolkit for evaluating the [LPD-Bench](https://huggingface.co/datasets/Justin900/LPD-Bench).
+
+>[!NOTE]
+> It is recommended to have Python 3.10 or higher and using PyTorch >= 2.6. We have remove the PyTorch dependency and let users decide it.
+
+>[!IMPORTANT]
+> This branch only provides the evaluation toolkit. For the paper details, please refer to the [main branch](https://github.com/basiclab/prompt_mog).
 
 ## Installation
 
 ```bash
-uv sync
-# load environment
-source .venv/bin/activate
+# Option 1: Clone the repository
+git clone https://github.com/basiclab/prompt_mog --branch lpd_eval --depth 1 && cd prompt_mog
+pip install -e .
 
-# If users want to compute the dataset statistics, download the spacy model
-uv run spacy download en_core_web_sm
+# Option 2: Install directly from git
+pip install git+https://github.com/basiclab/prompt_mog.git@lpd_eval
+## or with `uv`
+uv add git+https://github.com/basiclab/prompt_mog.git@lpd_eval
+
+# (must for current implementation) faster inference and lower memory usage
+## 1. Ensure `ninja` is installed and in the PATH
+## 2. Install `flash-attn`
+pip install flash-attn --no-build-isolation
+## (optional) usres can also set `MAX_JOBS` to speed up, but requires more memory
+MAX_JOBS=64 pip install flash-attn --no-build-isolation
 ```
 
-## Data Preparation
+## File Structure
 
-We have provided the filtered dataset in `data/lpbench/filtered`. Users can also follow the following steps to generate the dataset themselves.
+### Generated Images
 
-### Creating LBPench
+The structure of the generated images should be first wrapped in a folder with the seed number. The images within each seed folder should be named as `gen_<image_index>.png`:
 
-To generate the long prompts similar to `LPBench`, run the following command:
-
-```bash
-# Step 1: Generate a pool of long prompts
-python misc/dataset_gen/generate_long_prompt.py --num-prompts-for-topic 60
-
-# Step 2: Filter the prompts
-python misc/dataset_gen/post_process_data.py --data-root data/lpbench --num_prompts_per_topic 60 --num_remain_per_topic 40
+```plaintext
+gen_root_dir/
+├── seed_1/
+│   ├── gen_000.png
+│   ├── gen_001.png
+│   ├── ...
+├── seed_2/
+│   ├── gen_000.png
+│   ├── gen_001.png
+│   ├── ...
+├── ...
 ```
 
-The outputs will be saved to `data/lpbench/filtered`.
+>[!WARNING]
+> The seed folder should be purely numerical. Otherwise, the evaluation will not work. Please check the example under `assets/example/` for the correct structure.
 
-Users can also run the statistics of the dataset by running the following command:
+### Scoring
 
-```bash
-python misc/dataset_gen/data_statistics.py --data-root-dir data --plot 
+The scoring results will be saved in the seed folder with the name `score_<seed_number>.json`. For diversity evaluation, the results will be saved in the folder `diversity` with the name `diversity_<image_index>.json`.
+
+```plaintext
+gen_root_dir/
+├── seed_1/
+│   ├── score_000.json
+│   ├── score_001.json
+│   ├── ...
+├── seed_2/
+│   ├── score_000.json
+│   ├── score_001.json
+│   ├── ...
+├── diversity/
+│   ├── diversity_000.json
+│   ├── diversity_001.json
+│   ├── ...
 ```
 
-The results will be saved to `assets/dataset_statistics.pdf`.
-
-### Creating LPBench-Rewritten
-
-To rewrite the long prompts, run the following command:
-
-```bash
-python misc/rewrite_long_prompt.py \
-    --data_folder data/lpbench/filtered \
-    --output_folder data/lpbench/rewritten \
-    --num_variants 10 \
-    --model gpt-4o \
-    --workers 8
-```
-
-The outputs will be saved to `data/lpbench/rewritten`.
+The average score will be saved in the seed folder with the name `average_score.json`. The average diversity scores will be saved in the folder `diversity` with the name `average_diversity.json`. Please check the example under `assets/example/`.
 
 ## Usage
 
-### Diversity Test
+### Evaluation
+
+Users can evaluate the generated images with `lpd_eval` command:
 
 ```bash
-# Generate images
-./scripts/gen_image.sh \
-    --dataset_type long \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/long_prompt
-./scripts/gen_image.sh \
-    --dataset_type short \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/short_prompt_1 \
-    --first_top 1
-./scripts/gen_image.sh \
-    --dataset_type short \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/short_prompt_3 \
-    --first_top 3
-
-# Score the diversity
-./scripts/scoring_diversity.sh --output_root_dir outputs/long_prompt
-./scripts/scoring_diversity.sh --output_root_dir outputs/short_prompt_1
-./scripts/scoring_diversity.sh --output_root_dir outputs/short_prompt_3
+lpd_eval --gen_root_dir <gen_root_dir>
 ```
 
-### Prompt-MoG
+We also provide several flags to control the evaluation process:
+
+- `--dataset_name`: the name of the dataset to evaluate (default: `Justin900/LPD-Bench`).
+- `--partial_num`: the number of partial prompts to evaluate (default: `None`).
+- `--dtype`: the data type to use for the evaluation (default: `bf16`).
+- `--num_workers`: the number of workers to use for the evaluation (default: `4`).
+- `--overwrite`: whether to overwrite the existing score files (default: `False`).
+
+To support multi-GPU evaluation, users can use the [Accelerate library](https://huggingface.co/docs/accelerate/index) to accelerate the evaluation process. For example, to use 4 GPUs, run:
 
 ```bash
-./scripts/gen_image.sh \
-    --dataset_type long \
-    --model_type pmog \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/pmog
+accelerate launch --num_processes 4 -m lpd_eval --gen_root_dir <gen_root_dir>
 ```
 
-### Chunking
+### Score Printing
+
+Users can print the score with `lpd_print` command:
 
 ```bash
-./scripts/gen_image.sh \
-    --dataset_type long \
-    --model_type chunk \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/chunk_prompt
+lpd_print --gen_root_dir <gen_root_dir>
 ```
 
-### Prompt Rewriting
+We also provide two flags to control the output format:
 
-```bash
-./scripts/gen_image.sh \
-    --dataset_type rewritten \
-    --prompt_root_dir data/lpbench/rewritten \
-    --output_root_dir outputs/rewritten_prompt \
-    --model_type short
+- `--label`: whether to print the label of the seeds and the score names (default: `True`).
+- `--latex`: whether to print the score in LaTeX format (default: `False`).
 
-./scripts/scoring_diversity.sh --output_root_dir outputs/rewritten_prompt
-./scripts/scoring_lbp.sh --output_root_dir outputs/rewritten_prompt
-```
-
-### GenEval
-
-```bash
-./scripts/gen_image.sh \
-    --dataset_type gen_eval \
-    --prompt_root_dir data/geneval \
-    --output_root_dir outputs/gen_eval_prompt
-```
-
-### Ablation Study
-
-| Model | Gamma | Num Mode | Sigma |
-| ----- | ----- | -------- | ----- |
-| Flux  | 0.6   | 50       | 0.25  |
-| Qwen  | 0.85  | 50       | 0.25  |
-
-<details>
-<summary>Exploring the gamma</summary>
-
-```bash
-# [0.1, 0.35, 0.6, 0.85, 1.1]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_gamma_flux_1.1_qwen_1.1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 1.1 \
-    --qwen_gamma 1.1
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_gamma_flux_0.85_qwen_0.85 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.85 \
-    --qwen_gamma 0.85
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_gamma_flux_0.6_qwen_0.6 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.6 \
-    --qwen_gamma 0.6
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_gamma_flux_0.35_qwen_0.35 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.35 \
-    --qwen_gamma 0.35
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_gamma_flux_0.1_qwen_0.1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_gamma 0.1 \
-    --qwen_gamma 0.1
-
-```
-
-</details>
-
-<details>
-<summary>Exploring the sigma</summary>
-
-```bash
-# [0, 0.25, 0.5, 0.75, 1.0]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_sigma_flux_1.0_qwen_1.0 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 1.0 \
-    --qwen_sigma 1.0
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_sigma_flux_0.75_qwen_0.75 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.75 \
-    --qwen_sigma 0.75
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_sigma_flux_0.5_qwen_0.5 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.5 \
-    --qwen_sigma 0.5
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_sigma_flux_0.25_qwen_0.25 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.25 \
-    --qwen_sigma 0.25
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_sigma_flux_0.0_qwen_0.0 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_sigma 0.0 \
-    --qwen_sigma 0.0
-```
-
-</details>
-
-<details>
-<summary>Exploring the mode</summary>
-
-```bash
-# [1, 25, 50, 75, 100]
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_mode_flux_100_qwen_100 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 100 \
-    --qwen_num_mode 100
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_mode_flux_75_qwen_75 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 75 \
-    --qwen_num_mode 75
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_mode_flux_50_qwen_50 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 50 \
-    --qwen_num_mode 50
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_mode_flux_25_qwen_25 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 25 \
-    --qwen_num_mode 25
-
-./scripts/ablation/gen_and_scoring_ablation.sh \
-    --prompt_root_dir data/lpbench/filtered \
-    --output_root_dir outputs/ablation_mode_flux_1_qwen_1 \
-    --dataset_type long \
-    --model_type pmog \
-    --partial_num 8 \
-    --flux_num_mode 1 \
-    --qwen_num_mode 1
-
-```
-
-</details>
+To hide the label, use `--no-label` flag. To print the score in LaTeX format, use `--latex` flag.

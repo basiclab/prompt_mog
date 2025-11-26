@@ -1,0 +1,15 @@
+{
+  "semantic": {
+    "clip_score": 0.7734375,
+    "vqa_score": 0.9989327987035116
+  },
+  "spatial": {
+    "clip_score": 0.53125,
+    "vqa_score": 0.8344840804735819
+  },
+  "stylistic": {
+    "clip_score": 0.16796875,
+    "vqa_score": 0.9348518252372742
+  },
+  "aesthetic_score": 6.1875
+}
