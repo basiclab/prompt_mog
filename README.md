@@ -12,13 +12,13 @@ Toolkit for evaluating the [LPD-Bench](https://huggingface.co/datasets/Justin900
 
 ```bash
 # Option 1: Clone the repository
-git clone https://github.com/basiclab/prompt_mog --branch lpd_eval --depth 1 && cd prompt_mog
+git clone https://github.com/basiclab/prompt_mog --branch lpd-eval --depth 1 && cd prompt_mog
 pip install -e .
 
 # Option 2: Install directly from git
-pip install git+https://github.com/basiclab/prompt_mog.git@lpd_eval
+pip install git+https://github.com/basiclab/prompt_mog.git@lpd-eval
 ## or with `uv`
-uv add git+https://github.com/basiclab/prompt_mog.git@lpd_eval
+uv add git+https://github.com/basiclab/prompt_mog.git@lpd-eval
 
 # (must for current implementation) faster inference and lower memory usage
 ## 1. Ensure `ninja` is installed and in the PATH
