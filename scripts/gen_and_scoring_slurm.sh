@@ -93,7 +93,7 @@ source .venv/bin/activate
     --first_top ${FIRST_TOP} \\
     --partial_num ${PARTIAL_NUM}
 
-./scripts/scoring_lpb.sh \\
+./scripts/scoring_lpd.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\
     --num_processes ${NUM_PROCESSES} \\
     --mode ${MODE} \\

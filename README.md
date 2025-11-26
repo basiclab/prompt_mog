@@ -56,7 +56,7 @@ uv run spacy download en_core_web_sm
 
 We have provided the filtered dataset in `data/lpd_bench`. Users can also follow the following steps to generate the dataset themselves.
 
-### Creating LBPench
+### Creating LPD-Bench
 
 To generate the long prompts similar to `LPD-Bench`, run the following command:
 
@@ -150,7 +150,7 @@ The outputs will be saved to `data/lpd_bench/rewritten`.
     --model_type short
 
 ./scripts/scoring_diversity.sh --output_root_dir outputs/rewritten_prompt
-./scripts/scoring_lbp.sh --output_root_dir outputs/rewritten_prompt
+./scripts/scoring_lpd.sh --output_root_dir outputs/rewritten_prompt
 ```
 
 ### GenEval

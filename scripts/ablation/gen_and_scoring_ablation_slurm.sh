@@ -113,7 +113,7 @@ source .venv/bin/activate
     --qwen_num_mode ${QWEN_NUM_MODE} \\
     --qwen_sigma ${QWEN_SIGMA}
 
-./scripts/scoring_lpb.sh \\
+./scripts/scoring_lpd.sh \\
     --output_root_dir ${OUTPUT_ROOT_DIR} \\
     --num_processes ${NUM_PROCESSES} \\
     --model_list flux,qwen \\
