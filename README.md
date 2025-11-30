@@ -34,13 +34,13 @@ Bo-Kai Ruan, Teng-Fang Hsiao, Ling Lo, Yi-Lun Wu, Hong-Han Shuai
 |     ![DiverseFlow](assets/compare/qwen/700_df.jpg)     |
 
 >[!NOTE]
-> We provide the python package for LPD-Bench evaluation. Please check the [`lpd-eval` branch](https://github.com/basiclab/prompt_mog/tree/lpd-eval) for more details.
+> We provide the python package for LPD-Bench evaluation. Please check the [`lpd-eval` branch](https://github.com/basiclab/PromptMog/tree/lpd-eval) for more details.
 
 ## 📦 Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/basiclab/prompt_mog.git --depth 1 && cd prompt_mog
+git clone https://github.com/basiclab/PromptMog.git --depth 1 && cd PromptMoG
 
 # Install the dependencies
 uv sync
