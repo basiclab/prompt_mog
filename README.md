@@ -6,19 +6,19 @@ Toolkit for evaluating the [LPD-Bench](https://huggingface.co/datasets/Justin900
 > It is recommended to have Python 3.10 or higher and using PyTorch >= 2.6. We have remove the PyTorch dependency and let users decide it.
 
 >[!IMPORTANT]
-> This branch only provides the evaluation toolkit. For the paper details, please refer to the [main branch](https://github.com/basiclab/prompt_mog).
+> This branch only provides the evaluation toolkit. For the paper details, please refer to the [main branch](https://github.com/basiclab/PromptMoG).
 
 ## Installation
 
 ```bash
 # Option 1: Clone the repository
-git clone https://github.com/basiclab/prompt_mog --branch lpd-eval --depth 1 && cd prompt_mog
+git clone https://github.com/basiclab/PromptMoG --branch lpd-eval --depth 1 && cd PromptMoG
 pip install -e .
 
 # Option 2: Install directly from git
-pip install git+https://github.com/basiclab/prompt_mog.git@lpd-eval
+pip install git+https://github.com/basiclab/PromptMog.git@lpd-eval
 ## or with `uv`
-uv add git+https://github.com/basiclab/prompt_mog.git@lpd-eval
+uv add git+https://github.com/basiclab/PromptMog.git@lpd-eval
 
 # (must for current implementation) faster inference and lower memory usage
 ## 1. Ensure `ninja` is installed and in the PATH
